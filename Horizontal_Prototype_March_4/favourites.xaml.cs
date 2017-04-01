@@ -36,19 +36,31 @@ namespace Horizontal_Prototype_March_4
             {
                 window.expanderInvisible();
             }
+            if (window.backStack.Peek() is favourites)
+            {
+                window._favourites.initValues(window._recipesArray, window.favouritesList);
+            }
             window.CurrentUserControl = window.backStack.Pop();
             window._Navigation.Navigate(window.CurrentUserControl);
         }
 
-        public void initValues(object[,] _recipesArray, Stack<string> stackFavs)
+        public void initValues(object[,] _recipesArray, List<string> stackFavs)
         {
+
+            try
+            {
+                window._favourites._FavsWrapPanel.Children.Clear();
+            }
+            catch (Exception e) {}
+            
             
             Stack<string> searchStack = new Stack<string>();
             Stack<string> tempStack = new Stack<string>();
 
             while (stackFavs.Count != 0)
             {
-                string tempString = stackFavs.Pop();
+                string tempString = stackFavs.Last();
+                stackFavs.RemoveAt(stackFavs.IndexOf(stackFavs.Last()));
                 tempStack.Push(tempString);
                 for (int i = 0; i < _recipesArray.GetLength(0); i++)
                 {
@@ -63,6 +75,11 @@ namespace Horizontal_Prototype_March_4
                     }
                 }
             }
+            while (tempStack.Count != 0)
+            {
+                stackFavs.Add(tempStack.Pop());
+            }
+
             
             while (searchStack.Count != 0)
             {

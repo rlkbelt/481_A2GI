@@ -21,7 +21,7 @@ namespace Horizontal_Prototype_March_4
     public partial class MainWindow : Window
     {
         public Stack<object> backStack = new Stack<object>();
-        public Stack<string> favouritesStack = new Stack<string>();
+        public List<string> favouritesList = new List<string>();
         
         public object[,] _recipesArray = new object[,] {  { "Lemon Chicken" ,"chicken lemon lime pepper salt", "images/food/chicken.jpeg", new LemonChickenDesc() },
                                                            { "Italian Delux Pizza", "peperoni ham hamburger flour salt", "images/food/delux_pizza.jpg", new LemonChickenDesc() },
@@ -90,7 +90,7 @@ namespace Horizontal_Prototype_March_4
         public void FavouritesClick(object sender, RoutedEventArgs e)
         {
             expanderVisible();
-            _favourites.initValues(_recipesArray, favouritesStack);
+            _favourites.initValues(_recipesArray, favouritesList);
             _Navigation.Navigate(_favourites);
             backStack.Push(CurrentUserControl);
             CurrentUserControl = _favourites;

@@ -12,7 +12,7 @@
         <Button x:Name="page_back" Background="Transparent" BorderBrush="Transparent" BorderThickness="0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="75" Margin="10,10,0,0" Click="BackClick"  >
             <Image Source="images/buttons/back.png" HorizontalAlignment="Left" Width="100" Height="75"/>
         </Button>
-        <Button x:Name="favButtonMeat" Tag="fav" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Width="50" Height="50" Margin="318,10,-16,459" Click="favClick">
+        <Button x:Name="favButton" Tag="fav" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Width="50" Height="50" Margin="318,10,-16,459" Click="favClick">
             <Image x:Name ="star" Source="images/buttons/star2.png" HorizontalAlignment="Left" Width="50" RenderTransformOrigin="0.46,1.25"/>
         </Button>
         <TextBlock x:Name="title_all" Height="53" Text="Classic Meatloaf" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="34" Margin="118,27,44,459"/>
