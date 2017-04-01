@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace Horizontal_Prototype_March_4
 {
     /// <summary>
-    /// Interaction logic for UserControl1.xaml
+    /// Interaction logic MeatDesc.xaml
     /// </summary>
     public partial class MeatDesc : UserControl
     {
