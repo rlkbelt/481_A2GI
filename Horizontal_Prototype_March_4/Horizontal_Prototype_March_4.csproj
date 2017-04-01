@@ -61,6 +61,9 @@
     <Compile Include="MeatComplete.xaml.cs">
       <DependentUpon>MeatComplete.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MeatStep1.xaml.cs">
+      <DependentUpon>MeatStep1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PrintDialog.xaml.cs">
       <DependentUpon>PrintDialog.xaml</DependentUpon>
     </Compile>
@@ -81,6 +84,9 @@
     </Compile>
     <Compile Include="StrawberrySouffleDesc.xaml.cs">
       <DependentUpon>StrawberrySouffleDesc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StrawberrySouffleIngr.xaml.cs">
+      <DependentUpon>StrawberrySouffleIngr.xaml</DependentUpon>
     </Compile>
     <Page Include="AllRecipes.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -138,6 +144,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="MeatStep1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Popular.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -167,6 +177,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="StrawberrySouffleDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StrawberrySouffleIngr.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -214,7 +228,6 @@
     <Resource Include="images\buttons\home_good.png" />
     <Resource Include="images\buttons\many stars.png" />
     <Resource Include="images\buttons\NextArrow.png" />
-    <Resource Include="images\buttons\print.jpg" />
     <Resource Include="images\buttons\search-button-icon-93111.png" />
     <Resource Include="images\buttons\settings_button.png" />
     <Resource Include="images\buttons\star2.png" />
@@ -237,6 +250,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\buttons\star2fav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\buttons\print.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

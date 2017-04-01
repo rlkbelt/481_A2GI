@@ -52,6 +52,7 @@ namespace Horizontal_Prototype_March_4
         public Step1Screen _step1Screen = new Step1Screen();
         public Step2Screen _step2Screen = new Step2Screen();
         public HomePage _homePage = new HomePage();
+        public MeatStep1 _meatStep1 = new MeatStep1();
 
 
         private Boolean isExpanded { get; set; }
@@ -122,7 +123,8 @@ namespace Horizontal_Prototype_March_4
             _pagestack.Width = 462;
             _pagestack.Margin = new Thickness(32, 0, 0, 0);
             _ExpanderDP.Margin = new Thickness(91, -256, 0, 230);
-            changeWidth();
+            if (CurrentUserControl != _meatStep1)
+            { changeWidth(); }
 
         }
         private void Expanded(object sender, RoutedEventArgs e)
@@ -137,7 +139,9 @@ namespace Horizontal_Prototype_March_4
             _pagestack.Width = 462;
             _pagestack.Margin = new Thickness(28, 0, 0, 0);
             _ExpanderDP.Margin = new Thickness(0, -256, 0, 230);
-            changeWidth();
+            if (CurrentUserControl != _meatStep1)
+            { changeWidth(); }
+            
         }
 
         public void expanderInvisible()

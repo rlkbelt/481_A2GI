@@ -62,7 +62,6 @@ namespace Horizontal_Prototype_March_4
 					window._recipesArray[i, 3] = this;
 					break;
 
-
 				}
 			}
 		}
