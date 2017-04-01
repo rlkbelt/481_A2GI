@@ -17,13 +17,13 @@
                 <TextBox x:Name="straw_quan1" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="1 Cup" VerticalAlignment="Top" Width="70" FontSize="16" />
                 <TextBox x:Name="straw_ingr1" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="Pureed Strawberries" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="straw_quan2" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="1/2 Cup" VerticalAlignment="Top" Width="70"  FontSize="16"/>
+                <TextBox x:Name="straw_quan2" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="2 Cups" VerticalAlignment="Top" Width="70"  FontSize="16"/>
                 <TextBox x:Name="straw_ingr2" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Chilled Cream" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
                 <TextBox x:Name="straw_quan3" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  Text="2 Tbsp." FontSize="16"/>
                 <TextBox x:Name="straw_ingr3" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lemon Juice" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="straw_quan4" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="16" Text="1/2 Cup"/>
+                <TextBox x:Name="straw_quan4" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="16" Text="1/4 Cup"/>
                 <TextBox x:Name="straw_ingr4" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lukewarm Water" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
                 <TextBox x:Name="straw_quan5" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="3"/>
@@ -38,7 +38,7 @@
                 <TextBox x:Name="straw_quan8" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Tbsp."/>
                 <TextBox x:Name="straw_ingr8" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Gelatine" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="straw_quan9" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1/2 Tbsp."/>
+                <TextBox x:Name="straw_quan9" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Tsp."/>
                 <TextBox x:Name="straw_ingr9" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Vanilla" VerticalAlignment="Top" Width="146" FontSize="18"/>
             </WrapPanel>
         </Grid>
@@ -48,7 +48,7 @@
         <Button x:Name="print" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="55" Height="52" Background="Transparent" BorderBrush="White" Click="print_Click">
             <Image x:Name="print_button" Source="images/buttons/print.png"/>
         </Button>
-        <TextBox x:Name="tip_ingred" HorizontalAlignment="Left" BorderBrush="Transparent" Background="Transparent" Height="35" Margin="131,85,0,0" TextWrapping="Wrap" Text="Tip: Change units of measurement in the settings" VerticalAlignment="Top" Width="163" FontStyle="Italic" FontSize="12"/>
+        <TextBox x:Name="straw_tip_ingred" HorizontalAlignment="Left" BorderBrush="Transparent" Background="Transparent" Height="35" Margin="131,85,0,0" TextWrapping="Wrap" Text="Tip: Change units of measurement in the settings" VerticalAlignment="Top" Width="163" FontStyle="Italic" FontSize="12"/>
         <Slider x:Name="straw_Recipe_Ratio"   Orientation="Horizontal" Minimum="1" Maximum="3" Value="0" IsSnapToTickEnabled="True" BorderBrush="Black"   TickFrequency="1" Margin="131,427,101,90" ValueChanged="SliderMover"/>
         <TextBox x:Name="straw_RatiotextBox" HorizontalAlignment="Left" Height="23" FontFamily="Tw Cen MT Condensed Extra Bold" BorderBrush="Transparent" Background="Transparent" TextWrapping="Wrap" Text="Recipe Ratio: 1" VerticalAlignment="Top" Width="84" Margin="162,454,0,0"/>
     </Grid>
