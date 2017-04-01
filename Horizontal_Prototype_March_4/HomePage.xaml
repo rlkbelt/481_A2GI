@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="Horizontal_Prototype_March_4.HomePage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Horizontal_Prototype_March_4"
+             mc:Ignorable="d" 
+             d:DesignHeight="542" d:DesignWidth="472">
+    <Grid>
+        <WrapPanel x:Name="_HomePageUC_DP" Height="542" Width="382" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Button x:Name="all_recipes" Height="180" Width="382" Background="White" Content="All Recipes"  FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="48" DockPanel.Dock="Bottom" Click="AllRecipes_Click"/>
+            <Button x:Name="popular" Height="180" Width="382" Background="LightGray" Content="Popular"    FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="48" DockPanel.Dock="Bottom" Click="Popular_Click"/>
+            <Button x:Name="categories" Height="179" Width="382" Background="White" Content="Categories"  FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="48" DockPanel.Dock="Bottom" Click="Categories_Click"/>
+        </WrapPanel>
+    </Grid>
+</UserControl>

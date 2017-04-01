@@ -1,0 +1,24 @@
+﻿<Window x:Class="Horizontal_Prototype_March_4.Step_window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Horizontal_Prototype_March_4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="525" Width="500">
+    <Grid>
+        <Button x:Name="NextButton" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="494" Margin="402,0,0,0">
+            <StackPanel>
+                <Image Source="images/buttons/NextArrow.png" Height="98"/>
+                <TextBlock Text="Next" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="26" TextAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="BackButton" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="494">
+            <StackPanel>
+                <Image Source="images/buttons/BackArrow.png" Height="98"/>
+                <TextBlock Text="Back" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="26" TextAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <StackPanel Name="StepPanel" HorizontalAlignment="Left" Height="494" Margin="90,0,0,0" VerticalAlignment="Top" Width="312"/>
+    </Grid>
+</Window>

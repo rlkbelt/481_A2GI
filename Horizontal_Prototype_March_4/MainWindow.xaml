@@ -1,0 +1,55 @@
+﻿<Window x:Class="Horizontal_Prototype_March_4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Horizontal_Prototype_March_4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="570" Width="510">
+    <Grid>
+        <DockPanel x:Name="_BorderDP" Height="530" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Border CornerRadius="6" BorderBrush="Black" Background="White" BorderThickness="2" DockPanel.Dock="Top">
+                <DockPanel x:Name="_Sidebar" HorizontalAlignment="Left" VerticalAlignment="Top" Height="542" Width="120" Margin="0,0">
+                    <DockPanel x:Name="_HomeDP" Width="120" Height="132" HorizontalAlignment="Left" VerticalAlignment="Top" DockPanel.Dock="Top">
+                        <Button x:Name="_HomeButton" Background="White" HorizontalAlignment="Left" Height="132" VerticalAlignment="Top" Width="120" Click="HomeClick">
+                            <StackPanel>
+                                <Image x:Name ="home_side_panel" Source="images/buttons/home_good.png" Height="105" Width="90" />
+                                <TextBlock Text="Home" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="20" TextAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                    </DockPanel>
+                    <DockPanel x:Name="_SeachDP" Width="120" Height="132" HorizontalAlignment="Left" VerticalAlignment="Top" DockPanel.Dock="Top">
+                        <Button x:Name="_SearchButton" Background="White" HorizontalAlignment="Left" Height="132" VerticalAlignment="Top" Width="120" Click="SearchClick">
+                            <StackPanel>
+                                <Image Name ="search" Source="images/buttons/search-button-icon-93111.png" Height="105" Width="85" />
+                                <TextBlock Text="Search" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="20" TextAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                    </DockPanel >
+                    <DockPanel x:Name="_FavouritesDP" Width="120" Height="132" HorizontalAlignment="Left" VerticalAlignment="Top" DockPanel.Dock="Top">
+                        <Button x:Name="_FavouritesButton"  Background="White" HorizontalAlignment="Left" Height="132" VerticalAlignment="Top" Width="120" FontFamily="Tw Cen MT Condensed Extra Bold" Click="FavouritesClick">
+                            <StackPanel>
+                                <Image Name ="favs_side_panel" Source="images/buttons/many stars.png" Height="105" Width="95" />
+                                <TextBlock Text="Favourites" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="20" TextAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                    </DockPanel>
+                    <DockPanel x:Name="_SettingsDP" Width="120" Height="132" HorizontalAlignment="Left" VerticalAlignment="Top" DockPanel.Dock="Top">
+                        <Button x:Name="_SettingsButton" Background="White" HorizontalAlignment="Left" Height="132" VerticalAlignment="Top" Width="120" FontFamily="Tw Cen MT Condensed Extra Bold" Click="SettingsClick">
+                            <StackPanel>
+                                <Image Name ="settings_button" Source="images/buttons/settings_button.png" Height="105" Width="80" />
+                                <TextBlock Text="Settings" FontFamily="Tw Cen Mt Condensed Extra Bold" FontSize="20" TextAlignment="Center" Height="21" Width="78"/>
+                            </StackPanel>
+                        </Button>
+                    </DockPanel>
+                    <DockPanel x:Name="_ExpanderDP" Width="24" Margin="91,-256,0,230" >
+                        <Expander x:Name ="_ExpanderButton" ExpandDirection="Left" Collapsed="Collapsed" Expanded="Expanded" Visibility="Hidden"/>
+                    </DockPanel>
+                </DockPanel>
+            </Border>
+            </DockPanel>
+        <DockPanel x:Name ="_pagestack" HorizontalAlignment="Left" Height="539" Margin="120,0,0,0" VerticalAlignment="Top" Width="372">
+            <Frame x:Name="_Navigation" NavigationUIVisibility="Hidden"></Frame>
+        </DockPanel>
+    </Grid>
+</Window>
