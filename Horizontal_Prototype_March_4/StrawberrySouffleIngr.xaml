@@ -14,7 +14,7 @@
         </Button>
         <Grid HorizontalAlignment="Left" Height="297" Margin="97,106,0,0" VerticalAlignment="Top" Width="216" Background="White">
             <WrapPanel>
-                <TextBox x:Name="straw_quan1" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="1 cup" VerticalAlignment="Top" Width="70" FontSize="16" TextChanged="straw_quan1_TextChanged"/>
+                <TextBox x:Name="straw_quan1" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="1 cup" VerticalAlignment="Top" Width="70" FontSize="16" />
                 <TextBox x:Name="straw_ingr1" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="Pureed Strawberries" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
                 <TextBox x:Name="straw_quan2" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="70"  FontSize="16"/>
