@@ -111,6 +111,10 @@ namespace Horizontal_Prototype_March_4
 			CurrentUserControl = _lemonChickenDesc;
 
 		} **/
+        public void OpenCollapsed()
+        {
+            this._ExpanderButton.IsExpanded = true;
+        }
 		private void Collapsed(object sender, RoutedEventArgs e)
         {
             isExpanded = true;
@@ -123,8 +127,7 @@ namespace Horizontal_Prototype_March_4
             _pagestack.Width = 462;
             _pagestack.Margin = new Thickness(32, 0, 0, 0);
             _ExpanderDP.Margin = new Thickness(91, -256, 0, 230);
-            if (CurrentUserControl != _meatStep1)
-            { changeWidth(); }
+            changeWidth();
 
         }
         private void Expanded(object sender, RoutedEventArgs e)
@@ -139,8 +142,8 @@ namespace Horizontal_Prototype_March_4
             _pagestack.Width = 462;
             _pagestack.Margin = new Thickness(28, 0, 0, 0);
             _ExpanderDP.Margin = new Thickness(0, -256, 0, 230);
-            if (CurrentUserControl != _meatStep1)
-            { changeWidth(); }
+
+            changeWidth();
             
         }
 

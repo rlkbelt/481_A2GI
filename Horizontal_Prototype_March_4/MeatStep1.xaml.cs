@@ -20,9 +20,22 @@ namespace Horizontal_Prototype_March_4
     /// </summary>
     public partial class MeatStep1 : UserControl
     {
+        MainWindow window;
         public MeatStep1()
         {
             InitializeComponent();
+            this.Loaded += (s, e) =>
+            {
+                window = Window.GetWindow(this) as MainWindow;
+                window.OpenCollapsed();
+
+            };
+
+        }
+
+        private void BackClicked(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
