@@ -49,9 +49,7 @@ namespace Horizontal_Prototype_March_4
             printDialog.Show();
             printDialog.update();
 
+       }
 
-
-
-        }
-    }
+	}
 }
