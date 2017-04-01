@@ -16,7 +16,6 @@ using System.Windows.Shapes;
 namespace Horizontal_Prototype_March_4
 {
 
-
 	/// <summary>
 	/// Interaction logic for AllRecipes.xaml
 	/// </summary>
@@ -71,7 +70,6 @@ namespace Horizontal_Prototype_March_4
                 }
                 else
                 {
-
                     Image Img = new Image();
                     BitmapImage BitImg = new BitmapImage(new Uri(searchStack.Pop(), UriKind.Relative));
                     Img.Source = BitImg;
@@ -95,7 +93,6 @@ namespace Horizontal_Prototype_March_4
                     button.Click += new RoutedEventHandler(ButtonClick);
                     _RecipesWrapPanel.Children.Add(button);
                 }
-
             }
             searchStack.Clear();
         }
