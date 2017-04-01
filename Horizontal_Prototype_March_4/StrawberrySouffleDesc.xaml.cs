@@ -101,10 +101,17 @@ namespace Horizontal_Prototype_March_4
 
         }
 
+
         private void IngredClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+		private void straw_IngredClick(object sender, RoutedEventArgs e)
+
 		{
 			window.backStack.Push(this);
-			window._Navigation.Navigate(window._meatIngr);
+			window._Navigation.Navigate(window._strawIngr);
 		}
 	}
 }

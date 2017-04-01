@@ -22,7 +22,7 @@
         <TextBox x:Name="straw_prep" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Prep-Time: 10 mins " VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20" Margin="118,295,0,0" IsReadOnly="True" />
         <TextBox x:Name="straw_cookt" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Cook-Time: 15 mins" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20" Margin="118,324,0,0" IsReadOnly="True"/>
         <TextBox x:Name="straw_keywords" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="66" TextWrapping="Wrap" Text="Keywords: Icing Sugar, Strawberry, Dessert" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20" Margin="118,353,0,0" IsReadOnly="True"/>
-        <Button x:Name="straw_ing_but" Content="Ingredients" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,435,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="IngredClick"/>
+        <Button x:Name="straw_ing_but" Content="Ingredients" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,435,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="straw_IngredClick"/>
         <Button x:Name="straw_beg_but" Content="Begin" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,478,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22"/>
     </Grid>
 </UserControl>

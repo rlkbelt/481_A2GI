@@ -44,6 +44,7 @@ namespace Horizontal_Prototype_March_4
         static public MeatDesc _meatDescription = new MeatDesc();
         public MeatIngr _meatIngr = new MeatIngr();
         public Popular _popular = new Popular();
+		public StrawberrySouffleIngr _strawIngr = new StrawberrySouffleIngr();
         //public LemonChickenDesc _lemonChickenDesc = new LemonChickenDesc();
 
         public Settings _settings = new Settings();
