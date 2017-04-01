@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Horizontal_Prototype_March_4"
              mc:Ignorable="d" 
              d:DesignHeight="570" d:DesignWidth="470">
-    <Grid>
+    <Grid Name="MeatStep1Grid" Width="470" Height="570">
         <Button x:Name="NextButton" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Margin="380,0,0,0">
             <StackPanel>
                 <Image Source="images/buttons/NextArrow.png" Height="98"/>

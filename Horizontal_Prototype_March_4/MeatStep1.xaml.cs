@@ -28,6 +28,8 @@ namespace Horizontal_Prototype_March_4
             {
                 window = Window.GetWindow(this) as MainWindow;
                 window.OpenCollapsed();
+               // window._ExpanderButton.Expanded = Expander.Collap
+
 
             };
 
@@ -35,7 +37,7 @@ namespace Horizontal_Prototype_March_4
 
         private void BackClicked(object sender, RoutedEventArgs e)
         {
-            
+            window._allRecipes._searchboxAR.Text = window._Sidebar.Width.ToString();   
         }
     }
 }
