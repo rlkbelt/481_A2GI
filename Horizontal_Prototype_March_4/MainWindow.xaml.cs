@@ -55,20 +55,30 @@ namespace Horizontal_Prototype_March_4
         public HomePage _homePage = new HomePage();
         public MeatStep1 _meatStep1 = new MeatStep1();
 
-
+        private Boolean isMetric { get; set; }
         private Boolean isExpanded { get; set; }
 
         public object CurrentUserControl { get; set; }
 
 
-
+        
 
         public MainWindow()
         {
             InitializeComponent();
             _Navigation.Navigate(_homePage);
             CurrentUserControl = _homePage;
+            isMetric = false;
+        }
 
+        public Boolean getMetric()
+        {
+            return isMetric;
+        }
+
+        public void setMetric(Boolean value)
+        {
+            isMetric = value;
         }
 
         private void HomeClick(object sender, RoutedEventArgs e)

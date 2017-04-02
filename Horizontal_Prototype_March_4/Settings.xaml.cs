@@ -39,5 +39,15 @@ namespace Horizontal_Prototype_March_4
             window.CurrentUserControl = window.backStack.Pop();
             window._Navigation.Navigate(window.CurrentUserControl);
         }
+
+        private void ImperialCheck(object sender, RoutedEventArgs e)
+        {
+            window.setMetric(false);
+        }
+
+        private void MetricCheck(object sender, RoutedEventArgs e)
+        {
+            window.setMetric(true);
+        }
     }
 }

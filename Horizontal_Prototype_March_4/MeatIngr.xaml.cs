@@ -32,48 +32,57 @@ namespace Horizontal_Prototype_March_4
         }
         public void SliderMover (object sender, RoutedEventArgs e)
         {
-            if(Recipe_Ratio.Value == 1)
+            try
             {
-                quan1.Text = "1 lb.";
-                quan2.Text = "2";
-                quan3.Text = "2 Cups";
-                quan4.Text = "1 Cup";
-                quan5.Text = "1";
-                quan6.Text = "1 Cup";
-                quan7.Text = "1 tbsp.";
-                quan8.Text = "1 tbsp.";
-                quan9.Text = "Taste";
-                //RatiotextBox.Text = "Recipe Ratio: 1"; //for some reason this fails 
+                if (Recipe_Ratio.Value == 1 && !window.getMetric())
+                {
+                    quan1.Text = "1 lb.";
+                    quan2.Text = "2";
+                    quan3.Text = "2 Cups";
+                    quan4.Text = "1 Cup";
+                    quan5.Text = "1";
+                    quan6.Text = "1 Cup";
+                    quan7.Text = "1 tbsp.";
+                    quan8.Text = "1 tbsp.";
+                    quan9.Text = "Taste";
+                    //RatiotextBox.Text = "Recipe Ratio: 1"; //for some reason this fails 
+
+                }
+                else if (Recipe_Ratio.Value == 2 && !window.getMetric())
+                {
+                    quan1.Text = "2 lb.";
+                    quan2.Text = "4";
+                    quan3.Text = "4 Cups";
+                    quan4.Text = "2 Cups";
+                    quan5.Text = "2";
+                    quan6.Text = "2 Cups";
+                    quan7.Text = "2 tbsps.";
+                    quan8.Text = "2 tbsps.";
+                    quan9.Text = "Taste";
+                    RatiotextBox.Text = "Recipe Ratio: 2";
+
+                }
+                else if (Recipe_Ratio.Value == 3 && !window.getMetric())
+                {
+                    quan1.Text = "3 lb.";
+                    quan2.Text = "6";
+                    quan3.Text = "6 Cups";
+                    quan4.Text = "3 Cups";
+                    quan5.Text = "3";
+                    quan6.Text = "3 Cups";
+                    quan7.Text = "3 tbsps.";
+                    quan8.Text = "3 tbsps.";
+                    quan9.Text = "Taste";
+                    RatiotextBox.Text = "Recipe Ratio: 3";
+
+                }
+            
+            }
+            catch
+            {
 
             }
-            else if (Recipe_Ratio.Value == 2)
-            {
-                quan1.Text = "2 lb.";
-                quan2.Text = "4";
-                quan3.Text = "4 Cups";
-                quan4.Text = "2 Cups";
-                quan5.Text = "2";
-                quan6.Text = "2 Cups";
-                quan7.Text = "2 tbsps.";
-                quan8.Text = "2 tbsps.";
-                quan9.Text = "Taste";
-                RatiotextBox.Text = "Recipe Ratio: 2";
 
-            }
-            else 
-            {
-                quan1.Text = "4 lb.";
-                quan2.Text = "6";
-                quan3.Text = "6 Cups";
-                quan4.Text = "4 Cups";
-                quan5.Text = "4";
-                quan6.Text = "4 Cups";
-                quan7.Text = "4 tbsps.";
-                quan8.Text = "4 tbsps.";
-                quan9.Text = "Taste";
-                RatiotextBox.Text = "Recipe Ratio: 3";
-
-            }
         }
         
         private void BackClick(object sender, RoutedEventArgs e)

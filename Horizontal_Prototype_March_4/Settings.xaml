@@ -12,9 +12,9 @@
         </Button>
 
         <TextBlock x:Name="settingsTitle_all" Height="53" Margin="124,66,138,420"  Text="Settings" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="36"/>
-        <Button x:Name="imperial" Content="Imperial" Background="Black" Foreground="White" HorizontalAlignment="Left" Height="46" Margin="30,189,0,0" VerticalAlignment="Top" Width="138" FontSize="24" FontFamily="Tw Cen MT Condensed Extra Bold"/>
-        <Button x:Name="metric" Content="Metric" HorizontalAlignment="Left" Height="45" Margin="196,190,0,0" VerticalAlignment="Top" Width="138" FontSize="24" FontFamily="Tw Cen MT Condensed Extra Bold"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="38" Margin="72,119,0,0" TextWrapping="Wrap" Text="Unit of Measure" VerticalAlignment="Top" Width="220" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="36" TextDecorations="Underline"/>
+        <RadioButton x:Name="imperialRadio" Content="Imperial" HorizontalAlignment="Left" Margin="30,181,0,0" VerticalAlignment="Top" Height="44" Width="138" FontSize="24" Checked="ImperialCheck"/>
+        <RadioButton x:Name="metricRadio" Content="Metric" HorizontalAlignment="Left" Margin="192,181,0,0" VerticalAlignment="Top" Height="44" Width="138" FontSize="24" Checked="MetricCheck"/>
 
 
     </Grid>
