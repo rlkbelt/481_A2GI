@@ -16,7 +16,6 @@ using System.Windows.Shapes;
 namespace Horizontal_Prototype_March_4
 {
 
-
 	/// <summary>
 	/// Interaction logic for AllRecipes.xaml
 	/// </summary>
@@ -72,7 +71,6 @@ namespace Horizontal_Prototype_March_4
                 }
                 else
                 {
-
                     Image Img = new Image();
                     BitmapImage BitImg = new BitmapImage(new Uri(searchStack.Pop(), UriKind.Relative));
                     Img.Source = BitImg;
@@ -93,9 +91,9 @@ namespace Horizontal_Prototype_March_4
                     button.Content = sp;
                     button.Tag = text.Text;
                     button.Background = Brushes.White;
+                    button.Click += new RoutedEventHandler(ButtonClick);
                     _RecipesWrapPanel.Children.Add(button);
                 }
-
             }
             searchStack.Clear();
         }
@@ -154,6 +152,10 @@ namespace Horizontal_Prototype_March_4
             if (window.backStack.Peek() is HomePage)
             {
                 window.expanderInvisible();
+            }
+            if (window.backStack.Peek() is favourites)
+            {
+                window._favourites.initValues(window._recipesArray, window.favouritesList);
             }
             window.CurrentUserControl = window.backStack.Pop();
             window._Navigation.Navigate(window.CurrentUserControl);

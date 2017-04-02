@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="570" Width="510" WindowStartupLocation="CenterScreen">
     <Grid>
-        <DockPanel x:Name="_BorderDP" Height="530" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left">
+        <DockPanel x:Name="_BorderDP" Height="530" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Panel.ZIndex="1000">
             <Border CornerRadius="6" BorderBrush="Black" Background="White" BorderThickness="2" DockPanel.Dock="Top">
-                <DockPanel x:Name="_Sidebar" HorizontalAlignment="Left" VerticalAlignment="Top" Height="542" Width="120" Margin="0,0">
+                <DockPanel x:Name="_Sidebar" HorizontalAlignment="Left" VerticalAlignment="Top" Height="542" Width="120" Margin="0,0" Panel.ZIndex="2">
                     <DockPanel x:Name="_HomeDP" Width="120" Height="132" HorizontalAlignment="Left" VerticalAlignment="Top" DockPanel.Dock="Top">
                         <Button x:Name="_HomeButton" Background="White" HorizontalAlignment="Left" Height="132" VerticalAlignment="Top" Width="120" Click="HomeClick">
                             <StackPanel>
@@ -48,7 +48,7 @@
                 </DockPanel>
             </Border>
             </DockPanel>
-        <DockPanel x:Name ="_pagestack" HorizontalAlignment="Left" Height="539" Margin="120,0,0,0" VerticalAlignment="Top" Width="372">
+        <DockPanel x:Name ="_pagestack" HorizontalAlignment="Left" Height="539" Margin="120,0,0,0" VerticalAlignment="Top" Width="372" Panel.ZIndex="1">
             <Frame x:Name="_Navigation" NavigationUIVisibility="Hidden"></Frame>
         </DockPanel>
     </Grid>

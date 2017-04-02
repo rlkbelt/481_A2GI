@@ -36,6 +36,10 @@ namespace Horizontal_Prototype_March_4
             {
                 window.expanderInvisible();
             }
+            if (window.backStack.Peek() is favourites)
+            {
+                window._favourites.initValues(window._recipesArray, window.favouritesList);
+            }
             window.CurrentUserControl = window.backStack.Pop();
             window._Navigation.Navigate(window.CurrentUserControl);
         }

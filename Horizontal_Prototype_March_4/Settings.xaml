@@ -15,7 +15,6 @@
         <Button x:Name="imperial" Content="Imperial" Background="Black" Foreground="White" HorizontalAlignment="Left" Height="46" Margin="30,189,0,0" VerticalAlignment="Top" Width="138" FontSize="24" FontFamily="Tw Cen MT Condensed Extra Bold"/>
         <Button x:Name="metric" Content="Metric" HorizontalAlignment="Left" Height="45" Margin="196,190,0,0" VerticalAlignment="Top" Width="138" FontSize="24" FontFamily="Tw Cen MT Condensed Extra Bold"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="38" Margin="72,119,0,0" TextWrapping="Wrap" Text="Unit of Measure" VerticalAlignment="Top" Width="220" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="36" TextDecorations="Underline"/>
-        <Button x:Name="exit_settings" Content="Exit" Background="DimGray" Foreground="White" HorizontalAlignment="Left" Height="41" Margin="98,275,0,0" VerticalAlignment="Top" Width="164" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30"/>
 
 
     </Grid>

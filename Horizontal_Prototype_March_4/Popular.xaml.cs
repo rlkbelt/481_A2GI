@@ -80,7 +80,9 @@ namespace Horizontal_Prototype_March_4
                     button.Height = 127;
                     button.Width = 100;
                     button.Content = sp;
+                    button.Tag = text.Text;
                     button.Background = Brushes.White;
+                    button.Click += new RoutedEventHandler(ButtonClick);
                     _PopularWrapPanel.Children.Add(button);
                 }
 
@@ -141,6 +143,7 @@ namespace Horizontal_Prototype_March_4
         {
             window.backStack.Push(this);
             Button but = sender as Button;
+            _searchboxPop.Text = but.Tag.ToString();
             
             for (int i = 0; i < window._recipesArray.GetLength(0); i++)
             {
@@ -157,7 +160,11 @@ namespace Horizontal_Prototype_March_4
             {
                 window.expanderInvisible();
             }
-            
+            if (window.backStack.Peek() is favourites)
+            {
+                window._favourites.initValues(window._recipesArray, window.favouritesList);
+            }
+
             window.CurrentUserControl = window.backStack.Pop();
             window._Navigation.Navigate(window.CurrentUserControl);
         }
