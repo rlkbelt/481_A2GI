@@ -44,6 +44,8 @@ namespace Horizontal_Prototype_March_4
         }
         public void Filter(object sender, RoutedEventArgs e)
         {
+			Boolean expand = false;
+			try { expand = window._ExpanderButton.IsExpanded; } catch (Exception) { };
 			_RecipesWrapPanel.Children.Clear();
 			Stack<string> searchStack = new Stack<string>();
             
@@ -71,38 +73,65 @@ namespace Horizontal_Prototype_March_4
                 }
                 else
                 {
-                    Image Img = new Image();
-                    BitmapImage BitImg = new BitmapImage(new Uri(searchStack.Pop(), UriKind.Relative));
-                    Img.Source = BitImg;
+					Image Img = new Image();
+					BitmapImage BitImg = new BitmapImage(new Uri(searchStack.Pop(), UriKind.Relative));
+					Img.Source = BitImg;
 
-                    searchStack.Pop();
-                    TextBlock text = new TextBlock();
-                    text.Text = searchStack.Pop();
-                    text.FontSize = 14;
-					
-                    text.TextAlignment = System.Windows.TextAlignment.Center;
-                    text.FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
-					text.TextWrapping = TextWrapping.Wrap;
+					if (expand)
+					{
+						searchStack.Pop();
+						TextBlock text = new TextBlock();
+						text.Text = searchStack.Pop();
+						text.FontSize = 16;
+						text.TextAlignment = System.Windows.TextAlignment.Center;
+						text.FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
+						text.TextWrapping = TextWrapping.Wrap;
 
-                    StackPanel sp = new StackPanel();
-                    sp.Children.Add(Img);
-                    sp.Children.Add(text);
-					
-                    Button button = new Button();
-                    button.Height = 127;
-					button.Width = 100;
-					text.Width = button.Width - 10;
-					button.Content = sp;
-                    button.Tag = text.Text;
-                    button.Background = Brushes.White;
-                    button.Click += new RoutedEventHandler(ButtonClick);
-                    _RecipesWrapPanel.Children.Add(button);
-                }
+						StackPanel sp = new StackPanel();
+						sp.Children.Add(Img);
+						sp.Children.Add(text);
+						Button button = new Button();
+						button.Height = 127;
+						button.Width = 130;
+						text.Width = button.Width - 10;
+						button.Content = sp;
+						button.Tag = text.Text;
+						button.Background = Brushes.White;
+						button.Click += new RoutedEventHandler(ButtonClick);
+						_RecipesWrapPanel.Children.Add(button);
+					}
+					else
+					{
+						searchStack.Pop();
+						TextBlock text = new TextBlock();
+						text.Text = searchStack.Pop();
+						text.FontSize = 14;
+						text.TextAlignment = System.Windows.TextAlignment.Center;
+						text.FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
+						text.TextWrapping = TextWrapping.Wrap;
+
+						StackPanel sp = new StackPanel();
+						sp.Children.Add(Img);
+						sp.Children.Add(text);
+						Button button = new Button();
+						button.Height = 127;
+						button.Width = 100;
+						text.Width = button.Width - 10;
+						button.Content = sp;
+						button.Tag = text.Text;
+						button.Background = Brushes.White;
+						button.Click += new RoutedEventHandler(ButtonClick);
+						_RecipesWrapPanel.Children.Add(button);
+					}
+				}
             }
             searchStack.Clear();
         }
         public void initValues(object[,] _recipesArray)
         {
+			_RecipesWrapPanel.Children.Clear();
+			Boolean expand = false;
+			try {expand = window.isExpanded; } catch (Exception) { };
             Stack<string> searchStack = new Stack<string>();
             int end = _recipesArray.GetLength(0);
             for (int i = 0; i < end; i++)
@@ -126,29 +155,30 @@ namespace Horizontal_Prototype_March_4
                     Image Img = new Image();
                     BitmapImage BitImg = new BitmapImage(new Uri(searchStack.Pop(), UriKind.Relative));
                     Img.Source = BitImg;
+					
 
-
-
-                    searchStack.Pop();
-                    TextBlock text = new TextBlock();
-                    text.Text = searchStack.Pop();
-                    text.FontSize = 14;
-                    text.TextAlignment = System.Windows.TextAlignment.Center;
-                    text.FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
+					
+					searchStack.Pop();
+					TextBlock text = new TextBlock();
+					text.Text = searchStack.Pop();
+					text.FontSize = 14;
+					text.TextAlignment = System.Windows.TextAlignment.Center;
+					text.FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
 					text.TextWrapping = TextWrapping.Wrap;
 
 					StackPanel sp = new StackPanel();
-                    sp.Children.Add(Img);
-                    sp.Children.Add(text);
-                    Button button = new Button();
-                    button.Height = 127;
-                    button.Width = 100;
+					sp.Children.Add(Img);
+					sp.Children.Add(text);
+					Button button = new Button();
+					button.Height = 127;
+					button.Width = 100;
 					text.Width = button.Width - 10;
-                    button.Content = sp;
-                    button.Tag = text.Text;
-                    button.Background = Brushes.White;
-                    button.Click += new RoutedEventHandler(ButtonClick);
-                    _RecipesWrapPanel.Children.Add(button);
+					button.Content = sp;
+					button.Tag = text.Text;
+					button.Background = Brushes.White;
+					button.Click += new RoutedEventHandler(ButtonClick);
+					_RecipesWrapPanel.Children.Add(button);
+					
                 }
 
             }
@@ -157,7 +187,9 @@ namespace Horizontal_Prototype_March_4
         {
             if (window.backStack.Peek() is HomePage)
             {
-                window.expanderInvisible();
+				window.OpenExpanded();
+				window.expanderInvisible();
+				
             }
             if (window.backStack.Peek() is favourites)
             {

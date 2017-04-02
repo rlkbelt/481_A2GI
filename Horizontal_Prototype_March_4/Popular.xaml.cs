@@ -35,65 +35,93 @@ namespace Horizontal_Prototype_March_4
         }
         public void Filter(object sender, RoutedEventArgs e)
         {
-            _PopularWrapPanel.Children.Clear();
-            Stack<string> searchStack = new Stack<string>();
+			Boolean expand = false;
+			try { expand = window._ExpanderButton.IsExpanded; } catch (Exception) { };
+			_PopularWrapPanel.Children.Clear();
+			Stack<string> searchStack = new Stack<string>();
 
-            string _searchTerm = _searchboxPop.Text.ToLower();
+			string _searchTerm = _searchboxPop.Text.ToLower();
 
-            for (int i = 0; i < window._recipesArray.GetLength(0); i++)
-            {
-                string recipe_name = window._recipesArray[i, 0].ToString().ToLower();
-                if (recipe_name.Contains(_searchTerm))
-                {
-                    searchStack.Push(window._recipesArray[i, 0].ToString());
-                    searchStack.Push(window._recipesArray[i, 1].ToString());
-                    searchStack.Push(window._recipesArray[i, 2].ToString());
-                    searchStack.Push("*");
-                }
-            }
-            while (!(searchStack.Count == 0))
-            {
-                
-                string temp = searchStack.Pop();
-                if (!(temp == "*"))
-                {
 
-                }
-                else
-                {
+			for (int i = 0; i < window._recipesArray.GetLength(0); i++)
+			{
+				string recipe_name = window._recipesArray[i, 0].ToString().ToLower();
+				if (recipe_name.Contains(_searchTerm))
+				{
+					searchStack.Push(window._recipesArray[i, 0].ToString());
+					searchStack.Push(window._recipesArray[i, 1].ToString());
+					searchStack.Push(window._recipesArray[i, 2].ToString());
+					searchStack.Push("*");
+				}
+			}
+			while (!(searchStack.Count == 0))
+			{
+				
+				string temp = searchStack.Pop();
+				if (!(temp == "*"))
+				{
 
-                    Image Img = new Image();
-                    BitmapImage BitImg = new BitmapImage(new Uri(searchStack.Pop(), UriKind.Relative));
-                    Img.Source = BitImg;
+				}
+				else
+				{
+					Image Img = new Image();
+					BitmapImage BitImg = new BitmapImage(new Uri(searchStack.Pop(), UriKind.Relative));
+					Img.Source = BitImg;
 
-                    searchStack.Pop();
-                    TextBlock text = new TextBlock();
-                    text.Text = searchStack.Pop();
-                    text.FontSize = 14;
-                    text.TextAlignment = System.Windows.TextAlignment.Center;
-                    text.FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
-					text.TextWrapping = TextWrapping.Wrap;
+					if (expand)
+					{
+						searchStack.Pop();
+						TextBlock text = new TextBlock();
+						text.Text = searchStack.Pop();
+						text.FontSize = 16;
+						text.TextAlignment = System.Windows.TextAlignment.Center;
+						text.FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
+						text.TextWrapping = TextWrapping.Wrap;
 
-					StackPanel sp = new StackPanel();
-                    sp.Children.Add(Img);
-                    sp.Children.Add(text);
-                    Button button = new Button();
-                    button.Height = 127;
-                    button.Width = 100;
-					text.Width = button.Width - 10; 
-                    button.Content = sp;
-                    button.Tag = text.Text;
-                    button.Background = Brushes.White;
-                    button.Click += new RoutedEventHandler(ButtonClick);
-                    _PopularWrapPanel.Children.Add(button);
-                }
+						StackPanel sp = new StackPanel();
+						sp.Children.Add(Img);
+						sp.Children.Add(text);
+						Button button = new Button();
+						button.Height = 127;
+						button.Width = 130;
+						text.Width = button.Width - 10;
+						button.Content = sp;
+						button.Tag = text.Text;
+						button.Background = Brushes.White;
+						button.Click += new RoutedEventHandler(ButtonClick);
+						_PopularWrapPanel.Children.Add(button);
+					}
+					else
+					{
+						searchStack.Pop();
+						TextBlock text = new TextBlock();
+						text.Text = searchStack.Pop();
+						text.FontSize = 14;
+						text.TextAlignment = System.Windows.TextAlignment.Center;
+						text.FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
+						text.TextWrapping = TextWrapping.Wrap;
 
-            }
-            searchStack.Clear();
-        }
-        public void initValues(object[,] _recipesArray)
+						StackPanel sp = new StackPanel();
+						sp.Children.Add(Img);
+						sp.Children.Add(text);
+						Button button = new Button();
+						button.Height = 127;
+						button.Width = 100;
+						text.Width = button.Width - 10;
+						button.Content = sp;
+						button.Tag = text.Text;
+						button.Background = Brushes.White;
+						button.Click += new RoutedEventHandler(ButtonClick);
+						_PopularWrapPanel.Children.Add(button);
+					}
+				}
+			}
+			searchStack.Clear();
+		}
+		public void initValues(object[,] _recipesArray)
         {
-            Stack<string> searchStack = new Stack<string>();
+			_PopularWrapPanel.Children.Clear();
+			Stack<string> searchStack = new Stack<string>();
             int end = _recipesArray.GetLength(0);
             for (int i = 0; i < end; i++)
             {

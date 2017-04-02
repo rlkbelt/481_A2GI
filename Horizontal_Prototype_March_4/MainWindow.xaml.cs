@@ -41,11 +41,11 @@ namespace Horizontal_Prototype_March_4
         public AllRecipes _allRecipes = new AllRecipes();
         public categories _categories = new categories();
         public MeatComplete _meatComplete = new MeatComplete();
-        static public MeatDesc _meatDescription = new MeatDesc();
+        
         public MeatIngr _meatIngr = new MeatIngr();
         public Popular _popular = new Popular();
         public StrawberrySouffleIngr _strawIngr = new StrawberrySouffleIngr();
-        //public LemonChickenDesc _lemonChickenDesc = new LemonChickenDesc();
+        
 
         public Settings _settings = new Settings();
 
@@ -55,8 +55,8 @@ namespace Horizontal_Prototype_March_4
         public HomePage _homePage = new HomePage();
         public MeatStep1 _meatStep1 = new MeatStep1();
 
-        private Boolean isMetric { get; set; }
-        private Boolean isExpanded { get; set; }
+
+		public Boolean isExpanded = true;
 
         public object CurrentUserControl { get; set; }
 
@@ -71,15 +71,6 @@ namespace Horizontal_Prototype_March_4
             
         }
 
-        public Boolean getMetric()
-        {
-            return isMetric;
-        }
-
-        public void setMetric(Boolean value)
-        {
-            isMetric = value;
-        }
 
         private void HomeClick(object sender, RoutedEventArgs e)
         {
@@ -215,60 +206,76 @@ namespace Horizontal_Prototype_March_4
 
         public void changeWidth()
         {
-            if (CurrentUserControl == _favourites)
+            if (CurrentUserControl is favourites)
             {
                 if (!isExpanded)
                 {
                     _favourites._favourites_Grid.Width = 470;
-                    //  _popular._PopularWrapPanel.Width = 430;
+					_favourites._FavsWrapPanel.Width = 430;
+					incButtonSize(_favourites._FavsWrapPanel);
+                    
                 }
                 else
                 {
                     _favourites._favourites_Grid.Width = 372;
-                    //_popular._PopularWrapPanel.Width = 330;
-                }
+					_favourites._FavsWrapPanel.Width = 332;
+					decButtonSize(_favourites._FavsWrapPanel);
+
+				}
             }
 
-            else if (CurrentUserControl == _search)
+            else if (CurrentUserControl is Search)
             {
                 if (!isExpanded)
                 {
                     _search._search_Grid.Width = 470;
-                    //  _popular._PopularWrapPanel.Width = 430;
+					_search._SearchRecipesWrapPanel.Width = 430;
+					incButtonSize(_search._SearchRecipesWrapPanel);
                 }
                 else
                 {
                     _search._search_Grid.Width = 372;
-                    //_popular._PopularWrapPanel.Width = 330;
-                }
+					_search._SearchRecipesWrapPanel.Width = 332;
+					decButtonSize(_search._SearchRecipesWrapPanel);
+
+				}
             }
 
-            else if (CurrentUserControl == _allRecipes)
+            else if (CurrentUserControl is AllRecipes)
             {
-                if (!isExpanded)
-                {
-                    _allRecipes._allRecipes_Grid.Width = 470;
-                    _allRecipes._RecipesWrapPanel.Width = 430;
-                }
-                else
-                {
-                    _allRecipes._allRecipes_Grid.Width = 372;
-                    _allRecipes._RecipesWrapPanel.Width = 330;
-                }
+				if (!isExpanded)
+				{
+					_allRecipes._allRecipes_Grid.Width = 470;
+					_allRecipes._RecipesWrapPanel.Width = 430;
+					incButtonSize(_allRecipes._RecipesWrapPanel);
+
+
+				}
+				else
+				{
+					_allRecipes._allRecipes_Grid.Width = 372;
+					_allRecipes._RecipesWrapPanel.Width = 332;
+					decButtonSize(_allRecipes._RecipesWrapPanel);
+
+				}
             }
 
-            else if (CurrentUserControl == _categories)
+            else if (CurrentUserControl is categories)
             {
                 if (!isExpanded)
                 {
                     _categories._categories_Grid.Width = 470;
                     _categories._CategoriesWrapPanel.Width = 430;
+					incButtonSize(_categories._CategoriesWrapPanel);
+
+
                 }
                 else
                 {
                     _categories._categories_Grid.Width = 372;
-                    _categories._CategoriesWrapPanel.Width = 330;
-                }
+                    _categories._CategoriesWrapPanel.Width = 332;
+					decButtonSize(_categories._CategoriesWrapPanel);
+				}
 
             }
             else if (CurrentUserControl is LemonChickenDesc)
@@ -287,37 +294,40 @@ namespace Horizontal_Prototype_March_4
 
                 }
             }
-            else if (CurrentUserControl == _meatComplete)
+            else if (CurrentUserControl is MeatComplete)
             {
 
             }
-            else if (CurrentUserControl == _meatDescription)
+            else if (CurrentUserControl is MeatDesc)
             {
 
             }
-            else if (CurrentUserControl == _meatIngr)
+            else if (CurrentUserControl is MeatIngr)
             {
 
             }
-            else if (CurrentUserControl == _popular)
+            else if (CurrentUserControl is Popular)
             {
                 if (!isExpanded)
                 {
                     _popular._popular_Grid.Width = 470;
                     _popular._PopularWrapPanel.Width = 430;
-                }
+					incButtonSize(_popular._PopularWrapPanel);
+
+				}
                 else
                 {
                     _popular._popular_Grid.Width = 372;
-                    _popular._PopularWrapPanel.Width = 330;
-                }
+                    _popular._PopularWrapPanel.Width = 332;
+					decButtonSize(_popular._PopularWrapPanel);
+				}
             }
-            else if (CurrentUserControl == _settings)
+            else if (CurrentUserControl is Settings)
             {
                 if (!isExpanded)
                 {
                     _settings._settings_Grid.Width = 470;
-                    //_settings._SettingsWrapPanel.Width = 430;
+                    
                 }
                 else
                 {
@@ -325,18 +335,7 @@ namespace Horizontal_Prototype_March_4
                     //_popular._PopularWrapPanel.Width = 330;
                 }
             }
-            else if (CurrentUserControl == _stepWindow)
-            {
 
-            }
-            else if (CurrentUserControl == _step1Screen)
-            {
-
-            }
-            else if (CurrentUserControl == _step2Screen)
-            {
-
-            }
             else if (CurrentUserControl is MeatStep1)
             {
                 if (!isExpanded)
@@ -347,14 +346,80 @@ namespace Horizontal_Prototype_March_4
 
                 else
                 {
-                    //this._pagestack.HorizontalAlignment = HorizontalAlignment.Right;
-                    //this._pagestack.Width = 372;
-                    //_meatStep1.MeatStep1Grid.Width = 372;
-					//_meatStep1.MeatStep1Grid.HorizontalAlignment = HorizontalAlignment.Right;
+
                     _meatStep1.BackButton.Visibility = Visibility.Hidden;
                 }
             }
-        }
+        
+
+		}
+		public void decButtonSize(WrapPanel wp)
+		{
+			
+			foreach (Button child in wp.Children)
+			{
+				if (child.Width <= 100)
+				{
+					break;
+				}
+				child.Width = child.Width - 30;
+				StackPanel sp = child.Content as StackPanel;
+				
+				foreach (object spChild in sp.Children)
+				{
+					if (spChild is Image)
+					{
+						Image img = spChild as Image;
+						img.Width = child.Width - 10;
+
+					}
+					else if (spChild is TextBlock)
+					{
+						TextBlock text = spChild as TextBlock;
+						text.FontSize -= 2;
+					}
+				}
+
+			}
+		}
+
+		public void incButtonSize(WrapPanel wp)
+		{
+			foreach (Button child in wp.Children)
+			{
+
+				child.Width = child.Width + 30;
+				StackPanel sp = child.Content as StackPanel;
+				
+				
+				foreach (object spChild in sp.Children)
+				{
+					if (spChild is Image)
+					{
+						Image img = spChild as Image;
+						img.Width += 30;
+						BitmapImage btmi = img.Source as BitmapImage;
+						
+						if (btmi.UriSource.ToString().Contains("Meatloaf"))
+						{
+							//_allRecipes._searchboxAR.Text = btmi.UriSource.ToString();
+							img.Height = img.Height - 20;
+							img.Width = img.Width - 20;
+							//img.Margin = new Thickness(0, 0, 0, 80);
+						}
+
+					}
+				
+				if (spChild is TextBlock)
+					{
+						TextBlock text = spChild as TextBlock;
+						text.FontSize += 2;
+					}
+				}
+
+			}
+		}
+
 
     }
 }
