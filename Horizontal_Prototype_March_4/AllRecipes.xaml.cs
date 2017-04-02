@@ -44,12 +44,13 @@ namespace Horizontal_Prototype_March_4
         }
         public void Filter(object sender, RoutedEventArgs e)
         {
-            _RecipesWrapPanel.Children.Clear();
-            Stack<string> searchStack = new Stack<string>();
+			_RecipesWrapPanel.Children.Clear();
+			Stack<string> searchStack = new Stack<string>();
             
             string _searchTerm = _searchboxAR.Text.ToLower();
+			
 
-            for (int i = 0; i < window._recipesArray.GetLength(0); i++)
+			for (int i = 0; i < window._recipesArray.GetLength(0); i++)
             {
                 string recipe_name = window._recipesArray[i, 0].ToString().ToLower();
                 if (recipe_name.Contains(_searchTerm))
@@ -78,16 +79,20 @@ namespace Horizontal_Prototype_March_4
                     TextBlock text = new TextBlock();
                     text.Text = searchStack.Pop();
                     text.FontSize = 14;
+					
                     text.TextAlignment = System.Windows.TextAlignment.Center;
                     text.FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
+					text.TextWrapping = TextWrapping.Wrap;
 
                     StackPanel sp = new StackPanel();
                     sp.Children.Add(Img);
                     sp.Children.Add(text);
+					
                     Button button = new Button();
                     button.Height = 127;
-                    button.Width = 100;
-                    button.Content = sp;
+					button.Width = 100;
+					text.Width = button.Width - 10;
+					button.Content = sp;
                     button.Tag = text.Text;
                     button.Background = Brushes.White;
                     button.Click += new RoutedEventHandler(ButtonClick);
@@ -130,13 +135,15 @@ namespace Horizontal_Prototype_March_4
                     text.FontSize = 14;
                     text.TextAlignment = System.Windows.TextAlignment.Center;
                     text.FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
+					text.TextWrapping = TextWrapping.Wrap;
 
-                    StackPanel sp = new StackPanel();
+					StackPanel sp = new StackPanel();
                     sp.Children.Add(Img);
                     sp.Children.Add(text);
                     Button button = new Button();
                     button.Height = 127;
                     button.Width = 100;
+					text.Width = button.Width - 10;
                     button.Content = sp;
                     button.Tag = text.Text;
                     button.Background = Brushes.White;

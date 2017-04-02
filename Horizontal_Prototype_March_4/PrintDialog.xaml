@@ -5,15 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Horizontal_Prototype_March_4"
         mc:Ignorable="d"
-        Title="PrintDialog" Height="300" Width="300">
+        Title="PrintDialog" Height="300" Width="300" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
-        <WrapPanel Margin="10,80,-9.8,-80.2">
-            <TextBox x:Name="Status" Text="Printing in Progress:" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
-            <TextBlock Text="          " FontSize="40"></TextBlock>
-            
-            <TextBox x:Name="Progress" Text="0" FontSize="50" HorizontalAlignment="Center"></TextBox>
-            <TextBox x:Name="percent" Text="%" FontSize="50" HorizontalAlignment="Center"/>
-        </WrapPanel>
+        <Label x:Name="label" Content="Printing in progress..." HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="28" Margin="27,24,0,0" FontFamily="Tw Cen MT Condensed Extra Bold"/>
+        <ProgressBar x:Name="_progress" Minimum="0" Maximum="100" Value="0"  Margin="27,112,20,106" />
+        <TextBlock Text="{Binding ElementName=pbStatus, Path=Value, StringFormat={}{0:0}%}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="134,129,135,124" />
+        <TextBlock x:Name="percent" Margin="46,130,39,122" Text="0%" HorizontalAlignment="Center" FontSize="30"/>
     </Grid>
 
 </Window>

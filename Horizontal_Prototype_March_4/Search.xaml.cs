@@ -83,13 +83,15 @@ namespace Horizontal_Prototype_March_4
                     text.FontSize = 14;
                     text.TextAlignment = System.Windows.TextAlignment.Center;
                     text.FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
+					text.TextWrapping = TextWrapping.Wrap;
 
-                    StackPanel sp = new StackPanel();
+					StackPanel sp = new StackPanel();
                     sp.Children.Add(Img);
                     sp.Children.Add(text);
                     Button button = new Button();
                     button.Height = 127;
                     button.Width = 100;
+					text.Width = button.Width - 10;
                     button.Content = sp;
                     button.Tag = text.Text;
                     button.Background = Brushes.White;
@@ -126,7 +128,14 @@ namespace Horizontal_Prototype_March_4
             window.CurrentUserControl = window.backStack.Pop();
             window._Navigation.Navigate(window.CurrentUserControl);
         }
-    
+
+		private void _searchBar_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.Key == Key.Enter)
+			{
+				Search_Text_Click(this, new RoutedEventArgs());
+			}
+		}
 	}
 
 }

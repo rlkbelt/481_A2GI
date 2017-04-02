@@ -52,7 +52,7 @@
             <Image x:Name="print_button" Source="images/buttons/print.png"/>
         </Button>
         <TextBox x:Name="tip_ingred" HorizontalAlignment="Left" BorderBrush="Transparent" Background="Transparent" Height="75" Margin="293,397,0,0" TextWrapping="Wrap" Text="Tip: Change units of measurement in the settings" VerticalAlignment="Top" Width="79" FontStyle="Italic" FontSize="12"/>
-        <Slider x:Name="Recipe_Ratio"   Orientation="Horizontal" Minimum="1" Maximum="3" Value="0" IsSnapToTickEnabled="True" BorderBrush="Black"   TickFrequency="1" Margin="117,420,115,104.2" ValueChanged="SliderMover"/>
+        <Slider x:Name="Recipe_Ratio"   Orientation="Horizontal" Minimum="1" Maximum="3" Value="1" IsSnapToTickEnabled="True" BorderBrush="Black"   TickFrequency="1" Margin="117,420,115,104.2" ValueChanged="SliderMover"/>
         <TextBox x:Name="RatiotextBox" HorizontalAlignment="Left" Height="23" FontFamily="Tw Cen MT Condensed Extra Bold" BorderBrush="Transparent" Background="Transparent" TextWrapping="Wrap" Text="Recipe Ratio: 1" VerticalAlignment="Top" Width="84" Margin="153,442,0,0"/>
     </Grid>
 </UserControl>

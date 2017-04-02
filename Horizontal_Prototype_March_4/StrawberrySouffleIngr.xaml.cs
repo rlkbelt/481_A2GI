@@ -21,7 +21,9 @@ namespace Horizontal_Prototype_March_4
     public partial class StrawberrySouffleIngr : UserControl
     {
         MainWindow window;
-        public StrawberrySouffleIngr()
+		PrintDialog printDialog;
+
+		public StrawberrySouffleIngr()
         {
             InitializeComponent();
             this.Loaded += (s, e) =>
@@ -92,11 +94,13 @@ namespace Horizontal_Prototype_March_4
 
         private void print_Click(object sender, RoutedEventArgs e)
         {
-            PrintDialog printDialog = new PrintDialog();
+            printDialog = new PrintDialog();
             printDialog.Show();
-            printDialog.update();
+			printDialog.Process();
 
-       }
+
+		}
+
 
 	}
 }

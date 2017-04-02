@@ -132,6 +132,7 @@ namespace Horizontal_Prototype_March_4
             this._ExpanderButton.IsExpanded = true;
 
 
+
         }
         public void OpenExpanded()
         {
@@ -336,18 +337,20 @@ namespace Horizontal_Prototype_March_4
             {
 
             }
-            else if (CurrentUserControl == _meatStep1)
+            else if (CurrentUserControl is MeatStep1)
             {
                 if (!isExpanded)
                 {
                     _meatStep1.MeatStep1Grid.Width = 470;
-                }
+					_meatStep1.BackButton.Visibility = Visibility.Visible;
+				}
 
                 else
                 {
-                    this._pagestack.HorizontalAlignment = HorizontalAlignment.Right;
-                    this._pagestack.Width = 372;
-                    _meatStep1.MeatStep1Grid.Width = 372;
+                    //this._pagestack.HorizontalAlignment = HorizontalAlignment.Right;
+                    //this._pagestack.Width = 372;
+                    //_meatStep1.MeatStep1Grid.Width = 372;
+					//_meatStep1.MeatStep1Grid.HorizontalAlignment = HorizontalAlignment.Right;
                     _meatStep1.BackButton.Visibility = Visibility.Hidden;
                 }
             }
