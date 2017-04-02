@@ -13,7 +13,7 @@
         </Button>
 
         <TextBlock x:Name="title_search" Height="53" Margin="135,102,142,384"  Text="Search" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="36"/>
-        <TextBox x:Name="_searchBar" Height="25" Margin="18,160,54,354"  Text="Search For A Recipe..." Width="300" FontFamily="Tw Cen MT Condensed" FontSize="20" FontStyle="Italic" MouseDoubleClick="Search_Click"/>
+        <TextBox x:Name="_searchBar" Height="25" Margin="18,160,54,354"  Text="Search For A Recipe..." Width="300" FontFamily="Tw Cen MT Condensed" FontSize="20" FontStyle="Italic" MouseDoubleClick="Search_Click" KeyDown="_searchBar_KeyDown" />
         <TextBlock x:Name="search_instructions" HorizontalAlignment="Left" Margin="65,207,0,0" TextWrapping="Wrap" Text=" Type recipe names, keywords or categories and click the magnifying glass to search" VerticalAlignment="Top" Width="253" Height="41"/>
         <Button x:Name="_SearchButton" Background="Transparent" BorderBrush="Transparent"  HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="30" Click="Search_Text_Click" Margin="323,160,0,0">
             <StackPanel >

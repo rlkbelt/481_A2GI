@@ -21,6 +21,7 @@ namespace Horizontal_Prototype_March_4
     public partial class MeatIngr : UserControl
     {
         MainWindow window;
+		PrintDialog printDialog;
         public MeatIngr()
         {
             InitializeComponent();
@@ -43,7 +44,8 @@ namespace Horizontal_Prototype_March_4
                 quan7.Text = "1 tbsp.";
                 quan8.Text = "1 tbsp.";
                 quan9.Text = "Taste";
-                //RatiotextBox.Text = "Recipe Ratio: 1"; //for some reason this fails 
+				try { RatiotextBox.Text = "Recipe Ratio: 1"; }
+				catch (Exception) { }//for some reason this fails 
 
             }
             else if (Recipe_Ratio.Value == 2)
@@ -88,14 +90,13 @@ namespace Horizontal_Prototype_March_4
 
         private void print_Click(object sender, RoutedEventArgs e)
         {
-            PrintDialog printDialog = new PrintDialog();
-            printDialog.Show();
-            printDialog.update();
+			printDialog = new PrintDialog();
+			printDialog.Show();
+			printDialog.Process();
 
- 
-           
 
-        }
 
-    }
+		}
+
+	}
 }

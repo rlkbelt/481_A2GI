@@ -126,7 +126,14 @@ namespace Horizontal_Prototype_March_4
             window.CurrentUserControl = window.backStack.Pop();
             window._Navigation.Navigate(window.CurrentUserControl);
         }
-    
+
+		private void _searchBar_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.Key == Key.Enter)
+			{
+				Search_Text_Click(this, new RoutedEventArgs());
+			}
+		}
 	}
 
 }

@@ -45,12 +45,13 @@ namespace Horizontal_Prototype_March_4
         }
         public void Filter(object sender, RoutedEventArgs e)
         {
-            _RecipesWrapPanel.Children.Clear();
-            Stack<string> searchStack = new Stack<string>();
+			_RecipesWrapPanel.Children.Clear();
+			Stack<string> searchStack = new Stack<string>();
             
             string _searchTerm = _searchboxAR.Text.ToLower();
+			
 
-            for (int i = 0; i < window._recipesArray.GetLength(0); i++)
+			for (int i = 0; i < window._recipesArray.GetLength(0); i++)
             {
                 string recipe_name = window._recipesArray[i, 0].ToString().ToLower();
                 if (recipe_name.Contains(_searchTerm))
