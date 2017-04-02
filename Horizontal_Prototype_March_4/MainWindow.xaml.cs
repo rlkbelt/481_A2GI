@@ -68,7 +68,7 @@ namespace Horizontal_Prototype_March_4
             InitializeComponent();
             _Navigation.Navigate(_homePage);
             CurrentUserControl = _homePage;
-            isMetric = false;
+            
         }
 
         public Boolean getMetric()

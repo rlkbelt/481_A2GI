@@ -13,8 +13,8 @@
 
         <TextBlock x:Name="settingsTitle_all" Height="53" Margin="124,66,138,420"  Text="Settings" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="36"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="38" Margin="72,119,0,0" TextWrapping="Wrap" Text="Unit of Measure" VerticalAlignment="Top" Width="220" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="36" TextDecorations="Underline"/>
-        <RadioButton x:Name="imperialRadio" Content="Imperial" HorizontalAlignment="Left" Margin="30,181,0,0" VerticalAlignment="Top" Height="44" Width="138" FontSize="24" Checked="ImperialCheck"/>
-        <RadioButton x:Name="metricRadio" Content="Metric" HorizontalAlignment="Left" Margin="192,181,0,0" VerticalAlignment="Top" Height="44" Width="138" FontSize="24" Checked="MetricCheck"/>
+        <RadioButton x:Name="imperialRadio" Content="Imperial" HorizontalAlignment="Left" Margin="30,181,0,0" VerticalAlignment="Top" Height="44" Width="138" FontSize="24" Checked="ImperialCheck" IsChecked="True"/>
+        <RadioButton x:Name="metricRadio" Content="Metric" HorizontalAlignment="Left" Margin="192,181,0,0" VerticalAlignment="Top" Height="44" Width="138" FontSize="24" Checked="MetricCheck" IsChecked="False"/>
 
 
     </Grid>

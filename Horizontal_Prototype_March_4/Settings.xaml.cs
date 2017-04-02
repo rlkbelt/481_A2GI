@@ -42,12 +42,16 @@ namespace Horizontal_Prototype_March_4
 
         private void ImperialCheck(object sender, RoutedEventArgs e)
         {
-            window.setMetric(false);
-        }
+			imperialRadio.IsChecked = true;
+			try { window._meatIngr.SliderMover(null, null); } catch (Exception) { }
+			
+		}
 
         private void MetricCheck(object sender, RoutedEventArgs e)
         {
-            window.setMetric(true);
-        }
+            
+			metricRadio.IsChecked = true;
+			try { window._meatIngr.SliderMover(null, null); } catch (Exception) { }
+		}
     }
 }
