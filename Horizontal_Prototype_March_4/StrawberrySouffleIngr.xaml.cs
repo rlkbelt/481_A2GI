@@ -47,7 +47,7 @@ namespace Horizontal_Prototype_March_4
                     straw_quan7.Text = "1 Cup";
                     straw_quan8.Text = "1 Tbsp.";
                     straw_quan9.Text = "1 Tsp.";
-                    //RatiotextBox.Text = "Recipe Ratio: 1"; //for some reason this fails 
+                    straw_RatiotextBox.Text = "Recipe Ratio: 1"; //for some reason this fails 
 
                 }
                 else if (straw_Recipe_Ratio.Value == 2 && (bool)window._settings.imperialRadio.IsChecked)
