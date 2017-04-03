@@ -54,6 +54,8 @@ namespace Horizontal_Prototype_March_4
         public Step2Screen _step2Screen = new Step2Screen();
         public HomePage _homePage = new HomePage();
         public MeatStep1 _meatStep1 = new MeatStep1();
+		public Souffle_Step1 _souffleStep1 = new Souffle_Step1();
+		public Souffle_Step2 _souffleStep2 = new Souffle_Step2();
         public LemonIngred _lemonIngr = new LemonIngred();
 
 
@@ -109,14 +111,7 @@ namespace Horizontal_Prototype_March_4
             CurrentUserControl = _settings;
             OpenExpanded();
         }
-        /**
-		private void LemonChickenClick(object sender, RoutedEventArgs e)
-		{
-			_Navigation.Navigate(_lemonChickenDesc);
-			backStack.Push(CurrentUserControl);
-			CurrentUserControl = _lemonChickenDesc;
-
-		} **/
+     
         public void OpenCollapsed()
         {
             // this._ExpanderButton.IsExpanded = true;
@@ -301,6 +296,16 @@ namespace Horizontal_Prototype_March_4
             }
             else if (CurrentUserControl is MeatDesc)
             {
+				if(!isExpanded)
+				{
+					MeatDesc md = CurrentUserControl as MeatDesc;
+					md._meatGrid.Width = 470;
+				}
+				else
+				{
+					MeatDesc md = CurrentUserControl as MeatDesc;
+					md._meatGrid.Width = 372;
+				}
 
             }
             else if (CurrentUserControl is MeatIngr)

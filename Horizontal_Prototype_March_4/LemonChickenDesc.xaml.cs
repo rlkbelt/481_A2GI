@@ -16,7 +16,6 @@ using System.Windows.Shapes;
 namespace Horizontal_Prototype_March_4
 {
 
-
 	/// <summary>
 	/// Interaction logic for AllRecipes.xaml
 	/// </summary>
@@ -29,7 +28,7 @@ namespace Horizontal_Prototype_March_4
 		public object CurrentUserControl { get; set; }
 
 		MainWindow window;
-        public Boolean favFlag = false;
+		public Boolean favFlag = false;
 		public LemonChickenDesc()
 		{
 			InitializeComponent();
@@ -39,74 +38,76 @@ namespace Horizontal_Prototype_March_4
 			};
 		}
 
-        private void BackClick(object sender, RoutedEventArgs e)
-        {
-            if (window.backStack.Peek() is HomePage)
-            {
-                window.expanderInvisible();
-            }
-            if (window.backStack.Peek() is favourites)
-            {
-                window._favourites.initValues(window._recipesArray, window.favouritesList);
-            }
-            window.CurrentUserControl = window.backStack.Pop();
-            window._Navigation.Navigate(window.CurrentUserControl);
-        }
-        private void favClick(object sender, RoutedEventArgs e)
-        {
+		private void BackClick(object sender, RoutedEventArgs e)
+		{
+			if (window.backStack.Peek() is HomePage)
+			{
+				window.expanderInvisible();
+			}
+			if (window.backStack.Peek() is favourites)
+			{
+				window._favourites.initValues(window._recipesArray, window.favouritesList);
+			}
+			window.CurrentUserControl = window.backStack.Pop();
+			window._Navigation.Navigate(window.CurrentUserControl);
+		}
+		private void favClick(object sender, RoutedEventArgs e)
+		{
 
 
-            if (!favFlag)
-            {
-                favFlag = true;
-                Image img = favButton.Content as Image;
-                BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
-                img.Source = BitImg;
-                favButton.Content = img;
-                window.favouritesList.Add("lemon chicken");
-                for (int i = 0; i < window._recipesArray.GetLength(0); i++)
-                {
+			if (!favFlag)
+			{
+				favFlag = true;
+				Image img = favButton.Content as Image;
+				BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
+				img.Source = BitImg;
+				favButton.Content = img;
+				window.favouritesList.Add("lemon chicken");
+				for (int i = 0; i < window._recipesArray.GetLength(0); i++)
+				{
 
-                    if (window._recipesArray[i, 0].ToString().ToLower().Equals("lemon chicken"))
-                    {
+					if (window._recipesArray[i, 0].ToString().ToLower().Equals("lemon chicken"))
+					{
 
-                        window._recipesArray[i, 3] = this;
-                        break;
-
-
-                    }
-                }
-            }
-            else
-            {
-                favFlag = false;
-                Image img = favButton.Content as Image;
-                BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2.png", UriKind.Relative));
-                img.Source = BitImg;
-                favButton.Content = img;
-                window.favouritesList.Remove("lemon chicken");
-                for (int i = 0; i < window._recipesArray.GetLength(0); i++)
-                {
-
-                    if (window._recipesArray[i, 0].ToString().ToLower().Equals("lemon chicken"))
-                    {
-
-                        window._recipesArray[i, 3] = this;
-                        break;
+						window._recipesArray[i, 3] = this;
+						break;
 
 
-                    }
-                }
+					}
+				}
+			}
+			else
+			{
+				favFlag = false;
+				Image img = favButton.Content as Image;
+				BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2.png", UriKind.Relative));
+				img.Source = BitImg;
+				favButton.Content = img;
+				window.favouritesList.Remove("lemon chicken");
+				for (int i = 0; i < window._recipesArray.GetLength(0); i++)
+				{
 
-            }
+					if (window._recipesArray[i, 0].ToString().ToLower().Equals("lemon chicken"))
+					{
+
+						window._recipesArray[i, 3] = this;
+						break;
 
 
-        }
+					}
+				}
 
-        private void IngredClick(object sender, RoutedEventArgs e)
-        {
-            window.backStack.Push(this);
-            window._Navigation.Navigate(window._lemonIngr);
-        }
-    }
+			}
+
+
+		}
+
+		private void IngredClick(object sender, RoutedEventArgs e)
+		{
+			window.backStack.Push(this);
+			window._Navigation.Navigate(window._lemonIngr);
+
+		}
+
+	}
 }
