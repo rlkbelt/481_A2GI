@@ -325,6 +325,18 @@ namespace Horizontal_Prototype_March_4
                     _strawIngr._strawIngr_Grid.Width = 372;
                 }
             }
+
+            else if (CurrentUserControl is LemonIngred)
+            {
+                if (!isExpanded)
+                {
+                    _lemonIngr._lemonIngr_Grid.Width = 470;
+                }
+                else
+                {
+                    _lemonIngr._lemonIngr_Grid.Width = 372;
+                }
+            }
             else if (CurrentUserControl is Popular)
             {
                 if (!isExpanded)
