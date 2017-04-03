@@ -54,6 +54,7 @@ namespace Horizontal_Prototype_March_4
 			metricRadio.IsChecked = true;
 			try { window._meatIngr.SliderMover(null, null); } catch (Exception) { }
             try { window._strawIngr.SliderMover(null, null); } catch (Exception) { }
+            try { window._lemonIngr.SliderMover(null, null); } catch (Exception) { }
         }
     }
 }

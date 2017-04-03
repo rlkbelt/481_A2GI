@@ -58,6 +58,9 @@
     <Compile Include="LemonChickenDesc.xaml.cs">
       <DependentUpon>LemonChickenDesc.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LemonIngred.xaml.cs">
+      <DependentUpon>LemonIngred.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MeatComplete.xaml.cs">
       <DependentUpon>MeatComplete.xaml</DependentUpon>
     </Compile>
@@ -105,6 +108,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="LemonChickenDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LemonIngred.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

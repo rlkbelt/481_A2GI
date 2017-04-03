@@ -54,6 +54,7 @@ namespace Horizontal_Prototype_March_4
         public Step2Screen _step2Screen = new Step2Screen();
         public HomePage _homePage = new HomePage();
         public MeatStep1 _meatStep1 = new MeatStep1();
+        public LemonIngred _lemonIngr = new LemonIngred();
 
 
 		public Boolean isExpanded = true;
@@ -366,6 +367,18 @@ namespace Horizontal_Prototype_March_4
                 {
 
                     _meatStep1.BackButton.Visibility = Visibility.Hidden;
+                }
+            }
+            else if (CurrentUserControl is LemonIngred)
+            {
+                if (!isExpanded)
+                {
+                    _lemonIngr._lemonIngr_Grid.Width = 470;
+                }
+
+                else
+                {
+                    _lemonIngr._lemonIngr_Grid.Width = 372;
                 }
             }
         

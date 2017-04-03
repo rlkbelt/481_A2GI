@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="Horizontal_Prototype_March_4.LemonIngred"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Horizontal_Prototype_March_4"
+             mc:Ignorable="d" 
+             d:DesignHeight="539" d:DesignWidth="462">
+    <Grid x:Name="_lemonIngr_Grid" Width="372" Margin="90,0,0,0">
+        <Button x:Name="page_back_ingr" Background="Transparent" BorderBrush="Transparent" BorderThickness="0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="75" Margin="20,0,0,0" Click="BackClick" >
+            <Image Source="images/buttons/back.png" Height="75" HorizontalAlignment="Left" Width="100"/>
+
+        </Button>
+        <Grid HorizontalAlignment="Left" Height="297" Margin="97,106,0,0" VerticalAlignment="Top" Width="216" Background="White">
+            <WrapPanel>
+                <TextBox x:Name="quan1" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="70" FontSize="16"/>
+                <TextBox x:Name="ingr1" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="Chicken Breasts" VerticalAlignment="Top" Width="146" FontSize="18"/>
+
+                <TextBox x:Name="quan2" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="1/4 Cup" VerticalAlignment="Top" Width="70"  FontSize="16"/>
+                <TextBox x:Name="ingr2" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Olive Oil" VerticalAlignment="Top" Width="146" FontSize="18"/>
+
+                <TextBox x:Name="quan3" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  Text="3 tbsp." FontSize="16"/>
+                <TextBox x:Name="ingr3" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Minced Garlic" VerticalAlignment="Top" Width="146" FontSize="18"/>
+
+                <TextBox x:Name="quan4" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="16" Text="2 tbsp."/>
+                <TextBox x:Name="ingr4" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lemon Juice" VerticalAlignment="Top" Width="146" FontSize="18"/>
+
+                <TextBox x:Name="quan5" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1"/>
+                <TextBox x:Name="ingr5" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lemon" VerticalAlignment="Top" Width="146" FontSize="18"/>
+
+                <TextBox x:Name="quan6" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 tbsp."/>
+                <TextBox x:Name="ingr6" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lemon Zest" VerticalAlignment="Top" Width="146" FontSize="18"/>
+
+                <TextBox x:Name="quan7" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1/3 Cup"/>
+                <TextBox x:Name="ingr7" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Dry White Wine" VerticalAlignment="Top" Width="146" FontSize="18"/>
+
+                <TextBox x:Name="quan8" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 tsp."/>
+                <TextBox x:Name="ingr8" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Minced Thyme" VerticalAlignment="Top" Width="146" FontSize="18"/>
+
+                <TextBox x:Name="quan9" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="Taste"/>
+                <TextBox x:Name="ingr9" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Salt/Pepper" VerticalAlignment="Top" Width="146" FontSize="18"/>
+            </WrapPanel>
+        </Grid>
+        <TextBlock x:Name="tBlock" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="153,36,0,0" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" FontSize="24"/>
+        <Button x:Name="beg_but" Content="Begin" HorizontalAlignment="Left" Margin="97,470,0,0" VerticalAlignment="Top" Width="196" Height="38" FontSize="22" FontFamily="Tw Cen MT Condensed Extra Bold" />
+        <Button x:Name="star_but" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="62" Height="52" Background="Transparent" BorderBrush="Transparent"/>
+        <Button x:Name="print" HorizontalAlignment="Left" Margin="293,10,0,0" VerticalAlignment="Top" Width="62" Height="52" Background="Transparent" BorderBrush="Transparent" Click="print_Click">
+            <Image x:Name="print_button" Source="images/buttons/print.png"/>
+        </Button>
+        <TextBox x:Name="tip_ingred" HorizontalAlignment="Left" BorderBrush="Transparent" Background="Transparent" Height="75" Margin="293,397,0,0" TextWrapping="Wrap" Text="Tip: Change units of measurement in the settings" VerticalAlignment="Top" Width="79" FontStyle="Italic" FontSize="12"/>
+        <Slider x:Name="Recipe_Ratio"   Orientation="Horizontal" Minimum="1" Maximum="3" Value="1" IsSnapToTickEnabled="True" BorderBrush="Black"   TickFrequency="1" Margin="117,420,115,104.2" ValueChanged="SliderMover"/>
+        <TextBox x:Name="RatiotextBox" HorizontalAlignment="Left" Height="23" FontFamily="Tw Cen MT Condensed Extra Bold" BorderBrush="Transparent" Background="Transparent" TextWrapping="Wrap" Text="Recipe Ratio: 1" VerticalAlignment="Top" Width="84" Margin="153,442,0,0"/>
+    </Grid>
+</UserControl>
