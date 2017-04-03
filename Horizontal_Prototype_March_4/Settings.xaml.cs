@@ -44,14 +44,16 @@ namespace Horizontal_Prototype_March_4
         {
 			imperialRadio.IsChecked = true;
 			try { window._meatIngr.SliderMover(null, null); } catch (Exception) { }
-			
-		}
+            try { window._strawIngr.SliderMover(null, null); } catch (Exception) { }
+
+        }
 
         private void MetricCheck(object sender, RoutedEventArgs e)
         {
             
 			metricRadio.IsChecked = true;
 			try { window._meatIngr.SliderMover(null, null); } catch (Exception) { }
-		}
+            try { window._strawIngr.SliderMover(null, null); } catch (Exception) { }
+        }
     }
 }

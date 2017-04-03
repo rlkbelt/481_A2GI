@@ -304,7 +304,25 @@ namespace Horizontal_Prototype_March_4
             }
             else if (CurrentUserControl is MeatIngr)
             {
-
+                if (!isExpanded)
+                {
+                    _meatIngr._meatIngr_Grid.Width = 470;
+                }
+                else
+                {
+                    _meatIngr._meatIngr_Grid.Width = 372;
+                }
+            }
+            else if (CurrentUserControl is StrawberrySouffleIngr)
+            {
+                if (!isExpanded)
+                {
+                    _strawIngr._strawIngr_Grid.Width = 470;
+                }
+                else
+                {
+                    _strawIngr._strawIngr_Grid.Width = 372;
+                }
             }
             else if (CurrentUserControl is Popular)
             {
