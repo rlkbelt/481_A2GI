@@ -45,7 +45,7 @@ namespace Horizontal_Prototype_March_4
         public MeatIngr _meatIngr = new MeatIngr();
         public Popular _popular = new Popular();
         public StrawberrySouffleIngr _strawIngr = new StrawberrySouffleIngr();
-        
+		public StrawberrySouffleDesc _strawDesc = new StrawberrySouffleDesc();
 
         public Settings _settings = new Settings();
 
@@ -386,7 +386,36 @@ namespace Horizontal_Prototype_March_4
                     _meatStep1.BackButton.Visibility = Visibility.Hidden;
                 }
             }
-            else if (CurrentUserControl is LemonIngred)
+
+			else if (CurrentUserControl is Souffle_Step1)
+			{
+				if (!isExpanded)
+				{
+					_souffleStep1.Souffle_Step1Grid.Width = 470;
+					_souffleStep1.BackButton.Visibility = Visibility.Visible;
+				}
+				else
+				{
+					_souffleStep1.BackButton.Visibility = Visibility.Hidden;
+				}
+			}
+
+			else if (CurrentUserControl is Souffle_Step2)
+			{
+				if (!isExpanded)
+				{
+					_souffleStep2.Souffle_Step2Grid.Width = 470;
+					_souffleStep2.BackButton.Visibility = Visibility.Visible;
+				}
+				else
+				{
+					_souffleStep2.BackButton.Visibility = Visibility.Hidden;
+				}
+			}
+
+
+
+			else if (CurrentUserControl is LemonIngred)
             {
                 if (!isExpanded)
                 {

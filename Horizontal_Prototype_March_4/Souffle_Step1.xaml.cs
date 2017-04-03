@@ -51,5 +51,11 @@ namespace Horizontal_Prototype_March_4
 			window.backStack.Push(this);
 			window._Navigation.Navigate(window._souffleStep2);
 		}
+
+		private void backToDesc_Click(object sender, RoutedEventArgs e)
+		{
+			window.backStack.Push(this);
+			window._Navigation.Navigate(window._strawDesc);
+		}
 	}
 }

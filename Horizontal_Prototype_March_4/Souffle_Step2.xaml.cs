@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace Horizontal_Prototype_March_4
 {
 	/// <summary>
-	/// Interaction logic for Souffle_Step1.xaml
+	/// Interaction logic for Souffle_Step2.xaml
 	/// </summary>
 	public partial class Souffle_Step2 : UserControl
 	{
@@ -45,6 +45,17 @@ namespace Horizontal_Prototype_March_4
 			}
 			window.CurrentUserControl = window.backStack.Pop();
 			window._Navigation.Navigate(window.CurrentUserControl);
+		}
+		private void NextClicked(object sender, RoutedEventArgs e)
+		{
+			window.backStack.Push(this);
+			//window._Navigation.Navigate(window._souffleStep2);
+		}
+
+		private void backToDesc_Click(object sender, RoutedEventArgs e)
+		{
+			window.backStack.Push(this);
+			window._Navigation.Navigate(window._strawDesc);
 		}
 	}
 }

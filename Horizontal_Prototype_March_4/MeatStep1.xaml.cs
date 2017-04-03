@@ -29,8 +29,6 @@ namespace Horizontal_Prototype_March_4
                 window = Window.GetWindow(this) as MainWindow;
                 window.OpenCollapsed();
                // window._ExpanderButton.Expanded = Expander.Collap
-
-
             };
 
         }
