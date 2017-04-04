@@ -226,13 +226,20 @@ namespace Horizontal_Prototype_March_4
                 {
                     _search._search_Grid.Width = 470;
 					_search._SearchRecipesWrapPanel.Width = 430;
-					incButtonSize(_search._SearchRecipesWrapPanel);
+                    _search._searchWP.Margin = new Thickness(60, 160, 0, 345);
+                    _search.search_instructions.Margin = new Thickness(94, 177, 84, 0);
+
+
+                    incButtonSize(_search._SearchRecipesWrapPanel);
                 }
                 else
                 {
                     _search._search_Grid.Width = 372;
-					_search._SearchRecipesWrapPanel.Width = 332;
-					decButtonSize(_search._SearchRecipesWrapPanel);
+					_search._SearchRecipesWrapPanel.Width = 340;
+                    _search._searchWP.Margin = new Thickness(20, 160, 0, 345);
+                    _search.search_instructions.Margin = new Thickness(54, 177, 84, 0);
+                    decButtonSize(_search._SearchRecipesWrapPanel);
+                   
 
 				}
             }
@@ -477,13 +484,6 @@ namespace Horizontal_Prototype_March_4
 						img.Width += 30;
 						BitmapImage btmi = img.Source as BitmapImage;
 						
-						if (btmi.UriSource.ToString().Contains("Meatloaf"))
-						{
-							//_allRecipes._searchboxAR.Text = btmi.UriSource.ToString();
-							img.Height = img.Height - 20;
-							img.Width = img.Width - 20;
-							//img.Margin = new Thickness(0, 0, 0, 80);
-						}
 
 					}
 				
