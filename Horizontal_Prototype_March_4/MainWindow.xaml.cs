@@ -41,7 +41,7 @@ namespace Horizontal_Prototype_March_4
         public AllRecipes _allRecipes = new AllRecipes();
         public categories _categories = new categories();
         public MeatComplete _meatComplete = new MeatComplete();
-        
+		public Beat_Definition _beatDefinition = new Beat_Definition();
         public MeatIngr _meatIngr = new MeatIngr();
         public Popular _popular = new Popular();
         public StrawberrySouffleIngr _strawIngr = new StrawberrySouffleIngr();

@@ -11,11 +11,6 @@
         <TextBlock x:Name="instruction1" HorizontalAlignment="Left" Margin="60,62,0,0" TextWrapping="Wrap" Text="Mix beef, eggs, milk, bread crumbs, and chopped onions in a large mixing bowl. " VerticalAlignment="Top" FontSize="21" Height="111" Width="199"/>
         <TextBlock x:Name="definitions" HorizontalAlignment="Left" Text="Definitions: " VerticalAlignment="Top" TextDecorations="underline" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="24" Height="27" Width="108" Margin="60,195,0,0"/>
         <Button x:Name="term" Background="White" Foreground="Blue" Content="chopped" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Height="28" FontSize="24" FontFamily="Tw Cen Mt Condensed Extra Bold" Margin="60,227,0,0"/>
-        <Button x:Name="settings_step2" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="36" Height="40" Margin="266,444,0,0">
-            <StackPanel>
-                <Image Source="images/buttons/settings_button.png" Height="30"/>
-            </StackPanel>
-        </Button>
         <Grid HorizontalAlignment="Left" Height="117" Margin="85,271,0,0" VerticalAlignment="Top" Width="164">
             <TextBox x:Name="grbeef" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Ground Beef" VerticalAlignment="Top" Width="121" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="14" Margin="42,0,0,0" />
             <TextBox x:Name="onions" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="White Onions" VerticalAlignment="Top" Width="121" Margin="42,23,0,0" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="14"/>
@@ -28,7 +23,6 @@
             <TextBox x:Name="onePound_Copy3" HorizontalAlignment="Right" TextWrapping="Wrap" Text="1 cup" Width="42" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="14" Margin="0,69,122,25" RenderTransformOrigin="-0.563,3.539"/>
             <TextBox x:Name="onePound_Copy4" HorizontalAlignment="Right" TextWrapping="Wrap" Text="1" Width="42" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="14" Margin="0,92,122,0" RenderTransformOrigin="-0.563,3.539"/>
         </Grid>
-        <Button x:Name="exitRecipe" Content="Exit Recipe" Background="White" HorizontalAlignment="Left" Margin="119,406,0,0" VerticalAlignment="Top" Width="96" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Height="21"/>
 
     </Grid>
 

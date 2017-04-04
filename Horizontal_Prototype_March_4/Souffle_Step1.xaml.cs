@@ -52,5 +52,12 @@ namespace Horizontal_Prototype_March_4
 			window.CurrentUserControl = window._strawDesc;
 			window._Navigation.Navigate(window._strawDesc);
 		}
+
+		private void term_Click(object sender, RoutedEventArgs e)
+		{
+			window.CurrentUserControl = window._beatDefinition;
+			window._Navigation.Navigate(window._beatDefinition);
+		}
+
 	}
 }

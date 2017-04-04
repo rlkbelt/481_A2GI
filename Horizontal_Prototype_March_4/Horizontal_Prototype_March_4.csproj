@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Beat_Definition.xaml.cs">
+      <DependentUpon>Beat_Definition.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LemonChickenDesc.xaml.cs">
       <DependentUpon>LemonChickenDesc.xaml</DependentUpon>
     </Compile>
@@ -106,6 +109,10 @@
     <Page Include="AllRecipes.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Beat_Definition.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="categories.xaml">
       <Generator>MSBuild:Compile</Generator>

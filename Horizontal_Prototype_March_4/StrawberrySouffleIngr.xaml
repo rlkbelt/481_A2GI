@@ -23,11 +23,11 @@
                 <TextBox x:Name="straw_quan3" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  Text="2 Tbsp." FontSize="16"/>
                 <TextBox x:Name="straw_ingr3" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lemon Juice" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="straw_quan4" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="16" Text="1/4 Cup"/>
-                <TextBox x:Name="straw_ingr4" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lukewarm Water" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="straw_quan4" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="16" Text="3"/>
+                <TextBox x:Name="straw_ingr4" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Eggs" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="straw_quan5" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="3"/>
-                <TextBox x:Name="straw_ingr5" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Eggs" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="straw_quan5" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1/4 Cup"/>
+                <TextBox x:Name="straw_ingr5" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lukewarm Water" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
                 <TextBox x:Name="straw_quan6" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Cup"/>
                 <TextBox x:Name="straw_ingr6" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Powdered Sugar" VerticalAlignment="Top" Width="146" FontSize="18"/>

@@ -15,8 +15,10 @@
         </Button>
         <Grid Margin="90,10,90,0">
             <TextBlock x:Name="sStep1_Title" HorizontalAlignment="Left" Margin="110,0,0,0" TextWrapping="Wrap" Text="Step 1" VerticalAlignment="Top" TextDecorations="Underline" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Height="36" Width="74"/>
-            <TextBlock x:Name="sStep1_Step" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="168" Width="270" FontSize="24"><Run Text="Whip together pureed strawberries, chilled cream, lemon juice, lukewarm water, and eggs until fluffy."/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="sStep1_Step" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="174" FontSize="24"><Run Text="In a large mixer  "/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="sStep1p2_Step" HorizontalAlignment="Left" Margin="10,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="159" Width="270" FontSize="24"><Run Foreground="Black" Text="together pureed strawberries, chilled cream, lemon juice, eggs,  and lukewarm water until fluffy."/></TextBlock>
             <Button x:Name="backToDesc" Content="Back to Recipe Description" Background="White" HorizontalAlignment="Left" Margin="69,473,0,0" VerticalAlignment="Top" Width="168" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Height="21" Click="backToDesc_Click"/>
+            <Button x:Name="term" Background="White" Foreground="Blue" Content="beat " HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Height="34" FontSize="22" Margin="184,43,0,0" Click="term_Click" FontWeight="Bold"/>
         </Grid>
         <Button x:Name="BackButton" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Click="BackClicked">
             <StackPanel>
