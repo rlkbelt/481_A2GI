@@ -90,7 +90,7 @@ namespace Horizontal_Prototype_March_4
                     straw_quan7.Text = "5 mL";
                     straw_quan8.Text = "15 mL";
                     straw_quan9.Text = "250 mL";
-                    //RatiotextBox.Text = "Recipe Ratio: 1"; //for some reason this fails 
+                    straw_RatiotextBox.Text = "Recipe Ratio: 1"; 
 
                 }
                 else if (straw_Recipe_Ratio.Value == 2 && (bool)window._settings.metricRadio.IsChecked)
