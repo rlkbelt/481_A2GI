@@ -56,7 +56,9 @@ namespace Horizontal_Prototype_March_4
         public MeatStep1 _meatStep1 = new MeatStep1();
 		public Souffle_Step1 _souffleStep1 = new Souffle_Step1();
 		public Souffle_Step2 _souffleStep2 = new Souffle_Step2();
-        public LemonIngred _lemonIngr = new LemonIngred();
+		public Souffle_Step3 _souffleStep3 = new Souffle_Step3();
+		public Souffle_Complete _souffleComp = new Souffle_Complete();
+		public LemonIngred _lemonIngr = new LemonIngred();
 
 
 		public Boolean isExpanded = true;
@@ -338,7 +340,19 @@ namespace Horizontal_Prototype_March_4
                 }
             }
 
-            else if (CurrentUserControl is LemonIngred)
+			else if (CurrentUserControl is Souffle_Complete)
+			{
+				if (!isExpanded)
+				{
+					_souffleComp._souffleCompGrid.Width = 470;
+				}
+				else
+				{
+					_souffleComp._souffleCompGrid.Width = 372;
+				}
+			}
+
+			else if (CurrentUserControl is LemonIngred)
             {
                 if (!isExpanded)
                 {
@@ -420,6 +434,18 @@ namespace Horizontal_Prototype_March_4
 				}
 			}
 
+			else if (CurrentUserControl is Souffle_Step3)
+			{
+				if (!isExpanded)
+				{
+					_souffleStep3.Souffle_Step3Grid.Width = 470;
+					_souffleStep3.BackButton.Visibility = Visibility.Visible;
+				}
+				else
+				{
+					_souffleStep3.BackButton.Visibility = Visibility.Hidden;
+				}
+			}
 
 
 			else if (CurrentUserControl is LemonIngred)

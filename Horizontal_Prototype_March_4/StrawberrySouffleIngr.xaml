@@ -32,14 +32,14 @@
                 <TextBox x:Name="straw_quan6" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Cup"/>
                 <TextBox x:Name="straw_ingr6" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Powdered Sugar" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="straw_quan7" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Cup"/>
-                <TextBox x:Name="straw_ingr7" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Sliced Strawberries" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="straw_quan7" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Tsp."/>
+                <TextBox x:Name="straw_ingr7" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Vanilla" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
                 <TextBox x:Name="straw_quan8" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Tbsp."/>
                 <TextBox x:Name="straw_ingr8" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Gelatine" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="straw_quan9" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Tsp."/>
-                <TextBox x:Name="straw_ingr9" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Vanilla" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="straw_quan9" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Cup"/>
+                <TextBox x:Name="straw_ingr9" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Sliced Strawberries" VerticalAlignment="Top" Width="146" FontSize="18"/>
             </WrapPanel>
         </Grid>
         <TextBlock x:Name="tBlock" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="133,45,0,0" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" FontSize="32"/>

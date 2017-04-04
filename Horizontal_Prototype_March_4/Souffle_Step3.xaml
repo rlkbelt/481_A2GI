@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Horizontal_Prototype_March_4.Souffle_Step2"
+﻿<UserControl x:Class="Horizontal_Prototype_March_4.Souffle_Step3"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Horizontal_Prototype_March_4"
              mc:Ignorable="d" 
              d:DesignHeight="570" d:DesignWidth="470">
-    <Grid Name="Souffle_Step2Grid" Width="470" Height="570">
+    <Grid Name="Souffle_Step3Grid" Width="470" Height="570">
         <Button x:Name="NextButton" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Margin="380,0,0,0" Click="NextClicked">
             <StackPanel>
                 <Image Source="images/buttons/NextArrow.png" Height="98"/>
@@ -14,8 +14,8 @@
             </StackPanel>
         </Button>
         <Grid Margin="90,10,90,0">
-            <TextBlock x:Name="sStep1_Title" HorizontalAlignment="Left" Margin="110,0,0,0" TextWrapping="Wrap" Text="Step 2" VerticalAlignment="Top" TextDecorations="Underline" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Height="36" Width="74"/>
-            <TextBlock x:Name="sStep1_Step" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="168" Width="270" FontSize="24" Text="Add in powdered sugar, gelatine, and vanilla.  Mix thoroughly."/>
+            <TextBlock x:Name="sStep1_Title" HorizontalAlignment="Left" Margin="110,0,0,0" TextWrapping="Wrap" Text="Step 3" VerticalAlignment="Top" TextDecorations="Underline" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Height="36" Width="74"/>
+            <TextBlock x:Name="sStep1_Step" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="168" Width="270" FontSize="24" Text="Bake in oven for 15 minutes.  Top with plenty of sliced strawberries."/>
             <Button x:Name="backToDesc" Content="Back to Recipe Description" Background="White" HorizontalAlignment="Left" Margin="69,473,0,0" VerticalAlignment="Top" Width="168" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Height="21" Click="backToDesc_Click"/>
         </Grid>
         <Button x:Name="BackButton" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Click="BackClicked">

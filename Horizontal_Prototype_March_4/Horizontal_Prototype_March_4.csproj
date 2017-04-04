@@ -76,11 +76,17 @@
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Souffle_Complete.xaml.cs">
+      <DependentUpon>Souffle_Complete.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Souffle_Step1.xaml.cs">
       <DependentUpon>Souffle_Step1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Souffle_Step2.xaml.cs">
       <DependentUpon>Souffle_Step2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Souffle_Step3.xaml.cs">
+      <DependentUpon>Souffle_Step3.xaml</DependentUpon>
     </Compile>
     <Compile Include="Step1Screen.xaml.cs">
       <DependentUpon>Step1Screen.xaml</DependentUpon>
@@ -177,11 +183,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Souffle_Complete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Souffle_Step1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Souffle_Step2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Souffle_Step3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
