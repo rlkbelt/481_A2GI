@@ -13,11 +13,18 @@
         </Button>
         <Button x:Name="star_but" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="62" Height="52" Background="Transparent" BorderBrush="Transparent">
             <Image x:Name="star_img" Source="images/buttons/star2.png"/>
+            <Button.BitmapEffect >
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+            </Button.BitmapEffect>
         </Button>
         <TextBlock x:Name="complete_t" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="130,72,0,0" TextWrapping="Wrap" Text="Recipe Complete" VerticalAlignment="Top" FontSize="24" Width="106"/>
         <Image x:Name="meat_img" Source="images/food/Meatloaf-121.jpg" Margin="76,141,85,187"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="60" Margin="94,373,0,0" TextWrapping="Wrap" Text="Tip: If you enjoyed this recipe, hit the star above to save it to your favorites" VerticalAlignment="Top" Width="174" FontSize="14" Background="Transparent" BorderBrush="Black"/>
-        <Button x:Name="beg_but" Content="Exit" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="76,449,0,0" VerticalAlignment="Top" Width="211" Height="38" FontSize="22"/>
+        <Button x:Name="exit_but" Content="Exit" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="76,449,0,0" VerticalAlignment="Top" Width="211" Height="38" FontSize="22">
+            <Button.BitmapEffect >
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+            </Button.BitmapEffect>
+        </Button>
 
 
     </Grid>

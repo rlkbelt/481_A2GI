@@ -73,15 +73,19 @@ namespace Horizontal_Prototype_March_4
 			UserControl1 uc = new UserControl1();
 
 
-			string[] ingred = new string[5];
-			ingred[0] = "1 Cup";
+			
+			
 	
 		System.Threading.Thread.Sleep(10);
 		
-			for (int i = 0; i < 1; i++)
+			for (int i = 0; i < ingredString.Length; i++)
 			{
 				
+<<<<<<< HEAD
 				//arrayTB[i].Text. = "aString";
+=======
+				arrayTB[i].Text = window._strawIngr.straw_quan1.Text;
+>>>>>>> af07b60b37293202588ce58a52df6d23312e7697
 				arrayTB[i].FontSize = 16;
 				arrayTB[i].HorizontalAlignment = HorizontalAlignment.Left;
 				arrayTB[i].FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
