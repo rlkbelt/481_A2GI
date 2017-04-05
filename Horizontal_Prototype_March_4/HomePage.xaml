@@ -8,9 +8,9 @@
              d:DesignHeight="542" d:DesignWidth="472">
     <Grid>
         <WrapPanel x:Name="_HomePageUC_DP" Height="542" Width="382" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-            <Button x:Name="all_recipes" Height="180" Width="382" Background="White" Content="All Recipes"  FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="48" DockPanel.Dock="Bottom" Click="AllRecipes_Click"/>
-            <Button x:Name="popular" Height="180" Width="382" Background="LightGray" Content="Popular"    FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="48" DockPanel.Dock="Bottom" Click="Popular_Click"/>
-            <Button x:Name="categories" Height="179" Width="382" Background="White" Content="Categories"  FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="48" DockPanel.Dock="Bottom" Click="Categories_Click"/>
+            <Button x:Name="all_recipes" BorderBrush ="BurlyWood" Height="180" Width="382" Background="Beige" Content="All Recipes"  FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="48" DockPanel.Dock="Bottom" Click="AllRecipes_Click"/>
+            <Button x:Name="popular" Height="180" Width="382" BorderBrush ="BurlyWood" Background="Beige" Content="Popular"    FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="48" DockPanel.Dock="Bottom" Click="Popular_Click"/>
+            <Button x:Name="categories" Height="179" Width="382" BorderBrush ="BurlyWood" Background="Beige" Content="Categories"  FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="48" DockPanel.Dock="Bottom" Click="Categories_Click"/>
         </WrapPanel>
     </Grid>
 </UserControl>

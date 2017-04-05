@@ -92,7 +92,6 @@ namespace Horizontal_Prototype_March_4
             _Navigation.Navigate(_homePage);
             backStack.Push(CurrentUserControl);
             CurrentUserControl = _homePage;
-
         }
         public void SearchClick(object sender, RoutedEventArgs e)
         {

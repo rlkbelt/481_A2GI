@@ -19,7 +19,9 @@
             <WrapPanel x:Name="_CategoriesWrapPanel" HorizontalAlignment="Right" Width="330">
 
                 <Button x:Name="gluten_free"  Background="White" HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
+                    
                     <StackPanel>
+                       <!-- <Border x:Name ="TopAndLeft" BorderThickness="3,3,0,0" BorderBrush="{x:Static SystemColors.ControlDarkBrush}"/-->
                         <Image Source="images/food/chicken.jpeg" Height="90"/>
                         <TextBlock Text="Gluten Free" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="14" TextAlignment="Center"/>
                     </StackPanel>

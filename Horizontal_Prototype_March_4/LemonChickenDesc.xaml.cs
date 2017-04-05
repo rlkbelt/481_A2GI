@@ -33,7 +33,12 @@ namespace Horizontal_Prototype_March_4
 			this.Loaded += (s, e) =>
 			{
 				window = Window.GetWindow(this) as MainWindow;
-			};
+                window = Window.GetWindow(this) as MainWindow;
+                window._HomeButton.Background = Brushes.Beige;
+                window._SearchButton.Background = Brushes.Beige;
+                window._FavouritesButton.Background = Brushes.Beige;
+                window._SettingsButton.Background = Brushes.Beige;
+            };
             
 		}
 
