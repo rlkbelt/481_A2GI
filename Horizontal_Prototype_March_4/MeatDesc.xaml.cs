@@ -101,6 +101,8 @@ namespace Horizontal_Prototype_March_4
         {
             window.backStack.Push(this);
             window._Navigation.Navigate(window._meatIngr);
+            window.changeWidth();
+            window.expanderInvisible();
         }
 
         private void BeginClick(object sender, RoutedEventArgs e)
@@ -109,6 +111,7 @@ namespace Horizontal_Prototype_March_4
             window.backStack.Push(this);
 			window.CurrentUserControl = window._meatStep1;
             window._Navigation.Navigate(window._meatStep1);
+            window.changeWidth();
         }
     }
 }
