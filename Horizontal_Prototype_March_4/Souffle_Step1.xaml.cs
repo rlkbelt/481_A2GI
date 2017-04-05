@@ -68,10 +68,19 @@ namespace Horizontal_Prototype_March_4
 			string[] ingredString = { "Pureed Strawberries", "Chilled Cream", "Lemon Juice", "Eggs", "Lukewarm Water" };
 			TextBox[] arrayTB = new TextBox[ingredString.Length];
 			TextBox[] ingredName = new TextBox[ingredString.Length];
+            for (int i=0; i < arrayTB.Length; i++)
+            {
+                arrayTB[i] = new TextBox();
+            }
+            for (int i = 0; i < ingredName.Length; i++)
+            {
+                ingredName[i] = new TextBox();
+            }
 
 
-			UserControl1 uc = new UserControl1();
+            UserControl1 uc = new UserControl1();
 
+            string[] metric = { uc.straw_quan1, uc.straw_quan2, uc.straw_quan3, uc.straw_quan4, uc.straw_quan5 };
 
 			
 			
@@ -80,26 +89,26 @@ namespace Horizontal_Prototype_March_4
 		
 			for (int i = 0; i < ingredString.Length; i++)
 			{
-				
-				arrayTB[i].Text = window._strawIngr.straw_quan1.Text;
-				arrayTB[i].FontSize = 16;
+                
+                arrayTB[i].Text = metric[i];
+				arrayTB[i].FontSize = 12;
 				arrayTB[i].HorizontalAlignment = HorizontalAlignment.Left;
 				arrayTB[i].FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
-				arrayTB[i].Height = 33;
+				arrayTB[i].Height = 22;
 				arrayTB[i].TextWrapping = TextWrapping.Wrap;
 				arrayTB[i].VerticalAlignment = VerticalAlignment.Top;
 				arrayTB[i].Width = 70;
 				straw_step1wrap.Children.Add(arrayTB[i]);
 
 				ingredName[i].Text = ingredString[i];
-				ingredName[i].FontSize = 16;
+				ingredName[i].FontSize = 12;
 				ingredName[i].HorizontalAlignment = HorizontalAlignment.Left;
 				ingredName[i].FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
-				ingredName[i].Height = 33;
+				ingredName[i].Height = 22;
 				ingredName[i].TextWrapping = TextWrapping.Wrap;
 				ingredName[i].VerticalAlignment = VerticalAlignment.Top;
 				ingredName[i].Width = 146;
-				straw_step1wrap.Children.Add(arrayTB[i]);
+				straw_step1wrap.Children.Add(ingredName[i]);
 
 			}
 			
