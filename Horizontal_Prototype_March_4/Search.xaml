@@ -10,6 +10,9 @@
     <Grid x:Name="_search_Grid" Height="539" Width="372" HorizontalAlignment="Right">
         <Button x:Name="back_page" Background="Transparent" BorderBrush="Transparent" BorderThickness="0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="75" Margin="10,10,0,0" Click="Back_Click"  >
             <Image Source="images/buttons/back.png" HorizontalAlignment="Left" Width="100" Height="75"/>
+            <Button.BitmapEffect >
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+            </Button.BitmapEffect>
         </Button>
         <TextBlock x:Name="title_search" Height="53"   Text="Search" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="36" Margin="177,32,-177,454"/>
         <DockPanel>

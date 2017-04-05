@@ -330,33 +330,8 @@ namespace Horizontal_Prototype_March_4
 				}
 
             }
-            else if (CurrentUserControl is LemonChickenDesc)
-            {
-                if (!isExpanded)
-                {
-                    LemonChickenDesc lcd = CurrentUserControl as LemonChickenDesc;
-                    lcd._lemonChickenGrid.Width = 470;
-                    lcd._ingredList.Margin = new Thickness(50, 266, 162, 120);
-                    lcd.chick_desc.Margin = new Thickness(270, 280, 0, 120);
-                    lcd.chick_desc.Width = 165;
-                    lcd.chick_desc.FontSize = 16;
-                    lcd.chicken.Width = 210;
 
-                }
-                else
-                {
-                    LemonChickenDesc lcd = CurrentUserControl as LemonChickenDesc;
-                    lcd._lemonChickenGrid.Width = 372;
-
-                    lcd._ingredList.Margin = new Thickness(118, 266, 54, 120);
-                    lcd.chick_desc.Margin = new Thickness(137, 196, 0, 278);
-                    lcd.chick_desc.Width = 155;
-                    lcd.chick_desc.FontSize = 12;
-                    lcd.chicken.Width = 155;
-
-
-                }
-            }
+           
             else if (CurrentUserControl is MeatComplete)
             {
 
@@ -396,7 +371,36 @@ namespace Horizontal_Prototype_March_4
                     _meatIngr._meatIngr_Grid.Width = 372;
                 }
             }
-            else if (CurrentUserControl is StrawberrySouffleDesc)
+
+			else if (CurrentUserControl is LemonChickenDesc)
+			{
+				if (!isExpanded)
+				{
+					LemonChickenDesc lcd = CurrentUserControl as LemonChickenDesc;
+					lcd._lemonChickenGrid.Width = 470;
+					lcd._ingredList.Margin = new Thickness(50, 266, 162, 120);
+					lcd.chick_desc.Margin = new Thickness(270, 280, 0, 120);
+					lcd.chick_desc.Width = 165;
+					lcd.chick_desc.FontSize = 16;
+					lcd.chicken.Width = 210;
+
+				}
+				else
+				{
+					LemonChickenDesc lcd = CurrentUserControl as LemonChickenDesc;
+					lcd._lemonChickenGrid.Width = 372;
+
+					lcd._ingredList.Margin = new Thickness(118, 266, 54, 120);
+					lcd.chick_desc.Margin = new Thickness(137, 196, 0, 278);
+					lcd.chick_desc.Width = 155;
+					lcd.chick_desc.FontSize = 12;
+					lcd.chicken.Width = 155;
+
+
+				}
+			}
+
+			else if (CurrentUserControl is StrawberrySouffleDesc)
             {
                 if (!isExpanded)
                 {
@@ -423,7 +427,8 @@ namespace Horizontal_Prototype_March_4
                 }
             }
 
-            else if (CurrentUserControl is StrawberrySouffleIngr)
+			
+			else if (CurrentUserControl is StrawberrySouffleIngr)
             {
                 if (!isExpanded)
                 {
@@ -434,6 +439,18 @@ namespace Horizontal_Prototype_March_4
                     _strawIngr._strawIngr_Grid.Width = 372;
                 }
             }
+
+			else if (CurrentUserControl is LemonIngred)
+			{
+				if (!isExpanded)
+				{
+					_lemonIngr._lemonIngr_Grid.Width = 470;
+				}
+				else
+				{
+					_lemonIngr._lemonIngr_Grid.Width = 372;
+				}
+			}
 
 			else if (CurrentUserControl is Souffle_Complete)
 			{
@@ -447,17 +464,20 @@ namespace Horizontal_Prototype_March_4
 				}
 			}
 
-			else if (CurrentUserControl is LemonIngred)
-            {
-                if (!isExpanded)
-                {
-                    _lemonIngr._lemonIngr_Grid.Width = 470;
-                }
-                else
-                {
-                    _lemonIngr._lemonIngr_Grid.Width = 372;
-                }
-            }
+			else if (CurrentUserControl is Lemon_Complete)
+			{
+				if (!isExpanded)
+				{
+					_lemonComp._lemonCompleteGrid.Width = 470;
+				}
+				else
+				{
+					_lemonComp._lemonCompleteGrid.Width = 372;
+				}
+
+			}
+
+
             else if (CurrentUserControl is Popular)
             {
                 if (!isExpanded)
@@ -549,7 +569,47 @@ namespace Horizontal_Prototype_March_4
 				}
 			}
 
+			else if (CurrentUserControl is Lemon_Step1)
+			{
+				if (!isExpanded)
+				{
+					_lemonStep1.Lemon_Step1Grid.Width = 470;
+					_lemonStep1.BackButton.Visibility = Visibility.Visible;
+				}
+				else
+				{
+					_souffleStep1.BackButton.Visibility = Visibility.Hidden;
+				}
+			}
+
+			else if (CurrentUserControl is Lemon_Step2)
+			{
+				if (!isExpanded)
+				{
+					_lemonStep2.Lemon_Step2Grid.Width = 470;
+					_lemonStep2.BackButton.Visibility = Visibility.Visible;
+				}
+				else
+				{
+					_lemonStep2.BackButton.Visibility = Visibility.Hidden;
+				}
+			}
+
+			else if (CurrentUserControl is Lemon_Step3)
+			{
+				if (!isExpanded)
+				{
+					_lemonStep3.Lemon_Step3Grid.Width = 470;
+					_lemonStep3.BackButton.Visibility = Visibility.Visible;
+				}
+				else
+				{
+					_lemonStep3.BackButton.Visibility = Visibility.Hidden;
+				}
+			}
+
 		}
+
 		public void decButtonSize(WrapPanel wp)
 		{
 			

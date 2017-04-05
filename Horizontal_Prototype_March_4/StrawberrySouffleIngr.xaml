@@ -10,7 +10,9 @@
     <Grid x:Name="_strawIngr_Grid" Width="372" Height="539" Margin="98,0,0,0">
         <Button x:Name="page_back_strawIngr" Background="Transparent" BorderBrush="Transparent" BorderThickness="0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="75" Margin="20,0,0,0" Click="BackClick" >
             <Image Source="images/buttons/back.png" Height="75" HorizontalAlignment="Left" Width="100"/>
-
+            <Button.BitmapEffect >
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+            </Button.BitmapEffect>
         </Button>
         <Grid HorizontalAlignment="Left" Height="297" Margin="97,125,0,0" VerticalAlignment="Top" Width="216" Background="White">
             <WrapPanel x:Name="souffleIngr_Wrap" >

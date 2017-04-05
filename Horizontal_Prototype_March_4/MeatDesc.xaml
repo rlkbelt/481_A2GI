@@ -11,6 +11,9 @@
         <Frame x:Name="_Navigation" NavigationUIVisibility="Hidden"/>
         <Button x:Name="page_back" Background="Transparent" BorderBrush="Transparent" BorderThickness="0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="75" Margin="10,10,0,0" Click="BackClick"  >
             <Image Source="images/buttons/back.png" HorizontalAlignment="Left" Width="100" Height="75"/>
+            <Button.BitmapEffect >
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+            </Button.BitmapEffect>
         </Button>
         <Button x:Name="favButton" Tag="fav" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Width="50" Height="50" Margin="318,10,-16,459" Click="favClick">
             <Image x:Name ="star" Source="images/buttons/star2.png" HorizontalAlignment="Left" Width="50" RenderTransformOrigin="0.46,1.25"/>
