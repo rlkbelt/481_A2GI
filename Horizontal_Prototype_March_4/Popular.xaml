@@ -9,6 +9,9 @@
     <Grid x:Name="_popular_Grid" Height="539" Width="372" HorizontalAlignment="Right">
         <Button x:Name="_page_back" Background="Transparent" BorderBrush="Transparent" BorderThickness="0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="75" Margin="10,10,0,0" Click="BackClick"  >
             <Image Source="images/buttons/back.png" HorizontalAlignment="Left" Width="100" Height="75"/>
+            <Button.BitmapEffect >
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+            </Button.BitmapEffect>
         </Button>
         <TextBox x:Name="_searchboxPop" Height="25" Margin="35,96,37,418"  Text="Filter Recipes.." Width="300" FontFamily="Tw Cen MT Condensed" FontSize="20" FontStyle="Italic" MouseDoubleClick="ClearBox" KeyDown="Filter"/>
 

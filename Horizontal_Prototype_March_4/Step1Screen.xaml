@@ -14,7 +14,10 @@
                 <Image Source="images/buttons/settings_button.png" Height="30"/>
             </StackPanel>
         </Button>
-        <Button x:Name="exitRecipe2" Content="Exit Recipe" Background="White" HorizontalAlignment="Left" Margin="105,404,0,0" VerticalAlignment="Top" Width="96" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Height="21"/>
-
+        <Button x:Name="exitRecipe2" Content="Exit Recipe" Background="White" HorizontalAlignment="Left" Margin="105,404,0,0" VerticalAlignment="Top" Width="96" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Height="21">
+            <Button.BitmapEffect >
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+            </Button.BitmapEffect>
+        </Button>
     </Grid>
 </UserControl>

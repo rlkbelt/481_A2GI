@@ -9,7 +9,9 @@
     <Grid>
         <Button x:Name="page_back_comp" Background="Transparent" BorderBrush="Transparent" BorderThickness="0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="75" Margin="20,0,0,0" >
             <Image Source="images/buttons/back.png" Height="75" HorizontalAlignment="Left" Width="100"/>
-
+            <Button.BitmapEffect >
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+            </Button.BitmapEffect>
         </Button>
         <Button x:Name="star_but" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="62" Height="52" Background="Transparent" BorderBrush="Transparent">
             <Image x:Name="star_img" Source="images/buttons/star2.png"/>

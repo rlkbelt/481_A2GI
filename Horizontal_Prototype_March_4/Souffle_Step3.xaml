@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="570" d:DesignWidth="470">
     <Grid Name="Souffle_Step3Grid" Width="470" Height="570">
-        <Button x:Name="NextButton" Background="Beige" BorderBrush="BurlyWood" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Margin="380,0,0,0" Click="NextClicked">
+        <Button x:Name="NextButton" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Margin="380,0,0,0" Click="NextClicked">
             <StackPanel>
                 <Image Source="images/buttons/NextArrow.png" Height="98"/>
                 <TextBlock Text="Next" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="26" TextAlignment="Center"/>
@@ -16,9 +16,13 @@
         <Grid Margin="90,10,90,0">
             <TextBlock x:Name="sStep1_Title" HorizontalAlignment="Left" Margin="110,0,0,0" TextWrapping="Wrap" Text="Step 3" VerticalAlignment="Top" TextDecorations="Underline" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Height="36" Width="74"/>
             <TextBlock x:Name="sStep1_Step" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="168" Width="270" FontSize="24" Text="Bake in oven for 15 minutes.  Top with plenty of sliced strawberries."/>
-            <Button x:Name="backToDesc" Content="Back to Recipe Description" Background="Beige" HorizontalAlignment="Left" Margin="69,473,0,0" VerticalAlignment="Top" Width="168" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Height="21" Click="backToDesc_Click"/>
+            <Button x:Name="backToDesc" Content="Back to Recipe Description" Background="White" HorizontalAlignment="Left" Margin="68,462,0,0" VerticalAlignment="Top" Width="168" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Height="21" Click="backToDesc_Click">
+                <Button.BitmapEffect >
+                    <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+                </Button.BitmapEffect>
+            </Button>
         </Grid>
-        <Button x:Name="BackButton" Background="Beige" BorderBrush="BurlyWood" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Click="BackClicked">
+        <Button x:Name="BackButton" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Click="BackClicked">
             <StackPanel>
                 <Image Source="images/buttons/BackArrow.png" Height="98"/>
                 <TextBlock Text="Back" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="26" TextAlignment="Center"/>
