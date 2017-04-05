@@ -15,7 +15,7 @@
 
 
         <TextBlock x:Name="title_all" Height="53" Margin="80,-400,0,0"  Text="All Recipes" Width="164" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="36"/>
-        <TextBox x:Name="_searchboxAR" Height="25" Margin="35,96,37,418"  Text="Filter Recipes.." Width="300" FontFamily="Tw Cen MT Condensed" FontSize="20" FontStyle="Italic" MouseDoubleClick="ClearBox" KeyDown="Filter"/>
+        <TextBox x:Name="_searchboxAR" Height="25" Margin="35,96,37,418"  Text="Filter Recipes.." Width="300" FontFamily="Tw Cen MT Condensed" FontSize="20" FontStyle="Italic" MouseDoubleClick="ClearBox" KeyDown="Filter" Background="Transparent"/>
         <ScrollViewer x:Name="_scrollerAR" Margin="0,140,0,0" Visibility="Hidden" >
 
             <WrapPanel x:Name="_RecipesWrapPanel" HorizontalAlignment="Right" Width="330"/>

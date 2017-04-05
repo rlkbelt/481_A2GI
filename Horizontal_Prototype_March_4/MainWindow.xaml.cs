@@ -83,11 +83,6 @@ namespace Horizontal_Prototype_March_4
             _Navigation.Navigate(_homePage);
             backStack.Push(CurrentUserControl);
             CurrentUserControl = _homePage;
-            _HomeButton.Background = Brushes.Gray;
-            _SearchButton.Background = Brushes.White;
-            _FavouritesButton.Background = Brushes.White;
-            _SettingsButton.Background = Brushes.White;
-
         }
         public void SearchClick(object sender, RoutedEventArgs e)
         {
@@ -96,10 +91,6 @@ namespace Horizontal_Prototype_March_4
             backStack.Push(CurrentUserControl);
             CurrentUserControl = _search;
             OpenExpanded();
-            _HomeButton.Background = Brushes.White;
-            _SearchButton.Background = Brushes.Gray;
-            _FavouritesButton.Background = Brushes.White;
-            _SettingsButton.Background = Brushes.White;
 
         }
 
@@ -111,10 +102,6 @@ namespace Horizontal_Prototype_March_4
             backStack.Push(CurrentUserControl);
             CurrentUserControl = _favourites;
             OpenExpanded();
-            _HomeButton.Background = Brushes.White;
-            _SearchButton.Background = Brushes.White;
-            _FavouritesButton.Background = Brushes.Gray;
-            _SettingsButton.Background = Brushes.White;
         }
 
         public void SettingsClick(object sender, RoutedEventArgs e)
@@ -124,10 +111,6 @@ namespace Horizontal_Prototype_March_4
             backStack.Push(CurrentUserControl);
             CurrentUserControl = _settings;
             OpenExpanded();
-          /*  _HomeButton.Background = Brushes.White;
-            _SearchButton.Background = Brushes.White;
-            _FavouritesButton.Background = Brushes.White;
-            _SettingsButton.Background = Brushes.Gray;*/
         }
      
         public void OpenCollapsed()

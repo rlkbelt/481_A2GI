@@ -29,10 +29,10 @@ namespace Horizontal_Prototype_March_4
             this.Loaded += (s, e) =>
             {
                 window = Window.GetWindow(this) as MainWindow;
-                window._HomeButton.Background = Brushes.White;
-                window._SearchButton.Background = Brushes.White;
-                window._FavouritesButton.Background = Brushes.White;
-                window._SettingsButton.Background = Brushes.White;
+                window._HomeButton.Background = Brushes.Beige;
+                window._SearchButton.Background = Brushes.Beige;
+                window._FavouritesButton.Background = Brushes.Beige;
+                window._SettingsButton.Background = Brushes.Beige;
             };
 
         }
@@ -94,7 +94,7 @@ namespace Horizontal_Prototype_March_4
 						text.Width = button.Width - 10;
 						button.Content = sp;
 						button.Tag = text.Text;
-						button.Background = Brushes.White;
+						button.Background = Brushes.Beige;
 						button.Click += new RoutedEventHandler(ButtonClick);
 						_RecipesWrapPanel.Children.Add(button);
 					}
@@ -117,7 +117,7 @@ namespace Horizontal_Prototype_March_4
 						text.Width = button.Width - 10;
 						button.Content = sp;
 						button.Tag = text.Text;
-						button.Background = Brushes.White;
+						button.Background = Brushes.Beige;
 						button.Click += new RoutedEventHandler(ButtonClick);
 						_RecipesWrapPanel.Children.Add(button);
 					}
@@ -173,7 +173,8 @@ namespace Horizontal_Prototype_March_4
 					text.Width = button.Width - 10;
 					button.Content = sp;
 					button.Tag = text.Text;
-					button.Background = Brushes.White;
+					button.Background = Brushes.Beige;
+                    button.BorderBrush = Brushes.BurlyWood;
 					button.Click += new RoutedEventHandler(ButtonClick);
 					_RecipesWrapPanel.Children.Add(button);
 					
