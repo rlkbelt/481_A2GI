@@ -29,6 +29,10 @@ namespace Horizontal_Prototype_March_4
             {
                 window = Window.GetWindow(this) as MainWindow;
 				window.CurrentUserControl = this;
+                window._HomeButton.Background = Brushes.White;
+                window._SearchButton.Background = Brushes.White;
+                window._FavouritesButton.Background = Brushes.White;
+                window._SettingsButton.Background = Brushes.White;
             };
             
         }

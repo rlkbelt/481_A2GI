@@ -23,10 +23,16 @@ namespace Horizontal_Prototype_March_4
         public Settings()
         {
             InitializeComponent();
+
             this.Loaded += (s, e) =>
             {
                 window = Window.GetWindow(this) as MainWindow;
+                window._HomeButton.Background = Brushes.White;
+                window._SearchButton.Background = Brushes.White;
+                window._FavouritesButton.Background = Brushes.White;
+                window._SettingsButton.Background = Brushes.LightGray;
             };
+
         }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
