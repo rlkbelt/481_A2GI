@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="570" d:DesignWidth="470">
     <Grid Name="Lemon_Step1Grid" Width="470" Height="570">
-        <Button x:Name="NextButton" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Margin="380,0,0,0" Click="NextClicked">
+        <Button x:Name="NextButton" Background="Beige" BorderBrush ="BurlyWood" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Margin="380,0,0,0" Click="NextClicked">
             <StackPanel>
                 <Image Source="images/buttons/NextArrow.png" Height="98"/>
                 <TextBlock Text="Next" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="26" TextAlignment="Center"/>
@@ -25,7 +25,7 @@
             <WrapPanel x:Name="straw_step1wrap" Margin="10,360,10,86" Width="216" >
             </WrapPanel >
         </Grid>
-        <Button x:Name="BackButton" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Click="BackClicked">
+        <Button x:Name="BackButton" Background="Beige" BorderBrush ="BurlyWood" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Click="BackClicked">
             <StackPanel>
                 <Image Source="images/buttons/BackArrow.png" Height="98"/>
                 <TextBlock Text="Back" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="26" TextAlignment="Center"/>
