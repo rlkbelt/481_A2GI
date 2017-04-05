@@ -21,6 +21,7 @@ namespace Horizontal_Prototype_March_4
     public partial class MeatIngr : UserControl
     {
         MainWindow window;
+        PrintDialog printDialog;
         public MeatIngr()
         {
             InitializeComponent();
@@ -140,16 +141,20 @@ namespace Horizontal_Prototype_March_4
             }
             window.CurrentUserControl = window.backStack.Pop();
             window._Navigation.Navigate(window.CurrentUserControl);
+            window.changeWidth();
+            window.expanderVisible();
+            if (window.isExpanded == true)
+            {
+                window.OpenCollapsed();
+            }
         }
 
         private void print_Click(object sender, RoutedEventArgs e)
         {
-            PrintDialog printDialog = new PrintDialog();
+            printDialog = new PrintDialog();
             printDialog.Show();
-            printDialog.update();
+            printDialog.Process();
 
- 
-           
 
         }
 

@@ -117,8 +117,8 @@ namespace Horizontal_Prototype_March_4
         public void OpenCollapsed()
         {
             // this._ExpanderButton.IsExpanded = true;
-            this.Expanded(null, null);
-            this._ExpanderButton.IsExpanded = true;
+            Expanded(null, null);
+            _ExpanderButton.IsExpanded = true;
 
 
 
@@ -126,8 +126,8 @@ namespace Horizontal_Prototype_March_4
         public void OpenExpanded()
         {
             // this._ExpanderButton.IsExpanded = true;
-            this.Collapsed(null, null);
-            this._ExpanderButton.IsExpanded = false;
+            Collapsed(null, null);
+            _ExpanderButton.IsExpanded = false;
 
 
         }
@@ -540,21 +540,6 @@ namespace Horizontal_Prototype_March_4
 					_souffleStep3.BackButton.Visibility = Visibility.Hidden;
 				}
 			}
-
-
-			else if (CurrentUserControl is LemonIngred)
-            {
-                if (!isExpanded)
-                {
-                    _lemonIngr._lemonIngr_Grid.Width = 470;
-                }
-
-                else
-                {
-                    _lemonIngr._lemonIngr_Grid.Width = 372;
-                }
-            }
-        
 
 		}
 		public void decButtonSize(WrapPanel wp)

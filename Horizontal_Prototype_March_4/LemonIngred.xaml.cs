@@ -21,6 +21,7 @@ namespace Horizontal_Prototype_March_4
     public partial class LemonIngred : UserControl
     {
         MainWindow window;
+        PrintDialog printDialog;
         public LemonIngred()
         {
             InitializeComponent();
@@ -43,13 +44,19 @@ namespace Horizontal_Prototype_March_4
             }
             window.CurrentUserControl = window.backStack.Pop();
             window._Navigation.Navigate(window.CurrentUserControl);
+            window.changeWidth();
+            window.expanderVisible();
+            if (window.isExpanded == false)
+            {
+                window.OpenCollapsed();
+            }
         }
 
         private void print_Click(object sender, RoutedEventArgs e)
         {
-            PrintDialog printDialog = new PrintDialog();
+            printDialog = new PrintDialog();
             printDialog.Show();
-            printDialog.update();
+            printDialog.Process();
         }
 
         public void SliderMover(object sender, RoutedEventArgs e)
