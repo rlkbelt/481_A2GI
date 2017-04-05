@@ -107,7 +107,7 @@ namespace Horizontal_Prototype_March_4
 			window.CurrentUserControl = window._souffleStep1;
 			window._Navigation.Navigate(window._souffleStep1);
             window.changeWidth();
-			window._souffleStep1.populateStep();
+			//window._souffleStep1.populateStep();
 		}
 
 		private void straw_IngredClick(object sender, RoutedEventArgs e)

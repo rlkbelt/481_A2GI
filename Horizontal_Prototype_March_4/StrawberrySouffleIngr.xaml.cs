@@ -165,7 +165,7 @@ namespace Horizontal_Prototype_March_4
 			window.CurrentUserControl = window._souffleStep1;
 			window._Navigation.Navigate(window._souffleStep1);
             window.expanderVisible();
-			window._souffleStep1.populateStep();
+			//window._souffleStep1.populateStep();
         }
 		public void initVals()
 		{

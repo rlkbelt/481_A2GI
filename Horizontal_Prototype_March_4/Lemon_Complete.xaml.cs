@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,41 +16,24 @@ using System.Windows.Shapes;
 
 namespace Horizontal_Prototype_March_4
 {
-
 	/// <summary>
-	/// Interaction logic for AllRecipes.xaml
+	/// Interaction logic for Lemon_Complete.xaml
 	/// </summary>
-	public partial class LemonChickenDesc : UserControl
+	public partial class Lemon_Complete : UserControl
 	{
-		public Stack<object> backStack = new Stack<object>();
-
-
-
 		MainWindow window;
 		public Boolean favFlag = false;
-		public LemonChickenDesc()
+
+		public Lemon_Complete()
 		{
 			InitializeComponent();
 			this.Loaded += (s, e) =>
 			{
 				window = Window.GetWindow(this) as MainWindow;
+				window.OpenCollapsed();
+				// window._ExpanderButton.Expanded = Expander.Collap
 			};
-            
-		}
 
-		private void BackClick(object sender, RoutedEventArgs e)
-		{
-			if (window.backStack.Peek() is HomePage)
-			{
-				window.expanderInvisible();
-			}
-			if (window.backStack.Peek() is favourites)
-			{
-				window._favourites.initValues(window._recipesArray, window.favouritesList);
-			}
-			window.CurrentUserControl = window.backStack.Pop();
-			window._Navigation.Navigate(window.CurrentUserControl);
-            window.changeWidth();
 		}
 		private void favClick(object sender, RoutedEventArgs e)
 		{
@@ -93,30 +77,24 @@ namespace Horizontal_Prototype_March_4
 						window._recipesArray[i, 3] = this;
 						break;
 
-
 					}
 				}
-
 			}
-
 
 		}
 
-		private void IngredClick(object sender, RoutedEventArgs e)
+		private void BackClicked(object sender, RoutedEventArgs e)
 		{
 			window.backStack.Push(this);
-			window._Navigation.Navigate(window._lemonIngr);
-            window.changeWidth();
-            window.expanderInvisible();
+			window.CurrentUserControl = window._lemonStep3;
+			window._Navigation.Navigate(window._lemonStep3);
+		}
 
-        }
-		private void BeginClick(object sender, RoutedEventArgs e)
+		private void DoneClicked(object sender, RoutedEventArgs e)
 		{
 			window.backStack.Push(this);
-			window._Navigation.Navigate(window._lemonStep1);
-			window.changeWidth();
-			window.expanderInvisible();
-
+			window.CurrentUserControl = window._homePage;
+			window._Navigation.Navigate(window._homePage);
 		}
 	}
 }

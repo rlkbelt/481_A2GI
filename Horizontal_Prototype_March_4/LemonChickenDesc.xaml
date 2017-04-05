@@ -25,6 +25,6 @@
             <TextBox x:Name="chick_keywords" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="66" TextWrapping="Wrap" Text="Keywords: Chicken, Lemon, Lime, Pepper, Salt" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
         </WrapPanel>
         <Button x:Name="chick_ing_but" Content="Ingredients" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="IngredClick" Margin="118,435,0,0"/>
-        <Button x:Name="chick_beg_but" Content="Begin" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,478,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22"/>
+        <Button x:Name="chick_beg_but" Content="Begin" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,478,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="BeginClick"/>
     </Grid>
 </UserControl>

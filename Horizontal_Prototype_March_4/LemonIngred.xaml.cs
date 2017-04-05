@@ -69,7 +69,7 @@ namespace Horizontal_Prototype_March_4
                     quan2.Text = "1/4 Cup";
                     quan3.Text = "3 tbsp.";
                     quan4.Text = "2 tbsp.";
-                    quan5.Text = "1";
+                    quan5.Text = "1 tbsp.";
                     quan6.Text = "1 tbsp.";
                     quan7.Text = "1/3 Cup";
                     quan8.Text = "1 tsp.";
@@ -83,7 +83,7 @@ namespace Horizontal_Prototype_March_4
                     quan2.Text = "1/2 Cup";
                     quan3.Text = "6 tbsp.";
                     quan4.Text = "4 tbsp.";
-                    quan5.Text = "2";
+                    quan5.Text = "2 tbsp.";
                     quan6.Text = "2 tbsp.";
                     quan7.Text = "2/3 Cup";
                     quan8.Text = "2 tsp.";
@@ -97,7 +97,7 @@ namespace Horizontal_Prototype_March_4
                     quan2.Text = "3/4 Cup";
                     quan3.Text = "9 tbsp.";
                     quan4.Text = "6 tbsp.";
-                    quan5.Text = "3";
+                    quan5.Text = "3 tbsp.";
                     quan6.Text = "3 tbsp.";
                     quan7.Text = "1 Cup";
                     quan8.Text = "3 tsp.";
@@ -111,7 +111,7 @@ namespace Horizontal_Prototype_March_4
                     quan2.Text = "60 mL.";
                     quan3.Text = "45 mL.";
                     quan4.Text = "30 mL.";
-                    quan5.Text = "1";
+                    quan5.Text = "15 mL.";
                     quan6.Text = "15 mL.";
                     quan7.Text = "80 mL.";
                     quan8.Text = "5 mL.";
@@ -125,7 +125,7 @@ namespace Horizontal_Prototype_March_4
                     quan2.Text = "120 mL.";
                     quan3.Text = "90 mL.";
                     quan4.Text = "60 mL.";
-                    quan5.Text = "2";
+                    quan5.Text = "30 mL.";
                     quan6.Text = "30 mL.";
                     quan7.Text = "160 mL.";
                     quan8.Text = "10 mL.";
@@ -139,7 +139,7 @@ namespace Horizontal_Prototype_March_4
                     quan2.Text = "180 mL.";
                     quan3.Text = "135 mL.";
                     quan4.Text = "90 mL.";
-                    quan5.Text = "3";
+                    quan5.Text = "45 mL.";
                     quan6.Text = "45 mL.";
                     quan7.Text = "1 Cup";
                     quan8.Text = "15 mL.";
@@ -153,9 +153,16 @@ namespace Horizontal_Prototype_March_4
             {
 
             }
-
         }
-    }
+
+		private void BeginClick(object sender, RoutedEventArgs e)
+		{
+			window.backStack.Push(this);
+			window._Navigation.Navigate(window._lemonStep1);
+			window.changeWidth();
+			window.expanderInvisible();
+		}
+	}
 
 
 

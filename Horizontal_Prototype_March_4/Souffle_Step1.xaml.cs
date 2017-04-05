@@ -63,7 +63,7 @@ namespace Horizontal_Prototype_March_4
 			window._Navigation.Navigate(window._beatDefinition);
 		}
 
-		public void populateStep()
+		/* public void populateStep()
 		{
 			string[] ingredString = { "Pureed Strawberries", "Chilled Cream", "Lemon Juice", "Eggs", "Lukewarm Water" };
 			TextBox[] arrayTB = new TextBox[ingredString.Length];
@@ -81,7 +81,7 @@ namespace Horizontal_Prototype_March_4
 			for (int i = 0; i < 1; i++)
 			{
 				
-				arrayTB[i].Text.Insert = "aString";
+				//arrayTB[i].Text. = "aString";
 				arrayTB[i].FontSize = 16;
 				arrayTB[i].HorizontalAlignment = HorizontalAlignment.Left;
 				arrayTB[i].FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
@@ -103,13 +103,13 @@ namespace Horizontal_Prototype_March_4
 
 			}
 			
-
+		*/
 			
 
 			
 		
 
-		}
+		//}
 
 	}
 }
