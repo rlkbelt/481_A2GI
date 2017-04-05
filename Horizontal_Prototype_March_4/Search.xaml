@@ -16,6 +16,9 @@
             <WrapPanel x:Name="_searchWP" Margin="20,120,0,367">
                 <TextBox x:Name="_searchBar" Background ="Transparent" Text="Search For A Recipe..." Width="300" FontFamily="Tw Cen MT Condensed" FontSize="20" FontStyle="Italic" MouseDoubleClick="Search_Click" KeyDown="_searchBar_KeyDown" HorizontalAlignment="Center" />
                 <Button x:Name="_SearchButton" Background="Transparent" BorderBrush="Transparent" Click="Search_Text_Click">
+                    <Button.BitmapEffect >
+                        <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+                    </Button.BitmapEffect>
                     <StackPanel >
                         <Image x:Name ="search" Source="images/buttons/search-button-icon-93111.png" Height="32" Width="30" />
                     </StackPanel>

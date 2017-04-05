@@ -59,7 +59,11 @@ namespace Horizontal_Prototype_March_4
 		public Souffle_Step3 _souffleStep3 = new Souffle_Step3();
 		public Souffle_Complete _souffleComp = new Souffle_Complete();
 		public LemonIngred _lemonIngr = new LemonIngred();
-
+		public LemonChickenDesc _lemonDesc = new LemonChickenDesc();
+		public Lemon_Step1 _lemonStep1 = new Lemon_Step1();
+		public Lemon_Step2 _lemonStep2 = new Lemon_Step2();
+		public Lemon_Step3 _lemonStep3 = new Lemon_Step3();
+		public Lemon_Complete _lemonComp = new Lemon_Complete();
 
 		public Boolean isExpanded = true;
 
@@ -67,14 +71,19 @@ namespace Horizontal_Prototype_March_4
 
 
         
-
+		
         public MainWindow()
         {
             InitializeComponent();
             _Navigation.Navigate(_homePage);
             CurrentUserControl = _homePage;
+			_strawIngr.initVals();
             
         }
+		public StrawberrySouffleIngr getStrawIngr()
+		{
+			return _strawIngr;
+		}
 
 
         private void HomeClick(object sender, RoutedEventArgs e)

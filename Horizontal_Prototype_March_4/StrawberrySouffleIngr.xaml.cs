@@ -169,7 +169,21 @@ namespace Horizontal_Prototype_March_4
 			window.CurrentUserControl = window._souffleStep1;
 			window._Navigation.Navigate(window._souffleStep1);
             window.expanderVisible();
+			//window._souffleStep1.populateStep();
         }
+		public void initVals()
+		{
+			straw_quan1.Text = "1 Cup";
+			straw_quan2.Text = "2 Cups";
+			straw_quan3.Text = "2 Tbsps.";
+			straw_quan4.Text = "3";
+			straw_quan5.Text = "1/4 Cup";
+			straw_quan6.Text = "1 Cup";
+			straw_quan7.Text = "1 Tsp.";
+			straw_quan8.Text = "1 Tbsp.";
+			straw_quan9.Text = "1 Cup";
+			straw_RatiotextBox.Text = "Recipe Ratio: 1";
+		}
 
 		
 	}

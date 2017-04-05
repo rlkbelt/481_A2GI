@@ -64,6 +64,18 @@
     <Compile Include="LemonIngred.xaml.cs">
       <DependentUpon>LemonIngred.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Lemon_Complete.xaml.cs">
+      <DependentUpon>Lemon_Complete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lemon_Step1.xaml.cs">
+      <DependentUpon>Lemon_Step1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lemon_Step2.xaml.cs">
+      <DependentUpon>Lemon_Step2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lemon_Step3.xaml.cs">
+      <DependentUpon>Lemon_Step3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MeatComplete.xaml.cs">
       <DependentUpon>MeatComplete.xaml</DependentUpon>
     </Compile>
@@ -106,6 +118,9 @@
     <Compile Include="StrawberrySouffleIngr.xaml.cs">
       <DependentUpon>StrawberrySouffleIngr.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
     <Page Include="AllRecipes.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -131,6 +146,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="LemonIngred.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lemon_Complete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lemon_Step1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lemon_Step2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lemon_Step3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -223,6 +254,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="StrawberrySouffleIngr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

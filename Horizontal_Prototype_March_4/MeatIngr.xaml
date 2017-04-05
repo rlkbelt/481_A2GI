@@ -43,10 +43,17 @@
             </WrapPanel>
         </Grid>
         <TextBlock x:Name="tBlock" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="153,36,0,0" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" FontSize="24"/>
-        <Button x:Name="beg_but" Content="Begin" HorizontalAlignment="Left" Margin="97,470,0,0" VerticalAlignment="Top" Width="196" Height="38" FontSize="22" FontFamily="Tw Cen MT Condensed Extra Bold" />
+        <Button x:Name="beg_but" Content="Begin" HorizontalAlignment="Left" Margin="97,470,0,0" VerticalAlignment="Top" Width="196" Height="38" FontSize="22" FontFamily="Tw Cen MT Condensed Extra Bold" >
+            <Button.BitmapEffect >
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+            </Button.BitmapEffect>
+        </Button>
         <Button x:Name="star_but" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="62" Height="52" Background="Transparent" BorderBrush="Transparent"/>
         <Button x:Name="print" HorizontalAlignment="Left" Margin="293,10,0,0" VerticalAlignment="Top" Width="62" Height="52" Background="Transparent" BorderBrush="Transparent" Click="print_Click">
             <Image x:Name="print_button" Source="images/buttons/print.png"/>
+            <Button.BitmapEffect >
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+            </Button.BitmapEffect>
         </Button>
         <TextBox x:Name="tip_ingred" HorizontalAlignment="Left" BorderBrush="Transparent" Background="Transparent" Height="40" Margin="125,61,0,0" TextWrapping="Wrap" Text="Tip: Change units of measurement in the settings" VerticalAlignment="Top" Width="163" FontStyle="Italic" FontSize="12"/>
         <Slider x:Name="Recipe_Ratio"   Orientation="Horizontal" Minimum="1" Maximum="3" Value="1" IsSnapToTickEnabled="True" BorderBrush="Black"   TickFrequency="1" Margin="117,420,115,97" ValueChanged="SliderMover"/>
