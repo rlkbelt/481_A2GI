@@ -79,13 +79,14 @@ namespace Horizontal_Prototype_March_4
 
 
             UserControl1 uc = new UserControl1();
+            uc.changeMetrics();
 
             string[] metric = { uc.straw_quan1, uc.straw_quan2, uc.straw_quan3, uc.straw_quan4, uc.straw_quan5 };
-
+            
 			
 			
 	
-		System.Threading.Thread.Sleep(10);
+		
 		
 			for (int i = 0; i < ingredString.Length; i++)
 			{
