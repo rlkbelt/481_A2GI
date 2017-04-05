@@ -18,7 +18,7 @@
         <TextBlock x:Name="title_all" Height="53" Text="Strawberry Souffle" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="32" Margin="118,27,31,459"/>
         <Image x:Name="straw_sou" Source="images/food/straw_sou.jpg" HorizontalAlignment="Left"  Margin="137,80,0,0" VerticalAlignment="Top" Width="155"/>
         <TextBlock x:Name="straw_desc_ingr" FontStyle="Italic" HorizontalAlignment="Left" Margin="137,196,0,278" TextWrapping="Wrap" Width="155" Text="'A great tasting, simple soufflé recipe, great for a summer night'"/>
-        <WrapPanel x:Name="_ingred" Margin="118,266,54,104">
+        <WrapPanel x:Name="_ingred" Margin="118,266,54,119">
         <TextBox x:Name="straw_serving" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Serves: 2-4" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
         <TextBox x:Name="straw_prep" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Prep-Time: 10 mins " VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True" />
         <TextBox x:Name="straw_cookt" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Cook-Time: 15 mins" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>

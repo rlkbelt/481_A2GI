@@ -67,14 +67,19 @@ namespace Horizontal_Prototype_March_4
 
 
         
-
+		
         public MainWindow()
         {
             InitializeComponent();
             _Navigation.Navigate(_homePage);
             CurrentUserControl = _homePage;
+			_strawIngr.initVals();
             
         }
+		public StrawberrySouffleIngr getStrawIngr()
+		{
+			return _strawIngr;
+		}
 
 
         private void HomeClick(object sender, RoutedEventArgs e)

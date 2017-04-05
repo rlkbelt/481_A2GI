@@ -13,7 +13,7 @@
 
         </Button>
         <Grid HorizontalAlignment="Left" Height="297" Margin="97,125,0,0" VerticalAlignment="Top" Width="216" Background="White">
-            <WrapPanel>
+            <WrapPanel x:Name="souffleIngr_Wrap" >
                 <TextBox x:Name="straw_quan1" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="1 Cup" VerticalAlignment="Top" Width="70" FontSize="16" />
                 <TextBox x:Name="straw_ingr1" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="Pureed Strawberries" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
