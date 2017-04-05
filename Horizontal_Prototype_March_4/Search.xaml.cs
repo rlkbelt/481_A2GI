@@ -113,6 +113,8 @@ namespace Horizontal_Prototype_March_4
 
                 if (but.Tag.ToString().ToLower().Equals(window._recipesArray[i, 0].ToString().ToLower()))
                 {
+                    window.CurrentUserControl = window._recipesArray[i, 3];
+                    window.changeWidth();
                     window._Navigation.Navigate(window._recipesArray[i, 3]);
                     break;
                 }

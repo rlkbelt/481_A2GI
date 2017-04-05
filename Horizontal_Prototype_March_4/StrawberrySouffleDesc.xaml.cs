@@ -49,7 +49,8 @@ namespace Horizontal_Prototype_March_4
             }
             window.CurrentUserControl = window.backStack.Pop();
 			window._Navigation.Navigate(window.CurrentUserControl);
-		}
+            window.changeWidth();
+        }
         private void favClick(object sender, RoutedEventArgs e)
         {
 

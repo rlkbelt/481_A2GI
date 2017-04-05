@@ -21,12 +21,6 @@ namespace Horizontal_Prototype_March_4
 	/// </summary>
 	public partial class AllRecipes : UserControl
     {
-		public Stack<object> backStack = new Stack<object>();
-
-		public LemonChickenDesc _lemonChickenDesc = new LemonChickenDesc();
-		private Boolean isExpanded { get; set; }
-
-		public object CurrentUserControl { get; set; }
 
 		MainWindow window;
         public AllRecipes()
@@ -200,7 +194,9 @@ namespace Horizontal_Prototype_March_4
         }
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
+
             window.backStack.Push(this);
+            
             Button but = sender as Button;
 
             for (int i = 0; i < window._recipesArray.GetLength(0); i++)
@@ -208,6 +204,8 @@ namespace Horizontal_Prototype_March_4
 
                 if (but.Tag.ToString().ToLower().Equals(window._recipesArray[i, 0].ToString().ToLower()))
                 {
+                    window.CurrentUserControl = window._recipesArray[i, 3];
+                    window.changeWidth();
                     window._Navigation.Navigate(window._recipesArray[i, 3]);
                     break;
                 }

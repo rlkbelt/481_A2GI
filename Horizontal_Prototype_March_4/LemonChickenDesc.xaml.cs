@@ -23,9 +23,7 @@ namespace Horizontal_Prototype_March_4
 	{
 		public Stack<object> backStack = new Stack<object>();
 
-		/// public LemonChickenDesc _lemonChickenDesc = new LemonChickenDesc();
 
-		public object CurrentUserControl { get; set; }
 
 		MainWindow window;
 		public Boolean favFlag = false;
@@ -36,6 +34,7 @@ namespace Horizontal_Prototype_March_4
 			{
 				window = Window.GetWindow(this) as MainWindow;
 			};
+            
 		}
 
 		private void BackClick(object sender, RoutedEventArgs e)
@@ -50,6 +49,7 @@ namespace Horizontal_Prototype_March_4
 			}
 			window.CurrentUserControl = window.backStack.Pop();
 			window._Navigation.Navigate(window.CurrentUserControl);
+            window.changeWidth();
 		}
 		private void favClick(object sender, RoutedEventArgs e)
 		{

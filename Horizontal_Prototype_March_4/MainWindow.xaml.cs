@@ -23,18 +23,18 @@ namespace Horizontal_Prototype_March_4
         public Stack<object> backStack = new Stack<object>();
         public List<string> favouritesList = new List<string>();
 
-        public object[,] _recipesArray = new object[,] {  { "Lemon Chicken" ,"chicken lemon lime pepper salt", "images/food/chicken.jpeg", new LemonChickenDesc() },
-                                                           { "Italian Delux Pizza", "peperoni ham hamburger flour salt", "images/food/delux_pizza.jpg", new LemonChickenDesc() },
+        public object[,] _recipesArray = new object[,] {   { "Italian Delux Pizza", "peperoni ham hamburger flour salt", "images/food/delux_pizza.jpg", new LemonChickenDesc() },
                                                            { "Vegan Stirfry", "green pepper beef cabage yam brocolli soy sauce", "images/food/gluten_free_stirfry.jpeg", new LemonChickenDesc() },
                                                            {"Honeysmoked Ham", "ham honey brown sugar salt" , "images/food/honeysmoked_ham.jpeg", new LemonChickenDesc() },
                                                            {"Homestyle Spaghetti", "spaghetti beef pepper marianara tomato paste" , "images/food/italian_spaghetti.jpg", new LemonChickenDesc() },
                                                            {"Tofu Burger", "tofu pepper salt bun lettuce tomato green pepper" , "images/food/tofu_burger.jpeg", new LemonChickenDesc() },
                                                            {"Cake", "flour salt milk eggs sugar icing sugar", "images/food/cake.jpeg", new LemonChickenDesc() },
-                                                           {"Meatloaf", "Beef pepper curry salt chilli onion", "images/food/Meatloaf-121.jpg", new MeatDesc() },
                                                            {"Rosemary Fries", "french fries salt rosemary", "images/food/Rosemary_fry.jpeg", new LemonChickenDesc()},
-                                                           {"Strawberry Souffle", "icing sugar strawberry dessert", "images/food/straw_sou.jpg", new StrawberrySouffleDesc() },
                                                            {"Vegetarian Pasta", "broccoli celery salt pepper carrots", "images/food/veg_pasta.jpeg", new LemonChickenDesc() },
-                                                           {"Vegtable Salad", "Spinach italian dressing peppers raisons ", "images/food/veg_salad.jpg", new LemonChickenDesc() }};
+                                                           {"Vegtable Salad", "Spinach italian dressing peppers raisons ", "images/food/veg_salad.jpg", new LemonChickenDesc() },
+                                                           { "Lemon Chicken" ,"chicken lemon lime pepper salt", "images/food/chicken.jpeg", new LemonChickenDesc() },
+                                                           {"Meatloaf", "Beef pepper curry salt chilli onion", "images/food/Meatloaf-121.jpg", new MeatDesc() },
+                                                           {"Strawberry Souffle", "icing sugar strawberry dessert", "images/food/straw_sou.jpg", new StrawberrySouffleDesc() } };
         public favourites _favourites = new favourites();
         public Search _search = new Search();
 
@@ -210,7 +210,17 @@ namespace Horizontal_Prototype_March_4
                 {
                     _favourites._favourites_Grid.Width = 470;
 					_favourites._FavsWrapPanel.Width = 430;
-					incButtonSize(_favourites._FavsWrapPanel);
+                    foreach (Button child in _favourites._FavsWrapPanel.Children)
+                        if (child.Width > 110)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            incButtonSize(_favourites._FavsWrapPanel);
+                            break;
+                        }
+                    
                     
                 }
                 else
@@ -232,7 +242,16 @@ namespace Horizontal_Prototype_March_4
                     _search.search_instructions.Margin = new Thickness(94, 177, 84, 0);
 
 
-                    incButtonSize(_search._SearchRecipesWrapPanel);
+                    foreach (Button child in _search._SearchRecipesWrapPanel.Children)
+                        if (child.Width > 110)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            incButtonSize(_search._SearchRecipesWrapPanel);
+                            break;
+                        }
                 }
                 else
                 {
@@ -252,10 +271,20 @@ namespace Horizontal_Prototype_March_4
 				{
 					_allRecipes._allRecipes_Grid.Width = 470;
 					_allRecipes._RecipesWrapPanel.Width = 430;
-					incButtonSize(_allRecipes._RecipesWrapPanel);
+					
+                    foreach (Button child in _allRecipes._RecipesWrapPanel.Children)
+                        if (child.Width > 110)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            incButtonSize(_allRecipes._RecipesWrapPanel);
+                            break;
+                        }
 
 
-				}
+                }
 				else
 				{
 					_allRecipes._allRecipes_Grid.Width = 372;
@@ -271,7 +300,17 @@ namespace Horizontal_Prototype_March_4
                 {
                     _categories._categories_Grid.Width = 470;
                     _categories._CategoriesWrapPanel.Width = 430;
-					incButtonSize(_categories._CategoriesWrapPanel);
+					
+                    foreach (Button child in _categories._CategoriesWrapPanel.Children)
+                        if (child.Width > 110)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            incButtonSize(_categories._CategoriesWrapPanel);
+                            break;
+                        }
 
 
                 }
@@ -289,12 +328,23 @@ namespace Horizontal_Prototype_March_4
                 {
                     LemonChickenDesc lcd = CurrentUserControl as LemonChickenDesc;
                     lcd._lemonChickenGrid.Width = 470;
+                    lcd._ingredList.Margin = new Thickness(50, 266, 162, 120);
+                    lcd.chick_desc.Margin = new Thickness(270, 280, 0, 120);
+                    lcd.chick_desc.Width = 165;
+                    lcd.chick_desc.FontSize = 16;
+                    lcd.chicken.Width = 210;
 
                 }
                 else
                 {
                     LemonChickenDesc lcd = CurrentUserControl as LemonChickenDesc;
                     lcd._lemonChickenGrid.Width = 372;
+
+                    lcd._ingredList.Margin = new Thickness(118, 266, 54, 120);
+                    lcd.chick_desc.Margin = new Thickness(137, 196, 0, 278);
+                    lcd.chick_desc.Width = 155;
+                    lcd.chick_desc.FontSize = 12;
+                    lcd.chicken.Width = 155;
 
 
                 }
@@ -309,12 +359,22 @@ namespace Horizontal_Prototype_March_4
 				{
 					MeatDesc md = CurrentUserControl as MeatDesc;
 					md._meatGrid.Width = 470;
-				}
+                    md._ingredMeat.Margin = new Thickness(50, 266, 162, 120);
+                    md.meat_desc_inrec.Margin = new Thickness(270, 280, 0, 120);
+                    md.meat_desc_inrec.Width = 165;
+                    md.meat_desc_inrec.FontSize = 16;
+                    md.meat.Width = 216;
+                }
 				else
 				{
-					MeatDesc md = CurrentUserControl as MeatDesc;
-					md._meatGrid.Width = 372;
-				}
+                    MeatDesc md = CurrentUserControl as MeatDesc;
+                    md._meatGrid.Width = 372;
+                    md._ingredMeat.Margin = new Thickness(118, 266, 54, 120);
+                    md.meat_desc_inrec.Margin = new Thickness(118, 218, 0, 272);
+                    md.meat_desc_inrec.Width = 155;
+                    md.meat_desc_inrec.FontSize = 12;
+                    md.meat.Width = 161;
+                }
 
             }
             else if (CurrentUserControl is MeatIngr)
@@ -328,6 +388,33 @@ namespace Horizontal_Prototype_March_4
                     _meatIngr._meatIngr_Grid.Width = 372;
                 }
             }
+            else if (CurrentUserControl is StrawberrySouffleDesc)
+            {
+                if (!isExpanded)
+                {
+                    StrawberrySouffleDesc ssd = CurrentUserControl as StrawberrySouffleDesc;
+                    ssd._strawSouffleGrid.Width = 470;
+                    ssd.straw_sou.Width = 210;
+                    ssd._ingred.Margin = new Thickness(50, 266, 162, 120);
+                    ssd.straw_desc_ingr.Margin = new Thickness(270, 280, 0, 120);
+                    ssd.straw_desc_ingr.Width = 165;
+                    ssd.straw_desc_ingr.FontSize = 16;
+                    
+                }
+                else
+                {
+                    StrawberrySouffleDesc ssd = CurrentUserControl as StrawberrySouffleDesc;
+                    ssd._strawSouffleGrid.Width = 372;
+                    ssd.straw_sou.Width = 155;
+                    ssd._ingred.Margin = new Thickness(118, 266, 54, 120);
+                    ssd.straw_desc_ingr.Margin = new Thickness(137, 196, 0, 278);
+                    ssd.straw_desc_ingr.Width = 155;
+                    ssd.straw_desc_ingr.FontSize = 12;
+                    
+
+                }
+            }
+
             else if (CurrentUserControl is StrawberrySouffleIngr)
             {
                 if (!isExpanded)
@@ -369,7 +456,14 @@ namespace Horizontal_Prototype_March_4
                 {
                     _popular._popular_Grid.Width = 470;
                     _popular._PopularWrapPanel.Width = 430;
-					incButtonSize(_popular._PopularWrapPanel);
+                    foreach (Button child in _popular._PopularWrapPanel.Children)
+                        if (child.Width > 110) {
+                            break;
+                        }
+                        else { 
+                        incButtonSize(_popular._PopularWrapPanel);
+                            break;
+                        }
 
 				}
                 else

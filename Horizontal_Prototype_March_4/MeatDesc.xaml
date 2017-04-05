@@ -16,13 +16,15 @@
             <Image x:Name ="star" Source="images/buttons/star2.png" HorizontalAlignment="Left" Width="50" RenderTransformOrigin="0.46,1.25"/>
         </Button>
         <TextBlock x:Name="title_all" Height="53" Text="Classic Meatloaf" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="34" Margin="118,27,44,459"/>
-        <Image x:Name="chicken" Source="images/food/Meatloaf-121.jpg" HorizontalAlignment="Left" Height="160" Margin="115,75,0,0" VerticalAlignment="Top" Width="161"/>
-        <TextBlock x:Name="meat_desc_inrec" HorizontalAlignment="Left" Margin="118,240,0,251" TextWrapping="Wrap" Text="'Classic Dinner for a small group, best served with baked potatoes'" Width="155"></TextBlock>
-        <TextBox x:Name="meat_serving" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="Serves 2-4 " VerticalAlignment="Top" Width="230"  FontSize="20" Margin="88,288,0,0" BorderBrush="Black" IsReadOnly="True"/>
-        <TextBox x:Name="meat_prep" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="Prep-Time: 20 mins " VerticalAlignment="Top" Width="230"  FontSize="20" Margin="88,318,0,0" BorderBrush="Black" IsReadOnly="True"/>
-        <TextBox x:Name="meat_cookt" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Cook-Time: 1 hr" VerticalAlignment="Top" Width="230"  FontSize="20" Margin="88,348,0,0" BorderBrush="Black" IsReadOnly="True"/>
-        <TextBox x:Name="meat_keywords" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="54" TextWrapping="Wrap" Text="Keywords: Meat, Meal, Savory, Entree" VerticalAlignment="Top" Width="230" FontSize="20" Margin="88,376,0,0" RenderTransformOrigin="1,0.5" BorderBrush="Black" IsReadOnly="True"/>
-        <Button x:Name="meat_ing_but" Content="Ingredients" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="103,435,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="IngredClick"/>
-        <Button x:Name="meat_beg_but" Content="Begin" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="103,478,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="BeginClick"/>
+        <Image x:Name="meat" Source="images/food/Meatloaf-121.jpg" HorizontalAlignment="Left"  Margin="115,75,0,0" VerticalAlignment="Top" Width="161"/>
+        <TextBlock x:Name="meat_desc_inrec" FontStyle="Italic" HorizontalAlignment="Left" Margin="118,218,0,272" TextWrapping="Wrap" Text="'Classic Dinner for a small group, best served with baked potatoes'" Width="155"></TextBlock>
+        <WrapPanel x:Name="_ingredMeat" Margin="118,266,54,104">
+        <TextBox x:Name="meat_serving" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="Serves 2-4 " VerticalAlignment="Top" Width="200"  FontSize="20"  BorderBrush="Black" IsReadOnly="True"/>
+        <TextBox x:Name="meat_prep" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="Prep-Time: 20 mins " VerticalAlignment="Top" Width="200"  FontSize="20"  BorderBrush="Black" IsReadOnly="True"/>
+        <TextBox x:Name="meat_cookt" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Cook-Time: 1 hr" VerticalAlignment="Top" Width="200"  FontSize="20"  BorderBrush="Black" IsReadOnly="True"/>
+        <TextBox x:Name="meat_keywords" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="54" TextWrapping="Wrap" Text="Keywords: Meat, Meal, Savory, Entree" VerticalAlignment="Top" Width="200" FontSize="20"  RenderTransformOrigin="1,0.5" BorderBrush="Black" IsReadOnly="True"/>
+        </WrapPanel>
+        <Button x:Name="meat_ing_but" Content="Ingredients" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,435,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="IngredClick"/>
+        <Button x:Name="meat_beg_but" Content="Begin" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,478,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="BeginClick"/>
     </Grid>
 </UserControl>
