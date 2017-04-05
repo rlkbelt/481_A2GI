@@ -36,13 +36,11 @@ namespace Horizontal_Prototype_March_4
 
 		private void BackClicked(object sender, RoutedEventArgs e)
 		{
-			window.backStack.Push(this);
 			window.CurrentUserControl = window._lemonDesc;
 			window._Navigation.Navigate(window._lemonDesc);
 		}
 		private void NextClicked(object sender, RoutedEventArgs e)
 		{
-			window.backStack.Push(this);
 			window.CurrentUserControl = window._lemonStep2;
 			window._Navigation.Navigate(window._lemonStep2);
 		}

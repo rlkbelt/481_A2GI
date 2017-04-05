@@ -11,6 +11,9 @@
         <Frame x:Name="_Navigation" NavigationUIVisibility="Hidden"></Frame>
         <Button x:Name="page_back" Background="Transparent" BorderBrush="Transparent" BorderThickness="0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="75" Margin="10,10,0,0" Click="BackClick"  >
             <Image Source="images/buttons/back.png" HorizontalAlignment="Left" Width="100" Height="75"/>
+            <Button.BitmapEffect >
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+            </Button.BitmapEffect>
         </Button>
         <Button x:Name="favButton" Tag="fav" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Width="50" Height="50" Margin="318,10,-16,459" Click="favClick">
             <Image x:Name ="star" Source="images/buttons/star2.png" HorizontalAlignment="Left" Width="50" RenderTransformOrigin="0.46,1.25"/>
@@ -19,25 +22,21 @@
         <Image x:Name="chicken" Source="images/food/chicken.jpeg" HorizontalAlignment="Left"  Margin="137,80,0,0" VerticalAlignment="Top" Width="155"/>
         <TextBlock x:Name="chick_desc" FontSize="12" FontStyle="Italic" HorizontalAlignment="Left" Margin="137,196,0,278" TextWrapping="Wrap" Text="This easy lemon chicken recipe features simple flavors that allow the natural flavors to shine." Width="155"></TextBlock>
         <WrapPanel x:Name="_ingredList" Margin="118,266,54,104">
-        <TextBox x:Name="chick_serving" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Serves: 2-4" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
-        <TextBox x:Name="chick_prep" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Prep-Time: 10 mins " VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
-        <TextBox x:Name="chick_cookt" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Cook-Time: 20 mins" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
+            <TextBox x:Name="chick_serving" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Serves: 2-4" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
+            <TextBox x:Name="chick_prep" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Prep-Time: 10 mins " VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
+            <TextBox x:Name="chick_cookt" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Cook-Time: 20 mins" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
             <TextBox x:Name="chick_keywords" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="66" TextWrapping="Wrap" Text="Keywords: Chicken, Lemon, Lime, Pepper, Salt" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
         </WrapPanel>
-<<<<<<< HEAD
-        <Button x:Name="chick_ing_but" Content="Ingredients" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="IngredClick" Margin="118,435,0,0"/>
-        <Button x:Name="chick_beg_but" Content="Begin" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,478,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="BeginClick"/>
-=======
-        <Button x:Name="chick_ing_but" Content="Ingredients" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="IngredClick" Margin="118,435,0,0">
+
+        <Button x:Name="chick_beg_but" Content="Begin" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,478,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="BeginClick">
             <Button.BitmapEffect >
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </Button.BitmapEffect>
         </Button>
-        <Button x:Name="chick_beg_but" Content="Begin" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,478,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22">
+        <Button x:Name="chick_ing_but" Content="Ingredients" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="IngredClick" Margin="118,425,0,0">
             <Button.BitmapEffect >
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </Button.BitmapEffect>
         </Button>
->>>>>>> af07b60b37293202588ce58a52df6d23312e7697
     </Grid>
 </UserControl>

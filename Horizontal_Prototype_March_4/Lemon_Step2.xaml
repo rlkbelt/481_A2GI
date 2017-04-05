@@ -16,7 +16,11 @@
         <Grid Margin="85,10,95,0" >
             <TextBlock x:Name="lStep1_Title" HorizontalAlignment="Left" Margin="110,0,0,0" TextWrapping="Wrap" Text="Step 2" VerticalAlignment="Top" TextDecorations="Underline" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Height="36" Width="74"/>
             <TextBlock x:Name="lStep1_Step" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="192" Width="270" FontSize="24" Text="In a large pan sauté olive oil, minced garlic, lemon juice, lime juice, lemon zest, and dry white wine.  "/>
-            <Button x:Name="backToDesc" Content="Back to Recipe Description" Background="White" HorizontalAlignment="Left" Margin="67,510,0,0" VerticalAlignment="Top" Width="168" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Height="21" Click="backToDesc_Click"/>
+            <Button x:Name="backToDesc" Content="Back to Recipe Description" Background="White" HorizontalAlignment="Left" Margin="58,479,0,0" VerticalAlignment="Top" Width="168" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Height="21" Click="backToDesc_Click">
+                <Button.BitmapEffect >
+                    <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+                </Button.BitmapEffect>
+            </Button>
             <TextBlock x:Name="sStep1_Title_Copy1" HorizontalAlignment="Left" Margin="10,334,0,0" TextWrapping="Wrap" Text="Ingredients for this step:" VerticalAlignment="Top" TextDecorations="Underline" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="26" Height="36" Width="270"/>
             <WrapPanel x:Name="straw_step1wrap" Margin="10,360,10,86" Width="216" >
             </WrapPanel >
