@@ -35,7 +35,7 @@ namespace Horizontal_Prototype_March_4
 
         private void BackClicked(object sender, RoutedEventArgs e)
         {
-            window._allRecipes._searchboxAR.Text = window._Sidebar.Width.ToString();   
+       //     window._allRecipes._searchboxAR.Text = window._Sidebar.Width.ToString();   
         }
     }
 }
