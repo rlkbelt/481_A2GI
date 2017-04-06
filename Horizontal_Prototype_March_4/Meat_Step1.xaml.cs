@@ -40,24 +40,29 @@ namespace Horizontal_Prototype_March_4
 
 		private void BackClicked(object sender, RoutedEventArgs e)
 		{
-			if (window.backStack.Peek() is HomePage)
+            if (window.backStack.Peek() is MeatDesc && window._meatDesc.meatDescSidebarCollapsed == false)
             {
-                window.expanderInvisible();
+                window.OpenExpanded();
+                window.isExpanded = true;
             }
-            if (window.backStack.Peek() is favourites)
+            else if (window.backStack.Peek() is MeatDesc && window._meatIngr.meatIngrCollapsed == false)
             {
-                window._favourites.initValues(window._recipesArray, window.favouritesList);
+                window.OpenExpanded();
+                window.isExpanded = true;
             }
+            else
+            {
+                window.isExpanded = false;
+                window.OpenCollapsed();
+                
+            }
+
             window.CurrentUserControl = window.backStack.Pop();
             window._Navigation.Navigate(window.CurrentUserControl);
             window.changeWidth();
-            window.expanderVisible();
-            if (window.isExpanded == true)
-            {
-                window.OpenCollapsed();
-            }
-		}
-		private void NextClicked(object sender, RoutedEventArgs e)
+
+        }
+        private void NextClicked(object sender, RoutedEventArgs e)
 		{
 			window.CurrentUserControl = window._meatStep2;
 			window._Navigation.Navigate(window._meatStep2);

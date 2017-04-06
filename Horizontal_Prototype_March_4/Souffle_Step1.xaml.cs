@@ -29,33 +29,40 @@ namespace Horizontal_Prototype_March_4
 			{
 				window = Window.GetWindow(this) as MainWindow;
 				window.OpenCollapsed();
+                straw_step1wrap.Children.Clear();
+                string[] ingredString = { window._strawIngr.straw_ingr1.Text, window._strawIngr.straw_ingr2.Text, window._strawIngr.straw_ingr3.Text, window._strawIngr.straw_ingr4.Text, window._strawIngr.straw_ingr5.Text };
+                string[] quantities = { window._strawIngr.straw_quan1.Text, window._strawIngr.straw_quan2.Text, window._strawIngr.straw_quan3.Text, window._strawIngr.straw_quan4.Text, window._strawIngr.straw_quan5.Text };
+                window.populateStep(quantities, ingredString, straw_step1wrap);
 
-				// window._ExpanderButton.Expanded = Expander.Collap
 
-			};
+            };
 			
 
 		}
 
 		private void BackClicked(object sender, RoutedEventArgs e)
 		{
-			if (window.backStack.Peek() is HomePage)
-			{
-				window.expanderInvisible();
-			}
-			if (window.backStack.Peek() is favourites)
-			{
-				window._favourites.initValues(window._recipesArray, window.favouritesList);
-			}
-			window.CurrentUserControl = window.backStack.Pop();
-			window._Navigation.Navigate(window.CurrentUserControl);
-			window.changeWidth();
-			window.expanderVisible();
-			if (window.isExpanded == true)
-			{
-				window.OpenCollapsed();
-			}
-		}
+            if (window.backStack.Peek() is StrawberrySouffleDesc && window._strawDesc.strawDescSidebarCollapsed == false)
+            {
+                window.OpenExpanded();
+                window.isExpanded = true;
+            }
+            else if (window.backStack.Peek() is StrawberrySouffleIngr && window._strawIngr.strawSoufIngrCollapsed == false)
+            {
+                window.OpenExpanded();
+                window.isExpanded = true;
+            }
+            else
+            {
+                window.isExpanded = false;
+                window.OpenCollapsed();
+            }
+
+            window.CurrentUserControl = window.backStack.Pop();
+            window._Navigation.Navigate(window.CurrentUserControl);
+            window.changeWidth();
+            
+        }
 		private void NextClicked(object sender, RoutedEventArgs e)
 		{
 			window.CurrentUserControl = window._souffleStep2;
@@ -64,10 +71,12 @@ namespace Horizontal_Prototype_March_4
 
 		private void backToDesc_Click(object sender, RoutedEventArgs e)
 		{
-			window.backStack.Push(this);
-			window.CurrentUserControl = window._strawDesc;
-			window._Navigation.Navigate(window._strawDesc);
-		}
+            window.CurrentUserControl = window._strawDesc;
+            window._Navigation.Navigate(window.CurrentUserControl);
+            window.OpenExpanded();
+            window.changeWidth();
+            
+        }
 
 		private void term_Click(object sender, RoutedEventArgs e)
 		{
@@ -75,56 +84,5 @@ namespace Horizontal_Prototype_March_4
 			window._Navigation.Navigate(window._beatDefinition);
 		}
 
-		public void populateStep()
-		{
-			string[] ingredString = { "Pureed Strawberries", "Chilled Cream", "Lemon Juice", "Eggs", "Lukewarm Water" };
-			TextBox[] arrayTB = new TextBox[ingredString.Length];
-			TextBox[] ingredName = new TextBox[ingredString.Length];
-            for (int i=0; i < arrayTB.Length; i++)
-            {
-                arrayTB[i] = new TextBox();
-            }
-            for (int i = 0; i < ingredName.Length; i++)
-            {
-                ingredName[i] = new TextBox();
-            }
-
-
-            UserControl1 uc = new UserControl1();
-            uc.changeMetrics();
-
-            string[] metric = { uc.straw_quan1, uc.straw_quan2, uc.straw_quan3, uc.straw_quan4, uc.straw_quan5 };
-            	
-			for (int i = 0; i < ingredString.Length; i++)
-			{
-
-				//arrayTB[i].Text. = "aString";
-				arrayTB[i].Text = window._strawIngr.straw_quan1.Text;
-				arrayTB[i].FontSize = 16;
-                
-                arrayTB[i].Text = metric[i];
-				arrayTB[i].FontSize = 12;
-				arrayTB[i].HorizontalAlignment = HorizontalAlignment.Left;
-				arrayTB[i].FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
-				arrayTB[i].Height = 22;
-				arrayTB[i].TextWrapping = TextWrapping.Wrap;
-				arrayTB[i].VerticalAlignment = VerticalAlignment.Top;
-				arrayTB[i].Width = 70;
-				straw_step1wrap.Children.Add(arrayTB[i]);
-
-				ingredName[i].Text = ingredString[i];
-				ingredName[i].FontSize = 12;
-				ingredName[i].HorizontalAlignment = HorizontalAlignment.Left;
-				ingredName[i].FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
-				ingredName[i].Height = 22;
-				ingredName[i].TextWrapping = TextWrapping.Wrap;
-				ingredName[i].VerticalAlignment = VerticalAlignment.Top;
-				ingredName[i].Width = 146;
-				straw_step1wrap.Children.Add(ingredName[i]);
-
-			}
-			
-		}
-
-	}
+    }
 }

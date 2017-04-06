@@ -21,6 +21,7 @@ namespace Horizontal_Prototype_March_4
     public partial class MeatDesc : UserControl
     {
         MainWindow window;
+        public bool meatDescSidebarCollapsed;
         public Boolean favFlag = false;
         public MeatDesc()
         {
@@ -32,6 +33,11 @@ namespace Horizontal_Prototype_March_4
                 window._SearchButton.Background = Brushes.Beige;
                 window._FavouritesButton.Background = Brushes.Beige;
                 window._SettingsButton.Background = Brushes.Beige;
+                meatDescSidebarCollapsed = false;
+                if (!window.isExpanded)
+                {
+                    meatDescSidebarCollapsed = true;
+                }
             };
         }
 
@@ -50,7 +56,7 @@ namespace Horizontal_Prototype_March_4
             window.changeWidth();
         }
 
-        private void favClick(object sender, RoutedEventArgs e)
+        public void favClick(object sender, RoutedEventArgs e)
         {
 
 

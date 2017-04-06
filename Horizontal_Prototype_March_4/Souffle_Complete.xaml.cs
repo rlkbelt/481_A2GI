@@ -29,59 +29,63 @@ namespace Horizontal_Prototype_March_4
 			this.Loaded += (s, e) =>
 			{
 				window = Window.GetWindow(this) as MainWindow;
-				window.OpenCollapsed();
-				// window._ExpanderButton.Expanded = Expander.Collap
-			};
+                window.OpenExpanded(); //if this doesn't opened as expanded it messes with futher program use
+                                       // window._ExpanderButton.Expanded = Expander.Collap
+            };
 
 		}
-		private void favClick(object sender, RoutedEventArgs e)
-		{
+        private void favClick(object sender, RoutedEventArgs e)
+        {
+
+            StrawberrySouffleDesc md = window._strawDesc;
+            if (!md.favFlag)
+            {
+                Image img = md.favButton.Content as Image;
+                BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
+                img.Source = BitImg;
+                md.favButton.Content = img;
+
+                md.favFlag = true;
+                Image img2 = md.favButton.Content as Image;
 
 
-			if (!favFlag)
-			{
-				favFlag = true;
-				Image img = favButton.Content as Image;
-				BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
-				img.Source = BitImg;
-				favButton.Content = img;
-				window.favouritesList.Add("strawberry souffle");
-				/*for (int i = 0; i < window._recipesArray.GetLength(0); i++)
-				{
+                favButton.Content = img2;
+                window.favouritesList.Add("strawberry souffle");
+            }
 
-					if (window._recipesArray[i, 0].ToString().ToLower().Equals("strawberry souffle"))
-					{
+            else
+            {
+                Image img = md.favButton.Content as Image;
+                BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2.png", UriKind.Relative));
+                img.Source = BitImg;
+                md.favButton.Content = img;
 
-						window._recipesArray[i, 3] = this;
-						break;
+                md.favFlag = false;
+                Image img2 = md.favButton.Content as Image;
 
-					}
-				}*/
-			}
-			else
-			{
-				favFlag = false;
-				Image img = favButton.Content as Image;
-				BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2.png", UriKind.Relative));
-				img.Source = BitImg;
-				favButton.Content = img;
-				window.favouritesList.Remove("strawberry souffle");
-				/*for (int i = 0; i < window._recipesArray.GetLength(0); i++)
-				{
 
-					if (window._recipesArray[i, 0].ToString().ToLower().Equals("strawberry souffle"))
-					{
+                favButton.Content = img2;
+                window.favouritesList.Remove("strawberry souffle");
+            }
 
-						window._recipesArray[i, 3] = this;
-						break;
+            for (int i = 0; i < window._recipesArray.GetLength(0); i++)
+            {
 
-					}
-				}*/
-			}
+                if (window._recipesArray[i, 0].ToString().ToLower().Equals("strawberry souffle"))
+                {
 
-		}
+                    window._recipesArray[i, 3] = md;
+                    break;
 
-		private void BackClicked(object sender, RoutedEventArgs e)
+
+                }
+            }
+
+
+        }
+
+
+        private void BackClicked(object sender, RoutedEventArgs e)
 		{
 			if (window.backStack.Peek() is HomePage)
 			{
@@ -95,7 +99,7 @@ namespace Horizontal_Prototype_March_4
 			window._Navigation.Navigate(window.CurrentUserControl);
 			window.changeWidth();
 			window.expanderVisible();
-			if (window.isExpanded == true)
+			if (window.isExpanded == false)
 			{
 				window.OpenCollapsed();
 			}

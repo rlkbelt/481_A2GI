@@ -144,6 +144,33 @@ namespace Horizontal_Prototype_March_4
         }
         private void Collapsed(object sender, RoutedEventArgs e)
         {
+            if (CurrentUserControl is StrawberrySouffleDesc)
+            {
+                _strawDesc.strawDescSidebarCollapsed = false;
+            }
+            else if (CurrentUserControl is StrawberrySouffleIngr)
+            {
+                _strawIngr.strawSoufIngrCollapsed = false;
+            }
+
+            else if (CurrentUserControl is MeatDesc)
+            {
+                _meatDesc.meatDescSidebarCollapsed = false;
+            }
+            else if (CurrentUserControl is MeatIngr)
+            {
+                _meatIngr.meatIngrCollapsed = false;
+            }
+
+            else if (CurrentUserControl is LemonChickenDesc)
+            {
+                _lemonDesc.lemonSidebarCollapsed = false;
+            }
+            else if (CurrentUserControl is LemonIngred)
+            {
+                _lemonIngr.lemonIngrCollapsed = false;
+            }
+
             isExpanded = true;
             _HomeDP.Width = 95;
             _SeachDP.Width = 95;
@@ -159,6 +186,31 @@ namespace Horizontal_Prototype_March_4
         }
         private void Expanded(object sender, RoutedEventArgs e)
         {
+            if (CurrentUserControl is StrawberrySouffleDesc)
+            {
+                _strawDesc.strawDescSidebarCollapsed = true;
+            }
+            else if (CurrentUserControl is StrawberrySouffleIngr)
+            {
+                _strawIngr.strawSoufIngrCollapsed = true;
+            }
+            else if (CurrentUserControl is MeatDesc)
+            {
+                _meatDesc.meatDescSidebarCollapsed = true;
+            }
+            else if (CurrentUserControl is MeatIngr)
+            {
+                _meatIngr.meatIngrCollapsed = true;
+            }
+
+            else if (CurrentUserControl is LemonChickenDesc)
+            {
+                _lemonDesc.lemonSidebarCollapsed = true;
+            }
+            else if (CurrentUserControl is LemonIngred)
+            {
+                _lemonIngr.lemonIngrCollapsed = true;
+            }
             isExpanded = false;
             _HomeDP.Width = 0;
             _SeachDP.Width = 0;
@@ -361,13 +413,14 @@ namespace Horizontal_Prototype_March_4
             }
             else if (CurrentUserControl is MeatIngr)
             {
+                MeatIngr mi = CurrentUserControl as MeatIngr;
                 if (!isExpanded)
                 {
-                    _meatIngr._meatIngr_Grid.Width = 470;
+                    mi._meatIngr_Grid.Width = 470;
                 }
                 else
                 {
-                    _meatIngr._meatIngr_Grid.Width = 372;
+                    mi._meatIngr_Grid.Width = 372;
                 }
             }
 
@@ -429,25 +482,29 @@ namespace Horizontal_Prototype_March_4
 			
 			else if (CurrentUserControl is StrawberrySouffleIngr)
             {
+                StrawberrySouffleIngr ssi = CurrentUserControl as StrawberrySouffleIngr;
                 if (!isExpanded)
                 {
-                    _strawIngr._strawIngr_Grid.Width = 470;
+                    
+                    ssi._strawIngr_Grid.Width = 470;
                 }
                 else
                 {
-                    _strawIngr._strawIngr_Grid.Width = 372;
+                    ssi._strawIngr_Grid.Width = 372;
                 }
             }
 
 			else if (CurrentUserControl is LemonIngred)
 			{
-				if (!isExpanded)
+                LemonIngred li = CurrentUserControl as LemonIngred;
+
+                if (!isExpanded)
 				{
-					_lemonIngr._lemonIngr_Grid.Width = 470;
+					li._lemonIngr_Grid.Width = 470;
 				}
 				else
 				{
-					_lemonIngr._lemonIngr_Grid.Width = 372;
+					li._lemonIngr_Grid.Width = 372;
 				}
 			}
 
@@ -668,6 +725,54 @@ namespace Horizontal_Prototype_March_4
 
 			}
 		}
+
+        public void populateStep(string[] quantities, string[] ingredString, WrapPanel wp)
+        {
+
+            TextBlock[] arrayTB = new TextBlock[ingredString.Length];
+            TextBlock[] ingredName = new TextBlock[ingredString.Length];
+            for (int k = 0; k < arrayTB.Length; k++)
+            {
+                arrayTB[k] = new TextBlock();
+            }
+            for (int k = 0; k < ingredName.Length; k++)
+            {
+                ingredName[k] = new TextBlock();
+            }
+
+            
+            for (int k = 0; k < arrayTB.Length; k++)
+            {
+
+
+
+                arrayTB[k].Text = quantities[k];
+
+                arrayTB[k].FontSize = 12;
+                arrayTB[k].HorizontalAlignment = HorizontalAlignment.Left;
+                arrayTB[k].FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
+                arrayTB[k].Height = 22;
+                arrayTB[k].TextWrapping = TextWrapping.Wrap;
+                arrayTB[k].VerticalAlignment = VerticalAlignment.Top;
+                arrayTB[k].Width = 70;
+                wp.Children.Add(arrayTB[k]);
+                
+
+
+              
+                ingredName[k].Text = ingredString[k];
+                ingredName[k].FontSize = 12;
+                ingredName[k].HorizontalAlignment = HorizontalAlignment.Left;
+                ingredName[k].FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
+                ingredName[k].Height = 22;
+                ingredName[k].TextWrapping = TextWrapping.Wrap;
+                ingredName[k].VerticalAlignment = VerticalAlignment.Top;
+                ingredName[k].Width = 146;
+                wp.Children.Add(ingredName[k]);
+
+            }
+
+        }
 
 
     }

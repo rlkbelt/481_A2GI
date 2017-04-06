@@ -28,6 +28,7 @@ namespace Horizontal_Prototype_March_4
 		public object CurrentUserControl { get; set; }
 
 		MainWindow window;
+        public bool strawDescSidebarCollapsed;
         public Boolean favFlag = false;
         public StrawberrySouffleDesc()
 		{
@@ -39,6 +40,12 @@ namespace Horizontal_Prototype_March_4
                 window._SearchButton.Background = Brushes.Beige;
                 window._FavouritesButton.Background = Brushes.Beige;
                 window._SettingsButton.Background = Brushes.Beige;
+                strawDescSidebarCollapsed = false;
+                if (!window.isExpanded)
+                {
+                    strawDescSidebarCollapsed = true;
+                }
+                
             };
 		}
 
@@ -111,16 +118,20 @@ namespace Horizontal_Prototype_March_4
 			window.CurrentUserControl = window._souffleStep1;
 			window._Navigation.Navigate(window._souffleStep1);
             window.changeWidth();
-			//window._souffleStep1.populateStep();
-		}
+            string[] ingredString = { window._strawIngr.straw_ingr1.Text, window._strawIngr.straw_ingr2.Text, window._strawIngr.straw_ingr3.Text, window._strawIngr.straw_ingr4.Text, window._strawIngr.straw_ingr5.Text };
+            string[] quantities = { window._strawIngr.straw_quan1.Text, window._strawIngr.straw_quan2.Text, window._strawIngr.straw_quan3.Text, window._strawIngr.straw_quan4.Text, window._strawIngr.straw_quan5.Text };
+            window.populateStep(quantities, ingredString, window._souffleStep1.straw_step1wrap);
+        }
 
 		private void straw_IngredClick(object sender, RoutedEventArgs e)
 
 		{
 			window.backStack.Push(this);
 			window._Navigation.Navigate(window._strawIngr);
+ 
 			window.changeWidth();
-			window.expanderInvisible();
-		}
+			
+
+        }
 	}
 }

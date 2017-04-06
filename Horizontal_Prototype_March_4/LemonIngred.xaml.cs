@@ -22,8 +22,10 @@ namespace Horizontal_Prototype_March_4
 	{
 		MainWindow window;
 		PrintDialog printDialog;
+        public bool lemonIngrCollapsed;
 
-		public LemonIngred()
+
+        public LemonIngred()
 		{
 			InitializeComponent();
 			this.Loaded += (s, e) =>
@@ -34,7 +36,12 @@ namespace Horizontal_Prototype_March_4
 				window._SearchButton.Background = Brushes.Beige;
 				window._FavouritesButton.Background = Brushes.Beige;
 				window._SettingsButton.Background = Brushes.Beige;
-			};
+                lemonIngrCollapsed = false;
+                if (!window.isExpanded)
+                {
+                    lemonIngrCollapsed = true;
+                }
+            };
 		}
 		public void SliderMover(object sender, RoutedEventArgs e)
 		{
@@ -148,7 +155,7 @@ namespace Horizontal_Prototype_March_4
 			window._Navigation.Navigate(window.CurrentUserControl);
 			window.changeWidth();
 			window.expanderVisible();
-			if (window.isExpanded == true)
+			if (window.isExpanded == false)
 			{
 				window.OpenCollapsed();
 			}

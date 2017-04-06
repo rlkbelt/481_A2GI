@@ -29,7 +29,8 @@ namespace Horizontal_Prototype_March_4
 
 		MainWindow window;
 		public Boolean favFlag = false;
-		public LemonChickenDesc()
+        public bool lemonSidebarCollapsed;
+        public LemonChickenDesc()
 		{
 			InitializeComponent();
 			this.Loaded += (s, e) =>
@@ -39,6 +40,11 @@ namespace Horizontal_Prototype_March_4
 				window._SearchButton.Background = Brushes.Beige;
 				window._FavouritesButton.Background = Brushes.Beige;
 				window._SettingsButton.Background = Brushes.Beige;
+                lemonSidebarCollapsed = false;
+                if (!window.isExpanded)
+                {
+                    lemonSidebarCollapsed = true;
+                }
 			};
 		}
 

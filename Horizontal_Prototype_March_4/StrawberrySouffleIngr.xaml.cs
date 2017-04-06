@@ -22,7 +22,7 @@ namespace Horizontal_Prototype_March_4
     {
         MainWindow window;
 		PrintDialog printDialog;
-
+        public bool strawSoufIngrCollapsed;
 		public StrawberrySouffleIngr()
         {
             InitializeComponent();
@@ -34,6 +34,12 @@ namespace Horizontal_Prototype_March_4
                 window._SearchButton.Background = Brushes.Beige;
                 window._FavouritesButton.Background = Brushes.Beige;
                 window._SettingsButton.Background = Brushes.Beige;
+                strawSoufIngrCollapsed = false;
+                if (!window.isExpanded)
+                {
+                    strawSoufIngrCollapsed = true;
+                }
+                
             };
         }
 		public void SliderMover(object sender, RoutedEventArgs e)
@@ -147,8 +153,7 @@ namespace Horizontal_Prototype_March_4
             window.CurrentUserControl = window.backStack.Pop();
             window._Navigation.Navigate(window.CurrentUserControl);
             window.changeWidth();
-            window.expanderVisible();
-            if (window.isExpanded == true)
+            if (window.isExpanded == false)
             {
                 window.OpenCollapsed();
             }
@@ -169,7 +174,9 @@ namespace Horizontal_Prototype_March_4
 			window.CurrentUserControl = window._souffleStep1;
 			window._Navigation.Navigate(window._souffleStep1);
             window.expanderVisible();
-			//window._souffleStep1.populateStep();
+            string[] ingredString = { window._strawIngr.straw_ingr1.Text, window._strawIngr.straw_ingr2.Text, window._strawIngr.straw_ingr3.Text, window._strawIngr.straw_ingr4.Text, window._strawIngr.straw_ingr5.Text };
+            string[] quantities = { window._strawIngr.straw_quan1.Text, window._strawIngr.straw_quan2.Text, window._strawIngr.straw_quan3.Text, window._strawIngr.straw_quan4.Text, window._strawIngr.straw_quan5.Text };
+            window.populateStep(quantities, ingredString, window._souffleStep1.straw_step1wrap);
         }
 		public void initVals()
 		{
