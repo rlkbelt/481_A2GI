@@ -125,7 +125,13 @@ namespace Horizontal_Prototype_March_4
 
             }
         }
-        private void ButtonClick(object sender, RoutedEventArgs e)
+
+		public void ClearBox(object sender, RoutedEventArgs e)
+		{
+			recipe_count_Favs.Text = "";
+		}
+
+		private void ButtonClick(object sender, RoutedEventArgs e)
         {
             window.backStack.Push(this);
             Button but = sender as Button;
