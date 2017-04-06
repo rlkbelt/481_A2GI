@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -38,7 +37,7 @@ namespace Horizontal_Prototype_March_4
                 window = Window.GetWindow(this) as MainWindow;
                 window.OpenCollapsed();
 
-                // window._ExpanderButton.Expanded = Expander.Collap
+                //window._ExpanderButton.Expanded = Expander.Collap
 
             };
             straw_quan1 = "1 Cup";
