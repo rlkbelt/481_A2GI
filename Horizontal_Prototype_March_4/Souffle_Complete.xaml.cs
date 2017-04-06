@@ -46,7 +46,7 @@ namespace Horizontal_Prototype_March_4
 				img.Source = BitImg;
 				favButton.Content = img;
 				window.favouritesList.Add("strawberry souffle");
-				for (int i = 0; i < window._recipesArray.GetLength(0); i++)
+				/*for (int i = 0; i < window._recipesArray.GetLength(0); i++)
 				{
 
 					if (window._recipesArray[i, 0].ToString().ToLower().Equals("strawberry souffle"))
@@ -56,7 +56,7 @@ namespace Horizontal_Prototype_March_4
 						break;
 
 					}
-				}
+				}*/
 			}
 			else
 			{
@@ -66,7 +66,7 @@ namespace Horizontal_Prototype_March_4
 				img.Source = BitImg;
 				favButton.Content = img;
 				window.favouritesList.Remove("strawberry souffle");
-				for (int i = 0; i < window._recipesArray.GetLength(0); i++)
+				/*for (int i = 0; i < window._recipesArray.GetLength(0); i++)
 				{
 
 					if (window._recipesArray[i, 0].ToString().ToLower().Equals("strawberry souffle"))
@@ -76,7 +76,7 @@ namespace Horizontal_Prototype_March_4
 						break;
 
 					}
-				}
+				}*/
 			}
 
 		}
