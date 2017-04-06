@@ -14,38 +14,38 @@
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </Button.BitmapEffect>
         </Button>
-        <Grid HorizontalAlignment="Left" Height="297" Margin="97,125,0,0" VerticalAlignment="Top" Width="216" Background="White">
+        <Grid HorizontalAlignment="Left" Height="297" Margin="97,125,0,0" VerticalAlignment="Top" Width="216" Background="Transparent">
             <WrapPanel x:Name="souffleIngr_Wrap" >
-                <TextBox x:Name="straw_quan1" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="1 Cup" VerticalAlignment="Top" Width="70" FontSize="16" />
-                <TextBox x:Name="straw_ingr1" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="Pureed Strawberries" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="straw_quan1" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="1 Cup" VerticalAlignment="Top" Width="70" FontSize="16" />
+                <TextBox x:Name="straw_ingr1" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="Pureed Strawberries" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="straw_quan2" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="2 Cups" VerticalAlignment="Top" Width="70"  FontSize="16"/>
-                <TextBox x:Name="straw_ingr2" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Chilled Cream" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="straw_quan2" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="2 Cups" VerticalAlignment="Top" Width="70"  FontSize="16"/>
+                <TextBox x:Name="straw_ingr2" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Chilled Cream" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="straw_quan3" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  Text="2 Tbsp." FontSize="16"/>
-                <TextBox x:Name="straw_ingr3" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lemon Juice" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="straw_quan3" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  Text="2 Tbsp." FontSize="16"/>
+                <TextBox x:Name="straw_ingr3" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lemon Juice" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="straw_quan4" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="16" Text="3"/>
-                <TextBox x:Name="straw_ingr4" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Eggs" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="straw_quan4" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="16" Text="3"/>
+                <TextBox x:Name="straw_ingr4" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Eggs" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="straw_quan5" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1/4 Cup"/>
-                <TextBox x:Name="straw_ingr5" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lukewarm Water" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="straw_quan5" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1/4 Cup"/>
+                <TextBox x:Name="straw_ingr5" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lukewarm Water" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="straw_quan6" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Cup"/>
-                <TextBox x:Name="straw_ingr6" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Powdered Sugar" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="straw_quan6" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Cup"/>
+                <TextBox x:Name="straw_ingr6" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Powdered Sugar" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="straw_quan7" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Tsp."/>
-                <TextBox x:Name="straw_ingr7" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Vanilla" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="straw_quan7" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Tsp."/>
+                <TextBox x:Name="straw_ingr7" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Vanilla" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="straw_quan8" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Tbsp."/>
-                <TextBox x:Name="straw_ingr8" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Gelatine" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="straw_quan8" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Tbsp."/>
+                <TextBox x:Name="straw_ingr8" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Gelatine" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="straw_quan9" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Cup"/>
-                <TextBox x:Name="straw_ingr9" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Sliced Strawberries" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="straw_quan9" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Cup"/>
+                <TextBox x:Name="straw_ingr9" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Sliced Strawberries" VerticalAlignment="Top" Width="146" FontSize="18"/>
             </WrapPanel>
         </Grid>
         <TextBlock x:Name="tBlock" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="133,45,0,0" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" FontSize="32"/>
-        <Button x:Name="beg_but" Content="Begin" HorizontalAlignment="Left" Margin="97,482,0,0" VerticalAlignment="Top" Width="216" Height="38" FontSize="22" FontFamily="Tw Cen MT Condensed Extra Bold" Click="strawIngr_BeginClick">
+        <Button x:Name="beg_but" Background="BurlyWood" Foreground="SaddleBrown" Content="Begin" HorizontalAlignment="Left" Margin="97,482,0,0" VerticalAlignment="Top" Width="216" Height="38" FontSize="22" FontFamily="Tw Cen MT Condensed Extra Bold" Click="strawIngr_BeginClick">
             <Button.BitmapEffect >
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </Button.BitmapEffect>

@@ -25,17 +25,17 @@
         <Image x:Name="meat" Source="images/food/Meatloaf-121.jpg" HorizontalAlignment="Left"  Margin="115,75,0,0" VerticalAlignment="Top" Width="161"/>
         <TextBlock x:Name="meat_desc_inrec" FontStyle="Italic" HorizontalAlignment="Left" Margin="118,218,0,272" TextWrapping="Wrap" Text="'Classic Dinner for a small group, best served with baked potatoes'" Width="155"></TextBlock>
         <WrapPanel x:Name="_ingredMeat" Margin="118,266,54,104">
-        <TextBox x:Name="meat_serving" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="Serves 2-4 " VerticalAlignment="Top" Width="200"  FontSize="20"  BorderBrush="Black" IsReadOnly="True"/>
-        <TextBox x:Name="meat_prep" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="Prep-Time: 20 mins " VerticalAlignment="Top" Width="200"  FontSize="20"  BorderBrush="Black" IsReadOnly="True"/>
-        <TextBox x:Name="meat_cookt" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Cook-Time: 1 hr" VerticalAlignment="Top" Width="200"  FontSize="20"  BorderBrush="Black" IsReadOnly="True"/>
-        <TextBox x:Name="meat_keywords" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="54" TextWrapping="Wrap" Text="Keywords: Meat, Meal, Savory, Entree" VerticalAlignment="Top" Width="200" FontSize="20"  RenderTransformOrigin="1,0.5" BorderBrush="Black" IsReadOnly="True"/>
+        <TextBox x:Name="meat_serving" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="Serves 2-4 " VerticalAlignment="Top" Width="200"  FontSize="20"  BorderBrush="BurlyWood" Background="Transparent" IsReadOnly="True"/>
+        <TextBox x:Name="meat_prep" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="Prep-Time: 20 mins " VerticalAlignment="Top" Width="200"  FontSize="20"  BorderBrush="BurlyWood" Background="Beige" IsReadOnly="True"/>
+        <TextBox x:Name="meat_cookt" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Cook-Time: 1 hr" VerticalAlignment="Top" Width="200"  FontSize="20"  BorderBrush="BurlyWood" Background="Beige" IsReadOnly="True"/>
+        <TextBox x:Name="meat_keywords" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="54" TextWrapping="Wrap" Text="Keywords: Meat, Meal, Savory, Entree" VerticalAlignment="Top" Width="200" FontSize="20"  RenderTransformOrigin="1,0.5" BorderBrush="BurlyWood" Background="Beige" IsReadOnly="True"/>
         </WrapPanel>
-        <Button x:Name="meat_ing_but" Content="Ingredients" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,435,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="IngredClick">
+        <Button x:Name="meat_ing_but" Content="Ingredients" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,435,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="IngredClick" Background="BurlyWood" Foreground="SaddleBrown">
             <Button.BitmapEffect >
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </Button.BitmapEffect>
         </Button>
-        <Button x:Name="meat_beg_but" Content="Begin" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,478,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="BeginClick">
+        <Button x:Name="meat_beg_but" Content="Begin" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,478,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="BeginClick" Background="BurlyWood" Foreground="SaddleBrown">
             <Button.BitmapEffect >
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </Button.BitmapEffect>
