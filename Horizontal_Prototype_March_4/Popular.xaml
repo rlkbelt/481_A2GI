@@ -13,7 +13,7 @@
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </Button.BitmapEffect>
         </Button>
-        <TextBox x:Name="_searchboxPop" Height="25" Margin="35,96,37,418"  Text="Filter Recipes.." Width="300" FontFamily="Tw Cen MT Condensed" FontSize="20" FontStyle="Italic" MouseDoubleClick="ClearBox" KeyDown="Filter"/>
+        <TextBox x:Name="_searchboxPop" Height="25" Margin="35,96,37,418"  Background="Transparent" Text="Filter Recipes.." Width="300" FontFamily="Tw Cen MT Condensed" FontSize="20" FontStyle="Italic" MouseDoubleClick="ClearBox" KeyDown="Filter"/>
 
         <TextBlock x:Name="popTitle_all" Height="53" Margin="155,32,107,454"  Text="Popular" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="36"/>
 
