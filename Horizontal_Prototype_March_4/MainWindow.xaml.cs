@@ -162,7 +162,7 @@ namespace Horizontal_Prototype_March_4
                 string[] ingredString = { _strawIngr.straw_ingr1.Text, _strawIngr.straw_ingr2.Text, _strawIngr.straw_ingr3.Text, _strawIngr.straw_ingr4.Text, _strawIngr.straw_ingr5.Text };
                 string[] quantities = { _strawIngr.straw_quan1.Text, _strawIngr.straw_quan2.Text, _strawIngr.straw_quan3.Text, _strawIngr.straw_quan4.Text, _strawIngr.straw_quan5.Text };
                 populateStep(quantities, ingredString, _souffleStep1.straw_step1wrap);
-                _allRecipes._searchboxAR.Text = "Here";
+                
             }
             else if (CurrentUserControl is Souffle_Step2)
             {
