@@ -19,6 +19,6 @@
         <TextBlock x:Name="straw_desc_ingr" HorizontalAlignment="Left" Margin="52,134,0,275" TextWrapping="Wrap" Width="270" FontSize="24"><Run FontFamily="Segoe UI" Text="Cut something into small pieces with repeated sharp blows using an axe or knife."/><LineBreak/><Run/></TextBlock>
         <TextBlock x:Name="title_all" Text="Chop: " FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Margin="52,95,97,405"/>
         <TextBlock x:Name="title_all_Copy" Text="Chopped:" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Margin="52,282,97,218"/>
-        <TextBlock x:Name="straw_desc_ingr_Copy" HorizontalAlignment="Left" Margin="52,326,0,83" TextWrapping="Wrap" Width="270" FontSize="24"><Run Text="Diced, minced, or cut into small bits. "/><LineBreak/><Run FontFamily="Segoe UI" Text=""/></TextBlock>
+        <TextBlock x:Name="straw_desc_ingr_Copy" HorizontalAlignment="Left" Margin="52,326,0,83" TextWrapping="Wrap" Width="270" FontSize="24" Text="Cut into small pieces."/>
     </Grid>
 </UserControl>

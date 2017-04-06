@@ -13,7 +13,7 @@
         </Button>
 
         <TextBlock x:Name="title_favs" Height="53" Margin="80,-400,0,0"  Text="Favourites" Width="164" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="36"/>
-        <TextBox x:Name="recipe_count_Favs" Background ="Transparent" Height="25" Margin="35,96,37,418"  Text="Search For a Favourite.." Width="300" FontFamily="Tw Cen MT Condensed" FontSize="20" FontStyle="Italic"/>
+        <TextBox x:Name="recipe_count_Favs" Background ="Transparent" Height="25" Margin="35,96,37,418"  Text="Search For a Favourite.." Width="300" FontFamily="Tw Cen MT Condensed" FontSize="20" FontStyle="Italic" GotFocus="ClearBox"/>
         <ScrollViewer x:Name="_ScrollerFav" Margin="0,140,0,0" >
 
             <WrapPanel x:Name="_FavsWrapPanel" HorizontalAlignment="Right" Width="330">
