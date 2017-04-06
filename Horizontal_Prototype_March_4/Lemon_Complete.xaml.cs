@@ -94,7 +94,8 @@ namespace Horizontal_Prototype_March_4
 		{
 			window.backStack.Push(this);
 			window.CurrentUserControl = window._homePage;
-			window._Navigation.Navigate(window._homePage);
+            window.expanderInvisible();
+            window._Navigation.Navigate(window._homePage);
 		}
 	}
 }
