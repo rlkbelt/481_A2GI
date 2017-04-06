@@ -117,7 +117,8 @@ namespace Horizontal_Prototype_March_4
                     button.Width = 100;
                     button.Content = sp;
                     button.Tag = text.Text;
-                    button.Background = Brushes.White;
+                    button.Background = Brushes.Beige;
+                    button.BorderBrush = Brushes.BurlyWood;
                     button.Click += new RoutedEventHandler(ButtonClick);
                     _FavsWrapPanel.Children.Add(button);
                 }

@@ -21,7 +21,7 @@
 
             <WrapPanel x:Name="_CategoriesWrapPanel" HorizontalAlignment="Right" Width="330">
 
-                <Button x:Name="gluten_free"  Background="White" HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
+                <Button x:Name="gluten_free"  Background="Transparent" BorderBrush="BurlyWood"  HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
                     
                     <StackPanel>
                        <!-- <Border x:Name ="TopAndLeft" BorderThickness="3,3,0,0" BorderBrush="{x:Static SystemColors.ControlDarkBrush}"/-->
@@ -30,14 +30,14 @@
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="italian"  Background="White" HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
+                <Button x:Name="italian"  Background="Transparent" BorderBrush="BurlyWood"  HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
                     <StackPanel>
                         <Image Source="images/food/delux_pizza.jpg" Height="90"/>
                         <TextBlock Text="Italian" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="14" TextAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="vegan"  Background="White" HorizontalAlignment="Left" Height="127"  VerticalAlignment="Top" Width="100" >
+                <Button x:Name="vegan"  Background="Transparent" BorderBrush="BurlyWood"  HorizontalAlignment="Left" Height="127"  VerticalAlignment="Top" Width="100" >
                     <StackPanel>
                         <Image Source="images/food/gluten_free_stirfry.jpeg" Height="90"/>
                         <TextBlock Text="Vegan" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="14" TextAlignment="Center"/>
@@ -45,21 +45,21 @@
                 </Button>
 
 
-                <Button x:Name="beef"  Background="White" HorizontalAlignment="Left" Width="100" Height="127" VerticalAlignment="Top">
+                <Button x:Name="beef"  Background="Transparent" BorderBrush="BurlyWood"  HorizontalAlignment="Left" Width="100" Height="127" VerticalAlignment="Top">
                     <StackPanel>
                         <Image Source="images/food/honeysmoked_ham.jpeg" Height="90"/>
                         <TextBlock Text="Beef" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="14" TextAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="spaghetti"  Background="White" HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
+                <Button x:Name="spaghetti"  Background="Transparent" BorderBrush="BurlyWood"  HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
                     <StackPanel>
                         <Image Source="images/food/italian_spaghetti.jpg" Height="90"/>
                         <TextBlock Text="Spaghetti" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="14" TextAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="vegetarian"  Background="White" HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
+                <Button x:Name="vegetarian"  Background="Transparent" BorderBrush="BurlyWood"  HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
                     <StackPanel>
                         <Image Source="images/food/tofu_burger.jpeg" Height="90"/>
                         <TextBlock Text="Vegetarian" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="14" TextAlignment="Center"/>
@@ -68,21 +68,21 @@
 
 
 
-                <Button x:Name="chicken"  Background="White" HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
+                <Button x:Name="chicken"  Background="Transparent" BorderBrush="BurlyWood"  HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
                     <StackPanel>
                         <Image Source="images/food/chicken.jpeg" Height="90"/>
                         <TextBlock Text="Chicken" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="14" TextAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="pizza"  Background="White" HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
+                <Button x:Name="pizza"  Background="Transparent" BorderBrush="BurlyWood"  HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
                     <StackPanel>
                         <Image Source="images/food/delux_pizza.jpg" Height="90"/>
                         <TextBlock Text="Pizza" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="14" TextAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="asian"  Background="White" HorizontalAlignment="Left" Height="127"  VerticalAlignment="Top" Width="100" >
+                <Button x:Name="asian"  Background="Transparent" BorderBrush="BurlyWood"  HorizontalAlignment="Left" Height="127"  VerticalAlignment="Top" Width="100" >
                     <StackPanel>
                         <Image Source="images/food/gluten_free_stirfry.jpeg" Height="90"/>
                         <TextBlock Text="Asian" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="14" TextAlignment="Center"/>
@@ -90,21 +90,21 @@
                 </Button>
 
 
-                <Button x:Name="barbecue"  Background="White" HorizontalAlignment="Left" Width="100" Height="127" VerticalAlignment="Top">
+                <Button x:Name="barbecue"  Background="Transparent" BorderBrush="BurlyWood"  HorizontalAlignment="Left" Width="100" Height="127" VerticalAlignment="Top">
                     <StackPanel>
                         <Image Source="images/food/honeysmoked_ham.jpeg" Height="90"/>
                         <TextBlock Text="Barbecue" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="14" TextAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="spaghetti2"  Background="White" HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
+                <Button x:Name="spaghetti2"  Background="Transparent" BorderBrush="BurlyWood"  HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
                     <StackPanel>
                         <Image Source="images/food/italian_spaghetti.jpg" Height="90"/>
                         <TextBlock Text="Spaghetti" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="14" TextAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="vegetarian2"  Background="White" HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
+                <Button x:Name="vegetarian2"  Background="Transparent" BorderBrush="BurlyWood"  HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
                     <StackPanel>
                         <Image Source="images/food/tofu_burger.jpeg" Height="90"/>
                         <TextBlock Text="Vegetarian" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="14" TextAlignment="Center"/>

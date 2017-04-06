@@ -7,10 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="570" d:DesignWidth="470">
     <Grid Name="Lemon_Step1Grid" Width="470" Height="570">
-        <Button x:Name="NextButton" Background="Transparent" BorderBrush ="BurlyWood" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Margin="380,0,0,0" Click="NextClicked">
+        <Button x:Name="NextButton" Background="BurlyWood" BorderBrush="SaddleBrown" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Margin="380,0,0,0" Click="NextClicked">
             <StackPanel>
                 <Image Source="images/buttons/NextArrow.png" Height="98"/>
-                <TextBlock Text="Next" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="26" TextAlignment="Center"/>
+                <TextBlock Text="Next" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="26" TextAlignment="Center" Foreground="SaddleBrown"/>
             </StackPanel>
         </Button>
         <Grid Margin="85,10,95,0" >
@@ -25,10 +25,10 @@
             <WrapPanel x:Name="straw_step1wrap" Margin="10,360,10,86" Width="216" >
             </WrapPanel >
         </Grid>
-        <Button x:Name="BackButton" Background="Transparent" BorderBrush ="BurlyWood" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Click="BackClicked">
+        <Button x:Name="BackButton" Background="BurlyWood" BorderBrush="SaddleBrown"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Click="BackClicked">
             <StackPanel>
                 <Image Source="images/buttons/BackArrow.png" Height="98"/>
-                <TextBlock Text="Back" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="26" TextAlignment="Center"/>
+                <TextBlock Text="Back" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="26" TextAlignment="Center" Foreground="SaddleBrown"/>
             </StackPanel>
         </Button>
 
