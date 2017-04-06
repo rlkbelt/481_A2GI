@@ -162,5 +162,13 @@ namespace Horizontal_Prototype_March_4
 
         }
 
-    }
+		private void BeginClick(object sender, RoutedEventArgs e)
+		{
+			window.backStack.Push(this);
+			window.CurrentUserControl = window._meatStep1;
+			window._Navigation.Navigate(window._meatStep1);
+			window.expanderVisible();
+		}
+
+	}
 }

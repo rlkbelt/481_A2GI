@@ -40,20 +40,16 @@ namespace Horizontal_Prototype_March_4
 
         public AllRecipes _allRecipes = new AllRecipes();
         public categories _categories = new categories();
-        public MeatComplete _meatComplete = new MeatComplete();
 		public Beat_Definition _beatDefinition = new Beat_Definition();
         public MeatIngr _meatIngr = new MeatIngr();
+		public MeatDesc _meatDesc = new MeatDesc();
         public Popular _popular = new Popular();
         public StrawberrySouffleIngr _strawIngr = new StrawberrySouffleIngr();
 		public StrawberrySouffleDesc _strawDesc = new StrawberrySouffleDesc();
 
         public Settings _settings = new Settings();
 
-        public Step_window _stepWindow = new Step_window();
-        public Step1Screen _step1Screen = new Step1Screen();
-        public Step2Screen _step2Screen = new Step2Screen();
         public HomePage _homePage = new HomePage();
-        public MeatStep1 _meatStep1 = new MeatStep1();
 		public Souffle_Step1 _souffleStep1 = new Souffle_Step1();
 		public Souffle_Step2 _souffleStep2 = new Souffle_Step2();
 		public Souffle_Step3 _souffleStep3 = new Souffle_Step3();
@@ -64,6 +60,12 @@ namespace Horizontal_Prototype_March_4
 		public Lemon_Step2 _lemonStep2 = new Lemon_Step2();
 		public Lemon_Step3 _lemonStep3 = new Lemon_Step3();
 		public Lemon_Complete _lemonComp = new Lemon_Complete();
+
+		public Meat_Step1 _meatStep1 = new Meat_Step1();
+		public Meat_Step2 _meatStep2 = new Meat_Step2();
+		public Meat_Step3 _meatStep3 = new Meat_Step3();
+		public Meat_Step4 _meatStep4 = new Meat_Step4();
+		public Meat_Complete _meatComp = new Meat_Complete();
 
 		public Boolean isExpanded = true;
 
@@ -332,10 +334,6 @@ namespace Horizontal_Prototype_March_4
             }
 
            
-            else if (CurrentUserControl is MeatComplete)
-            {
-
-            }
             else if (CurrentUserControl is MeatDesc)
             {
 				if(!isExpanded)
@@ -515,11 +513,11 @@ namespace Horizontal_Prototype_March_4
                 }
             }
 
-            else if (CurrentUserControl is MeatStep1)
+            else if (CurrentUserControl is Meat_Step1)
             {
                 if (!isExpanded)
                 {
-                    _meatStep1.MeatStep1Grid.Width = 470;
+                    _meatStep1.Meat_Step1Grid.Width = 470;
 					_meatStep1.BackButton.Visibility = Visibility.Visible;
 				}
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,19 +17,22 @@ using System.Windows.Shapes;
 namespace Horizontal_Prototype_March_4
 {
 	/// <summary>
-	/// Interaction logic for Lemon_Step1.xaml
+	/// Interaction logic for Souffle_Step1.xaml
 	/// </summary>
-	public partial class Lemon_Step1 : UserControl
+	public partial class Meat_Step1 : UserControl
 	{
 		MainWindow window;
 
-		public Lemon_Step1()
+		public Meat_Step1()
 		{
 			InitializeComponent();
 			this.Loaded += (s, e) =>
 			{
 				window = Window.GetWindow(this) as MainWindow;
 				window.OpenCollapsed();
+
+				// window._ExpanderButton.Expanded = Expander.Collap
+
 			};
 
 
@@ -50,15 +54,14 @@ namespace Horizontal_Prototype_March_4
 		}
 		private void NextClicked(object sender, RoutedEventArgs e)
 		{
-			window.CurrentUserControl = window._lemonStep2;
-			window._Navigation.Navigate(window._lemonStep2);
+			window.CurrentUserControl = window._meatStep2;
+			window._Navigation.Navigate(window._meatStep2);
 		}
 
 		private void backToDesc_Click(object sender, RoutedEventArgs e)
 		{
-			window.backStack.Push(this);
-			window.CurrentUserControl = window._lemonDesc;
-			window._Navigation.Navigate(window._lemonDesc);
+			window.CurrentUserControl = window._meatDesc;
+			window._Navigation.Navigate(window._meatDesc);
 		}
 
 	}

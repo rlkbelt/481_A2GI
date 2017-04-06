@@ -76,11 +76,20 @@
     <Compile Include="Lemon_Step3.xaml.cs">
       <DependentUpon>Lemon_Step3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MeatComplete.xaml.cs">
-      <DependentUpon>MeatComplete.xaml</DependentUpon>
+    <Compile Include="Meat_Complete.xaml.cs">
+      <DependentUpon>Meat_Complete.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MeatStep1.xaml.cs">
-      <DependentUpon>MeatStep1.xaml</DependentUpon>
+    <Compile Include="Meat_Step1.xaml.cs">
+      <DependentUpon>Meat_Step1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Meat_Step2.xaml.cs">
+      <DependentUpon>Meat_Step2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Meat_Step3.xaml.cs">
+      <DependentUpon>Meat_Step3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Meat_Step4.xaml.cs">
+      <DependentUpon>Meat_Step4.xaml</DependentUpon>
     </Compile>
     <Compile Include="PrintDialog.xaml.cs">
       <DependentUpon>PrintDialog.xaml</DependentUpon>
@@ -102,15 +111,6 @@
     </Compile>
     <Compile Include="Souffle_Step3.xaml.cs">
       <DependentUpon>Souffle_Step3.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Step1Screen.xaml.cs">
-      <DependentUpon>Step1Screen.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Step2Screen.xaml.cs">
-      <DependentUpon>Step2Screen.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Step_window.xaml.cs">
-      <DependentUpon>Step_window.xaml</DependentUpon>
     </Compile>
     <Compile Include="StrawberrySouffleDesc.xaml.cs">
       <DependentUpon>StrawberrySouffleDesc.xaml</DependentUpon>
@@ -189,10 +189,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MeatComplete.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MeatDesc.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -201,7 +197,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MeatStep1.xaml">
+    <Page Include="Meat_Complete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Meat_Step1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Meat_Step2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Meat_Step3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Meat_Step4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -234,18 +246,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Souffle_Step3.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Step1Screen.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Step2Screen.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Step_window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

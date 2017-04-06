@@ -45,7 +45,7 @@
             </WrapPanel>
         </Grid>
         <TextBlock x:Name="tBlock" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="153,36,0,0" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" FontSize="24"/>
-        <Button x:Name="beg_but"  Background="BurlyWood" Content="Begin" HorizontalAlignment="Left" Margin="97,470,0,0" VerticalAlignment="Top" Width="196" Height="38" FontSize="22" FontFamily="Tw Cen MT Condensed Extra Bold" >
+        <Button x:Name="beg_but"  Background="BurlyWood" Content="Begin" HorizontalAlignment="Left" Margin="97,470,0,0" VerticalAlignment="Top" Width="196" Height="38" FontSize="22" FontFamily="Tw Cen MT Condensed Extra Bold" Click="BeginClick" >
             <Button.BitmapEffect >
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </Button.BitmapEffect>
