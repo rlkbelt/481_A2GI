@@ -1,0 +1,8 @@
+Categories 
+Add ingrediants to all remaining recipe steps
+Write-ups 
+If nothing found on search/filter show no results found 
+When expanding ingrediants do something when the page expands and fix 
+	slider bar when page is expanded 
+Do the README file 
+Find bugs and clean stuff up

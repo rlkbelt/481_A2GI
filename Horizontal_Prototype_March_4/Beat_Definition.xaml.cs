@@ -34,7 +34,7 @@ namespace Horizontal_Prototype_March_4
 
 		private void BackClick(object sender, RoutedEventArgs e)
 		{
-			window.backStack.Push(this);
+			
 			window.CurrentUserControl = window._souffleStep1;
 			window._Navigation.Navigate(window._souffleStep1);
 		}

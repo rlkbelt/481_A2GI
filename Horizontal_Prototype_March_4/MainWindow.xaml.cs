@@ -83,10 +83,9 @@ namespace Horizontal_Prototype_March_4
 			_strawIngr.initVals();
             
         }
-		public StrawberrySouffleIngr getStrawIngr()
-		{
-			return _strawIngr;
-		}
+
+
+
 
 
         private void HomeClick(object sender, RoutedEventArgs e)
@@ -123,6 +122,23 @@ namespace Horizontal_Prototype_March_4
             backStack.Push(CurrentUserControl);
             CurrentUserControl = _settings;
             OpenExpanded();
+            reinit();
+        }
+
+
+        public void reinit()
+        {
+            object[] steps = { new Meat_Step1(), new Meat_Step2(), new Meat_Step3(), new Meat_Step4(),
+                               new Lemon_Step1(),new Lemon_Step2(), new Lemon_Step3(),
+                               new Souffle_Step1(), new Souffle_Step1(), new Souffle_Step1()};
+            foreach (object obj in steps)
+            {
+                if (CurrentUserControl.GetType() == obj.GetType()) { }
+            }
+            if (CurrentUserControl is Meat_Step1)
+            {
+
+            }
         }
      
         public void OpenCollapsed()
@@ -591,11 +607,11 @@ namespace Horizontal_Prototype_March_4
 				if (!isExpanded)
 				{
 					_souffleStep1.Souffle_Step1Grid.Width = 470;
-					_souffleStep1.BackButton.Visibility = Visibility.Visible;
+					//_souffleStep1.BackButton.Visibility = Visibility.Visible;
 				}
 				else
 				{
-					_souffleStep1.BackButton.Visibility = Visibility.Hidden;
+					//_souffleStep1.BackButton.Visibility = Visibility.Hidden;
 				}
 			}
 
@@ -604,11 +620,11 @@ namespace Horizontal_Prototype_March_4
 				if (!isExpanded)
 				{
 					_souffleStep2.Souffle_Step2Grid.Width = 470;
-					_souffleStep2.BackButton.Visibility = Visibility.Visible;
+					//_souffleStep2.BackButton.Visibility = Visibility.Visible;
 				}
 				else
 				{
-					_souffleStep2.BackButton.Visibility = Visibility.Hidden;
+					//_souffleStep2.BackButton.Visibility = Visibility.Hidden;
 				}
 			}
 
@@ -621,7 +637,7 @@ namespace Horizontal_Prototype_March_4
 				}
 				else
 				{
-					_souffleStep3.BackButton.Visibility = Visibility.Hidden;
+					//_souffleStep3.BackButton.Visibility = Visibility.Hidden;
 				}
 			}
 
@@ -634,7 +650,7 @@ namespace Horizontal_Prototype_March_4
 				}
 				else
 				{
-					_souffleStep1.BackButton.Visibility = Visibility.Hidden;
+					//_souffleStep1.BackButton.Visibility = Visibility.Hidden;
 				}
 			}
 
@@ -647,7 +663,7 @@ namespace Horizontal_Prototype_March_4
 				}
 				else
 				{
-					_lemonStep2.BackButton.Visibility = Visibility.Hidden;
+					//_lemonStep2.BackButton.Visibility = Visibility.Hidden;
 				}
 			}
 
@@ -660,7 +676,7 @@ namespace Horizontal_Prototype_March_4
 				}
 				else
 				{
-					_lemonStep3.BackButton.Visibility = Visibility.Hidden;
+					//_lemonStep3.BackButton.Visibility = Visibility.Hidden;
 				}
 			}
 

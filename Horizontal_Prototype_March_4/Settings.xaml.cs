@@ -42,8 +42,10 @@ namespace Horizontal_Prototype_March_4
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
+            
             window.CurrentUserControl = window.backStack.Pop();
             window._Navigation.Navigate(window.CurrentUserControl);
+            window.changeWidth();
         }
 
         private void ImperialCheck(object sender, RoutedEventArgs e)
@@ -51,6 +53,8 @@ namespace Horizontal_Prototype_March_4
 			imperialRadio.IsChecked = true;
 			try { window._meatIngr.SliderMover(null, null); } catch (Exception) { }
             try { window._strawIngr.SliderMover(null, null); } catch (Exception) { }
+            try { window._lemonIngr.SliderMover(null, null); } catch (Exception) { }
+            
 
         }
 
@@ -61,6 +65,8 @@ namespace Horizontal_Prototype_March_4
 			try { window._meatIngr.SliderMover(null, null); } catch (Exception) { }
             try { window._strawIngr.SliderMover(null, null); } catch (Exception) { }
             try { window._lemonIngr.SliderMover(null, null); } catch (Exception) { }
+            
+
         }
     }
 }
