@@ -45,6 +45,10 @@ namespace Horizontal_Prototype_March_4
             
             window.CurrentUserControl = window.backStack.Pop();
             window._Navigation.Navigate(window.CurrentUserControl);
+            try { window._meatIngr.SliderMover(null, null); } catch (Exception) { }
+            try { window._strawIngr.SliderMover(null, null); } catch (Exception) { }
+            try { window._lemonIngr.SliderMover(null, null); } catch (Exception) { }
+            window.reinit();
             window.changeWidth();
         }
 
@@ -54,6 +58,7 @@ namespace Horizontal_Prototype_March_4
 			try { window._meatIngr.SliderMover(null, null); } catch (Exception) { }
             try { window._strawIngr.SliderMover(null, null); } catch (Exception) { }
             try { window._lemonIngr.SliderMover(null, null); } catch (Exception) { }
+            
             
 
         }
@@ -66,6 +71,7 @@ namespace Horizontal_Prototype_March_4
             try { window._strawIngr.SliderMover(null, null); } catch (Exception) { }
             try { window._lemonIngr.SliderMover(null, null); } catch (Exception) { }
             
+
 
         }
     }

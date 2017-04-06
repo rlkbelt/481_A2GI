@@ -128,14 +128,47 @@ namespace Horizontal_Prototype_March_4
 
         public void reinit()
         {
-            object[] steps = { new Meat_Step1(), new Meat_Step2(), new Meat_Step3(), new Meat_Step4(),
-                               new Lemon_Step1(),new Lemon_Step2(), new Lemon_Step3(),
-                               new Souffle_Step1(), new Souffle_Step1(), new Souffle_Step1()};
-            foreach (object obj in steps)
-            {
-                if (CurrentUserControl.GetType() == obj.GetType()) { }
-            }
+           
             if (CurrentUserControl is Meat_Step1)
+            {
+
+            }
+            else if (CurrentUserControl is Meat_Step2)
+            {
+
+            }
+            else if (CurrentUserControl is Meat_Step3)
+            {
+
+            }
+            else if (CurrentUserControl is Meat_Step4)
+            {
+
+            }
+            else if (CurrentUserControl is Lemon_Step1)
+            {
+
+            }
+            else if (CurrentUserControl is Lemon_Step2)
+            {
+
+            }
+            else if (CurrentUserControl is Lemon_Step3)
+            {
+
+            }
+            else if (CurrentUserControl is Souffle_Step1)
+            {
+                string[] ingredString = { _strawIngr.straw_ingr1.Text, _strawIngr.straw_ingr2.Text, _strawIngr.straw_ingr3.Text, _strawIngr.straw_ingr4.Text, _strawIngr.straw_ingr5.Text };
+                string[] quantities = { _strawIngr.straw_quan1.Text, _strawIngr.straw_quan2.Text, _strawIngr.straw_quan3.Text, _strawIngr.straw_quan4.Text, _strawIngr.straw_quan5.Text };
+                populateStep(quantities, ingredString, _souffleStep1.straw_step1wrap);
+                _allRecipes._searchboxAR.Text = "Here";
+            }
+            else if (CurrentUserControl is Souffle_Step2)
+            {
+
+            }
+            else if (CurrentUserControl is Souffle_Step3)
             {
 
             }
