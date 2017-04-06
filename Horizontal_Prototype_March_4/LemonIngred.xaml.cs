@@ -168,7 +168,7 @@ namespace Horizontal_Prototype_March_4
 			window.backStack.Push(this);
 			window.CurrentUserControl = window._lemonStep1;
 			window._Navigation.Navigate(window._lemonStep1);
-			window.expanderVisible();
+		//	window.expanderVisible();
 		}
 	
 
