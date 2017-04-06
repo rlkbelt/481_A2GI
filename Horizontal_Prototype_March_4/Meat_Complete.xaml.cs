@@ -91,9 +91,12 @@ namespace Horizontal_Prototype_March_4
 
 		private void DoneClicked(object sender, RoutedEventArgs e)
 		{
+		
 			window.backStack.Push(this);
 			window.CurrentUserControl = window._homePage;
+			window.expanderInvisible();
 			window._Navigation.Navigate(window._homePage);
+		
 		}
 	}
 }

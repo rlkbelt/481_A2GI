@@ -67,6 +67,7 @@ namespace Horizontal_Prototype_March_4
 		public Meat_Step4 _meatStep4 = new Meat_Step4();
 		public Meat_Complete _meatComp = new Meat_Complete();
 
+		public Chopped_Definition _choppedDefinition = new Chopped_Definition();
 		public Boolean isExpanded = true;
 
         public object CurrentUserControl { get; set; }

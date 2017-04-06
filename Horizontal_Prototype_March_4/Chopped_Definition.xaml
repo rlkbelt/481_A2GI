@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Horizontal_Prototype_March_4.Chopped_Definition"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Horizontal_Prototype_March_4"
+             mc:Ignorable="d" 
+             d:DesignHeight="539" d:DesignWidth="462">
+
+    <Grid x:Name="_choppedDefGrid" Height="539" Width="372" HorizontalAlignment="Right">
+        <Frame x:Name="_Navigation" NavigationUIVisibility="Hidden"></Frame>
+        <Button x:Name="page_back" Background="Transparent" BorderBrush="Transparent" BorderThickness="0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="75" Margin="10,10,0,0" Click="BackClick"  >
+            <Image Source="images/buttons/back.png" HorizontalAlignment="Left" Width="100" Height="75"/>
+            <Button.BitmapEffect >
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+            </Button.BitmapEffect>
+        </Button>
+
+        <TextBlock x:Name="straw_desc_ingr" HorizontalAlignment="Left" Margin="52,134,0,275" TextWrapping="Wrap" Width="270" FontSize="24"><Run FontFamily="Segoe UI" Text="Cut something into small pieces with repeated sharp blows using an axe or knife."/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="title_all" Text="Chop: " FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Margin="52,95,97,405"/>
+        <TextBlock x:Name="title_all_Copy" Text="Chopped:" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Margin="52,282,97,218"/>
+        <TextBlock x:Name="straw_desc_ingr_Copy" HorizontalAlignment="Left" Margin="52,326,0,83" TextWrapping="Wrap" Width="270" FontSize="24"><Run Text="Diced, minced, or cut into small bits. "/><LineBreak/><Run FontFamily="Segoe UI" Text=""/></TextBlock>
+    </Grid>
+</UserControl>

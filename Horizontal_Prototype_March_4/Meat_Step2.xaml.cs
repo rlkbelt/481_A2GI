@@ -57,8 +57,9 @@ namespace Horizontal_Prototype_March_4
 		}
 		private void term_Click(object sender, RoutedEventArgs e)
 		{
-			//window.CurrentUserControl = window._beatDefinition;
-			//window._Navigation.Navigate(window._beatDefinition);
+			window.CurrentUserControl = window._choppedDefinition;
+			window._Navigation.Navigate(window._choppedDefinition);
 		}
+	
 	}
 }
