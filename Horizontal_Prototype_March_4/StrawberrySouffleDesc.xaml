@@ -25,17 +25,10 @@
         <Image x:Name="straw_sou" Source="images/food/straw_sou.jpg" HorizontalAlignment="Left"  Margin="137,110,0,0" VerticalAlignment="Top" Width="155"/>
         <TextBlock x:Name="straw_desc_ingr" FontStyle="Italic" HorizontalAlignment="Left" Margin="137,213,0,273" TextWrapping="Wrap" Width="155" Text="'A great tasting, simple soufflé recipe, great for a summer night'"/>
         <WrapPanel x:Name="_ingred" Margin="118,266,54,119">
-<<<<<<< HEAD
-            <TextBox x:Name="straw_serving" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Serves: 2-4" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
-            <TextBox x:Name="straw_prep" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Prep-Time: 10 mins " VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True" />
-            <TextBox x:Name="straw_cookt" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Cook-Time: 15 mins" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
-            <TextBox x:Name="straw_keywords" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="66" TextWrapping="Wrap" Text="Keywords: Icing Sugar, Strawberry, Dessert" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
-=======
-        <TextBox x:Name="straw_serving" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Serves: 2-4" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
-        <TextBox x:Name="straw_prep" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Prep-Time: 10 mins " VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True" />
-        <TextBox x:Name="straw_cookt" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Cook-Time: 15 mins" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
-        <TextBox x:Name="straw_keywords" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="66" TextWrapping="Wrap" Text="Keywords: Icing Sugar, Strawberry, Dessert" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
->>>>>>> 966f7f642cb5785e50ce0d848b0e1e3e268a8eb0
+            <TextBox x:Name="straw_serving" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Serves: 2-4" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
+            <TextBox x:Name="straw_prep" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Prep-Time: 10 mins " VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True" />
+            <TextBox x:Name="straw_cookt" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Cook-Time: 15 mins" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
+            <TextBox x:Name="straw_keywords" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="66" TextWrapping="Wrap" Text="Keywords: Icing Sugar, Strawberry, Dessert" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
         </WrapPanel>
         <Button x:Name="straw_ing_but" Background="BurlyWood" Foreground="SaddleBrown" Content="Ingredients" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,435,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="straw_IngredClick">
             <Button.BitmapEffect >

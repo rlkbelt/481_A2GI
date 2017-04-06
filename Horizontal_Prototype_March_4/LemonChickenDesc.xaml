@@ -15,10 +15,13 @@
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </Button.BitmapEffect>
         </Button>
-        <Button x:Name="favButton" Tag="fav" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Width="50" Height="50" Margin="318,10,-16,459" Click="favClick">
+        <Button x:Name="favButton" Tag="fav" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Width="50" Height="50" Margin="312,30,10,459" Click="favClick">
             <Image x:Name ="star" Source="images/buttons/star2.png" HorizontalAlignment="Left" Width="50" RenderTransformOrigin="0.46,1.25"/>
+            <Button.BitmapEffect >
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+            </Button.BitmapEffect>
         </Button>
-        <TextBlock x:Name="title_all" Height="53" Text="Lemon Chicken" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="36" Margin="118,27,54,459"/>
+        <TextBlock x:Name="title_all" Text="Lemon Chicken" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="28" Margin="137,50,74,459"/>
         <Image x:Name="chicken" Source="images/food/chicken.jpeg" HorizontalAlignment="Left"  Margin="137,80,0,0" VerticalAlignment="Top" Width="155"/>
         <TextBlock x:Name="chick_desc" FontSize="12" FontStyle="Italic" HorizontalAlignment="Left" Margin="137,196,0,278" TextWrapping="Wrap" Text="This easy lemon chicken recipe features simple flavors that allow the natural flavors to shine." Width="155"></TextBlock>
         <WrapPanel x:Name="_ingredList" Margin="118,266,54,104">

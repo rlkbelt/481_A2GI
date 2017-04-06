@@ -58,8 +58,6 @@ namespace Horizontal_Prototype_March_4
 		}
 		private void favClick(object sender, RoutedEventArgs e)
 		{
-
-
 			if (!favFlag)
 			{
 				favFlag = true;
@@ -98,12 +96,9 @@ namespace Horizontal_Prototype_March_4
 						window._recipesArray[i, 3] = this;
 						break;
 
-
 					}
 				}
-
 			}
-
 
 		}
 

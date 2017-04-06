@@ -15,32 +15,32 @@
         </Button>
         <Grid HorizontalAlignment="Left" Height="297" Margin="97,116,0,0" VerticalAlignment="Top" Width="216" Background="Transparent">
             <WrapPanel>
-                <TextBox x:Name="quan1" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="70" FontSize="16"/>
-                <TextBox x:Name="ingr1" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="Chicken Breasts" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="lemon_quan1" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="70" FontSize="16"/>
+                <TextBox x:Name="lemon_ingr1" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="Chicken Breasts" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="quan2" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="1/4 Cup" VerticalAlignment="Top" Width="70"  FontSize="16"/>
-                <TextBox x:Name="ingr2" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Olive Oil" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="lemon_quan2" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="1/4 Cup" VerticalAlignment="Top" Width="70"  FontSize="16"/>
+                <TextBox x:Name="lemon_ingr2" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Olive Oil" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="quan3" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  Text="3 tbsp." FontSize="16"/>
-                <TextBox x:Name="ingr3" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Minced Garlic" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="lemon_quan3" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  Text="3 tbsp." FontSize="16"/>
+                <TextBox x:Name="lemon_ingr3" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Minced Garlic" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="quan4" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="16" Text="2 tbsp."/>
-                <TextBox x:Name="ingr4" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lemon Juice" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="lemon_quan4" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="16" Text="2 tbsp."/>
+                <TextBox x:Name="lemon_ingr4" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lemon Juice" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="quan5" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 tbsp."/>
-                <TextBox x:Name="ingr5" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lime Juice" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="lemon_quan5" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 tbsp."/>
+                <TextBox x:Name="lemon_ingr5" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lime Juice" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="quan6" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 tbsp."/>
-                <TextBox x:Name="ingr6" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lemon Zest" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="lemon_quan6" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 tbsp."/>
+                <TextBox x:Name="lemon_ingr6" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Lemon Zest" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="quan7" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1/3 Cup"/>
-                <TextBox x:Name="ingr7" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Dry White Wine" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="lemon_quan7" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1/3 Cup"/>
+                <TextBox x:Name="lemon_ingr7" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Dry White Wine" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="quan8" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 tsp."/>
-                <TextBox x:Name="ingr8" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Minced Thyme" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="lemon_quan8" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 tsp."/>
+                <TextBox x:Name="lemon_ingr8" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Minced Thyme" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="quan9" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="Taste"/>
-                <TextBox x:Name="ingr9" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Salt/Pepper" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="lemon_quan9" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="Taste"/>
+                <TextBox x:Name="lemon_ingr9" Background="Transparent" BorderBrush="BurlyWood" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Salt/Pepper" VerticalAlignment="Top" Width="146" FontSize="18"/>
             </WrapPanel>
         </Grid>
         <TextBlock x:Name="tBlock" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="153,36,0,0" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" FontSize="24"/>
@@ -56,7 +56,7 @@
             </Button.BitmapEffect>
         </Button>
         <TextBox x:Name="tip_ingred" HorizontalAlignment="Left" BorderBrush="Transparent" Background="Transparent" Height="40" Margin="135,67,0,0" TextWrapping="Wrap" Text="Tip: Change units of measurement in the settings" VerticalAlignment="Top" Width="158" FontStyle="Italic" FontSize="12"/>
-        <Slider x:Name="Recipe_Ratio"   Orientation="Horizontal" Minimum="1" Maximum="3" Value="1" IsSnapToTickEnabled="True" BorderBrush="Black"   TickFrequency="1" Margin="117,418,115,92" ValueChanged="SliderMover"/>
-        <TextBox x:Name="RatiotextBox" HorizontalAlignment="Left" Height="23" FontFamily="Tw Cen MT Condensed Extra Bold" BorderBrush="Transparent" Background="Transparent" TextWrapping="Wrap" Text="Recipe Ratio: 1" VerticalAlignment="Top" Width="84" Margin="153,447,0,0"/>
+        <Slider x:Name="lemon_Recipe_Ratio"   Orientation="Horizontal" Minimum="1" Maximum="3" Value="1" IsSnapToTickEnabled="True" BorderBrush="Black"   TickFrequency="1" Margin="117,418,115,92" ValueChanged="SliderMover"/>
+        <TextBox x:Name="lemon_RatiotextBox" HorizontalAlignment="Left" Height="23" FontFamily="Tw Cen MT Condensed Extra Bold" BorderBrush="Transparent" Background="Transparent" TextWrapping="Wrap" Text="Recipe Ratio: 1" VerticalAlignment="Top" Width="84" Margin="153,447,0,0"/>
     </Grid>
 </UserControl>
