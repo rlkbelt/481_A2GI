@@ -382,7 +382,7 @@ namespace Horizontal_Prototype_March_4
 					lcd.chick_desc.Margin = new Thickness(270, 280, 0, 120);
 					lcd.chick_desc.Width = 165;
 					lcd.chick_desc.FontSize = 16;
-					lcd.chicken.Width = 210;
+				//	lcd.chicken.Width = 210;
 
 				}
 				else

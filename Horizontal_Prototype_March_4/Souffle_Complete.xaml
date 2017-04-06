@@ -18,7 +18,7 @@
         <TextBlock x:Name="title_all" Height="53" Text="Recipe Complete!" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="32" Margin="97,85,65,401"/>
         <Image x:Name="straw_sou" Source="images/food/straw_sou.jpg" HorizontalAlignment="Left" Height="205" Margin="51,138,0,0" VerticalAlignment="Top" Width="292" RenderTransformOrigin="0.5,0.5"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="64" Margin="97,348,0,0" TextWrapping="Wrap" Text="Tip: If you enjoyed this recipe, hit the star above to save it to your favorites" VerticalAlignment="Top" Width="210" FontSize="14" Background="Transparent" BorderBrush="Black"/>
-        <Button x:Name="Done_but" Content="Done Recipe" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="97,433,0,0" VerticalAlignment="Top" Width="211" Height="38" FontSize="22" Click="DoneClicked">
+        <Button x:Name="Done_but" Content="Done Recipe" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="97,433,0,0" VerticalAlignment="Top" Width="211" Height="38" FontSize="22" Click="DoneClicked" Background="BurlyWood" Foreground="SaddleBrown">
             <Button.BitmapEffect >
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </Button.BitmapEffect>

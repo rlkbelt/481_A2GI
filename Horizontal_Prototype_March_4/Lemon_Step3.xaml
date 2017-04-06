@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="570" d:DesignWidth="470">
     <Grid Name="Lemon_Step3Grid" Width="470" Height="570">
-        <Button x:Name="NextButton" Background="Beige" BorderBrush ="BurlyWood" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Margin="380,0,0,0" Click="NextClicked">
+        <Button x:Name="NextButton" Background="Transparent" BorderBrush ="BurlyWood" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Margin="380,0,0,0" Click="NextClicked">
             <StackPanel>
                 <Image Source="images/buttons/NextArrow.png" Height="98"/>
                 <TextBlock Text="Next" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="26" TextAlignment="Center"/>
@@ -16,7 +16,7 @@
         <Grid Margin="85,10,95,0" >
             <TextBlock x:Name="lStep1_Title" HorizontalAlignment="Left" Margin="110,0,0,0" TextWrapping="Wrap" Text="Step 3" VerticalAlignment="Top" TextDecorations="Underline" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Height="36" Width="74"/>
             <TextBlock x:Name="lStep1_Step" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="192" Width="270" FontSize="24"/>
-            <Button x:Name="backToDesc" Content="Back to Recipe Description" Background="Beige" HorizontalAlignment="Left" Margin="64,479,0,0" VerticalAlignment="Top" Width="168" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Height="21" Click="backToDesc_Click">
+            <Button x:Name="backToDesc" Content="Back to Recipe Description" Background="BurlyWood" Foreground="SaddleBrown" HorizontalAlignment="Left" Margin="64,479,0,0" VerticalAlignment="Top" Width="168" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Height="21" Click="backToDesc_Click">
                 <Button.BitmapEffect >
                     <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
                 </Button.BitmapEffect>
@@ -25,7 +25,7 @@
             <WrapPanel x:Name="straw_step1wrap" Margin="10,360,10,86" Width="216" >
             </WrapPanel >
         </Grid>
-        <Button x:Name="BackButton" Background="Beige" BorderBrush="BurlyWood" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Click="BackClicked">
+        <Button x:Name="BackButton" Background="Transparent" BorderBrush="BurlyWood"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Click="BackClicked">
             <StackPanel>
                 <Image Source="images/buttons/BackArrow.png" Height="98"/>
                 <TextBlock Text="Back" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="26" TextAlignment="Center"/>

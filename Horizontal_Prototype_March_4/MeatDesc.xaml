@@ -30,12 +30,12 @@
         <TextBox x:Name="meat_cookt" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Cook-Time: 1 hr" VerticalAlignment="Top" Width="200"  FontSize="20"  BorderBrush="BurlyWood" Background="Beige" IsReadOnly="True"/>
         <TextBox x:Name="meat_keywords" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="54" TextWrapping="Wrap" Text="Keywords: Meat, Meal, Savory, Entree" VerticalAlignment="Top" Width="200" FontSize="20"  RenderTransformOrigin="1,0.5" BorderBrush="BurlyWood" Background="Beige" IsReadOnly="True"/>
         </WrapPanel>
-        <Button x:Name="meat_ing_but" Content="Ingredients" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,435,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="IngredClick" Background="BurlyWood">
+        <Button x:Name="meat_ing_but" Content="Ingredients" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,435,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="IngredClick" Background="BurlyWood" Foreground="SaddleBrown">
             <Button.BitmapEffect >
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </Button.BitmapEffect>
         </Button>
-        <Button x:Name="meat_beg_but" Content="Begin" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,478,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="BeginClick" Background="BurlyWood">
+        <Button x:Name="meat_beg_but" Content="Begin" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="118,478,0,0" VerticalAlignment="Top" Width="200" Height="38" FontSize="22" Click="BeginClick" Background="BurlyWood" Foreground="SaddleBrown">
             <Button.BitmapEffect >
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </Button.BitmapEffect>
