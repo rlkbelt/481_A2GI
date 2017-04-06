@@ -84,9 +84,22 @@ namespace Horizontal_Prototype_March_4
 
 		private void BackClicked(object sender, RoutedEventArgs e)
 		{
-			window.backStack.Push(this);
-			window.CurrentUserControl = window._meatStep4;
-			window._Navigation.Navigate(window._meatStep4);
+			if (window.backStack.Peek() is HomePage)
+			{
+				window.expanderInvisible();
+			}
+			if (window.backStack.Peek() is favourites)
+			{
+				window._favourites.initValues(window._recipesArray, window.favouritesList);
+			}
+			window.CurrentUserControl = window.backStack.Pop();
+			window._Navigation.Navigate(window.CurrentUserControl);
+			window.changeWidth();
+			window.expanderVisible();
+			if (window.isExpanded == true)
+			{
+				window.OpenCollapsed();
+			}
 		}
 
 		private void DoneClicked(object sender, RoutedEventArgs e)

@@ -42,7 +42,6 @@ namespace Horizontal_Prototype_March_4
 		{
 			window.CurrentUserControl = window._meatStep1;
 			window._Navigation.Navigate(window._meatStep1);
-
 		}
 		private void NextClicked(object sender, RoutedEventArgs e)
 		{
@@ -52,6 +51,7 @@ namespace Horizontal_Prototype_March_4
 
 		private void backToDesc_Click(object sender, RoutedEventArgs e)
 		{
+			window.backStack.Push(this);
 			window.CurrentUserControl = window._meatDesc;
 			window._Navigation.Navigate(window._meatDesc);
 		}

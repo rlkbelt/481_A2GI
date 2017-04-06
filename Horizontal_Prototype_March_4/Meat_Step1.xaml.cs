@@ -41,16 +41,21 @@ namespace Horizontal_Prototype_March_4
 		private void BackClicked(object sender, RoutedEventArgs e)
 		{
 			if (window.backStack.Peek() is HomePage)
-			{
-				window.expanderInvisible();
-			}
-			if (window.backStack.Peek() is favourites)
-			{
-				window._favourites.initValues(window._recipesArray, window.favouritesList);
-			}
-			window.CurrentUserControl = window.backStack.Pop();
-			window._Navigation.Navigate(window.CurrentUserControl);
-			window.changeWidth();
+            {
+                window.expanderInvisible();
+            }
+            if (window.backStack.Peek() is favourites)
+            {
+                window._favourites.initValues(window._recipesArray, window.favouritesList);
+            }
+            window.CurrentUserControl = window.backStack.Pop();
+            window._Navigation.Navigate(window.CurrentUserControl);
+            window.changeWidth();
+            window.expanderVisible();
+            if (window.isExpanded == true)
+            {
+                window.OpenCollapsed();
+            }
 		}
 		private void NextClicked(object sender, RoutedEventArgs e)
 		{
@@ -60,6 +65,8 @@ namespace Horizontal_Prototype_March_4
 
 		private void backToDesc_Click(object sender, RoutedEventArgs e)
 		{
+			window.backStack.Push(this);
+
 			window.CurrentUserControl = window._meatDesc;
 			window._Navigation.Navigate(window._meatDesc);
 		}

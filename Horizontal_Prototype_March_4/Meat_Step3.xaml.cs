@@ -43,16 +43,18 @@ namespace Horizontal_Prototype_March_4
 		{
 			window.CurrentUserControl = window._meatStep2;
 			window._Navigation.Navigate(window._meatStep2);
-
 		}
 		private void NextClicked(object sender, RoutedEventArgs e)
 		{
+
 			window.CurrentUserControl = window._meatStep4;
 			window._Navigation.Navigate(window._meatStep4);
 		}
 
 		private void backToDesc_Click(object sender, RoutedEventArgs e)
 		{
+			window.backStack.Push(this);
+
 			window.CurrentUserControl = window._meatDesc;
 			window._Navigation.Navigate(window._meatDesc);
 		}

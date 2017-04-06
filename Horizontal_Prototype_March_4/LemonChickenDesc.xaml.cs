@@ -16,14 +16,16 @@ using System.Windows.Shapes;
 namespace Horizontal_Prototype_March_4
 {
 
+
 	/// <summary>
-	/// Interaction logic for AllRecipes.xaml
+	/// Interaction logic for LemonChickenDesc.xaml
 	/// </summary>
 	public partial class LemonChickenDesc : UserControl
 	{
 		public Stack<object> backStack = new Stack<object>();
 
 
+		public object CurrentUserControl { get; set; }
 
 		MainWindow window;
 		public Boolean favFlag = false;
@@ -33,13 +35,11 @@ namespace Horizontal_Prototype_March_4
 			this.Loaded += (s, e) =>
 			{
 				window = Window.GetWindow(this) as MainWindow;
-                window = Window.GetWindow(this) as MainWindow;
-                window._HomeButton.Background = Brushes.Beige;
-                window._SearchButton.Background = Brushes.Beige;
-                window._FavouritesButton.Background = Brushes.Beige;
-                window._SettingsButton.Background = Brushes.Beige;
-            };
-            
+				window._HomeButton.Background = Brushes.Beige;
+				window._SearchButton.Background = Brushes.Beige;
+				window._FavouritesButton.Background = Brushes.Beige;
+				window._SettingsButton.Background = Brushes.Beige;
+			};
 		}
 
 		private void BackClick(object sender, RoutedEventArgs e)
@@ -54,10 +54,13 @@ namespace Horizontal_Prototype_March_4
 			}
 			window.CurrentUserControl = window.backStack.Pop();
 			window._Navigation.Navigate(window.CurrentUserControl);
-            window.changeWidth();
+			window.changeWidth();
+
 		}
 		private void favClick(object sender, RoutedEventArgs e)
 		{
+
+
 			if (!favFlag)
 			{
 				favFlag = true;
@@ -102,21 +105,21 @@ namespace Horizontal_Prototype_March_4
 
 		}
 
-		private void IngredClick(object sender, RoutedEventArgs e)
-		{
-			window.backStack.Push(this);
-			window._Navigation.Navigate(window._lemonIngr);
-            window.changeWidth();
-            window.expanderInvisible();
-
-        }
 		private void BeginClick(object sender, RoutedEventArgs e)
 		{
 			window.backStack.Push(this);
+			window.CurrentUserControl = window._lemonStep1;
 			window._Navigation.Navigate(window._lemonStep1);
 			window.changeWidth();
-			window.expanderInvisible();
+		}
 
+		private void IngredClick(object sender, RoutedEventArgs e)
+
+		{
+			window.backStack.Push(this);
+			window._Navigation.Navigate(window._lemonIngr);
+			window.changeWidth();
+			window.expanderInvisible();
 		}
 	}
 }

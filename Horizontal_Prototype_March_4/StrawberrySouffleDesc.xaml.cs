@@ -48,15 +48,14 @@ namespace Horizontal_Prototype_March_4
 			{
 				window.expanderInvisible();
 			}
-            if (window.backStack.Peek() is favourites)
-            {
-                window._favourites.initValues(window._recipesArray, window.favouritesList);
-            }
-            window.CurrentUserControl = window.backStack.Pop();
+			if (window.backStack.Peek() is favourites)
+			{
+				window._favourites.initValues(window._recipesArray, window.favouritesList);
+			}
+			window.CurrentUserControl = window.backStack.Pop();
 			window._Navigation.Navigate(window.CurrentUserControl);
-            window.changeWidth();
-            
-        }
+			window.changeWidth();
+		}
         private void favClick(object sender, RoutedEventArgs e)
         {
 
@@ -107,6 +106,8 @@ namespace Horizontal_Prototype_March_4
 
 		private void straw_BeginClick(object sender, RoutedEventArgs e)
 		{
+			window.backStack.Push(this);
+
 			window.CurrentUserControl = window._souffleStep1;
 			window._Navigation.Navigate(window._souffleStep1);
             window.changeWidth();
@@ -118,8 +119,8 @@ namespace Horizontal_Prototype_March_4
 		{
 			window.backStack.Push(this);
 			window._Navigation.Navigate(window._strawIngr);
-            window.changeWidth();
-            window.expanderInvisible();
-        }
+			window.changeWidth();
+			window.expanderInvisible();
+		}
 	}
 }
