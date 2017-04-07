@@ -35,6 +35,7 @@ namespace Horizontal_Prototype_March_4
                                                            { "Lemon Chicken" ,"chicken lemon lime pepper salt", "images/food/chicken.jpeg", new LemonChickenDesc() },
                                                            {"Meatloaf", "Beef pepper curry salt chilli onion", "images/food/Meatloaf-121.jpg", new MeatDesc() },
                                                            {"Strawberry Souffle", "icing sugar strawberry dessert", "images/food/straw_sou.jpg", new StrawberrySouffleDesc() } };
+        
         public favourites _favourites = new favourites();
         public Search _search = new Search();
 
@@ -68,6 +69,7 @@ namespace Horizontal_Prototype_March_4
 		public Meat_Complete _meatComp = new Meat_Complete();
 
 		public Chopped_Definition _choppedDefinition = new Chopped_Definition();
+        public GlutenFree _glutenFree = new GlutenFree();
 		public Boolean isExpanded = true;
 
         public object CurrentUserControl { get; set; }
@@ -864,8 +866,33 @@ namespace Horizontal_Prototype_March_4
 					//_lemonStep3.BackButton.Visibility = Visibility.Hidden;
 				}
 			}
+            else if (CurrentUserControl is GlutenFree)
+            {
+                if (!isExpanded)
+                {
+                    _glutenFree._glutenFree_Grid.Width = 470;
+                    _glutenFree._GlutenWrapPanel.Width = 430;
+                    foreach (Button child in _glutenFree._GlutenWrapPanel.Children)
+                        if (child.Width > 110)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            incButtonSize(_glutenFree._GlutenWrapPanel);
+                            break;
+                        }
 
-		}
+                }
+                else
+                {
+                    _glutenFree._glutenFree_Grid.Width = 372;
+                    _glutenFree._GlutenWrapPanel.Width = 332;
+                    decButtonSize(_glutenFree._GlutenWrapPanel);
+                }
+            }
+
+        }
 
 		public void decButtonSize(WrapPanel wp)
 		{
