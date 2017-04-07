@@ -29,11 +29,17 @@ namespace Horizontal_Prototype_March_4
 			{
 				window = Window.GetWindow(this) as MainWindow;
 				window.OpenCollapsed();
+                window._HomeButton.Background = Brushes.Beige;
+                window._SearchButton.Background = Brushes.Beige;
+                window._FavouritesButton.Background = Brushes.Beige;
+                window._SettingsButton.Background = Brushes.Beige;
                 straw_step1wrap.Children.Clear();
+                //window.reinit();
+              //  try { window._strawIngr.SliderMover(null, null); } catch (Exception) { }
                 string[] ingredString = { window._strawIngr.straw_ingr1.Text, window._strawIngr.straw_ingr2.Text, window._strawIngr.straw_ingr3.Text, window._strawIngr.straw_ingr4.Text, window._strawIngr.straw_ingr5.Text };
                 string[] quantities = { window._strawIngr.straw_quan1.Text, window._strawIngr.straw_quan2.Text, window._strawIngr.straw_quan3.Text, window._strawIngr.straw_quan4.Text, window._strawIngr.straw_quan5.Text };
                 window.populateStep(quantities, ingredString, straw_step1wrap);
-
+                
 
             };
 			

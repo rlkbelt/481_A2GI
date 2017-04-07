@@ -48,14 +48,23 @@ namespace Horizontal_Prototype_March_4
             try { window._meatIngr.SliderMover(null, null); } catch (Exception) { }
             try { window._strawIngr.SliderMover(null, null); } catch (Exception) { }
             try { window._lemonIngr.SliderMover(null, null); } catch (Exception) { }
-            window.reinit();
+            //window.reinit();
             window.changeWidth();
         }
 
         private void ImperialCheck(object sender, RoutedEventArgs e)
         {
+            
 			imperialRadio.IsChecked = true;
-			try { window._meatIngr.SliderMover(null, null); } catch (Exception) { }
+            metricRadio.IsChecked = false;
+            try
+            {
+                window.initStrawImp();
+                window.initMeatImp();
+                window.initLemonImp();
+            }
+            catch (Exception) { }
+            try { window._meatIngr.SliderMover(null, null); } catch (Exception) { }
             try { window._strawIngr.SliderMover(null, null); } catch (Exception) { }
             try { window._lemonIngr.SliderMover(null, null); } catch (Exception) { }
             
@@ -67,12 +76,21 @@ namespace Horizontal_Prototype_March_4
         {
             
 			metricRadio.IsChecked = true;
-			try { window._meatIngr.SliderMover(null, null); } catch (Exception) { }
-            try { window._strawIngr.SliderMover(null, null); } catch (Exception) { }
+            imperialRadio.IsChecked = false;
+            window.initStrawMetric();
+            window.initLemonMetric();
+            window.initMeatMetric();
+            try { window._meatIngr.SliderMover(null, null); } catch (Exception) { }
+            try { window._strawIngr.SliderMover(window._strawIngr.straw_Recipe_Ratio, null); } catch (Exception) { }
             try { window._lemonIngr.SliderMover(null, null); } catch (Exception) { }
             
 
 
+        }
+
+        public void setMetric(bool value)
+        {
+            metricRadio.IsChecked = false;
         }
     }
 }
