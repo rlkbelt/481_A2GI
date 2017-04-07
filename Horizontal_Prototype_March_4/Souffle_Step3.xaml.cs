@@ -44,8 +44,32 @@ namespace Horizontal_Prototype_March_4
 		}
 		private void NextClicked(object sender, RoutedEventArgs e)
 		{
-			window.backStack.Push(this);
 
+			window.backStack.Push(this);
+			//bool temp = window._strawDesc.favFlag;
+			//StrawberrySouffleDesc ssd = new StrawberrySouffleDesc();
+			//ssd.favFlag = temp;
+			
+
+			//Souffle_Complete sc = new Souffle_Complete();
+			//sc.favButton.Content = ssd.favButton.Content; 
+			//window._strawDesc = ssd;
+			//window._souffleComp = sc;
+
+			if (window._strawDesc.favFlag == true)
+			{
+				Image img = window._souffleComp.favButton.Content as Image;
+				BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
+				img.Source = BitImg;
+				window._souffleComp.favButton.Content = img;
+			}
+			else
+			{
+				Image img = window._souffleComp.favButton.Content as Image;
+				BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2.png", UriKind.Relative));
+				img.Source = BitImg;
+				window._souffleComp.favButton.Content = img;
+			}
 			window.CurrentUserControl = window._souffleComp;
 			window._Navigation.Navigate(window._souffleComp);
 		}

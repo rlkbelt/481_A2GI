@@ -50,8 +50,12 @@ namespace Horizontal_Prototype_March_4
 
 
                 favButton.Content = img2;
-                window.favouritesList.Add("strawberry souffle");
-            }
+				if (!window.favouritesList.Contains("strawberry souffle"))
+				{
+					window.favouritesList.Add("strawberry souffle");
+
+				}
+			}
 
             else
             {
@@ -80,6 +84,7 @@ namespace Horizontal_Prototype_March_4
 
                 }
             }
+			window._souffleComp = this;
 
 
         }
@@ -108,6 +113,7 @@ namespace Horizontal_Prototype_March_4
 		private void DoneClicked(object sender, RoutedEventArgs e)
 		{
 			window.backStack.Push(this);
+			window.OpenExpanded();
 			window.CurrentUserControl = window._homePage;
             window.expanderInvisible();
 			window._Navigation.Navigate(window._homePage);

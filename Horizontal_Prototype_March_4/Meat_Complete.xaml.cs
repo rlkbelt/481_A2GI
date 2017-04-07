@@ -39,13 +39,14 @@ namespace Horizontal_Prototype_March_4
 
             MeatDesc md = window._meatDesc;
             if (!md.favFlag)
-            {
-                Image img = md.favButton.Content as Image;
+			{
+				md.favFlag = true;
+
+				Image img = md.favButton.Content as Image;
                 BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
                 img.Source = BitImg;
                 md.favButton.Content = img;
 
-                md.favFlag = true;
                 Image img2 = md.favButton.Content as Image;
 
 
@@ -105,6 +106,7 @@ namespace Horizontal_Prototype_March_4
 		{
 		
 			window.backStack.Push(this);
+			window.OpenExpanded();
 			window.CurrentUserControl = window._homePage;
 			window.expanderInvisible();
 			window._Navigation.Navigate(window._homePage);

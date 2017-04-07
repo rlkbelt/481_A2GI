@@ -113,7 +113,8 @@ namespace Horizontal_Prototype_March_4
             backStack.Push(CurrentUserControl);
             CurrentUserControl = _favourites;
             OpenExpanded();
-        }
+			
+		}
 
         public void SettingsClick(object sender, RoutedEventArgs e)
         {
@@ -446,6 +447,7 @@ namespace Horizontal_Prototype_March_4
                     md.meat_desc_inrec.Width = 165;
                     md.meat_desc_inrec.FontSize = 16;
                     md.meat.Width = 216;
+					md.meat_desc_inrec.Visibility = Visibility.Visible;
                 }
 				else
 				{
@@ -456,6 +458,7 @@ namespace Horizontal_Prototype_March_4
                     md.meat_desc_inrec.Width = 155;
                     md.meat_desc_inrec.FontSize = 12;
                     md.meat.Width = 161;
+					md.meat_desc_inrec.Visibility = Visibility.Hidden;
                 }
 
             }
@@ -482,7 +485,8 @@ namespace Horizontal_Prototype_March_4
 					lcd.chick_desc.Margin = new Thickness(270, 280, 0, 120);
 					lcd.chick_desc.Width = 165;
 					lcd.chick_desc.FontSize = 16;
-				//	lcd.chicken.Width = 210;
+					//	lcd.chicken.Width = 210;
+					lcd.chick_desc.Visibility = Visibility.Visible;
 
 				}
 				else
@@ -495,7 +499,7 @@ namespace Horizontal_Prototype_March_4
 					lcd.chick_desc.Width = 155;
 					lcd.chick_desc.FontSize = 12;
 					lcd.chicken.Width = 155;
-
+					lcd.chick_desc.Visibility = Visibility.Hidden;
 
 				}
 			}
@@ -511,7 +515,7 @@ namespace Horizontal_Prototype_March_4
                     ssd.straw_desc_ingr.Margin = new Thickness(270, 280, 0, 120);
                     ssd.straw_desc_ingr.Width = 165;
                     ssd.straw_desc_ingr.FontSize = 16;
-                    
+					ssd.straw_desc_ingr.Visibility = Visibility.Visible;
                 }
                 else
                 {
@@ -522,6 +526,7 @@ namespace Horizontal_Prototype_March_4
                     ssd.straw_desc_ingr.Margin = new Thickness(137, 196, 0, 278);
                     ssd.straw_desc_ingr.Width = 155;
                     ssd.straw_desc_ingr.FontSize = 12;
+					ssd.straw_desc_ingr.Visibility = Visibility.Hidden;
                     
 
                 }

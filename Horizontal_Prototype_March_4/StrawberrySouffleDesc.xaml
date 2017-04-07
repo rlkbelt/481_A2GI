@@ -15,16 +15,17 @@
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </Button.BitmapEffect>
         </Button>
-        <Button x:Name="favButton" Tag="fav" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Width="50" Height="50" Margin="312,24,10,465" Click="favClick">
-            <Image x:Name ="star" Source="images/buttons/star2.png" HorizontalAlignment="Left" Width="50" RenderTransformOrigin="0.46,1.25"/>
+        <Button  x:Name="favButton" Tag="fav" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Width="50" Height="50" Margin="312,24,10,465" Click="favClick">
+            <Image x:Name ="star" x:FieldModifier="public" Source="images/buttons/star2.png" HorizontalAlignment="Left" Width="50" RenderTransformOrigin="0.46,1.25"></Image>
             <Button.BitmapEffect >
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </Button.BitmapEffect>
         </Button>
-        <TextBlock x:Name="title_all" Text="Strawberry Souffle" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="28" Margin="110,74,39,426"/>
-        <Image x:Name="straw_sou" Source="images/food/straw_sou.jpg" HorizontalAlignment="Left"  Margin="137,110,0,0" VerticalAlignment="Top" Width="155"/>
-        <TextBlock x:Name="straw_desc_ingr" FontStyle="Italic" HorizontalAlignment="Left" Margin="137,213,0,273" TextWrapping="Wrap" Width="155" Text="'A great tasting, simple soufflé recipe, great for a summer night'"/>
-        <WrapPanel x:Name="_ingred" Margin="118,266,54,119">
+        
+        <TextBlock x:Name="title_all" Text="Strawberry Souffle" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="28" Margin="110,66,39,434"/>
+        <Image x:Name="straw_sou" Source="images/food/straw_sou.jpg" HorizontalAlignment="Left"  Margin="137,105,0,0" VerticalAlignment="Top" Width="155"/>
+        <TextBlock x:Name="straw_desc_ingr" FontStyle="Italic" HorizontalAlignment="Left" Margin="137,218,0,268" TextWrapping="Wrap" Width="155" Text="'A great tasting, simple soufflé recipe, great for a summer night'" Visibility="Hidden"/>
+        <WrapPanel x:Name="_ingred" Margin="118,276,54,109">
             <TextBox x:Name="straw_serving" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Serves: 2-4" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>
             <TextBox x:Name="straw_prep" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Prep-Time: 10 mins " VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True" />
             <TextBox x:Name="straw_cookt" Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Cook-Time: 15 mins" VerticalAlignment="Top" Width="200" BorderBrush="Black" FontSize="20"  IsReadOnly="True"/>

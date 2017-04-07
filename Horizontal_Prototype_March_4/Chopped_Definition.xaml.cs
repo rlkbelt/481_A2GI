@@ -36,8 +36,8 @@ namespace Horizontal_Prototype_March_4
 		{
 
 			
-			window.CurrentUserControl = window._meatStep1;
-			window._Navigation.Navigate(window._meatStep1);
+			window.CurrentUserControl = window._meatStep2;
+			window._Navigation.Navigate(window._meatStep2);
 
 
 		}
