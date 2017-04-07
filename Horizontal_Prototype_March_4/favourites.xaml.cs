@@ -55,7 +55,7 @@ namespace Horizontal_Prototype_March_4
             {
                 window._favourites._FavsWrapPanel.Children.Clear();
             }
-            catch (Exception e) {}
+            catch (Exception) {}
             
             
             Stack<string> searchStack = new Stack<string>();

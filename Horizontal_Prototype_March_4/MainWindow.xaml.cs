@@ -80,14 +80,111 @@ namespace Horizontal_Prototype_March_4
             InitializeComponent();
             _Navigation.Navigate(_homePage);
             CurrentUserControl = _homePage;
-			_strawIngr.initVals();
+           // initStraw();
             
+            /*_strawIngr.InitializeComponent();
+            _strawIngr.Loaded += (s, e) =>
+            {
+                _strawIngr.;
+                _strawIngr.initVals();
+                //reinit(_souffleStep1);
+            };
+            _Navigation.Navigate(_strawIngr);
+            CurrentUserControl = _strawIngr;
+            _Navigation.Navigate(_homePage);
+            CurrentUserControl = _homePage;
+            */
+            //reinit(_souffleStep1);
+            //_Navigation.Navigate(_strawIngr);
+            //_Navigation.Navigate(CurrentUserControl);
+            //_strawIngr.initVals();
+            _settings.imperialRadio.IsChecked = true;
+            try { _meatIngr.SliderMover(null, null); } catch (Exception) { }
+            try { _strawIngr.SliderMover(null, null); } catch (Exception) { }
+            try { _lemonIngr.SliderMover(null, null); } catch (Exception) { }
+
         }
 
 
 
 
+        public void initStrawMetric()
+        {
+            _strawIngr.straw_quan1.Text = "250 mL";
+            _strawIngr.straw_quan2.Text = "500 mL";
+            _strawIngr.straw_quan3.Text = "30 mL";
+            _strawIngr.straw_quan4.Text = "3";
+            _strawIngr.straw_quan5.Text = "60 mL";
+            _strawIngr.straw_quan6.Text = "250 mL";
+            _strawIngr.straw_quan7.Text = "5 mL";
+            _strawIngr.straw_quan8.Text = "15 mL";
+            _strawIngr.straw_quan9.Text = "250 mL";
+        }
 
+        public void initMeatMetric ()
+        {
+            _meatIngr.meat_quan1.Text = "0.45 kg.";
+            _meatIngr.meat_quan2.Text = "2";
+            _meatIngr.meat_quan3.Text = "500 mL.";
+            _meatIngr.meat_quan4.Text = "250 mL.";
+            _meatIngr.meat_quan5.Text = "1";
+            _meatIngr.meat_quan6.Text = "250 mL.";
+            _meatIngr.meat_quan7.Text = "15 mL.";
+            _meatIngr.meat_quan8.Text = "15 mL.";
+            _meatIngr.meat_quan9.Text = "Taste";
+        }
+
+        public void initLemonMetric()
+        {
+            _lemonIngr.lemon_quan1.Text = "4";
+            _lemonIngr.lemon_quan2.Text = "60 mL";
+            _lemonIngr.lemon_quan3.Text = "45 mL";
+            _lemonIngr.lemon_quan4.Text = "30 mL";
+            _lemonIngr.lemon_quan5.Text = "15 mL";
+            _lemonIngr.lemon_quan6.Text = "15 mL";
+            _lemonIngr.lemon_quan7.Text = "235 mL";
+            _lemonIngr.lemon_quan8.Text = "5 mL";
+            _lemonIngr.lemon_quan9.Text = " Taste";
+        }
+
+    public void initStrawImp()
+        {
+            _strawIngr.straw_quan1.Text = "1 Cup";
+            _strawIngr.straw_quan2.Text = "2 Cups";
+            _strawIngr.straw_quan3.Text = "2 Tbsps.";
+            _strawIngr.straw_quan4.Text = "3";
+            _strawIngr.straw_quan5.Text = "1/4 Cup";
+            _strawIngr.straw_quan6.Text = "1 Cup";
+            _strawIngr.straw_quan7.Text = "1 Tsp.";
+            _strawIngr.straw_quan8.Text = "1 Tbsp.";
+            _strawIngr.straw_quan9.Text = "1 Cup";
+        }
+
+        public void initMeatImp()
+        {
+            _meatIngr.meat_quan1.Text = "1 lb.";
+            _meatIngr.meat_quan2.Text = "2";
+            _meatIngr.meat_quan3.Text = "2 Cups";
+            _meatIngr.meat_quan4.Text = "1 Cup";
+            _meatIngr.meat_quan5.Text = "1";
+            _meatIngr.meat_quan6.Text = "1 Cup";
+            _meatIngr.meat_quan7.Text = "1 tbsp.";
+            _meatIngr.meat_quan8.Text = "1 tbsp.";
+            _meatIngr.meat_quan9.Text = "Taste";
+        }
+
+        public void initLemonImp()
+        {
+            _lemonIngr.lemon_quan1.Text = "4";
+            _lemonIngr.lemon_quan2.Text = "1/4 Cup";
+            _lemonIngr.lemon_quan3.Text = "3 Tbsps.";
+            _lemonIngr.lemon_quan4.Text = "2 Tbsps.";
+            _lemonIngr.lemon_quan5.Text = "1 Tbsp.";
+            _lemonIngr.lemon_quan6.Text = "1 Tbsp.";
+            _lemonIngr.lemon_quan7.Text = "1/3 Cup";
+            _lemonIngr.lemon_quan8.Text = "1 Tsp.";
+            _lemonIngr.lemon_quan9.Text = "Taste";
+        }
         private void HomeClick(object sender, RoutedEventArgs e)
         {
             expanderInvisible();
@@ -122,11 +219,10 @@ namespace Horizontal_Prototype_March_4
             backStack.Push(CurrentUserControl);
             CurrentUserControl = _settings;
             OpenExpanded();
-            reinit();
+            //reinit();
         }
 
-
-        public void reinit()
+        public void reinit(object Control)
         {
            
             if (CurrentUserControl is Meat_Step1)
@@ -157,8 +253,9 @@ namespace Horizontal_Prototype_March_4
             {
 
             }
-            else if (CurrentUserControl is Souffle_Step1)
+            else if (Control is Souffle_Step1)
             {
+                try { _strawIngr.SliderMover(null, null); } catch (Exception) { }
                 string[] ingredString = { _strawIngr.straw_ingr1.Text, _strawIngr.straw_ingr2.Text, _strawIngr.straw_ingr3.Text, _strawIngr.straw_ingr4.Text, _strawIngr.straw_ingr5.Text };
                 string[] quantities = { _strawIngr.straw_quan1.Text, _strawIngr.straw_quan2.Text, _strawIngr.straw_quan3.Text, _strawIngr.straw_quan4.Text, _strawIngr.straw_quan5.Text };
                 populateStep(quantities, ingredString, _souffleStep1.straw_step1wrap);

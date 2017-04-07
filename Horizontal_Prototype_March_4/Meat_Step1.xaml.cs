@@ -30,10 +30,14 @@ namespace Horizontal_Prototype_March_4
 			{
 				window = Window.GetWindow(this) as MainWindow;
 				window.OpenCollapsed();
+                window._HomeButton.Background = Brushes.Beige;
+                window._SearchButton.Background = Brushes.Beige;
+                window._FavouritesButton.Background = Brushes.Beige;
+                window._SettingsButton.Background = Brushes.Beige;
 
-				// window._ExpanderButton.Expanded = Expander.Collap
+                // window._ExpanderButton.Expanded = Expander.Collap
 
-			};
+            };
 
 
 		}
