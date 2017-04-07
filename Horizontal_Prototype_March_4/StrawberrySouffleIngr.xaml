@@ -50,7 +50,7 @@
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </Button.BitmapEffect>
         </Button>
-        <Button x:Name="star_but" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="55" Height="52" Background="Transparent" BorderBrush="White"/>
+        <!-- <Button x:Name="star_but" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="55" Height="52" Background="Transparent" BorderBrush="Transparent"/> -->
         <Button x:Name="print" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="55" Height="52" Background="Transparent" BorderBrush="Transparent" Click="print_Click">
             <Image x:Name="print_button" Source="images/buttons/print.png"/>
             <Button.BitmapEffect >

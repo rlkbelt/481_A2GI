@@ -125,7 +125,7 @@ namespace Horizontal_Prototype_March_4
 			window.backStack.Push(this);
 			window._Navigation.Navigate(window._lemonIngr);
 			window.changeWidth();
-			window.expanderInvisible();
+		//	window.expanderInvisible();
 		}
 	}
 }

@@ -56,7 +56,7 @@
             </Button.BitmapEffect>
         </Button>
         <TextBox x:Name="tip_ingred" HorizontalAlignment="Left" BorderBrush="Transparent" Background="Transparent" Height="40" Margin="135,67,0,0" TextWrapping="Wrap" Text="Tip: Change units of measurement in the settings" VerticalAlignment="Top" Width="158" FontStyle="Italic" FontSize="12"/>
-        <Slider x:Name="lemon_Recipe_Ratio"   Orientation="Horizontal" Minimum="1" Maximum="3" Value="1" IsSnapToTickEnabled="True" BorderBrush="Black"   TickFrequency="1" Margin="117,418,115,92" ValueChanged="SliderMover"/>
+        <Slider x:Name="lemon_Recipe_Ratio"   Orientation="Horizontal" Minimum="1" Maximum="3" Value="1" IsSnapToTickEnabled="True" BorderBrush="Black"   TickFrequency="1" Margin="117,418,0,92" ValueChanged="SliderMover" HorizontalAlignment="Left" Width="140"/>
         <TextBox x:Name="lemon_RatiotextBox" HorizontalAlignment="Left" Height="23" FontFamily="Tw Cen MT Condensed Extra Bold" BorderBrush="Transparent" Background="Transparent" TextWrapping="Wrap" Text="Recipe Ratio: 1" VerticalAlignment="Top" Width="84" Margin="153,447,0,0"/>
     </Grid>
 </UserControl>
