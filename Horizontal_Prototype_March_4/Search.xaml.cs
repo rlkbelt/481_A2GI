@@ -63,14 +63,24 @@ namespace Horizontal_Prototype_March_4
                     
 
                 }
-            } 
-            while(!(searchStack.Count == 0))
+            }
+            if (searchStack.Count == 0)
+            {
+                TextBlock none = new TextBlock();
+                none.Text = "No Results Found, please check spelling and search again";
+                none.FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
+                _SearchRecipesWrapPanel.Children.Add(none);
+
+
+
+            }
+            while (!(searchStack.Count == 0))
             {
                 _scroller.Visibility = Visibility.Visible;
                 string temp = searchStack.Pop();
                 if (!(temp == "*"))
                 {
-                    
+
                 }
                 else
                 {

@@ -50,7 +50,7 @@
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </Button.BitmapEffect>
         </Button>
-        <Button x:Name="star_but" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="55" Height="52" Background="Transparent" BorderBrush="White"/>
+        <!-- <Button x:Name="star_but" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="55" Height="52" Background="Transparent" BorderBrush="Transparent"/> -->
         <Button x:Name="print" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="55" Height="52" Background="Transparent" BorderBrush="Transparent" Click="print_Click">
             <Image x:Name="print_button" Source="images/buttons/print.png"/>
             <Button.BitmapEffect >
@@ -58,7 +58,7 @@
             </Button.BitmapEffect>
         </Button>
         <TextBox x:Name="straw_tip_ingred" HorizontalAlignment="Left" BorderBrush="Transparent" Background="Transparent" Height="35" Margin="131,85,0,0" TextWrapping="Wrap" Text="Tip: Change units of measurement in the settings" VerticalAlignment="Top" Width="163" FontStyle="Italic" FontSize="12"/>
-        <Slider x:Name="straw_Recipe_Ratio"   Orientation="Horizontal" Minimum="1" Maximum="3" Value="0" IsSnapToTickEnabled="True" BorderBrush="Black"   TickFrequency="1" Margin="131,427,101,90" ValueChanged="SliderMover"/>
+        <Slider x:Name="straw_Recipe_Ratio"   Orientation="Horizontal" Minimum="1" Maximum="3" Value="0" IsSnapToTickEnabled="True" BorderBrush="Black"   TickFrequency="1" Margin="131,427,0,90" ValueChanged="SliderMover" Width="142" HorizontalAlignment="Left"/>
         <TextBox x:Name="straw_RatiotextBox" HorizontalAlignment="Left" Height="23" FontFamily="Tw Cen MT Condensed Extra Bold" BorderBrush="Transparent" Background="Transparent" TextWrapping="Wrap" Text="Recipe Ratio: 1" VerticalAlignment="Top" Width="84" Margin="162,454,0,0"/>
     </Grid>
 </UserControl>
