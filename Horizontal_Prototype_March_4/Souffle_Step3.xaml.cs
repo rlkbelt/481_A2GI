@@ -45,16 +45,7 @@ namespace Horizontal_Prototype_March_4
 		private void NextClicked(object sender, RoutedEventArgs e)
 		{
 
-			window.backStack.Push(this);
-			//bool temp = window._strawDesc.favFlag;
-			//StrawberrySouffleDesc ssd = new StrawberrySouffleDesc();
-			//ssd.favFlag = temp;
 			
-
-			//Souffle_Complete sc = new Souffle_Complete();
-			//sc.favButton.Content = ssd.favButton.Content; 
-			//window._strawDesc = ssd;
-			//window._souffleComp = sc;
 
 			if (window._strawDesc.favFlag == true)
 			{
@@ -76,9 +67,10 @@ namespace Horizontal_Prototype_March_4
 
 		private void backToDesc_Click(object sender, RoutedEventArgs e)
 		{
-			window.backStack.Push(this);
-			window.CurrentUserControl = window._strawDesc;
+            window.backStack.Pop();
+            window.CurrentUserControl = window._strawDesc;
 			window._Navigation.Navigate(window._strawDesc);
+            window.OpenExpanded();
 		}
 	}
 }

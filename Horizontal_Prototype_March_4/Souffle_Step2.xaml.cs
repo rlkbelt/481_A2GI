@@ -50,9 +50,10 @@ namespace Horizontal_Prototype_March_4
 
 		private void backToDesc_Click(object sender, RoutedEventArgs e)
 		{
-			window.backStack.Push(this);
-			window.CurrentUserControl = window._strawDesc;
+            window.backStack.Pop();
+            window.CurrentUserControl = window._strawDesc;
 			window._Navigation.Navigate(window._strawDesc);
-		}
+            window.OpenExpanded();
+        }
 	}
 }

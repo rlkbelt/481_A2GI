@@ -100,8 +100,8 @@ namespace Horizontal_Prototype_March_4
 			{
 				window._favourites.initValues(window._recipesArray, window.favouritesList);
 			}
-			window.CurrentUserControl = window.backStack.Pop();
-			window._Navigation.Navigate(window.CurrentUserControl);
+            window.CurrentUserControl = window._souffleStep3;
+			window._Navigation.Navigate(window._souffleStep3);
 			window.changeWidth();
 			window.expanderVisible();
 			if (window.isExpanded == false)
@@ -112,7 +112,7 @@ namespace Horizontal_Prototype_March_4
 
 		private void DoneClicked(object sender, RoutedEventArgs e)
 		{
-			window.backStack.Push(this);
+			
 			window.OpenExpanded();
 			window.CurrentUserControl = window._homePage;
             window.expanderInvisible();
