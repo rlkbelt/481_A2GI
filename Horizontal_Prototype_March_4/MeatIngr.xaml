@@ -16,32 +16,32 @@
         </Button>
         <Grid HorizontalAlignment="Left" Height="297" Margin="97,106,0,0" VerticalAlignment="Top" Width="216" Background="Transparent">
             <WrapPanel>
-                <TextBox x:Name="quan1"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="1 lb." VerticalAlignment="Top" Width="70" FontSize="16"/>
-                <TextBox x:Name="ingr1"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="Ground Beef" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="meat_quan1"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="1 lb." VerticalAlignment="Top" Width="70" FontSize="16"/>
+                <TextBox x:Name="meat_ingr1"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="Ground Beef" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="quan2"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="70"  FontSize="16"/>
-                <TextBox x:Name="ingr2"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="White Onions" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="meat_quan2"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="70"  FontSize="16"/>
+                <TextBox x:Name="meat_ingr2"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold"  HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="White Onions" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="quan3"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  Text="2 Cups" FontSize="16"/>
-                <TextBox x:Name="ingr3"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Bread Crumbs" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="meat_quan3"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  Text="2 Cups" FontSize="16"/>
+                <TextBox x:Name="meat_ingr3"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Bread Crumbs" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="quan4"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="16" Text="1 Cup"/>
-                <TextBox x:Name="ingr4"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Milk" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="meat_quan4"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="16" Text="1 Cup"/>
+                <TextBox x:Name="meat_ingr4"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Milk" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="quan5"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1"/>
-                <TextBox x:Name="ingr5"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Egg" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="meat_quan5"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1"/>
+                <TextBox x:Name="meat_ingr5"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Egg" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="quan6"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Cup"/>
-                <TextBox x:Name="ingr6"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Ketchup" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="meat_quan6"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 Cup"/>
+                <TextBox x:Name="meat_ingr6"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Ketchup" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="quan7"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 tbsp."/>
-                <TextBox x:Name="ingr7"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Brown Sugar" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="meat_quan7"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 tbsp."/>
+                <TextBox x:Name="meat_ingr7"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Brown Sugar" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="quan8"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 tbsp."/>
-                <TextBox x:Name="ingr8"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Mustard" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="meat_quan8"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="1 tbsp."/>
+                <TextBox x:Name="meat_ingr8"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Mustard" VerticalAlignment="Top" Width="146" FontSize="18"/>
 
-                <TextBox x:Name="quan9"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="Taste"/>
-                <TextBox x:Name="ingr9"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Salt/Pepper" VerticalAlignment="Top" Width="146" FontSize="18"/>
+                <TextBox x:Name="meat_quan9"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"  FontSize="16" Text="Taste"/>
+                <TextBox x:Name="meat_ingr9"  Background="Transparent" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="Salt/Pepper" VerticalAlignment="Top" Width="146" FontSize="18"/>
             </WrapPanel>
         </Grid>
         <TextBlock x:Name="tBlock" FontFamily="Tw Cen MT Condensed Extra Bold" HorizontalAlignment="Left" Margin="153,36,0,0" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" FontSize="24"/>

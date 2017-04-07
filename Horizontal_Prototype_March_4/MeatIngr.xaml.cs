@@ -48,85 +48,85 @@ namespace Horizontal_Prototype_March_4
             {
                 if (Recipe_Ratio.Value == 1 && (bool) window._settings.imperialRadio.IsChecked)
                 {
-                    quan1.Text = "1 lb.";
-                    quan2.Text = "2";
-                    quan3.Text = "2 Cups";
-                    quan4.Text = "1 Cup";
-                    quan5.Text = "1";
-                    quan6.Text = "1 Cup";
-                    quan7.Text = "1 tbsp.";
-                    quan8.Text = "1 tbsp.";
-                    quan9.Text = "Taste";
+                    meat_quan1.Text = "1 lb.";
+                    meat_quan2.Text = "2";
+                    meat_quan3.Text = "2 Cups";
+                    meat_quan4.Text = "1 Cup";
+                    meat_quan5.Text = "1";
+                    meat_quan6.Text = "1 Cup";
+                    meat_quan7.Text = "1 tbsp.";
+                    meat_quan8.Text = "1 tbsp.";
+                    meat_quan9.Text = "Taste";
                     RatiotextBox.Text = "Recipe Ratio: 1"; //for some reason this fails 
 
                 }
                 else if (Recipe_Ratio.Value == 2 && (bool)window._settings.imperialRadio.IsChecked)
                 {
-                    quan1.Text = "2 lb.";
-                    quan2.Text = "4";
-                    quan3.Text = "4 Cups";
-                    quan4.Text = "2 Cups";
-                    quan5.Text = "2";
-                    quan6.Text = "2 Cups";
-                    quan7.Text = "2 tbsps.";
-                    quan8.Text = "2 tbsps.";
-                    quan9.Text = "Taste";
+                    meat_quan1.Text = "2 lb.";
+                    meat_quan2.Text = "4";
+                    meat_quan3.Text = "4 Cups";
+                    meat_quan4.Text = "2 Cups";
+                    meat_quan5.Text = "2";
+                    meat_quan6.Text = "2 Cups";
+                    meat_quan7.Text = "2 tbsps.";
+                    meat_quan8.Text = "2 tbsps.";
+                    meat_quan9.Text = "Taste";
                     RatiotextBox.Text = "Recipe Ratio: 2";
 
                 }
                 else if (Recipe_Ratio.Value == 3 && (bool)window._settings.imperialRadio.IsChecked)
                 {
-                    quan1.Text = "3 lb.";
-                    quan2.Text = "6";
-                    quan3.Text = "6 Cups";
-                    quan4.Text = "3 Cups";
-                    quan5.Text = "3";
-                    quan6.Text = "3 Cups";
-                    quan7.Text = "3 tbsps.";
-                    quan8.Text = "3 tbsps.";
-                    quan9.Text = "Taste";
+                    meat_quan1.Text = "3 lb.";
+                    meat_quan2.Text = "6";
+                    meat_quan3.Text = "6 Cups";
+                    meat_quan4.Text = "3 Cups";
+                    meat_quan5.Text = "3";
+                    meat_quan6.Text = "3 Cups";
+                    meat_quan7.Text = "3 tbsps.";
+                    meat_quan8.Text = "3 tbsps.";
+                    meat_quan9.Text = "Taste";
                     RatiotextBox.Text = "Recipe Ratio: 3";
 
                 }
 				else if (Recipe_Ratio.Value == 1 && (bool)window._settings.metricRadio.IsChecked)
 				{
-					quan1.Text = "0.45 kg.";
-					quan2.Text = "2";
-					quan3.Text = "500 mL.";
-					quan4.Text = "250 mL.";
-					quan5.Text = "1";
-					quan6.Text = "250 mL.";
-					quan7.Text = "15 mL.";
-					quan8.Text = "15 mL.";
-					quan9.Text = "Taste";
+					meat_quan1.Text = "0.45 kg.";
+					meat_quan2.Text = "2";
+					meat_quan3.Text = "500 mL.";
+					meat_quan4.Text = "250 mL.";
+					meat_quan5.Text = "1";
+					meat_quan6.Text = "250 mL.";
+					meat_quan7.Text = "15 mL.";
+					meat_quan8.Text = "15 mL.";
+					meat_quan9.Text = "Taste";
 					RatiotextBox.Text = "Recipe Ratio: 1"; //for some reason this fails 
 
 				}
 				else if (Recipe_Ratio.Value == 2 && (bool)window._settings.metricRadio.IsChecked)
 				{
-					quan1.Text = "0.9 kg.";
-					quan2.Text = "4";
-					quan3.Text = "1 L.";
-					quan4.Text = "500 mL.";
-					quan5.Text = "2";
-					quan6.Text = "500 mL.";
-					quan7.Text = "30 mL.";
-					quan8.Text = "30 mL.";
-					quan9.Text = "Taste";
+					meat_quan1.Text = "0.9 kg.";
+					meat_quan2.Text = "4";
+					meat_quan3.Text = "1 L.";
+					meat_quan4.Text = "500 mL.";
+					meat_quan5.Text = "2";
+					meat_quan6.Text = "500 mL.";
+					meat_quan7.Text = "30 mL.";
+					meat_quan8.Text = "30 mL.";
+					meat_quan9.Text = "Taste";
 					RatiotextBox.Text = "Recipe Ratio: 2";
 
 				}
 				else if (Recipe_Ratio.Value == 3 && (bool)window._settings.metricRadio.IsChecked)
 				{
-					quan1.Text = "3 lb.";
-					quan2.Text = "6";
-					quan3.Text = "1.5 L.";
-					quan4.Text = "750 mL";
-					quan5.Text = "3";
-					quan6.Text = "750 mL";
-					quan7.Text = "45 mL.";
-					quan8.Text = "45 mL.";
-					quan9.Text = "Taste";
+					meat_quan1.Text = "3 lb.";
+					meat_quan2.Text = "6";
+					meat_quan3.Text = "1.5 L.";
+					meat_quan4.Text = "750 mL";
+					meat_quan5.Text = "3";
+					meat_quan6.Text = "750 mL";
+					meat_quan7.Text = "45 mL.";
+					meat_quan8.Text = "45 mL.";
+					meat_quan9.Text = "Taste";
 					RatiotextBox.Text = "Recipe Ratio: 3";
 
 				}

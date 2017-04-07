@@ -29,7 +29,11 @@ namespace Horizontal_Prototype_March_4
 			{
 				window = Window.GetWindow(this) as MainWindow;
 				window.OpenCollapsed();
-			};
+                lemon_step2wrap.Children.Clear();
+                string[] ingredString = { window._lemonIngr.lemon_ingr2.Text, window._lemonIngr.lemon_ingr3.Text, window._lemonIngr.lemon_ingr4.Text, window._lemonIngr.lemon_ingr5.Text, window._lemonIngr.lemon_ingr6.Text, window._lemonIngr.lemon_ingr7.Text };
+                string[] quantities = { window._lemonIngr.lemon_quan2.Text, window._lemonIngr.lemon_quan3.Text, window._lemonIngr.lemon_quan4.Text, window._lemonIngr.lemon_quan5.Text, window._lemonIngr.lemon_quan6.Text, window._lemonIngr.lemon_quan7.Text };
+                window.populateStep(quantities, ingredString, lemon_step2wrap);
+            };
 
 
 		}

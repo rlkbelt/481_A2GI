@@ -16,7 +16,7 @@
         <Grid Margin="85,10,95,0" >
             <TextBlock x:Name="sStep1_Title" HorizontalAlignment="Left" Margin="110,0,0,0" TextWrapping="Wrap" Text="Step 1" VerticalAlignment="Top" TextDecorations="Underline" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Height="36" Width="74"/>
             <TextBlock x:Name="sStep1_Step" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="192" Width="270" FontSize="24" Text="Preheat oven to 400 degrees Celsius. "/>
-            <Button x:Name="backToDesc" Content="Back to Recipe Description" Background="BurlyWood" HorizontalAlignment="Left" Margin="67,498,0,0" VerticalAlignment="Top" Width="168" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Height="21" Click="backToDesc_Click" Foreground="SaddleBrown">
+            <Button x:Name="backToDesc" Content="Back to Recipe Description" Background="BurlyWood" HorizontalAlignment="Left" Margin="67,488,0,0" VerticalAlignment="Top" Width="168" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Height="21" Click="backToDesc_Click" Foreground="SaddleBrown">
                 <Button.BitmapEffect >
                     <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
                 </Button.BitmapEffect>

@@ -28,8 +28,12 @@ namespace Horizontal_Prototype_March_4
 			{
 				window = Window.GetWindow(this) as MainWindow;
 				window.OpenCollapsed();
-				// window._ExpanderButton.Expanded = Expander.Collap
-			};
+                straw_step3wrap.Children.Clear();
+                string[] ingredString = { window._strawIngr.straw_ingr9.Text };
+                string[] quantities = { window._strawIngr.straw_quan9.Text };
+                window.populateStep(quantities, ingredString, straw_step3wrap);
+                // window._ExpanderButton.Expanded = Expander.Collap
+            };
 
 		}
 

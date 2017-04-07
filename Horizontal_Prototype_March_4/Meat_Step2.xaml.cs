@@ -30,10 +30,14 @@ namespace Horizontal_Prototype_March_4
 			{
 				window = Window.GetWindow(this) as MainWindow;
 				window.OpenCollapsed();
+                meat_step2wrap.Children.Clear();
+                string[] ingredString = { window._meatIngr.meat_ingr1.Text, window._meatIngr.meat_ingr2.Text, window._meatIngr.meat_ingr3.Text, window._meatIngr.meat_ingr4.Text, window._meatIngr.meat_ingr5.Text };
+                string[] quantities = { window._meatIngr.meat_quan1.Text, window._meatIngr.meat_quan2.Text, window._meatIngr.meat_quan3.Text, window._meatIngr.meat_ingr4.Text, window._meatIngr.meat_ingr5.Text };
+                window.populateStep(quantities, ingredString, meat_step2wrap);
 
-				// window._ExpanderButton.Expanded = Expander.Collap
+                // window._ExpanderButton.Expanded = Expander.Collap
 
-			};
+            };
 
 
 		}

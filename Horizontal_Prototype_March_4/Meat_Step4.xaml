@@ -20,14 +20,11 @@
             </Grid.RowDefinitions>
             <TextBlock x:Name="sStep1_Title" HorizontalAlignment="Left" Margin="110,0,0,0" TextWrapping="Wrap" Text="Step 4" VerticalAlignment="Top" TextDecorations="Underline" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Height="36" Width="74"/>
             <TextBlock x:Name="sStep1_Step" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="192" Width="270" FontSize="24" Grid.RowSpan="2"><Run Text="Put meat mixture in a loaf pan, pour ketchup sauce over meat mixture.  Bake for 1 hr.  Let cool"/><LineBreak/><Run/></TextBlock>
-            <Button x:Name="backToDesc" Content="Back to Recipe Description" Background="BurlyWood" HorizontalAlignment="Left" Margin="67,322.143,0,0" VerticalAlignment="Top" Width="168" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Height="21" Click="backToDesc_Click" Foreground="SaddleBrown" Grid.Row="1">
+            <Button x:Name="backToDesc" Content="Back to Recipe Description" Background="BurlyWood" HorizontalAlignment="Left" Margin="67,312.143,0,0" VerticalAlignment="Top" Width="168" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Height="21" Click="backToDesc_Click" Foreground="SaddleBrown" Grid.Row="1">
                 <Button.BitmapEffect >
                     <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
                 </Button.BitmapEffect>
             </Button>
-            <WrapPanel x:Name="straw_step1wrap" Margin="37,184.143,37,86" Width="216" Grid.Row="1" >
-            </WrapPanel >
-            <TextBlock x:Name="sStep1_Title_Copy1" HorizontalAlignment="Left" Margin="10,148.143,0,0" TextWrapping="Wrap" Text="Ingredients for this step:" VerticalAlignment="Top" TextDecorations="Underline" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="26" Height="36" Width="270" Grid.Row="1"/>
         </Grid>
         <Button x:Name="BackButton" Background="BurlyWood" BorderBrush="SaddleBrown" Foreground="SaddleBrown" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Click="BackClicked">
             <StackPanel>
