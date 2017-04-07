@@ -565,10 +565,12 @@ namespace Horizontal_Prototype_March_4
                 if (!isExpanded)
                 {
                     mi._meatIngr_Grid.Width = 470;
+                    mi._meatIngr_Grid.Margin = new Thickness(40, 0, 0, 0);  
                 }
                 else
                 {
                     mi._meatIngr_Grid.Width = 372;
+                    mi._meatIngr_Grid.Margin = new Thickness(90, 0, 0, 0);
                 }
             }
 
@@ -637,10 +639,12 @@ namespace Horizontal_Prototype_March_4
                 {
                     
                     ssi._strawIngr_Grid.Width = 470;
+                    ssi._strawIngr_Grid.Margin = new Thickness(40, 0, 0, 0);
                 }
                 else
                 {
                     ssi._strawIngr_Grid.Width = 372;
+                    ssi._strawIngr_Grid.Margin = new Thickness(90, 0, 0, 0);
                 }
             }
 
@@ -651,11 +655,13 @@ namespace Horizontal_Prototype_March_4
                 if (!isExpanded)
 				{
 					li._lemonIngr_Grid.Width = 470;
-				}
+                    li._lemonIngr_Grid.Margin = new Thickness(40, 0, 0, 0);
+                }
 				else
 				{
 					li._lemonIngr_Grid.Width = 372;
-				}
+                    li._lemonIngr_Grid.Margin = new Thickness(90, 0, 0, 0);
+                }
 			}
 
 			else if (CurrentUserControl is Souffle_Complete)
