@@ -107,10 +107,10 @@
     </Window.Triggers>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="269*"/>
-            <RowDefinition Height="270*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
-        <DockPanel x:Name="_BorderDP" Height="530" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Panel.ZIndex="1000" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+        <DockPanel x:Name="_BorderDP" Height="530" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Panel.ZIndex="1000" RenderTransformOrigin="0.5,0.5">
             <DockPanel.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -131,7 +131,7 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </Border.RenderTransform>
-                <DockPanel x:Name="_Sidebar" HorizontalAlignment="Left" VerticalAlignment="Top" Height="542" Width="120" Margin="0,0" Panel.ZIndex="2" Background="Beige">
+                <DockPanel x:Name="_Sidebar" HorizontalAlignment="Left" VerticalAlignment="Top" Height="542" Width="120" Margin="0,0" Background="Beige" Panel.ZIndex="1001">
 
 
 
@@ -173,8 +173,8 @@
                 </DockPanel>
             </Border>
         </DockPanel>
-        <Button x:Name="step_expander" HorizontalAlignment="Left" Height="539" Margin="120,0,0,0" VerticalAlignment="Top" Width="380" Background="Black" Opacity="0.2" Visibility="Hidden" Panel.ZIndex="1000" Click="step_expander_Click" />
-        <DockPanel x:Name ="_pagestack" HorizontalAlignment="Left" Height="539" Margin="120,0,0,0" VerticalAlignment="Top" Width="372" Panel.ZIndex="1" Grid.RowSpan="2">
+        <Button x:Name="step_expander" HorizontalAlignment="Left" Height="539" Margin="120,0,0,0" VerticalAlignment="Top" Width="510" Background="Black" Opacity="0.2" Visibility="Hidden" Panel.ZIndex="1000" Click="step_expander_Click" />
+        <DockPanel x:Name ="_pagestack" HorizontalAlignment="Left" Height="539" Margin="120,0,0,0" VerticalAlignment="Top" Width="372" Panel.ZIndex="1">
             <Frame x:Name="_Navigation" NavigationUIVisibility="Hidden"></Frame>
         </DockPanel>
     </Grid>
