@@ -24,15 +24,15 @@ namespace Horizontal_Prototype_March_4
         public List<string> favouritesList = new List<string>();
 
 
-        public object[,] _recipesArray = new object[,] {   { "Italian Delux Pizza", "peperoni ham hamburger flour salt", "images/food/delux_pizza.jpg", new LemonChickenDesc(false) },
-                                                           { "Vegan Stirfry", "green pepper beef cabage yam brocolli soy sauce", "images/food/gluten_free_stirfry.jpeg", new LemonChickenDesc(false) },
-                                                           {"Honeysmoked Ham", "ham honey brown sugar salt" , "images/food/honeysmoked_ham.jpeg", new LemonChickenDesc(false) },
-                                                           {"Homestyle Spaghetti", "spaghetti beef pepper marianara tomato paste" , "images/food/italian_spaghetti.jpg", new LemonChickenDesc(false) },
-                                                           {"Tofu Burger", "tofu pepper salt bun lettuce tomato green pepper" , "images/food/tofu_burger.jpeg", new LemonChickenDesc(false) },
-                                                           {"Cake", "flour salt milk eggs sugar icing sugar", "images/food/cake.jpeg", new LemonChickenDesc(false) },
-                                                           {"Rosemary Fries", "french fries salt rosemary", "images/food/Rosemary_fry.jpeg", new LemonChickenDesc(false)},
-                                                           {"Vegetarian Pasta", "broccoli celery salt pepper carrots", "images/food/veg_pasta.jpeg", new LemonChickenDesc(false) },
-                                                           {"Vegtable Salad", "Spinach italian dressing peppers raisons ", "images/food/veg_salad.jpg", new LemonChickenDesc(false) },
+        public object[,] _recipesArray = new object[,] {   { "Italian Delux Pizza", "peperoni ham hamburger flour salt", "images/food/delux_pizza.jpg", new ComingSoon() },
+                                                           { "Vegan Stirfry", "green pepper beef cabage yam brocolli soy sauce", "images/food/gluten_free_stirfry.jpeg", new ComingSoon() },
+                                                           {"Honeysmoked Ham", "ham honey brown sugar salt" , "images/food/honeysmoked_ham.jpeg", new ComingSoon() },
+                                                           {"Homestyle Spaghetti", "spaghetti beef pepper marianara tomato paste" , "images/food/italian_spaghetti.jpg", new ComingSoon() },
+                                                           {"Tofu Burger", "tofu pepper salt bun lettuce tomato green pepper" , "images/food/tofu_burger.jpeg", new ComingSoon() },
+                                                           {"Cake", "flour salt milk eggs sugar icing sugar", "images/food/cake.jpeg", new ComingSoon() },
+                                                           {"Rosemary Fries", "french fries salt rosemary", "images/food/Rosemary_fry.jpeg", new ComingSoon()},
+                                                           {"Vegetarian Pasta", "broccoli celery salt pepper carrots", "images/food/veg_pasta.jpeg",new ComingSoon() },
+                                                           {"Vegtable Salad", "Spinach italian dressing peppers raisons ", "images/food/veg_salad.jpg",new ComingSoon() },
                                                            { "Lemon Chicken" ,"chicken lemon lime pepper salt", "images/food/chicken.jpeg", new LemonChickenDesc(false) },
                                                            {"Meatloaf", "Beef pepper curry salt chilli onion", "images/food/Meatloaf-121.jpg", new MeatDesc(false) },
                                                            {"Strawberry Souffle", "icing sugar strawberry dessert", "images/food/straw_sou.jpg", new StrawberrySouffleDesc(false) } };

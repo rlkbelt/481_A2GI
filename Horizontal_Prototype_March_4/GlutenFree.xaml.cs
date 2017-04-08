@@ -136,14 +136,26 @@ namespace Horizontal_Prototype_March_4
         public void initValues(object[,] _recipesArray)
         {
             _GlutenWrapPanel.Children.Clear();
-            Boolean expand = false;
+            bool expand = false;
             try { expand = window.isExpanded; } catch (Exception) { };
             Stack<string> searchStack = new Stack<string>();
             int end = _recipesArray.GetLength(0);
             searchStack.Push(_recipesArray[1, 0].ToString());
+            searchStack.Push(_recipesArray[1, 1].ToString());
+            searchStack.Push(_recipesArray[1, 2].ToString());
+            searchStack.Push("*");
             searchStack.Push(_recipesArray[7, 0].ToString());
+            searchStack.Push(_recipesArray[7, 1].ToString());
+            searchStack.Push(_recipesArray[7, 2].ToString());
+            searchStack.Push("*");
             searchStack.Push(_recipesArray[8, 0].ToString());
+            searchStack.Push(_recipesArray[8, 1].ToString());
+            searchStack.Push(_recipesArray[8, 2].ToString());
+            searchStack.Push("*");
             searchStack.Push(_recipesArray[9, 0].ToString());
+            searchStack.Push(_recipesArray[9, 1].ToString());
+            searchStack.Push(_recipesArray[9, 2].ToString());
+            searchStack.Push("*");
 
             while (!(searchStack.Count == 0))
             {

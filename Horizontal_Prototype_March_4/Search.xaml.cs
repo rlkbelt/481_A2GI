@@ -64,16 +64,7 @@ namespace Horizontal_Prototype_March_4
 
                 }
             }
-            if (searchStack.Count == 0)
-            {
-                TextBlock none = new TextBlock();
-                none.Text = "No Results Found, please check spelling and search again";
-                none.FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
-                _SearchRecipesWrapPanel.Children.Add(none);
 
-
-
-            }
             while (!(searchStack.Count == 0))
             {
                 _scroller.Visibility = Visibility.Visible;
@@ -114,7 +105,32 @@ namespace Horizontal_Prototype_March_4
                     _SearchRecipesWrapPanel.Children.Add(button);
                 }
                 
-            } 
+            }
+            int j = 0;
+            foreach(Button child in _SearchRecipesWrapPanel.Children)
+            {
+                j++;
+            }
+            
+            if (j == 0)
+            {
+                _scroller.Visibility = Visibility.Visible;
+
+                TextBlock none = new TextBlock();
+                none.Text = "No Results Found, please check spelling and search again";
+                none.FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
+                none.Width = 335;
+                none.Height = 200;
+                none.FontSize = 20;
+                none.TextAlignment = System.Windows.TextAlignment.Center;
+                none.TextWrapping = TextWrapping.Wrap;
+
+                StackPanel sp = new StackPanel();
+                sp.Children.Add(none);
+
+                _SearchRecipesWrapPanel.Children.Add(sp);
+
+            }
 
         }
 

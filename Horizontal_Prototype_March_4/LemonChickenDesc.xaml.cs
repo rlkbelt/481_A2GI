@@ -87,10 +87,11 @@ namespace Horizontal_Prototype_March_4
 				img.Source = BitImg;
 				favButton.Content = img;
                 window._lemonComp.favButton.Content = img;
+                window.favouritesList.Add("lemon chicken");
 
-  
-                
-				for (int i = 0; i < window._recipesArray.GetLength(0); i++)
+
+
+                for (int i = 0; i < window._recipesArray.GetLength(0); i++)
 				{
 
 					if (window._recipesArray[i, 0].ToString().ToLower().Equals("lemon chicken"))
@@ -112,9 +113,10 @@ namespace Horizontal_Prototype_March_4
 				img.Source = BitImg;
 				favButton.Content = img;
                 window._lemonComp.favButton.Content = img;
+                window.favouritesList.Remove("lemon chicken");
 
 
-               
+
                 for (int i = 0; i < window._recipesArray.GetLength(0); i++)
 				{
 

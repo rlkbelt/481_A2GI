@@ -123,6 +123,31 @@ namespace Horizontal_Prototype_March_4
 					}
 				}
             }
+            int j = 0;
+            foreach (Button child in _RecipesWrapPanel.Children)
+            {
+                j++;
+            }
+
+            if (j == 0)
+            {
+                _scrollerAR.Visibility = Visibility.Visible;
+
+                TextBlock none = new TextBlock();
+                none.Text = "No Results Found, please check spelling and search again";
+                none.FontFamily = new FontFamily("Tw Cen MT Condensed Extra Bold");
+                none.Width = 320;
+                none.Height = 200;
+                none.FontSize = 20;
+                none.TextAlignment = System.Windows.TextAlignment.Center;
+                none.TextWrapping = TextWrapping.Wrap;
+
+                StackPanel sp = new StackPanel();
+                sp.Children.Add(none);
+
+                _RecipesWrapPanel.Children.Add(sp);
+
+            }
             searchStack.Clear();
         }
         public void initValues(object[,] _recipesArray)
