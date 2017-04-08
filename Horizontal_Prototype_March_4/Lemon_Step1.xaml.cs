@@ -29,10 +29,10 @@ namespace Horizontal_Prototype_March_4
 			{
 				window = Window.GetWindow(this) as MainWindow;
 				window.OpenCollapsed();
-                window._HomeButton.Background = Brushes.Beige;
-                window._SearchButton.Background = Brushes.Beige;
-                window._FavouritesButton.Background = Brushes.Beige;
-                window._SettingsButton.Background = Brushes.Beige;
+                window._HomeButton.Background = Brushes.BurlyWood;
+                window._SearchButton.Background = Brushes.BurlyWood;
+                window._FavouritesButton.Background = Brushes.BurlyWood;
+                window._SettingsButton.Background = Brushes.BurlyWood;
                 lemon_step1wrap.Children.Clear();
                 string[] ingredString = { window._lemonIngr.lemon_ingr1.Text };
                 string[] quantities = { window._lemonIngr.lemon_quan1.Text };

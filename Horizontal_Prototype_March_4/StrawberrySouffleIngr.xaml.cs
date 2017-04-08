@@ -30,11 +30,11 @@ namespace Horizontal_Prototype_March_4
             {
                 window = Window.GetWindow(this) as MainWindow;
                 window.CurrentUserControl = this;
-   //             SliderMover(straw_Recipe_Ratio, null);
-                window._HomeButton.Background = Brushes.Beige;
-                window._SearchButton.Background = Brushes.Beige;
-                window._FavouritesButton.Background = Brushes.Beige;
-                window._SettingsButton.Background = Brushes.Beige;
+                //             SliderMover(straw_Recipe_Ratio, null);
+                window._HomeButton.Background = Brushes.BurlyWood;
+                window._SearchButton.Background = Brushes.BurlyWood;
+                window._FavouritesButton.Background = Brushes.BurlyWood;
+                window._SettingsButton.Background = Brushes.BurlyWood;
                 strawSoufIngrCollapsed = false;
                 if (!window.isExpanded)
                 {

@@ -85,7 +85,9 @@ namespace Horizontal_Prototype_March_4
         public MainWindow()
         {
             InitializeComponent();
-            
+
+            Show();
+            _Navigation.Navigate(_allRecipes);
             
             intro.Show();
             

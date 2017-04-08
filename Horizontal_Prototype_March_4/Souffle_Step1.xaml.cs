@@ -29,10 +29,10 @@ namespace Horizontal_Prototype_March_4
 			{
 				window = Window.GetWindow(this) as MainWindow;
 				window.OpenCollapsed();
-                window._HomeButton.Background = Brushes.Beige;
-                window._SearchButton.Background = Brushes.Beige;
-                window._FavouritesButton.Background = Brushes.Beige;
-                window._SettingsButton.Background = Brushes.Beige;
+                window._HomeButton.Background = Brushes.BurlyWood;
+                window._SearchButton.Background = Brushes.BurlyWood;
+                window._FavouritesButton.Background = Brushes.BurlyWood;
+                window._SettingsButton.Background = Brushes.BurlyWood;
                 straw_step1wrap.Children.Clear();
                 string[] ingredString = { window._strawIngr.straw_ingr1.Text, window._strawIngr.straw_ingr2.Text, window._strawIngr.straw_ingr3.Text, window._strawIngr.straw_ingr4.Text, window._strawIngr.straw_ingr5.Text };
                 string[] quantities = { window._strawIngr.straw_quan1.Text, window._strawIngr.straw_quan2.Text, window._strawIngr.straw_quan3.Text, window._strawIngr.straw_quan4.Text, window._strawIngr.straw_quan5.Text };

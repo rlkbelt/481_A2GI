@@ -26,7 +26,7 @@ namespace Horizontal_Prototype_March_4
         public void close()
         {
 
-            System.Threading.Thread.Sleep(3000);
+            System.Threading.Thread.Sleep(8000);
             
             Close();
         }

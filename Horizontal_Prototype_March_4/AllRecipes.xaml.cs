@@ -29,10 +29,10 @@ namespace Horizontal_Prototype_March_4
             this.Loaded += (s, e) =>
             {
                 window = Window.GetWindow(this) as MainWindow;
-                window._HomeButton.Background = Brushes.Beige;
-                window._SearchButton.Background = Brushes.Beige;
-                window._FavouritesButton.Background = Brushes.Beige;
-                window._SettingsButton.Background = Brushes.Beige;
+                window._HomeButton.Background = Brushes.BurlyWood;
+                window._SearchButton.Background = Brushes.BurlyWood;
+                window._FavouritesButton.Background = Brushes.BurlyWood;
+                window._SettingsButton.Background = Brushes.BurlyWood;
             };
 
         }

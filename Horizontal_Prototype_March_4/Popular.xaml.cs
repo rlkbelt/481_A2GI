@@ -27,10 +27,10 @@ namespace Horizontal_Prototype_March_4
             this.Loaded += (s, e) =>
             {
                 window = Window.GetWindow(this) as MainWindow;
-                window._HomeButton.Background = Brushes.Beige;
-                window._SearchButton.Background = Brushes.Beige;
-                window._FavouritesButton.Background = Brushes.Beige;
-                window._SettingsButton.Background = Brushes.Beige;
+                window._HomeButton.Background = Brushes.BurlyWood;
+                window._SearchButton.Background = Brushes.BurlyWood;
+                window._FavouritesButton.Background = Brushes.BurlyWood;
+                window._SettingsButton.Background = Brushes.BurlyWood;
             };
         }
         public void ClearBox(object sender, RoutedEventArgs e)
@@ -207,7 +207,7 @@ namespace Horizontal_Prototype_March_4
         {
             window.backStack.Push(this);
             Button but = sender as Button;
-            _searchboxPop.Text = but.Tag.ToString();
+            //_searchboxPop.Text = but.Tag.ToString();
             
             for (int i = 0; i < window._recipesArray.GetLength(0); i++)
             {
