@@ -124,8 +124,13 @@ namespace Horizontal_Prototype_March_4
             window.backStack.Push(this);
             window._Navigation.Navigate(window._meatIngr);
             window.changeWidth();
-            //window.expanderInvisible();
-        }
+
+			if (window.isExpanded)
+			{
+				window.OpenExpanded();
+			}
+			//window.expanderInvisible();
+		}
 
         private void BeginClick(object sender, RoutedEventArgs e)
         {

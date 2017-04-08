@@ -60,7 +60,7 @@ namespace Horizontal_Prototype_March_4
 			//Tight Loop: Loop until the ProgressBar.Value reaches the max
 			do
 			{
-				value += 1;
+				value += 2;
 				percent.Text = (int)(_progress.Value/326.27) + "%";
 
 
