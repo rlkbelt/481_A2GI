@@ -42,7 +42,17 @@ namespace Horizontal_Prototype_March_4
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (window.backStack.Peek() is HomePage)
+            {
+                window.OpenExpanded();
+                window.expanderInvisible();
+
+            }
+            if (window.backStack.Peek() is favourites)
+            {
+                window._favourites.initValues(window._recipesArray, window.favouritesList);
+            }
+
             window.CurrentUserControl = window.backStack.Pop();
             window._Navigation.Navigate(window.CurrentUserControl);
             try { window._meatIngr.SliderMover(null, null); } catch (Exception) { }

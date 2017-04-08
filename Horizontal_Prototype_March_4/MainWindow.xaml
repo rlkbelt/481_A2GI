@@ -7,17 +7,135 @@
         mc:Ignorable="d"
      
         Title="Step by Step with Jetty Brocker" Height="570" Width="510" WindowStartupLocation="CenterScreen" Background="Beige">
+    <Window.Resources>
+        <Storyboard x:Key="PanelExpand">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="_BorderDP">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-120"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut" Power="6"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="_BorderDP">
+                <EasingDoubleKeyFrame KeyTime="0" Value="4.711"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="3.769">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut" Power="6"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="PanelCollapse">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="_BorderDP">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="_BorderDP">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-0.5">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="_HomeDP">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="_SeachDP">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="_FavouritesDP">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="_SettingsDP">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="_Sidebar">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="24"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="_BorderDP">
+                <EasingDoubleKeyFrame KeyTime="0" Value="120"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="30"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="PanelExpand02">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="_BorderDP">
+                <EasingDoubleKeyFrame KeyTime="0" Value="24"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="120"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="_HomeDP">
+                <EasingDoubleKeyFrame KeyTime="0" Value="24"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="120"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="_SeachDP">
+                <EasingDoubleKeyFrame KeyTime="0" Value="24"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="120"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="_FavouritesDP">
+                <EasingDoubleKeyFrame KeyTime="0" Value="24"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="120"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="_SettingsDP">
+                <EasingDoubleKeyFrame KeyTime="0" Value="24"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="120"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="PanelCollapse02">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="_BorderDP">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-96">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut" Power="6"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Expander.Expanded" SourceName="_ExpanderButton">
+            <BeginStoryboard x:Name="PanelCollapse02_BeginStoryboard" Storyboard="{StaticResource PanelCollapse02}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Expander.Collapsed" SourceName="_ExpanderButton">
+            <BeginStoryboard x:Name="PanelExpand_BeginStoryboard1" Storyboard="{StaticResource PanelExpand}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded" SourceName="_Navigation"/>
+    </Window.Triggers>
     <Grid>
-        <DockPanel x:Name="_BorderDP" Height="530" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Panel.ZIndex="1000">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="269*"/>
+            <RowDefinition Height="270*"/>
+        </Grid.RowDefinitions>
+        <DockPanel x:Name="_BorderDP" Height="530" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Panel.ZIndex="1000" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <DockPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DockPanel.RenderTransform>
             <DockPanel.BitmapEffect >
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
             </DockPanel.BitmapEffect>
-            <Border CornerRadius="6" BorderBrush="BurlyWood" Background="White" BorderThickness="2" DockPanel.Dock="Top">
+            <Border x:Name="border" CornerRadius="6" BorderBrush="BurlyWood" Background="White" BorderThickness="2" DockPanel.Dock="Top" RenderTransformOrigin="0.5,0.5">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
                 <DockPanel x:Name="_Sidebar" HorizontalAlignment="Left" VerticalAlignment="Top" Height="542" Width="120" Margin="0,0" Panel.ZIndex="2" Background="Beige">
 
 
-                
-                <DockPanel x:Name="_HomeDP" Width="120" Height="132" HorizontalAlignment="Left" VerticalAlignment="Top" DockPanel.Dock="Top">
+
+                    <DockPanel x:Name="_HomeDP" Width="120" Height="132" HorizontalAlignment="Left" VerticalAlignment="Top" DockPanel.Dock="Top">
                         <Button x:Name="_HomeButton" Background="BurlyWood" HorizontalAlignment="Left" Height="132" VerticalAlignment="Top" Width="120" Click="HomeClick">
                             <StackPanel>
                                 <Image x:Name ="home_side_panel" Source="images/buttons/home_good.png" Height="105" Width="90" />
@@ -54,8 +172,8 @@
                     </DockPanel>
                 </DockPanel>
             </Border>
-            </DockPanel>
-        <DockPanel x:Name ="_pagestack" HorizontalAlignment="Left" Height="539" Margin="120,0,0,0" VerticalAlignment="Top" Width="372" Panel.ZIndex="1">
+        </DockPanel>
+        <DockPanel x:Name ="_pagestack" HorizontalAlignment="Left" Height="539" Margin="120,0,0,0" VerticalAlignment="Top" Width="372" Panel.ZIndex="1" Grid.RowSpan="2">
             <Frame x:Name="_Navigation" NavigationUIVisibility="Hidden"></Frame>
         </DockPanel>
     </Grid>
