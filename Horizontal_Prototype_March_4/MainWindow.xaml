@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Horizontal_Prototype_March_4"
         mc:Ignorable="d"
-        Title="MainWindow" Height="570" Width="510" WindowStartupLocation="CenterScreen" Background="Beige">
+        Title="Step by Step with Jetty Brocker" Height="570" Width="510" WindowStartupLocation="CenterScreen" Background="Beige">
     <Grid>
         <DockPanel x:Name="_BorderDP" Height="530" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Panel.ZIndex="1000">
             <Border CornerRadius="6" BorderBrush="BurlyWood" Background="White" BorderThickness="2" DockPanel.Dock="Top">

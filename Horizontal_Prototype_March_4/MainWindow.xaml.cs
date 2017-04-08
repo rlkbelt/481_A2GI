@@ -74,6 +74,7 @@ namespace Horizontal_Prototype_March_4
 		public bool isExpanded = true;
 
         public GlutenFree _glutenFree = new GlutenFree();
+        public Intro intro = new Intro();
 
 
         public object CurrentUserControl { get; set; }
@@ -84,6 +85,13 @@ namespace Horizontal_Prototype_March_4
         public MainWindow()
         {
             InitializeComponent();
+            
+            
+            intro.Show();
+            
+            
+            intro.close();
+            
 
             _Navigation.Navigate(_homePage);
             CurrentUserControl = _homePage;
