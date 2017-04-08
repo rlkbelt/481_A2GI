@@ -223,16 +223,18 @@ namespace Horizontal_Prototype_March_4
         }
         private void BackClick(object sender, RoutedEventArgs e)
         {
-            if (window.backStack.Peek() is HomePage)
-            {
-                window.expanderInvisible();
-            }
-            if (window.backStack.Peek() is favourites)
-            {
-                window._favourites.initValues(window._recipesArray, window.favouritesList);
-            }
+			if (window.backStack.Peek() is HomePage)
+			{
+				window.OpenExpanded();
+				window.expanderInvisible();
 
-            window.CurrentUserControl = window.backStack.Pop();
+			}
+			if (window.backStack.Peek() is favourites)
+			{
+				window._favourites.initValues(window._recipesArray, window.favouritesList);
+			}
+
+			window.CurrentUserControl = window.backStack.Pop();
             window._Navigation.Navigate(window.CurrentUserControl);
         }
     }

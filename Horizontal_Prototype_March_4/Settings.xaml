@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Horizontal_Prototype_March_4"
              mc:Ignorable="d" 
              d:DesignHeight="539" d:DesignWidth="462">
-    <Grid x:Name="_settings_Grid" Height="539" Width="372" HorizontalAlignment="Right">
+    <Grid x:Name="_settings_Grid" Height="539" Width="372" HorizontalAlignment="Left" Margin="90,0,0,0">
         <Button x:Name="_page__back" Background="Transparent" BorderBrush="Transparent" BorderThickness="0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="75" Margin="10,10,0,0" Click="Back_Click"  >
             <Image Source="images/buttons/back.png" HorizontalAlignment="Left" Width="100" Height="75"/>
             <Button.BitmapEffect >

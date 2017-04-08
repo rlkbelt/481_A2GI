@@ -754,15 +754,19 @@ namespace Horizontal_Prototype_March_4
             {
                 if (!isExpanded)
                 {
-                    _settings._settings_Grid.Width = 470;
-                    
-                }
-                else
+                    _settings._settings_Grid.Width = 372;
+					_settings._settings_Grid.Margin = new Thickness(50, 0, 0, 0);
+
+
+				}
+				else
                 {
                     _settings._settings_Grid.Width = 372;
-                    //_popular._PopularWrapPanel.Width = 330;
-                }
-            }
+					_settings._settings_Grid.Margin = new Thickness(90, 0, 0, 0);
+
+					//_popular._PopularWrapPanel.Width = 330;
+				}
+			}
 
             else if (CurrentUserControl is Meat_Step1)
             {
