@@ -192,14 +192,16 @@ namespace Horizontal_Prototype_March_4
         }
         private void HomeClick(object sender, RoutedEventArgs e)
         {
-            expanderInvisible();
+			step_expander.Visibility = Visibility.Hidden;
+			expanderInvisible();
             _Navigation.Navigate(_homePage);
             backStack.Push(CurrentUserControl);
             CurrentUserControl = _homePage;
         }
         public void SearchClick(object sender, RoutedEventArgs e)
         {
-            expanderVisible();
+			step_expander.Visibility = Visibility.Hidden;
+			expanderVisible();
             _Navigation.Navigate(_search);
             backStack.Push(CurrentUserControl);
             CurrentUserControl = _search;
@@ -209,7 +211,8 @@ namespace Horizontal_Prototype_March_4
 
         public void FavouritesClick(object sender, RoutedEventArgs e)
         {
-            expanderVisible();
+			step_expander.Visibility = Visibility.Hidden;
+			expanderVisible();
             _favourites.initValues(_recipesArray, favouritesList);
             _Navigation.Navigate(_favourites);
             backStack.Push(CurrentUserControl);
@@ -220,7 +223,8 @@ namespace Horizontal_Prototype_March_4
 
         public void SettingsClick(object sender, RoutedEventArgs e)
         {
-            expanderVisible();
+			step_expander.Visibility = Visibility.Hidden;
+			expanderVisible();
             _Navigation.Navigate(_settings);
             backStack.Push(CurrentUserControl);
             CurrentUserControl = _settings;
@@ -481,7 +485,7 @@ namespace Horizontal_Prototype_March_4
                     _search._search_Grid.Width = 470;
 					_search._SearchRecipesWrapPanel.Width = 430;
                     _search._searchWP.Margin = new Thickness(60, 160, 0, 345);
-                    _search.search_instructions.Margin = new Thickness(94, 177, 84, 0);
+                    //_search.search_instructions.Margin = new Thickness(94, 177, 84, 0);
 
 
                     foreach (Button child in _search._SearchRecipesWrapPanel.Children)
@@ -500,7 +504,7 @@ namespace Horizontal_Prototype_March_4
                     _search._search_Grid.Width = 372;
 					_search._SearchRecipesWrapPanel.Width = 340;
                     _search._searchWP.Margin = new Thickness(20, 160, 0, 345);
-                    _search.search_instructions.Margin = new Thickness(54, 177, 84, 0);
+                   // _search.search_instructions.Margin = new Thickness(54, 177, 84, 0);
                     decButtonSize(_search._SearchRecipesWrapPanel);
                    
 
