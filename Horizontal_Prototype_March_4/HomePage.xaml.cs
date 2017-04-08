@@ -42,6 +42,7 @@ namespace Horizontal_Prototype_March_4
                 window.backStack.Push(this);
                 
                 window.expanderVisible();
+				window.OpenExpanded();
                 window._allRecipes.initValues(window._recipesArray);
                 window._Navigation.Navigate(window._allRecipes);
                 window.CurrentUserControl = window._allRecipes;
@@ -55,7 +56,8 @@ namespace Horizontal_Prototype_March_4
                 window.backStack.Push(this);
                 
                 window.expanderVisible();
-                window._popular.initValues(window._recipesArray);
+				window.OpenExpanded();
+				window._popular.initValues(window._recipesArray);
                 window._Navigation.Navigate(window._popular);
                 window.CurrentUserControl = window._popular;
                 
@@ -67,8 +69,8 @@ namespace Horizontal_Prototype_March_4
             if (window != null)
             {
                 window.backStack.Push(this);
-                
-                window.expanderVisible();
+				window.OpenExpanded();
+				window.expanderVisible();
                 window._Navigation.Navigate(window._categories);
                 window.CurrentUserControl = window._categories;
             }

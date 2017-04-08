@@ -173,6 +173,7 @@
                 </DockPanel>
             </Border>
         </DockPanel>
+        <Button x:Name="step_expander" HorizontalAlignment="Left" Height="539" Margin="120,0,0,0" VerticalAlignment="Top" Width="380" Background="Black" Opacity="0.2" Visibility="Hidden" Panel.ZIndex="1000" Click="step_expander_Click" />
         <DockPanel x:Name ="_pagestack" HorizontalAlignment="Left" Height="539" Margin="120,0,0,0" VerticalAlignment="Top" Width="372" Panel.ZIndex="1" Grid.RowSpan="2">
             <Frame x:Name="_Navigation" NavigationUIVisibility="Hidden"></Frame>
         </DockPanel>

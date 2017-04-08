@@ -19,15 +19,24 @@ namespace Horizontal_Prototype_March_4
     /// </summary>
     public partial class Intro : Window
     {
+		MainWindow window;
         public Intro()
         {
             InitializeComponent();
-        }
+
+		}
         public void close()
         {
+			this.Loaded += (s, e) =>
+			{
+				window = Window.GetWindow(this) as MainWindow;
 
-            System.Threading.Thread.Sleep(8000);
-            
+
+				// window._ExpanderButton.Expanded = Expander.Collap
+
+			};
+			System.Threading.Thread.Sleep(8000);
+
             Close();
         }
     }

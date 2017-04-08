@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:Horizontal_Prototype_March_4"
              mc:Ignorable="d" 
              d:DesignHeight="570" d:DesignWidth="470">
+   
     <Grid Name="Meat_Step1Grid" Width="470" Height="570">
+        
         <Button x:Name="NextButton" Background="BurlyWood" BorderBrush="SaddleBrown" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="570" Margin="380,0,0,0" Click="NextClicked">
             <StackPanel>
                 <Image Source="images/buttons/NextArrow.png" Height="98"/>
@@ -30,6 +32,6 @@
                 <TextBlock Text="Back" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="26" TextAlignment="Center" Foreground="SaddleBrown"/>
             </StackPanel>
         </Button>
-
-    </Grid>
+        </Grid>
+    
 </UserControl>

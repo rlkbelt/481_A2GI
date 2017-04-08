@@ -55,5 +55,9 @@ namespace Horizontal_Prototype_March_4
             window.CurrentUserControl = window._glutenFree;
 
         }
-    }
+		public void ClearBox(object sender, RoutedEventArgs e)
+		{
+			_searchboxAR.Text = "";
+		}
+	}
 }

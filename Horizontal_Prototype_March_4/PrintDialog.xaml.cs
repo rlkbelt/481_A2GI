@@ -80,5 +80,9 @@ namespace Horizontal_Prototype_March_4
 			Close();
 		}
 
+		private void Click(object sender, RoutedEventArgs e)
+		{
+			Close();
+		}
 	}
 }
