@@ -44,61 +44,63 @@ namespace Horizontal_Prototype_March_4
 
         public AllRecipes _allRecipes = new AllRecipes();
         public categories _categories = new categories();
-		public Beat_Definition _beatDefinition = new Beat_Definition();
+        public Beat_Definition _beatDefinition = new Beat_Definition();
         public MeatIngr _meatIngr = new MeatIngr();
         public Popular _popular = new Popular();
         public StrawberrySouffleIngr _strawIngr = new StrawberrySouffleIngr();
-		
+
 
         public Settings _settings = new Settings();
 
         public HomePage _homePage = new HomePage();
-		public Souffle_Step1 _souffleStep1 = new Souffle_Step1();
-		public Souffle_Step2 _souffleStep2 = new Souffle_Step2();
-		public Souffle_Step3 _souffleStep3 = new Souffle_Step3();
-		public Souffle_Complete _souffleComp = new Souffle_Complete(false);
-		public LemonIngred _lemonIngr = new LemonIngred();
-		
-		public Lemon_Step1 _lemonStep1 = new Lemon_Step1();
-		public Lemon_Step2 _lemonStep2 = new Lemon_Step2();
-		public Lemon_Step3 _lemonStep3 = new Lemon_Step3();
-		public Lemon_Complete _lemonComp = new Lemon_Complete(false);
+        public Souffle_Step1 _souffleStep1 = new Souffle_Step1();
+        public Souffle_Step2 _souffleStep2 = new Souffle_Step2();
+        public Souffle_Step3 _souffleStep3 = new Souffle_Step3();
+        public Souffle_Complete _souffleComp = new Souffle_Complete(false);
+        public LemonIngred _lemonIngr = new LemonIngred();
 
-		public Meat_Step1 _meatStep1 = new Meat_Step1();
-		public Meat_Step2 _meatStep2 = new Meat_Step2();
-		public Meat_Step3 _meatStep3 = new Meat_Step3();
-		public Meat_Step4 _meatStep4 = new Meat_Step4();
-		public Meat_Complete _meatComp = new Meat_Complete(false);
+        public Lemon_Step1 _lemonStep1 = new Lemon_Step1();
+        public Lemon_Step2 _lemonStep2 = new Lemon_Step2();
+        public Lemon_Step3 _lemonStep3 = new Lemon_Step3();
+        public Lemon_Complete _lemonComp = new Lemon_Complete(false);
 
-		public Chopped_Definition _choppedDefinition = new Chopped_Definition();
+        public Meat_Step1 _meatStep1 = new Meat_Step1();
+        public Meat_Step2 _meatStep2 = new Meat_Step2();
+        public Meat_Step3 _meatStep3 = new Meat_Step3();
+        public Meat_Step4 _meatStep4 = new Meat_Step4();
+        public Meat_Complete _meatComp = new Meat_Complete(false);
 
-		public bool isExpanded = true;
+        public Chopped_Definition _choppedDefinition = new Chopped_Definition();
+
+        public bool isExpanded = true;
 
         public GlutenFree _glutenFree = new GlutenFree();
-		public Intro intro = new Intro();
+        public Intro intro = new Intro();
 
 
-		public object CurrentUserControl { get; set; }
+        public object CurrentUserControl { get; set; }
 
 
-        
-		
+
+
+
         public MainWindow()
         {
             InitializeComponent();
 
-			_allRecipes.initValues(_recipesArray);
-			_Navigation.Navigate(_allRecipes);
-            
-            intro.Show();
-			
-            
-            
-           intro.close();
-            
 
-           _Navigation.Navigate(_homePage);
-           CurrentUserControl = _homePage;
+            _allRecipes.initValues(_recipesArray);
+            _Navigation.Navigate(_allRecipes);
+
+            intro.Show();
+
+
+
+            intro.close();
+
+
+            _Navigation.Navigate(_homePage);
+            CurrentUserControl = _homePage;
 
             _settings.imperialRadio.IsChecked = true;
             try { _meatIngr.SliderMover(null, null); } catch (Exception) { }
@@ -113,7 +115,7 @@ namespace Horizontal_Prototype_March_4
 
 
 
-		public void initStrawMetric()
+        public void initStrawMetric()
         {
             _strawIngr.straw_quan1.Text = "250 mL";
             _strawIngr.straw_quan2.Text = "500 mL";
@@ -126,7 +128,7 @@ namespace Horizontal_Prototype_March_4
             _strawIngr.straw_quan9.Text = "250 mL";
         }
 
-        public void initMeatMetric ()
+        public void initMeatMetric()
         {
             _meatIngr.meat_quan1.Text = "0.45 kg.";
             _meatIngr.meat_quan2.Text = "2";
@@ -152,7 +154,7 @@ namespace Horizontal_Prototype_March_4
             _lemonIngr.lemon_quan9.Text = " Taste";
         }
 
-    public void initStrawImp()
+        public void initStrawImp()
         {
             _strawIngr.straw_quan1.Text = "1 Cup";
             _strawIngr.straw_quan2.Text = "2 Cups";
@@ -192,16 +194,16 @@ namespace Horizontal_Prototype_March_4
         }
         private void HomeClick(object sender, RoutedEventArgs e)
         {
-			step_expander.Visibility = Visibility.Hidden;
-			expanderInvisible();
+            step_expander.Visibility = Visibility.Hidden;
+            expanderInvisible();
             _Navigation.Navigate(_homePage);
             backStack.Push(CurrentUserControl);
             CurrentUserControl = _homePage;
         }
         public void SearchClick(object sender, RoutedEventArgs e)
         {
-			step_expander.Visibility = Visibility.Hidden;
-			expanderVisible();
+            step_expander.Visibility = Visibility.Hidden;
+            expanderVisible();
             _Navigation.Navigate(_search);
             backStack.Push(CurrentUserControl);
             CurrentUserControl = _search;
@@ -211,20 +213,20 @@ namespace Horizontal_Prototype_March_4
 
         public void FavouritesClick(object sender, RoutedEventArgs e)
         {
-			step_expander.Visibility = Visibility.Hidden;
-			expanderVisible();
+            step_expander.Visibility = Visibility.Hidden;
+            expanderVisible();
             _favourites.initValues(_recipesArray, favouritesList);
             _Navigation.Navigate(_favourites);
             backStack.Push(CurrentUserControl);
             CurrentUserControl = _favourites;
             OpenExpanded();
-			
-		}
+
+        }
 
         public void SettingsClick(object sender, RoutedEventArgs e)
         {
-			step_expander.Visibility = Visibility.Hidden;
-			expanderVisible();
+            step_expander.Visibility = Visibility.Hidden;
+            expanderVisible();
             _Navigation.Navigate(_settings);
             backStack.Push(CurrentUserControl);
             CurrentUserControl = _settings;
@@ -234,11 +236,11 @@ namespace Horizontal_Prototype_March_4
 
 
 
-		public void reinit(object Control)
-		{
+        public void reinit(object Control)
+        {
 
 
-			if (CurrentUserControl is Meat_Step2)
+            if (CurrentUserControl is Meat_Step2)
             {
 
             }
@@ -268,7 +270,7 @@ namespace Horizontal_Prototype_March_4
                 string[] ingredString = { _strawIngr.straw_ingr1.Text, _strawIngr.straw_ingr2.Text, _strawIngr.straw_ingr3.Text, _strawIngr.straw_ingr4.Text, _strawIngr.straw_ingr5.Text };
                 string[] quantities = { _strawIngr.straw_quan1.Text, _strawIngr.straw_quan2.Text, _strawIngr.straw_quan3.Text, _strawIngr.straw_quan4.Text, _strawIngr.straw_quan5.Text };
                 populateStep(quantities, ingredString, _souffleStep1.straw_step1wrap);
-                
+
             }
             else if (CurrentUserControl is Souffle_Step2)
             {
@@ -279,13 +281,13 @@ namespace Horizontal_Prototype_March_4
 
             }
         }
-     
+
         public void OpenCollapsed()
         {
             // this._ExpanderButton.IsExpanded = true;
             Expanded(null, null);
             _ExpanderButton.IsExpanded = true;
-			
+
 
 
 
@@ -295,21 +297,21 @@ namespace Horizontal_Prototype_March_4
             // this._ExpanderButton.IsExpanded = true;
             Collapsed(null, null);
             _ExpanderButton.IsExpanded = false;
-			
+
 
 
         }
         private void Collapsed(object sender, RoutedEventArgs e)
         {
-			if ((CurrentUserControl is Meat_Step1 || CurrentUserControl is Meat_Step2 || CurrentUserControl is Meat_Step3 || CurrentUserControl is Meat_Step4 ||
-				CurrentUserControl is Lemon_Step1 || CurrentUserControl is Lemon_Step2 || CurrentUserControl is Lemon_Step3 ||
-				CurrentUserControl is Souffle_Step1 || CurrentUserControl is Souffle_Step2 || CurrentUserControl is Souffle_Step3))
-			{
-				
-				
-				step_expander.Visibility = Visibility.Visible;
-			}
-			if (CurrentUserControl is StrawberrySouffleDesc)
+            if ((CurrentUserControl is Meat_Step1 || CurrentUserControl is Meat_Step2 || CurrentUserControl is Meat_Step3 || CurrentUserControl is Meat_Step4 ||
+                CurrentUserControl is Lemon_Step1 || CurrentUserControl is Lemon_Step2 || CurrentUserControl is Lemon_Step3 ||
+                CurrentUserControl is Souffle_Step1 || CurrentUserControl is Souffle_Step2 || CurrentUserControl is Souffle_Step3))
+            {
+
+
+                step_expander.Visibility = Visibility.Visible;
+            }
+            if (CurrentUserControl is StrawberrySouffleDesc)
             {
                 StrawberrySouffleDesc ssd = CurrentUserControl as StrawberrySouffleDesc;
                 ssd.strawDescSidebarCollapsed = false;
@@ -357,14 +359,14 @@ namespace Horizontal_Prototype_March_4
         }
         private void Expanded(object sender, RoutedEventArgs e)
         {
-			if ((CurrentUserControl is Meat_Step1 || CurrentUserControl is Meat_Step2 || CurrentUserControl is Meat_Step3 || CurrentUserControl is Meat_Step4 ||
-				CurrentUserControl is Lemon_Step1 || CurrentUserControl is Lemon_Step2 || CurrentUserControl is Lemon_Step3 ||
-				CurrentUserControl is Souffle_Step1 || CurrentUserControl is Souffle_Step2 || CurrentUserControl is Souffle_Step3))
-			{
-				
-				step_expander.Visibility = Visibility.Hidden;
-			}
-			if (CurrentUserControl is StrawberrySouffleDesc)
+            if ((CurrentUserControl is Meat_Step1 || CurrentUserControl is Meat_Step2 || CurrentUserControl is Meat_Step3 || CurrentUserControl is Meat_Step4 ||
+                CurrentUserControl is Lemon_Step1 || CurrentUserControl is Lemon_Step2 || CurrentUserControl is Lemon_Step3 ||
+                CurrentUserControl is Souffle_Step1 || CurrentUserControl is Souffle_Step2 || CurrentUserControl is Souffle_Step3))
+            {
+
+                step_expander.Visibility = Visibility.Hidden;
+            }
+            if (CurrentUserControl is StrawberrySouffleDesc)
             {
                 StrawberrySouffleDesc ssd = CurrentUserControl as StrawberrySouffleDesc;
                 ssd.strawDescSidebarCollapsed = true;
@@ -396,15 +398,15 @@ namespace Horizontal_Prototype_March_4
                 _lemonIngr.lemonIngrCollapsed = true;
             }
             isExpanded = false;
-         //   _HomeDP.Width = 0;
-          //  _SeachDP.Width = 0;
-           // _FavouritesDP.Width = 0;
+            //   _HomeDP.Width = 0;
+            //  _SeachDP.Width = 0;
+            // _FavouritesDP.Width = 0;
             //_SettingsDP.Width = 0;
-           // _Sidebar.Width = 24;
-           // _BorderDP.Width = 30;
+            // _Sidebar.Width = 24;
+            // _BorderDP.Width = 30;
             _pagestack.Width = 462;
             _pagestack.Margin = new Thickness(28, 0, 0, 0);
-           // _ExpanderDP.Margin = new Thickness(0, -256, 0, 230);
+            // _ExpanderDP.Margin = new Thickness(0, -256, 0, 230);
 
             changeWidth();
 
@@ -456,7 +458,7 @@ namespace Horizontal_Prototype_March_4
                 if (!isExpanded)
                 {
                     _favourites._favourites_Grid.Width = 470;
-					_favourites._FavsWrapPanel.Width = 430;
+                    _favourites._FavsWrapPanel.Width = 430;
                     foreach (Button child in _favourites._FavsWrapPanel.Children)
                         if (child.Width > 110)
                         {
@@ -472,10 +474,10 @@ namespace Horizontal_Prototype_March_4
                 else
                 {
                     _favourites._favourites_Grid.Width = 372;
-					_favourites._FavsWrapPanel.Width = 332;
-					decButtonSize(_favourites._FavsWrapPanel);
+                    _favourites._FavsWrapPanel.Width = 332;
+                    decButtonSize(_favourites._FavsWrapPanel);
 
-				}
+                }
             }
 
             else if (CurrentUserControl is Search)
@@ -483,7 +485,7 @@ namespace Horizontal_Prototype_March_4
                 if (!isExpanded)
                 {
                     _search._search_Grid.Width = 470;
-					_search._SearchRecipesWrapPanel.Width = 430;
+                    _search._SearchRecipesWrapPanel.Width = 430;
                     _search._searchWP.Margin = new Thickness(60, 160, 0, 345);
                     //_search.search_instructions.Margin = new Thickness(94, 177, 84, 0);
 
@@ -502,22 +504,22 @@ namespace Horizontal_Prototype_March_4
                 else
                 {
                     _search._search_Grid.Width = 372;
-					_search._SearchRecipesWrapPanel.Width = 340;
+                    _search._SearchRecipesWrapPanel.Width = 340;
                     _search._searchWP.Margin = new Thickness(20, 160, 0, 345);
-                   // _search.search_instructions.Margin = new Thickness(54, 177, 84, 0);
+                    // _search.search_instructions.Margin = new Thickness(54, 177, 84, 0);
                     decButtonSize(_search._SearchRecipesWrapPanel);
-                   
 
-				}
+
+                }
             }
 
             else if (CurrentUserControl is AllRecipes)
             {
-				if (!isExpanded)
-				{
-					_allRecipes._allRecipes_Grid.Width = 470;
-					_allRecipes._RecipesWrapPanel.Width = 430;
-					
+                if (!isExpanded)
+                {
+                    _allRecipes._allRecipes_Grid.Width = 470;
+                    _allRecipes._RecipesWrapPanel.Width = 430;
+
                     foreach (Button child in _allRecipes._RecipesWrapPanel.Children)
                         if (child.Width > 110)
                         {
@@ -531,13 +533,13 @@ namespace Horizontal_Prototype_March_4
 
 
                 }
-				else
-				{
-					_allRecipes._allRecipes_Grid.Width = 372;
-					_allRecipes._RecipesWrapPanel.Width = 332;
-					decButtonSize(_allRecipes._RecipesWrapPanel);
+                else
+                {
+                    _allRecipes._allRecipes_Grid.Width = 372;
+                    _allRecipes._RecipesWrapPanel.Width = 332;
+                    decButtonSize(_allRecipes._RecipesWrapPanel);
 
-				}
+                }
             }
 
             else if (CurrentUserControl is categories)
@@ -546,7 +548,7 @@ namespace Horizontal_Prototype_March_4
                 {
                     _categories._categories_Grid.Width = 470;
                     _categories._CategoriesWrapPanel.Width = 430;
-					
+
                     foreach (Button child in _categories._CategoriesWrapPanel.Children)
                         if (child.Width > 110)
                         {
@@ -564,27 +566,27 @@ namespace Horizontal_Prototype_March_4
                 {
                     _categories._categories_Grid.Width = 372;
                     _categories._CategoriesWrapPanel.Width = 332;
-					decButtonSize(_categories._CategoriesWrapPanel);
-				}
+                    decButtonSize(_categories._CategoriesWrapPanel);
+                }
 
             }
 
-           
+
             else if (CurrentUserControl is MeatDesc)
             {
-				if(!isExpanded)
-				{
-					MeatDesc md = CurrentUserControl as MeatDesc;
-					md._meatGrid.Width = 470;
+                if (!isExpanded)
+                {
+                    MeatDesc md = CurrentUserControl as MeatDesc;
+                    md._meatGrid.Width = 470;
                     md._ingredMeat.Margin = new Thickness(50, 266, 162, 120);
                     md.meat_desc_inrec.Margin = new Thickness(270, 280, 0, 120);
                     md.meat_desc_inrec.Width = 165;
                     md.meat_desc_inrec.FontSize = 16;
                     md.meat.Width = 216;
-					md.meat_desc_inrec.Visibility = Visibility.Visible;
+                    md.meat_desc_inrec.Visibility = Visibility.Visible;
                 }
-				else
-				{
+                else
+                {
                     MeatDesc md = CurrentUserControl as MeatDesc;
                     md._meatGrid.Width = 372;
                     md._ingredMeat.Margin = new Thickness(118, 266, 54, 120);
@@ -592,7 +594,7 @@ namespace Horizontal_Prototype_March_4
                     md.meat_desc_inrec.Width = 155;
                     md.meat_desc_inrec.FontSize = 12;
                     md.meat.Width = 161;
-					md.meat_desc_inrec.Visibility = Visibility.Hidden;
+                    md.meat_desc_inrec.Visibility = Visibility.Hidden;
                 }
 
             }
@@ -602,7 +604,7 @@ namespace Horizontal_Prototype_March_4
                 if (!isExpanded)
                 {
                     mi._meatIngr_Grid.Width = 470;
-                    mi._meatIngr_Grid.Margin = new Thickness(40, 0, 0, 0);  
+                    mi._meatIngr_Grid.Margin = new Thickness(40, 0, 0, 0);
                 }
                 else
                 {
@@ -611,36 +613,36 @@ namespace Horizontal_Prototype_March_4
                 }
             }
 
-			else if (CurrentUserControl is LemonChickenDesc)
-			{
-				if (!isExpanded)
-				{
-					LemonChickenDesc lcd = CurrentUserControl as LemonChickenDesc;
-					lcd._lemonChickenGrid.Width = 470;
-					lcd._ingredList.Margin = new Thickness(50, 266, 162, 120);
-					lcd.chick_desc.Margin = new Thickness(270, 280, 0, 120);
-					lcd.chick_desc.Width = 165;
-					lcd.chick_desc.FontSize = 16;
-					//	lcd.chicken.Width = 210;
-					lcd.chick_desc.Visibility = Visibility.Visible;
+            else if (CurrentUserControl is LemonChickenDesc)
+            {
+                if (!isExpanded)
+                {
+                    LemonChickenDesc lcd = CurrentUserControl as LemonChickenDesc;
+                    lcd._lemonChickenGrid.Width = 470;
+                    lcd._ingredList.Margin = new Thickness(50, 266, 162, 120);
+                    lcd.chick_desc.Margin = new Thickness(270, 280, 0, 120);
+                    lcd.chick_desc.Width = 165;
+                    lcd.chick_desc.FontSize = 16;
+                    //	lcd.chicken.Width = 210;
+                    lcd.chick_desc.Visibility = Visibility.Visible;
 
-				}
-				else
-				{
-					LemonChickenDesc lcd = CurrentUserControl as LemonChickenDesc;
-					lcd._lemonChickenGrid.Width = 372;
+                }
+                else
+                {
+                    LemonChickenDesc lcd = CurrentUserControl as LemonChickenDesc;
+                    lcd._lemonChickenGrid.Width = 372;
 
-					lcd._ingredList.Margin = new Thickness(118, 266, 54, 120);
-					lcd.chick_desc.Margin = new Thickness(137, 196, 0, 278);
-					lcd.chick_desc.Width = 155;
-					lcd.chick_desc.FontSize = 12;
-					lcd.chicken.Width = 155;
-					lcd.chick_desc.Visibility = Visibility.Hidden;
+                    lcd._ingredList.Margin = new Thickness(118, 266, 54, 120);
+                    lcd.chick_desc.Margin = new Thickness(137, 196, 0, 278);
+                    lcd.chick_desc.Width = 155;
+                    lcd.chick_desc.FontSize = 12;
+                    lcd.chicken.Width = 155;
+                    lcd.chick_desc.Visibility = Visibility.Hidden;
 
-				}
-			}
+                }
+            }
 
-			else if (CurrentUserControl is StrawberrySouffleDesc)
+            else if (CurrentUserControl is StrawberrySouffleDesc)
             {
                 if (!isExpanded)
                 {
@@ -651,7 +653,7 @@ namespace Horizontal_Prototype_March_4
                     ssd.straw_desc_ingr.Margin = new Thickness(270, 280, 0, 120);
                     ssd.straw_desc_ingr.Width = 165;
                     ssd.straw_desc_ingr.FontSize = 16;
-					ssd.straw_desc_ingr.Visibility = Visibility.Visible;
+                    ssd.straw_desc_ingr.Visibility = Visibility.Visible;
                 }
                 else
                 {
@@ -662,19 +664,19 @@ namespace Horizontal_Prototype_March_4
                     ssd.straw_desc_ingr.Margin = new Thickness(137, 196, 0, 278);
                     ssd.straw_desc_ingr.Width = 155;
                     ssd.straw_desc_ingr.FontSize = 12;
-					ssd.straw_desc_ingr.Visibility = Visibility.Hidden;
-                    
+                    ssd.straw_desc_ingr.Visibility = Visibility.Hidden;
+
 
                 }
             }
 
-			
-			else if (CurrentUserControl is StrawberrySouffleIngr)
+
+            else if (CurrentUserControl is StrawberrySouffleIngr)
             {
                 StrawberrySouffleIngr ssi = CurrentUserControl as StrawberrySouffleIngr;
                 if (!isExpanded)
                 {
-                    
+
                     ssi._strawIngr_Grid.Width = 470;
                     ssi._strawIngr_Grid.Margin = new Thickness(40, 0, 0, 0);
                 }
@@ -685,46 +687,46 @@ namespace Horizontal_Prototype_March_4
                 }
             }
 
-			else if (CurrentUserControl is LemonIngred)
-			{
+            else if (CurrentUserControl is LemonIngred)
+            {
                 LemonIngred li = CurrentUserControl as LemonIngred;
 
                 if (!isExpanded)
-				{
-					li._lemonIngr_Grid.Width = 470;
+                {
+                    li._lemonIngr_Grid.Width = 470;
                     li._lemonIngr_Grid.Margin = new Thickness(40, 0, 0, 0);
                 }
-				else
-				{
-					li._lemonIngr_Grid.Width = 372;
+                else
+                {
+                    li._lemonIngr_Grid.Width = 372;
                     li._lemonIngr_Grid.Margin = new Thickness(90, 0, 0, 0);
                 }
-			}
+            }
 
-			else if (CurrentUserControl is Souffle_Complete)
-			{
-				if (!isExpanded)
-				{
-					_souffleComp._souffleCompGrid.Width = 470;
-				}
-				else
-				{
-					_souffleComp._souffleCompGrid.Width = 372;
-				}
-			}
+            else if (CurrentUserControl is Souffle_Complete)
+            {
+                if (!isExpanded)
+                {
+                    _souffleComp._souffleCompGrid.Width = 470;
+                }
+                else
+                {
+                    _souffleComp._souffleCompGrid.Width = 372;
+                }
+            }
 
-			else if (CurrentUserControl is Lemon_Complete)
-			{
-				if (!isExpanded)
-				{
-					_lemonComp._lemonCompleteGrid.Width = 470;
-				}
-				else
-				{
-					_lemonComp._lemonCompleteGrid.Width = 372;
-				}
+            else if (CurrentUserControl is Lemon_Complete)
+            {
+                if (!isExpanded)
+                {
+                    _lemonComp._lemonCompleteGrid.Width = 470;
+                }
+                else
+                {
+                    _lemonComp._lemonCompleteGrid.Width = 372;
+                }
 
-			}
+            }
 
 
             else if (CurrentUserControl is Popular)
@@ -737,44 +739,44 @@ namespace Horizontal_Prototype_March_4
                         if (child.Width > 110) {
                             break;
                         }
-                        else { 
-                        incButtonSize(_popular._PopularWrapPanel);
+                        else {
+                            incButtonSize(_popular._PopularWrapPanel);
                             break;
                         }
 
-				}
+                }
                 else
                 {
                     _popular._popular_Grid.Width = 372;
                     _popular._PopularWrapPanel.Width = 332;
-					decButtonSize(_popular._PopularWrapPanel);
-				}
+                    decButtonSize(_popular._PopularWrapPanel);
+                }
             }
             else if (CurrentUserControl is Settings)
             {
                 if (!isExpanded)
                 {
                     _settings._settings_Grid.Width = 372;
-					_settings._settings_Grid.Margin = new Thickness(50, 0, 0, 0);
+                    _settings._settings_Grid.Margin = new Thickness(50, 0, 0, 0);
 
 
-				}
-				else
+                }
+                else
                 {
                     _settings._settings_Grid.Width = 372;
-					_settings._settings_Grid.Margin = new Thickness(90, 0, 0, 0);
+                    _settings._settings_Grid.Margin = new Thickness(90, 0, 0, 0);
 
-					//_popular._PopularWrapPanel.Width = 330;
-				}
-			}
+                    //_popular._PopularWrapPanel.Width = 330;
+                }
+            }
 
             else if (CurrentUserControl is Meat_Step1)
             {
                 if (!isExpanded)
                 {
                     _meatStep1.Meat_Step1Grid.Width = 470;
-					_meatStep1.BackButton.Visibility = Visibility.Visible;
-				}
+                    _meatStep1.BackButton.Visibility = Visibility.Visible;
+                }
 
                 else
                 {
@@ -783,128 +785,128 @@ namespace Horizontal_Prototype_March_4
                 }
             }
 
-			else if (CurrentUserControl is Meat_Step2)
-			{
-				if (!isExpanded)
-				{
-					_meatStep2.Meat_Step2Grid.Width = 470;
-					_meatStep2.BackButton.Visibility = Visibility.Visible;
-				}
+            else if (CurrentUserControl is Meat_Step2)
+            {
+                if (!isExpanded)
+                {
+                    _meatStep2.Meat_Step2Grid.Width = 470;
+                    _meatStep2.BackButton.Visibility = Visibility.Visible;
+                }
 
-				else
-				{
+                else
+                {
 
-					_meatStep2.BackButton.Visibility = Visibility.Hidden;
-				}
-			}
+                    _meatStep2.BackButton.Visibility = Visibility.Hidden;
+                }
+            }
 
-			else if (CurrentUserControl is Meat_Step3)
-			{
-				if (!isExpanded)
-				{
-					_meatStep3.Meat_Step3Grid.Width = 470;
-					_meatStep3.BackButton.Visibility = Visibility.Visible;
-				}
+            else if (CurrentUserControl is Meat_Step3)
+            {
+                if (!isExpanded)
+                {
+                    _meatStep3.Meat_Step3Grid.Width = 470;
+                    _meatStep3.BackButton.Visibility = Visibility.Visible;
+                }
 
-				else
-				{
+                else
+                {
 
-					_meatStep3.BackButton.Visibility = Visibility.Hidden;
-				}
-			}
+                    _meatStep3.BackButton.Visibility = Visibility.Hidden;
+                }
+            }
 
-			else if (CurrentUserControl is Meat_Step4)
-			{
-				if (!isExpanded)
-				{
-					_meatStep4.Meat_Step4Grid.Width = 470;
-					_meatStep4.BackButton.Visibility = Visibility.Visible;
-				}
+            else if (CurrentUserControl is Meat_Step4)
+            {
+                if (!isExpanded)
+                {
+                    _meatStep4.Meat_Step4Grid.Width = 470;
+                    _meatStep4.BackButton.Visibility = Visibility.Visible;
+                }
 
-				else
-				{
+                else
+                {
 
-					_meatStep4.BackButton.Visibility = Visibility.Hidden;
-				}
-			}
+                    _meatStep4.BackButton.Visibility = Visibility.Hidden;
+                }
+            }
 
-			else if (CurrentUserControl is Souffle_Step1)
-			{
-				if (!isExpanded)
-				{
-					_souffleStep1.Souffle_Step1Grid.Width = 470;
-					//_souffleStep1.BackButton.Visibility = Visibility.Visible;
-				}
-				else
-				{
-					//_souffleStep1.BackButton.Visibility = Visibility.Hidden;
-				}
-			}
+            else if (CurrentUserControl is Souffle_Step1)
+            {
+                if (!isExpanded)
+                {
+                    _souffleStep1.Souffle_Step1Grid.Width = 470;
+                    //_souffleStep1.BackButton.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    //_souffleStep1.BackButton.Visibility = Visibility.Hidden;
+                }
+            }
 
-			else if (CurrentUserControl is Souffle_Step2)
-			{
-				if (!isExpanded)
-				{
-					_souffleStep2.Souffle_Step2Grid.Width = 470;
-					//_souffleStep2.BackButton.Visibility = Visibility.Visible;
-				}
-				else
-				{
-					//_souffleStep2.BackButton.Visibility = Visibility.Hidden;
-				}
-			}
+            else if (CurrentUserControl is Souffle_Step2)
+            {
+                if (!isExpanded)
+                {
+                    _souffleStep2.Souffle_Step2Grid.Width = 470;
+                    //_souffleStep2.BackButton.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    //_souffleStep2.BackButton.Visibility = Visibility.Hidden;
+                }
+            }
 
-			else if (CurrentUserControl is Souffle_Step3)
-			{
-				if (!isExpanded)
-				{
-					_souffleStep3.Souffle_Step3Grid.Width = 470;
-					_souffleStep3.BackButton.Visibility = Visibility.Visible;
-				}
-				else
-				{
-					//_souffleStep3.BackButton.Visibility = Visibility.Hidden;
-				}
-			}
+            else if (CurrentUserControl is Souffle_Step3)
+            {
+                if (!isExpanded)
+                {
+                    _souffleStep3.Souffle_Step3Grid.Width = 470;
+                    _souffleStep3.BackButton.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    //_souffleStep3.BackButton.Visibility = Visibility.Hidden;
+                }
+            }
 
-			else if (CurrentUserControl is Lemon_Step1)
-			{
-				if (!isExpanded)
-				{
-					_lemonStep1.Lemon_Step1Grid.Width = 470;
-					_lemonStep1.BackButton.Visibility = Visibility.Visible;
-				}
-				else
-				{
-					//_souffleStep1.BackButton.Visibility = Visibility.Hidden;
-				}
-			}
+            else if (CurrentUserControl is Lemon_Step1)
+            {
+                if (!isExpanded)
+                {
+                    _lemonStep1.Lemon_Step1Grid.Width = 470;
+                    _lemonStep1.BackButton.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    //_souffleStep1.BackButton.Visibility = Visibility.Hidden;
+                }
+            }
 
-			else if (CurrentUserControl is Lemon_Step2)
-			{
-				if (!isExpanded)
-				{
-					_lemonStep2.Lemon_Step2Grid.Width = 470;
-					_lemonStep2.BackButton.Visibility = Visibility.Visible;
-				}
-				else
-				{
-					//_lemonStep2.BackButton.Visibility = Visibility.Hidden;
-				}
-			}
+            else if (CurrentUserControl is Lemon_Step2)
+            {
+                if (!isExpanded)
+                {
+                    _lemonStep2.Lemon_Step2Grid.Width = 470;
+                    _lemonStep2.BackButton.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    //_lemonStep2.BackButton.Visibility = Visibility.Hidden;
+                }
+            }
 
-			else if (CurrentUserControl is Lemon_Step3)
-			{
-				if (!isExpanded)
-				{
-					_lemonStep3.Lemon_Step3Grid.Width = 470;
-					_lemonStep3.BackButton.Visibility = Visibility.Visible;
-				}
-				else
-				{
-					//_lemonStep3.BackButton.Visibility = Visibility.Hidden;
-				}
-			}
+            else if (CurrentUserControl is Lemon_Step3)
+            {
+                if (!isExpanded)
+                {
+                    _lemonStep3.Lemon_Step3Grid.Width = 470;
+                    _lemonStep3.BackButton.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    //_lemonStep3.BackButton.Visibility = Visibility.Hidden;
+                }
+            }
             else if (CurrentUserControl is GlutenFree)
             {
                 if (!isExpanded)
@@ -933,65 +935,65 @@ namespace Horizontal_Prototype_March_4
 
         }
 
-		public void decButtonSize(WrapPanel wp)
-		{
-			
-			foreach (Button child in wp.Children)
-			{
-				if (child.Width <= 100)
-				{
-					break;
-				}
-				child.Width = child.Width - 30;
-				StackPanel sp = child.Content as StackPanel;
-				
-				foreach (object spChild in sp.Children)
-				{
-					if (spChild is Image)
-					{
-						Image img = spChild as Image;
-						img.Width = child.Width - 10;
+        public void decButtonSize(WrapPanel wp)
+        {
 
-					}
-					else if (spChild is TextBlock)
-					{
-						TextBlock text = spChild as TextBlock;
-						text.FontSize -= 2;
-					}
-				}
+            foreach (Button child in wp.Children)
+            {
+                if (child.Width <= 100)
+                {
+                    break;
+                }
+                child.Width = child.Width - 30;
+                StackPanel sp = child.Content as StackPanel;
 
-			}
-		}
+                foreach (object spChild in sp.Children)
+                {
+                    if (spChild is Image)
+                    {
+                        Image img = spChild as Image;
+                        img.Width = child.Width - 10;
 
-		public void incButtonSize(WrapPanel wp)
-		{
-			foreach (Button child in wp.Children)
-			{
+                    }
+                    else if (spChild is TextBlock)
+                    {
+                        TextBlock text = spChild as TextBlock;
+                        text.FontSize -= 2;
+                    }
+                }
 
-				child.Width = child.Width + 30;
-				StackPanel sp = child.Content as StackPanel;
-				
-				
-				foreach (object spChild in sp.Children)
-				{
-					if (spChild is Image)
-					{
-						Image img = spChild as Image;
-						img.Width += 30;
-						BitmapImage btmi = img.Source as BitmapImage;
-						
+            }
+        }
 
-					}
-				
-				if (spChild is TextBlock)
-					{
-						TextBlock text = spChild as TextBlock;
-						text.FontSize += 2;
-					}
-				}
+        public void incButtonSize(WrapPanel wp)
+        {
+            foreach (Button child in wp.Children)
+            {
 
-			}
-		}
+                child.Width = child.Width + 30;
+                StackPanel sp = child.Content as StackPanel;
+
+
+                foreach (object spChild in sp.Children)
+                {
+                    if (spChild is Image)
+                    {
+                        Image img = spChild as Image;
+                        img.Width += 30;
+                        BitmapImage btmi = img.Source as BitmapImage;
+
+
+                    }
+
+                    if (spChild is TextBlock)
+                    {
+                        TextBlock text = spChild as TextBlock;
+                        text.FontSize += 2;
+                    }
+                }
+
+            }
+        }
 
         public void populateStep(string[] quantities, string[] ingredString, WrapPanel wp)
         {
@@ -1007,7 +1009,7 @@ namespace Horizontal_Prototype_March_4
                 ingredName[k] = new TextBlock();
             }
 
-            
+
             for (int k = 0; k < arrayTB.Length; k++)
             {
 
@@ -1023,10 +1025,10 @@ namespace Horizontal_Prototype_March_4
                 arrayTB[k].VerticalAlignment = VerticalAlignment.Top;
                 arrayTB[k].Width = 70;
                 wp.Children.Add(arrayTB[k]);
-                
 
 
-              
+
+
                 ingredName[k].Text = ingredString[k];
                 ingredName[k].FontSize = 12;
                 ingredName[k].HorizontalAlignment = HorizontalAlignment.Left;
@@ -1041,10 +1043,24 @@ namespace Horizontal_Prototype_March_4
 
         }
 
-		private void step_expander_Click(object sender, RoutedEventArgs e)
-		{
-			OpenCollapsed();
+        private void step_expander_Click(object sender, RoutedEventArgs e)
+        {
+            OpenCollapsed();
 
-		}
-	}
+        }
+
+        private void _ExpanderDP_Click(object sender, RoutedEventArgs e)
+        {
+            if (isExpanded)
+            {
+                isExpanded = false;
+                OpenCollapsed();
+            }
+            else { 
+                isExpanded = true;
+            OpenExpanded();
+
+            }
+        }
+    }
 }

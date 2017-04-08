@@ -35,7 +35,7 @@ namespace Horizontal_Prototype_March_4
 				// window._ExpanderButton.Expanded = Expander.Collap
 
 			};
-			System.Threading.Thread.Sleep(1000);
+			System.Threading.Thread.Sleep(2100);
 
             Close();
         }

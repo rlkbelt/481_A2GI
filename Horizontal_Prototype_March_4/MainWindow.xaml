@@ -167,7 +167,7 @@
                             </StackPanel>
                         </Button>
                     </DockPanel>
-                    <DockPanel x:Name="_ExpanderDP" Width="24" Margin="91,-256,0,230" Background="Transparent">
+                    <DockPanel x:Name="_ExpanderDP" Width="24" Margin="91,-256,0,230" Background="Transparent" >
                         <Expander x:Name ="_ExpanderButton" ExpandDirection="Left" Collapsed="Collapsed" Expanded="Expanded" Visibility="Hidden"/>
                     </DockPanel>
                 </DockPanel>
