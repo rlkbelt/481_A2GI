@@ -133,6 +133,17 @@ namespace Horizontal_Prototype_March_4
 			window.CurrentUserControl = window._meatStep1;
             window._Navigation.Navigate(window._meatStep1);
             window.changeWidth();
+            if (favFlag)
+            {
+                window._meatComp = new Meat_Complete(true);
+            }
+            else
+            {
+
+                window._meatComp = new Meat_Complete(false);
+                
+            }
+            
         }
     }
 }

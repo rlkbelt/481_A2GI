@@ -53,6 +53,10 @@ namespace Horizontal_Prototype_March_4
             {
                 window._recipesArray[10, 3] = new MeatDesc(true);
             }
+            else
+            {
+                window._recipesArray[10, 3] = new MeatDesc(false);
+            }
         }
 
 		private void backToDesc_Click(object sender, RoutedEventArgs e)

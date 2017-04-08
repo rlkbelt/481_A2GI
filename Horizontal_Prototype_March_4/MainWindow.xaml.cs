@@ -55,19 +55,19 @@ namespace Horizontal_Prototype_March_4
 		public Souffle_Step1 _souffleStep1 = new Souffle_Step1();
 		public Souffle_Step2 _souffleStep2 = new Souffle_Step2();
 		public Souffle_Step3 _souffleStep3 = new Souffle_Step3();
-		public Souffle_Complete _souffleComp = new Souffle_Complete();
+		public Souffle_Complete _souffleComp = new Souffle_Complete(false);
 		public LemonIngred _lemonIngr = new LemonIngred();
 		
 		public Lemon_Step1 _lemonStep1 = new Lemon_Step1();
 		public Lemon_Step2 _lemonStep2 = new Lemon_Step2();
 		public Lemon_Step3 _lemonStep3 = new Lemon_Step3();
-		public Lemon_Complete _lemonComp = new Lemon_Complete();
+		public Lemon_Complete _lemonComp = new Lemon_Complete(false);
 
 		public Meat_Step1 _meatStep1 = new Meat_Step1();
 		public Meat_Step2 _meatStep2 = new Meat_Step2();
 		public Meat_Step3 _meatStep3 = new Meat_Step3();
 		public Meat_Step4 _meatStep4 = new Meat_Step4();
-		public Meat_Complete _meatComp = new Meat_Complete();
+		public Meat_Complete _meatComp = new Meat_Complete(false);
 
 		public Chopped_Definition _choppedDefinition = new Chopped_Definition();
 

@@ -51,6 +51,11 @@ namespace Horizontal_Prototype_March_4
             {
                 window._recipesArray[11, 3] = new StrawberrySouffleDesc(true);
             }
+            else
+            {
+                window._recipesArray[11, 3] = new StrawberrySouffleDesc(false);
+
+            }
         }
 
 		private void backToDesc_Click(object sender, RoutedEventArgs e)

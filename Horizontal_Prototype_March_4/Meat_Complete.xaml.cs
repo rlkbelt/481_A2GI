@@ -21,9 +21,9 @@ namespace Horizontal_Prototype_March_4
 	public partial class Meat_Complete : UserControl
 	{
 		MainWindow window;
-		public Boolean favFlag = false;
+        public bool favFlag;
 
-		public Meat_Complete()
+		public Meat_Complete(bool flag)
 		{
 			InitializeComponent();
 			this.Loaded += (s, e) =>
@@ -32,6 +32,20 @@ namespace Horizontal_Prototype_March_4
                 window.OpenExpanded(); //if this doesn't opened as expanded it messes with futher program use
                                        // window._ExpanderButton.Expanded = Expander.Collap
             };
+            favFlag = false;
+            if (flag)
+            {
+                favFlag = flag;
+                Image img = new Image();
+                BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
+                img.Source = BitImg;
+
+                favFlag = true;
+                favButton.Content = img;
+
+                favButton.Content = img;
+
+            }
 
 		}
 		private void favClick(object sender, RoutedEventArgs e)

@@ -137,7 +137,17 @@ namespace Horizontal_Prototype_March_4
 			window.CurrentUserControl = window._lemonStep1;
 			window._Navigation.Navigate(window._lemonStep1);
 			window.changeWidth();
-		}
+            if (favFlag)
+            {
+                window._lemonComp = new Lemon_Complete(true);
+            }
+            else
+            {
+
+                window._lemonComp = new Lemon_Complete(false);
+
+            }
+        }
 
 		private void IngredClick(object sender, RoutedEventArgs e)
 

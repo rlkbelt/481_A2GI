@@ -123,6 +123,17 @@ namespace Horizontal_Prototype_March_4
             string[] ingredString = { window._strawIngr.straw_ingr1.Text, window._strawIngr.straw_ingr2.Text, window._strawIngr.straw_ingr3.Text, window._strawIngr.straw_ingr4.Text, window._strawIngr.straw_ingr5.Text };
             string[] quantities = { window._strawIngr.straw_quan1.Text, window._strawIngr.straw_quan2.Text, window._strawIngr.straw_quan3.Text, window._strawIngr.straw_quan4.Text, window._strawIngr.straw_quan5.Text };
             window.populateStep(quantities, ingredString, window._souffleStep1.straw_step1wrap);
+            if (favFlag)
+            {
+                window._souffleComp = new Souffle_Complete(true);
+            }
+            else
+            {
+
+                window._souffleComp = new Souffle_Complete(false);
+
+            }
+
         }
 
 		private void straw_IngredClick(object sender, RoutedEventArgs e)

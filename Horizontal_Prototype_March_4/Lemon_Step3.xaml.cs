@@ -55,6 +55,10 @@ namespace Horizontal_Prototype_March_4
             {
                 window._recipesArray[9, 3] = new LemonChickenDesc(true);
             }
+            else
+            {
+                window._recipesArray[9, 3] = new LemonChickenDesc(false);
+            }
 
         }
 
