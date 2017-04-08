@@ -49,13 +49,20 @@ namespace Horizontal_Prototype_March_4
 
 			window.CurrentUserControl = window._lemonComp;
 			window._Navigation.Navigate(window._lemonComp);
-		}
+
+            LemonChickenDesc lcd = window._recipesArray[9, 3] as LemonChickenDesc;
+            if (lcd.favFlag)
+            {
+                window._recipesArray[9, 3] = new LemonChickenDesc(true);
+            }
+
+        }
 
 		private void backToDesc_Click(object sender, RoutedEventArgs e)
 		{
             window.backStack.Pop();
-            window.CurrentUserControl = window._lemonDesc;
-			window._Navigation.Navigate(window._lemonDesc);
+            window.CurrentUserControl = window._recipesArray[9,3];
+			window._Navigation.Navigate(window.CurrentUserControl);
             window.OpenExpanded();
         }
 

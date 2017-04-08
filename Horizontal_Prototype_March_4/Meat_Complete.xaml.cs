@@ -37,50 +37,35 @@ namespace Horizontal_Prototype_March_4
 		private void favClick(object sender, RoutedEventArgs e)
 		{
 
-            MeatDesc md = window._meatDesc;
-            if (!md.favFlag)
-			{
-				md.favFlag = true;
-
-				Image img = md.favButton.Content as Image;
+            MeatDesc lcd = window._recipesArray[10, 3] as MeatDesc;
+            if (!lcd.favFlag)
+            {
+                Image img = new Image();
                 BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
                 img.Source = BitImg;
-                md.favButton.Content = img;
 
-                Image img2 = md.favButton.Content as Image;
+                lcd.favFlag = true;
+                lcd.favButton.Content = img;
 
-
-                favButton.Content = img2;
+                favButton.Content = img;
                 window.favouritesList.Add("meatloaf");
             }
 
             else
             {
-                Image img = md.favButton.Content as Image;
+                Image img = new Image();
                 BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2.png", UriKind.Relative));
                 img.Source = BitImg;
-                md.favButton.Content = img;
-
-                md.favFlag = false;
-                Image img2 = md.favButton.Content as Image;
-
-
-                favButton.Content = img2;
+                lcd.favFlag = false;
+                favButton.Content = img;
+                lcd.favButton.Content = img;
                 window.favouritesList.Remove("meatloaf");
             }
-
-            for (int i = 0; i < window._recipesArray.GetLength(0); i++)
-            {
-
-                if (window._recipesArray[i, 0].ToString().ToLower().Equals("meatloaf"))
-                {
-
-                    window._recipesArray[i, 3] = md;
-                    break;
-                }
-            }
-
         }
+
+
+
+       
 
 		private void BackClicked(object sender, RoutedEventArgs e)
 		{

@@ -37,57 +37,34 @@ namespace Horizontal_Prototype_March_4
         private void favClick(object sender, RoutedEventArgs e)
         {
 
-            StrawberrySouffleDesc md = window._strawDesc;
-            if (!md.favFlag)
+            StrawberrySouffleDesc lcd = window._recipesArray[11, 3] as StrawberrySouffleDesc;
+            if (!lcd.favFlag)
             {
-                Image img = md.favButton.Content as Image;
+                Image img = new Image();
                 BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
                 img.Source = BitImg;
-                md.favButton.Content = img;
 
-                md.favFlag = true;
-                Image img2 = md.favButton.Content as Image;
+                lcd.favFlag = true;
 
-
-                favButton.Content = img2;
-				if (!window.favouritesList.Contains("strawberry souffle"))
-				{
-					window.favouritesList.Add("strawberry souffle");
-
-				}
-			}
+                favButton.Content = img;
+                lcd.favButton.Content = img;
+                window.favouritesList.Add("strawberry souffle");
+            }
 
             else
             {
-                Image img = md.favButton.Content as Image;
+                Image img = new Image();
                 BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2.png", UriKind.Relative));
                 img.Source = BitImg;
-                md.favButton.Content = img;
-
-                md.favFlag = false;
-                Image img2 = md.favButton.Content as Image;
-
-
-                favButton.Content = img2;
+                lcd.favFlag = false;
+                favButton.Content = img;
+                lcd.favButton.Content = img;
                 window.favouritesList.Remove("strawberry souffle");
             }
-
-            for (int i = 0; i < window._recipesArray.GetLength(0); i++)
-            {
-
-                if (window._recipesArray[i, 0].ToString().ToLower().Equals("strawberry souffle"))
-                {
-
-                    window._recipesArray[i, 3] = md;
-                    break;
-
-
-                }
-            }
-			window._souffleComp = this;
-
-
+            window._recipesArray[11, 3] = lcd;
         }
+
+
 
 
         private void BackClicked(object sender, RoutedEventArgs e)

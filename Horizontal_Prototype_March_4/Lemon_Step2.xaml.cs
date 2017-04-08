@@ -52,8 +52,8 @@ namespace Horizontal_Prototype_March_4
 		private void backToDesc_Click(object sender, RoutedEventArgs e)
 		{
             window.backStack.Pop();
-            window.CurrentUserControl = window._lemonDesc;
-			window._Navigation.Navigate(window._lemonDesc);
+            window.CurrentUserControl = window._recipesArray[9,3];
+			window._Navigation.Navigate(window.CurrentUserControl);
             window.OpenExpanded();
         }
 

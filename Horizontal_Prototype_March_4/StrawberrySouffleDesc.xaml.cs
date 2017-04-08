@@ -29,8 +29,8 @@ namespace Horizontal_Prototype_March_4
 
 		MainWindow window;
         public bool strawDescSidebarCollapsed;
-        public Boolean favFlag = false;
-        public StrawberrySouffleDesc()
+        public bool favFlag;
+        public StrawberrySouffleDesc(bool flag)
 		{
 			InitializeComponent();
 			this.Loaded += (s, e) =>
@@ -47,6 +47,16 @@ namespace Horizontal_Prototype_March_4
                 }
                 
             };
+            favFlag = false;
+            if (flag)
+            {
+                favFlag = flag;
+                Image img = favButton.Content as Image;
+                BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
+                img.Source = BitImg;
+                favButton.Content = img;
+
+            }
 		}
 
 		private void BackClick(object sender, RoutedEventArgs e)
@@ -66,7 +76,7 @@ namespace Horizontal_Prototype_March_4
         private void favClick(object sender, RoutedEventArgs e)
         {
 
-
+            
             if (!favFlag)
             {
                 favFlag = true;
@@ -74,24 +84,17 @@ namespace Horizontal_Prototype_March_4
                 BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
                 img.Source = BitImg;
                 favButton.Content = img;
+                window._souffleComp.favButton.Content = img;
+                
 				if (!window.favouritesList.Contains("strawberry souffle"))
 				{
 					window.favouritesList.Add("strawberry souffle");
 
 				}
-				for (int i = 0; i < window._recipesArray.GetLength(0); i++)
-                {
-
-                    if (window._recipesArray[i, 0].ToString().ToLower().Equals("strawberry souffle"))
-                    {
-
-                        window._recipesArray[i, 3] = this;
-                        break;
 
 
-                    }
-                }
-				window._souffleComp.favButton.Content = img;
+                window._recipesArray[11, 3] = this;
+                        
 
             }
             else
@@ -101,19 +104,10 @@ namespace Horizontal_Prototype_March_4
                 BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2.png", UriKind.Relative));
                 img.Source = BitImg;
                 favButton.Content = img;
+                window._souffleComp.favButton.Content = img;
                 window.favouritesList.Remove("strawberry souffle");
-                for (int i = 0; i < window._recipesArray.GetLength(0); i++)
-                {
-
-                    if (window._recipesArray[i, 0].ToString().ToLower().Equals("strawberry souffle"))
-                    {
-
-                        window._recipesArray[i, 3] = this;
-                        break;
-
-                    }
-                }
-				window._souffleComp.favButton.Content = img;
+                window._recipesArray[11, 3] = this;
+                        
 
 			}
 

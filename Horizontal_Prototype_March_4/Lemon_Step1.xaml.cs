@@ -44,7 +44,8 @@ namespace Horizontal_Prototype_March_4
 
 		private void BackClicked(object sender, RoutedEventArgs e)
 		{
-            if (window.backStack.Peek() is LemonChickenDesc && window._lemonDesc.lemonSidebarCollapsed == false)
+            LemonChickenDesc lcd =  window._recipesArray[9, 3] as LemonChickenDesc;
+            if (window.backStack.Peek() is LemonChickenDesc && lcd.lemonSidebarCollapsed == false)
             {
                 window.OpenExpanded();
                 window.isExpanded = true;
@@ -59,8 +60,9 @@ namespace Horizontal_Prototype_March_4
                 window.isExpanded = false;
                 window.OpenCollapsed();
             }
+            window.backStack.Pop();
 
-            window.CurrentUserControl = window.backStack.Pop();
+            window.CurrentUserControl = window._recipesArray[9, 3];
             window._Navigation.Navigate(window.CurrentUserControl);
             window.changeWidth();
         }
@@ -73,8 +75,8 @@ namespace Horizontal_Prototype_March_4
 		private void backToDesc_Click(object sender, RoutedEventArgs e)
 		{
             window.backStack.Pop();
-            window.CurrentUserControl = window._lemonDesc;
-			window._Navigation.Navigate(window._lemonDesc);
+            window.CurrentUserControl = window._recipesArray[9,3];
+			window._Navigation.Navigate(window.CurrentUserControl);
             window.OpenExpanded();
         }
 

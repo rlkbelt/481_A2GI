@@ -46,17 +46,21 @@ namespace Horizontal_Prototype_March_4
 		private void NextClicked(object sender, RoutedEventArgs e)
 		{
 			
-
 			window.CurrentUserControl = window._meatComp;
 			window._Navigation.Navigate(window._meatComp);
-		}
+            MeatDesc md = window._recipesArray[10, 3] as MeatDesc;
+            if (md.favFlag)
+            {
+                window._recipesArray[10, 3] = new MeatDesc(true);
+            }
+        }
 
 		private void backToDesc_Click(object sender, RoutedEventArgs e)
 		{
 
             window.backStack.Pop();
-            window.CurrentUserControl = window._meatDesc;
-			window._Navigation.Navigate(window._meatDesc);
+            window.CurrentUserControl = window._recipesArray[10,3];
+			window._Navigation.Navigate(window.CurrentUserControl);
             window.OpenExpanded();
         }
 

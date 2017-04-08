@@ -44,7 +44,8 @@ namespace Horizontal_Prototype_March_4
 
 		private void BackClicked(object sender, RoutedEventArgs e)
 		{
-            if (window.backStack.Peek() is MeatDesc && window._meatDesc.meatDescSidebarCollapsed == false)
+            MeatDesc md = window._recipesArray[10, 3] as MeatDesc;
+            if (window.backStack.Peek() is MeatDesc && md.meatDescSidebarCollapsed == false)
             {
                 window.OpenExpanded();
                 window.isExpanded = true;
@@ -61,7 +62,8 @@ namespace Horizontal_Prototype_March_4
                 
             }
 
-            window.CurrentUserControl = window.backStack.Pop();
+            window.backStack.Pop();
+            window.CurrentUserControl = window._recipesArray[10, 3];
             window._Navigation.Navigate(window.CurrentUserControl);
             window.changeWidth();
 
@@ -76,8 +78,8 @@ namespace Horizontal_Prototype_March_4
 		{
 
             window.backStack.Pop();
-            window.CurrentUserControl = window._meatDesc;
-			window._Navigation.Navigate(window._meatDesc);
+            window.CurrentUserControl = window._recipesArray[10,3];
+			window._Navigation.Navigate(window.CurrentUserControl);
             window.OpenExpanded();
         }
 

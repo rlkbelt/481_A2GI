@@ -22,8 +22,8 @@ namespace Horizontal_Prototype_March_4
     {
         MainWindow window;
         public bool meatDescSidebarCollapsed;
-        public Boolean favFlag = false;
-        public MeatDesc()
+        public bool favFlag;
+        public MeatDesc(bool flag)
         {
             InitializeComponent();
             this.Loaded += (s, e) =>
@@ -39,6 +39,16 @@ namespace Horizontal_Prototype_March_4
                     meatDescSidebarCollapsed = true;
                 }
             };
+            favFlag = false;
+            if (flag)
+            {
+                favFlag = flag;
+                Image img = favButton.Content as Image;
+                BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
+                img.Source = BitImg;
+                favButton.Content = img;
+
+            }
         }
 
         private void BackClick(object sender, RoutedEventArgs e)
@@ -67,6 +77,7 @@ namespace Horizontal_Prototype_March_4
                 BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
                 img.Source = BitImg;
                 favButton.Content = img;
+                window._meatComp.favButton.Content = img;
                 window.favouritesList.Add("meatloaf");
                 for (int i = 0; i < window._recipesArray.GetLength(0); i++)
                 {
@@ -88,6 +99,7 @@ namespace Horizontal_Prototype_March_4
                 BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2.png", UriKind.Relative));
                 img.Source = BitImg;
                 favButton.Content = img;
+                window._meatComp.favButton.Content = img;
                 window.favouritesList.Remove("meatloaf");
                 for (int i = 0; i < window._recipesArray.GetLength(0); i++)
                 {

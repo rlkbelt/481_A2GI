@@ -22,7 +22,7 @@ namespace Horizontal_Prototype_March_4
 	public partial class Lemon_Complete : UserControl
 	{
 		MainWindow window;
-		public Boolean favFlag = false;
+        public bool favFlag;
 
 		public Lemon_Complete()
 		{
@@ -33,55 +33,48 @@ namespace Horizontal_Prototype_March_4
 				window.OpenExpanded(); //if this doesn't opened as expanded it messes with futher program use
 				// window._ExpanderButton.Expanded = Expander.Collap
 			};
+   
+                                
 
-		}
+        }
+
+
+            
+        
+
+
 
         private void favClick(object sender, RoutedEventArgs e)
         {
 
-            LemonChickenDesc md = window._lemonDesc;
-            if (!md.favFlag)
+            LemonChickenDesc lcd = window._recipesArray[9, 3] as LemonChickenDesc;
+            if (!lcd.favFlag)
             {
-                Image img = md.favButton.Content as Image;
+                Image img = new Image();
                 BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
                 img.Source = BitImg;
-                md.favButton.Content = img;
+                
+                lcd.favFlag = true;
+                lcd.favButton.Content = img;
 
-                md.favFlag = true;
-                Image img2 = md.favButton.Content as Image;
-
-
-                favButton.Content = img2;
+                favButton.Content = img;
                 window.favouritesList.Add("lemon chicken");
             }
 
             else
             {
-                Image img = md.favButton.Content as Image;
+                Image img = new Image();
                 BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2.png", UriKind.Relative));
                 img.Source = BitImg;
-                md.favButton.Content = img;
-
-                md.favFlag = false;
-                Image img2 = md.favButton.Content as Image;
-
-
-                favButton.Content = img2;
+                lcd.favFlag = false;
+                favButton.Content = img;
+                lcd.favButton.Content = img;
                 window.favouritesList.Remove("lemon chicken");
             }
 
-            for (int i = 0; i < window._recipesArray.GetLength(0); i++)
-            {
-
-                if (window._recipesArray[i, 0].ToString().ToLower().Equals("lemon chicken"))
-                {
-
-                    window._recipesArray[i, 3] = md;
-                    break;
+            
 
 
-                }
-            }
 
 
         }

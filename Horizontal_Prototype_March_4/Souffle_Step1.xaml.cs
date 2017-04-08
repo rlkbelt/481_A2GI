@@ -34,8 +34,6 @@ namespace Horizontal_Prototype_March_4
                 window._FavouritesButton.Background = Brushes.Beige;
                 window._SettingsButton.Background = Brushes.Beige;
                 straw_step1wrap.Children.Clear();
-                //window.reinit();
-              //  try { window._strawIngr.SliderMover(null, null); } catch (Exception) { }
                 string[] ingredString = { window._strawIngr.straw_ingr1.Text, window._strawIngr.straw_ingr2.Text, window._strawIngr.straw_ingr3.Text, window._strawIngr.straw_ingr4.Text, window._strawIngr.straw_ingr5.Text };
                 string[] quantities = { window._strawIngr.straw_quan1.Text, window._strawIngr.straw_quan2.Text, window._strawIngr.straw_quan3.Text, window._strawIngr.straw_quan4.Text, window._strawIngr.straw_quan5.Text };
                 window.populateStep(quantities, ingredString, straw_step1wrap);
@@ -48,7 +46,8 @@ namespace Horizontal_Prototype_March_4
 
 		private void BackClicked(object sender, RoutedEventArgs e)
 		{
-            if (window.backStack.Peek() is StrawberrySouffleDesc && window._strawDesc.strawDescSidebarCollapsed == false)
+            StrawberrySouffleDesc ssd = window._recipesArray[11,3] as StrawberrySouffleDesc;
+            if (window.backStack.Peek() is StrawberrySouffleDesc && ssd.strawDescSidebarCollapsed == false)
             {
                 window.OpenExpanded();
                 window.isExpanded = true;
@@ -64,7 +63,8 @@ namespace Horizontal_Prototype_March_4
                 window.OpenCollapsed();
             }
 
-            window.CurrentUserControl = window.backStack.Pop();
+            window.backStack.Pop();
+            window.CurrentUserControl = window._recipesArray[11, 3];
             window._Navigation.Navigate(window.CurrentUserControl);
             window.changeWidth();
             
@@ -78,7 +78,7 @@ namespace Horizontal_Prototype_March_4
 		private void backToDesc_Click(object sender, RoutedEventArgs e)
 		{
             window.backStack.Pop();
-            window.CurrentUserControl = window._strawDesc;
+            window.CurrentUserControl = window._recipesArray[11,3];
             window._Navigation.Navigate(window.CurrentUserControl);
             window.OpenExpanded();
             

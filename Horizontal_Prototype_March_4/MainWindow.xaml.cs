@@ -23,18 +23,18 @@ namespace Horizontal_Prototype_March_4
         public Stack<object> backStack = new Stack<object>();
         public List<string> favouritesList = new List<string>();
 
-        public object[,] _recipesArray = new object[,] {   { "Italian Delux Pizza", "peperoni ham hamburger flour salt", "images/food/delux_pizza.jpg", new LemonChickenDesc() },
-                                                           { "Vegan Stirfry", "green pepper beef cabage yam brocolli soy sauce", "images/food/gluten_free_stirfry.jpeg", new LemonChickenDesc() },
-                                                           {"Honeysmoked Ham", "ham honey brown sugar salt" , "images/food/honeysmoked_ham.jpeg", new LemonChickenDesc() },
-                                                           {"Homestyle Spaghetti", "spaghetti beef pepper marianara tomato paste" , "images/food/italian_spaghetti.jpg", new LemonChickenDesc() },
-                                                           {"Tofu Burger", "tofu pepper salt bun lettuce tomato green pepper" , "images/food/tofu_burger.jpeg", new LemonChickenDesc() },
-                                                           {"Cake", "flour salt milk eggs sugar icing sugar", "images/food/cake.jpeg", new LemonChickenDesc() },
-                                                           {"Rosemary Fries", "french fries salt rosemary", "images/food/Rosemary_fry.jpeg", new LemonChickenDesc()},
-                                                           {"Vegetarian Pasta", "broccoli celery salt pepper carrots", "images/food/veg_pasta.jpeg", new LemonChickenDesc() },
-                                                           {"Vegtable Salad", "Spinach italian dressing peppers raisons ", "images/food/veg_salad.jpg", new LemonChickenDesc() },
-                                                           { "Lemon Chicken" ,"chicken lemon lime pepper salt", "images/food/chicken.jpeg", new LemonChickenDesc() },
-                                                           {"Meatloaf", "Beef pepper curry salt chilli onion", "images/food/Meatloaf-121.jpg", new MeatDesc() },
-                                                           {"Strawberry Souffle", "icing sugar strawberry dessert", "images/food/straw_sou.jpg", new StrawberrySouffleDesc() } };
+        public object[,] _recipesArray = new object[,] {   { "Italian Delux Pizza", "peperoni ham hamburger flour salt", "images/food/delux_pizza.jpg", new LemonChickenDesc(false) },
+                                                           { "Vegan Stirfry", "green pepper beef cabage yam brocolli soy sauce", "images/food/gluten_free_stirfry.jpeg", new LemonChickenDesc(false) },
+                                                           {"Honeysmoked Ham", "ham honey brown sugar salt" , "images/food/honeysmoked_ham.jpeg", new LemonChickenDesc(false) },
+                                                           {"Homestyle Spaghetti", "spaghetti beef pepper marianara tomato paste" , "images/food/italian_spaghetti.jpg", new LemonChickenDesc(false) },
+                                                           {"Tofu Burger", "tofu pepper salt bun lettuce tomato green pepper" , "images/food/tofu_burger.jpeg", new LemonChickenDesc(false) },
+                                                           {"Cake", "flour salt milk eggs sugar icing sugar", "images/food/cake.jpeg", new LemonChickenDesc(false) },
+                                                           {"Rosemary Fries", "french fries salt rosemary", "images/food/Rosemary_fry.jpeg", new LemonChickenDesc(false)},
+                                                           {"Vegetarian Pasta", "broccoli celery salt pepper carrots", "images/food/veg_pasta.jpeg", new LemonChickenDesc(false) },
+                                                           {"Vegtable Salad", "Spinach italian dressing peppers raisons ", "images/food/veg_salad.jpg", new LemonChickenDesc(false) },
+                                                           { "Lemon Chicken" ,"chicken lemon lime pepper salt", "images/food/chicken.jpeg", new LemonChickenDesc(false) },
+                                                           {"Meatloaf", "Beef pepper curry salt chilli onion", "images/food/Meatloaf-121.jpg", new MeatDesc(false) },
+                                                           {"Strawberry Souffle", "icing sugar strawberry dessert", "images/food/straw_sou.jpg", new StrawberrySouffleDesc(falsecmd) } };
         public favourites _favourites = new favourites();
         public Search _search = new Search();
 
@@ -42,10 +42,9 @@ namespace Horizontal_Prototype_March_4
         public categories _categories = new categories();
 		public Beat_Definition _beatDefinition = new Beat_Definition();
         public MeatIngr _meatIngr = new MeatIngr();
-		public MeatDesc _meatDesc = new MeatDesc();
         public Popular _popular = new Popular();
         public StrawberrySouffleIngr _strawIngr = new StrawberrySouffleIngr();
-		public StrawberrySouffleDesc _strawDesc = new StrawberrySouffleDesc();
+		
 
         public Settings _settings = new Settings();
 
@@ -55,7 +54,7 @@ namespace Horizontal_Prototype_March_4
 		public Souffle_Step3 _souffleStep3 = new Souffle_Step3();
 		public Souffle_Complete _souffleComp = new Souffle_Complete();
 		public LemonIngred _lemonIngr = new LemonIngred();
-		public LemonChickenDesc _lemonDesc = new LemonChickenDesc();
+		
 		public Lemon_Step1 _lemonStep1 = new Lemon_Step1();
 		public Lemon_Step2 _lemonStep2 = new Lemon_Step2();
 		public Lemon_Step3 _lemonStep3 = new Lemon_Step3();
@@ -68,7 +67,9 @@ namespace Horizontal_Prototype_March_4
 		public Meat_Complete _meatComp = new Meat_Complete();
 
 		public Chopped_Definition _choppedDefinition = new Chopped_Definition();
-		public Boolean isExpanded = true;
+		public bool isExpanded = true;
+
+
 
         public object CurrentUserControl { get; set; }
 
@@ -78,26 +79,10 @@ namespace Horizontal_Prototype_March_4
         public MainWindow()
         {
             InitializeComponent();
+
             _Navigation.Navigate(_homePage);
             CurrentUserControl = _homePage;
-           // initStraw();
-            
-            /*_strawIngr.InitializeComponent();
-            _strawIngr.Loaded += (s, e) =>
-            {
-                _strawIngr.;
-                _strawIngr.initVals();
-                //reinit(_souffleStep1);
-            };
-            _Navigation.Navigate(_strawIngr);
-            CurrentUserControl = _strawIngr;
-            _Navigation.Navigate(_homePage);
-            CurrentUserControl = _homePage;
-            */
-            //reinit(_souffleStep1);
-            //_Navigation.Navigate(_strawIngr);
-            //_Navigation.Navigate(CurrentUserControl);
-            //_strawIngr.initVals();
+
             _settings.imperialRadio.IsChecked = true;
             try { _meatIngr.SliderMover(null, null); } catch (Exception) { }
             try { _strawIngr.SliderMover(null, null); } catch (Exception) { }
@@ -293,7 +278,9 @@ namespace Horizontal_Prototype_March_4
         {
             if (CurrentUserControl is StrawberrySouffleDesc)
             {
-                _strawDesc.strawDescSidebarCollapsed = false;
+                StrawberrySouffleDesc ssd = CurrentUserControl as StrawberrySouffleDesc;
+                ssd.strawDescSidebarCollapsed = false;
+                _recipesArray[11, 3] = ssd;
             }
             else if (CurrentUserControl is StrawberrySouffleIngr)
             {
@@ -302,7 +289,9 @@ namespace Horizontal_Prototype_March_4
 
             else if (CurrentUserControl is MeatDesc)
             {
-                _meatDesc.meatDescSidebarCollapsed = false;
+                MeatDesc md = CurrentUserControl as MeatDesc;
+                md.meatDescSidebarCollapsed = false;
+                _recipesArray[10, 3] = md;
             }
             else if (CurrentUserControl is MeatIngr)
             {
@@ -311,7 +300,9 @@ namespace Horizontal_Prototype_March_4
 
             else if (CurrentUserControl is LemonChickenDesc)
             {
-                _lemonDesc.lemonSidebarCollapsed = false;
+                LemonChickenDesc lcd = CurrentUserControl as LemonChickenDesc;
+                lcd.lemonSidebarCollapsed = false;
+                _recipesArray[9, 3] = lcd;
             }
             else if (CurrentUserControl is LemonIngred)
             {
@@ -335,7 +326,9 @@ namespace Horizontal_Prototype_March_4
         {
             if (CurrentUserControl is StrawberrySouffleDesc)
             {
-                _strawDesc.strawDescSidebarCollapsed = true;
+                StrawberrySouffleDesc ssd = CurrentUserControl as StrawberrySouffleDesc;
+                ssd.strawDescSidebarCollapsed = true;
+                _recipesArray[11, 3] = ssd;
             }
             else if (CurrentUserControl is StrawberrySouffleIngr)
             {
@@ -343,7 +336,9 @@ namespace Horizontal_Prototype_March_4
             }
             else if (CurrentUserControl is MeatDesc)
             {
-                _meatDesc.meatDescSidebarCollapsed = true;
+                MeatDesc md = CurrentUserControl as MeatDesc;
+                md.meatDescSidebarCollapsed = true;
+                _recipesArray[10, 3] = md;
             }
             else if (CurrentUserControl is MeatIngr)
             {
@@ -352,7 +347,9 @@ namespace Horizontal_Prototype_March_4
 
             else if (CurrentUserControl is LemonChickenDesc)
             {
-                _lemonDesc.lemonSidebarCollapsed = true;
+                LemonChickenDesc lcd = CurrentUserControl as LemonChickenDesc;
+                lcd.lemonSidebarCollapsed = true;
+                _recipesArray[9, 3] = lcd;
             }
             else if (CurrentUserControl is LemonIngred)
             {

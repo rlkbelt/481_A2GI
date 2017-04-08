@@ -32,7 +32,7 @@ namespace Horizontal_Prototype_March_4
                 string[] ingredString = { window._strawIngr.straw_ingr9.Text };
                 string[] quantities = { window._strawIngr.straw_quan9.Text };
                 window.populateStep(quantities, ingredString, straw_step3wrap);
-                // window._ExpanderButton.Expanded = Expander.Collap
+                
             };
 
 		}
@@ -44,32 +44,20 @@ namespace Horizontal_Prototype_March_4
 		}
 		private void NextClicked(object sender, RoutedEventArgs e)
 		{
-
-			
-
-			if (window._strawDesc.favFlag == true)
-			{
-				Image img = window._souffleComp.favButton.Content as Image;
-				BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
-				img.Source = BitImg;
-				window._souffleComp.favButton.Content = img;
-			}
-			else
-			{
-				Image img = window._souffleComp.favButton.Content as Image;
-				BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2.png", UriKind.Relative));
-				img.Source = BitImg;
-				window._souffleComp.favButton.Content = img;
-			}
 			window.CurrentUserControl = window._souffleComp;
 			window._Navigation.Navigate(window._souffleComp);
-		}
+            StrawberrySouffleDesc ssd = window._recipesArray[11, 3] as StrawberrySouffleDesc;
+            if (ssd.favFlag)
+            {
+                window._recipesArray[11, 3] = new StrawberrySouffleDesc(true);
+            }
+        }
 
 		private void backToDesc_Click(object sender, RoutedEventArgs e)
 		{
             window.backStack.Pop();
-            window.CurrentUserControl = window._strawDesc;
-			window._Navigation.Navigate(window._strawDesc);
+            window.CurrentUserControl = window._recipesArray[11,3];
+			window._Navigation.Navigate(window.CurrentUserControl);
             window.OpenExpanded();
 		}
 	}

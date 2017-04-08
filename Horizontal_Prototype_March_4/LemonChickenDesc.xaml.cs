@@ -28,9 +28,9 @@ namespace Horizontal_Prototype_March_4
 		public object CurrentUserControl { get; set; }
 
 		MainWindow window;
-		public Boolean favFlag = false;
+        public bool favFlag;
         public bool lemonSidebarCollapsed;
-        public LemonChickenDesc()
+        public LemonChickenDesc(bool flag)
 		{
 			InitializeComponent();
 			this.Loaded += (s, e) =>
@@ -46,6 +46,17 @@ namespace Horizontal_Prototype_March_4
                     lemonSidebarCollapsed = true;
                 }
 			};
+            favFlag = false;
+            if (flag)
+            {
+                favFlag = flag;
+                Image img = favButton.Content as Image;
+                BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
+                img.Source = BitImg;
+                favButton.Content = img;
+                
+            }
+            
 		}
 
 		private void BackClick(object sender, RoutedEventArgs e)
@@ -63,7 +74,8 @@ namespace Horizontal_Prototype_March_4
 			window.changeWidth();
 
 		}
-		private void favClick(object sender, RoutedEventArgs e)
+
+        private void favClick(object sender, RoutedEventArgs e)
 		{
 
 
@@ -74,7 +86,10 @@ namespace Horizontal_Prototype_March_4
 				BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2fav.png", UriKind.Relative));
 				img.Source = BitImg;
 				favButton.Content = img;
-				window.favouritesList.Add("lemon chicken");
+                window._lemonComp.favButton.Content = img;
+
+  
+                
 				for (int i = 0; i < window._recipesArray.GetLength(0); i++)
 				{
 
@@ -91,12 +106,16 @@ namespace Horizontal_Prototype_March_4
 			else
 			{
 				favFlag = false;
-				Image img = favButton.Content as Image;
+                
+                Image img = favButton.Content as Image;
 				BitmapImage BitImg = new BitmapImage(new Uri("/images/buttons/star2.png", UriKind.Relative));
 				img.Source = BitImg;
 				favButton.Content = img;
-				window.favouritesList.Remove("lemon chicken");
-				for (int i = 0; i < window._recipesArray.GetLength(0); i++)
+                window._lemonComp.favButton.Content = img;
+
+
+               
+                for (int i = 0; i < window._recipesArray.GetLength(0); i++)
 				{
 
 					if (window._recipesArray[i, 0].ToString().ToLower().Equals("lemon chicken"))
@@ -108,8 +127,9 @@ namespace Horizontal_Prototype_March_4
 					}
 				}
 			}
+            
 
-		}
+        }
 
 		private void BeginClick(object sender, RoutedEventArgs e)
 		{

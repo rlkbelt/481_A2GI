@@ -59,8 +59,8 @@ namespace Horizontal_Prototype_March_4
 		{
 
             window.backStack.Pop();
-            window.CurrentUserControl = window._meatDesc;
-			window._Navigation.Navigate(window._meatDesc);
+            window.CurrentUserControl = window._recipesArray[10,3];
+			window._Navigation.Navigate(window.CurrentUserControl);
             window.OpenExpanded();
         }
 	
