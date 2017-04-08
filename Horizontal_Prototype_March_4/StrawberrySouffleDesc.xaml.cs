@@ -143,8 +143,11 @@ namespace Horizontal_Prototype_March_4
 			window._Navigation.Navigate(window._strawIngr);
  
 			window.changeWidth();
-			
+			if (window.isExpanded)
+			{
+				window.OpenExpanded();
+			}
 
-        }
+		}
 	}
 }
