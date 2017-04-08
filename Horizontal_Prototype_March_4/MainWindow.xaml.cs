@@ -74,10 +74,10 @@ namespace Horizontal_Prototype_March_4
 		public bool isExpanded = true;
 
         public GlutenFree _glutenFree = new GlutenFree();
-        public Intro intro = new Intro();
+		public Intro intro = new Intro();
 
 
-        public object CurrentUserControl { get; set; }
+		public object CurrentUserControl { get; set; }
 
 
         
@@ -85,14 +85,15 @@ namespace Horizontal_Prototype_March_4
         public MainWindow()
         {
             InitializeComponent();
-
+			
             Show();
             _Navigation.Navigate(_allRecipes);
             
             intro.Show();
+			
             
             
-            intro.close();
+           intro.close();
             
 
             _Navigation.Navigate(_homePage);
@@ -223,14 +224,13 @@ namespace Horizontal_Prototype_March_4
             //reinit();
         }
 
-        public void reinit(object Control)
-        {
-           
-            if (CurrentUserControl is Meat_Step1)
-            {
 
-            }
-            else if (CurrentUserControl is Meat_Step2)
+
+		public void reinit(object Control)
+		{
+
+
+			if (CurrentUserControl is Meat_Step2)
             {
 
             }
@@ -277,6 +277,7 @@ namespace Horizontal_Prototype_March_4
             // this._ExpanderButton.IsExpanded = true;
             Expanded(null, null);
             _ExpanderButton.IsExpanded = true;
+			
 
 
 
@@ -286,12 +287,21 @@ namespace Horizontal_Prototype_March_4
             // this._ExpanderButton.IsExpanded = true;
             Collapsed(null, null);
             _ExpanderButton.IsExpanded = false;
+			
 
 
         }
         private void Collapsed(object sender, RoutedEventArgs e)
         {
-            if (CurrentUserControl is StrawberrySouffleDesc)
+			if ((CurrentUserControl is Meat_Step1 || CurrentUserControl is Meat_Step2 || CurrentUserControl is Meat_Step3 || CurrentUserControl is Meat_Step4 ||
+				CurrentUserControl is Lemon_Step1 || CurrentUserControl is Lemon_Step2 || CurrentUserControl is Lemon_Step3 ||
+				CurrentUserControl is Souffle_Step1 || CurrentUserControl is Souffle_Step2 || CurrentUserControl is Souffle_Step3))
+			{
+				
+				
+				step_expander.Visibility = Visibility.Visible;
+			}
+			if (CurrentUserControl is StrawberrySouffleDesc)
             {
                 StrawberrySouffleDesc ssd = CurrentUserControl as StrawberrySouffleDesc;
                 ssd.strawDescSidebarCollapsed = false;
@@ -339,7 +349,14 @@ namespace Horizontal_Prototype_March_4
         }
         private void Expanded(object sender, RoutedEventArgs e)
         {
-            if (CurrentUserControl is StrawberrySouffleDesc)
+			if ((CurrentUserControl is Meat_Step1 || CurrentUserControl is Meat_Step2 || CurrentUserControl is Meat_Step3 || CurrentUserControl is Meat_Step4 ||
+				CurrentUserControl is Lemon_Step1 || CurrentUserControl is Lemon_Step2 || CurrentUserControl is Lemon_Step3 ||
+				CurrentUserControl is Souffle_Step1 || CurrentUserControl is Souffle_Step2 || CurrentUserControl is Souffle_Step3))
+			{
+				
+				step_expander.Visibility = Visibility.Hidden;
+			}
+			if (CurrentUserControl is StrawberrySouffleDesc)
             {
                 StrawberrySouffleDesc ssd = CurrentUserControl as StrawberrySouffleDesc;
                 ssd.strawDescSidebarCollapsed = true;
@@ -1012,6 +1029,10 @@ namespace Horizontal_Prototype_March_4
 
         }
 
+		private void step_expander_Click(object sender, RoutedEventArgs e)
+		{
+			OpenCollapsed();
 
-    }
+		}
+	}
 }

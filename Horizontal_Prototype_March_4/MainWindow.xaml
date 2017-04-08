@@ -8,9 +8,10 @@
      
         Title="Step by Step with Jetty Brocker" Height="570" Width="510" WindowStartupLocation="CenterScreen" Background="Beige">
     <Grid>
-        <DockPanel x:Name="_BorderDP" Height="530" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Panel.ZIndex="1000">
+        
+            <DockPanel x:Name="_BorderDP" Height="530" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Panel.ZIndex="1000">
             <DockPanel.BitmapEffect >
-                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="5" Opacity="0.5"  />
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="3" Opacity="0.5"  />
             </DockPanel.BitmapEffect>
             <Border CornerRadius="6" BorderBrush="BurlyWood" Background="White" BorderThickness="2" DockPanel.Dock="Top">
                 <DockPanel x:Name="_Sidebar" HorizontalAlignment="Left" VerticalAlignment="Top" Height="542" Width="120" Margin="0,0" Panel.ZIndex="2" Background="Beige">
@@ -55,8 +56,11 @@
                 </DockPanel>
             </Border>
             </DockPanel>
+        
+        <Button x:Name="step_expander" HorizontalAlignment="Left" Height="539" Margin="120,0,0,0" VerticalAlignment="Top" Width="380" Background="Black" Opacity="0.2" Visibility="Hidden" Panel.ZIndex="1000" Click="step_expander_Click" ></Button>
         <DockPanel x:Name ="_pagestack" HorizontalAlignment="Left" Height="539" Margin="120,0,0,0" VerticalAlignment="Top" Width="372" Panel.ZIndex="1">
             <Frame x:Name="_Navigation" NavigationUIVisibility="Hidden"></Frame>
         </DockPanel>
+        
     </Grid>
 </Window>
