@@ -27,6 +27,7 @@ namespace Horizontal_Prototype_March_4
             this.Loaded += (s, e) =>
             {
                 window = Window.GetWindow(this) as MainWindow;
+                window.changeWidth();
                 window._HomeButton.Background = Brushes.BurlyWood;
                 window._SearchButton.Background = Brushes.BurlyWood;
                 window._FavouritesButton.Background = Brushes.BurlyWood;
