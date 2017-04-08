@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -85,9 +86,9 @@ namespace Horizontal_Prototype_March_4
         public MainWindow()
         {
             InitializeComponent();
-			
-            Show();
-            _Navigation.Navigate(_allRecipes);
+
+			_allRecipes.initValues(_recipesArray);
+			_Navigation.Navigate(_allRecipes);
             
             intro.Show();
 			
@@ -96,8 +97,8 @@ namespace Horizontal_Prototype_March_4
            intro.close();
             
 
-            _Navigation.Navigate(_homePage);
-            CurrentUserControl = _homePage;
+           _Navigation.Navigate(_homePage);
+           CurrentUserControl = _homePage;
 
             _settings.imperialRadio.IsChecked = true;
             try { _meatIngr.SliderMover(null, null); } catch (Exception) { }
@@ -109,7 +110,10 @@ namespace Horizontal_Prototype_March_4
 
 
 
-        public void initStrawMetric()
+
+
+
+		public void initStrawMetric()
         {
             _strawIngr.straw_quan1.Text = "250 mL";
             _strawIngr.straw_quan2.Text = "500 mL";

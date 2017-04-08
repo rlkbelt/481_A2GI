@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -95,7 +96,7 @@ namespace Horizontal_Prototype_March_4
 						text.Width = button.Width - 10;
 						button.Content = sp;
 						button.Tag = text.Text;
-						button.Background = Brushes.Beige;
+						button.Background = Brushes.BurlyWood;
 						button.Click += new RoutedEventHandler(ButtonClick);
 						_RecipesWrapPanel.Children.Add(button);
 					}
@@ -118,7 +119,7 @@ namespace Horizontal_Prototype_March_4
 						text.Width = button.Width - 10;
 						button.Content = sp;
 						button.Tag = text.Text;
-						button.Background = Brushes.Beige;
+						button.Background = Brushes.BurlyWood;
 						button.Click += new RoutedEventHandler(ButtonClick);
 						_RecipesWrapPanel.Children.Add(button);
 					}
@@ -165,6 +166,7 @@ namespace Horizontal_Prototype_March_4
                 searchStack.Push(_recipesArray[i, 2].ToString());
                 searchStack.Push("*");
             }
+			
             while (!(searchStack.Count == 0))
             {
                 _scrollerAR.Visibility = Visibility.Visible;
@@ -199,13 +201,16 @@ namespace Horizontal_Prototype_March_4
 					text.Width = button.Width - 10;
 					button.Content = sp;
 					button.Tag = text.Text;
-					button.Background = Brushes.Beige;
-                    button.BorderBrush = Brushes.BurlyWood;
+					button.Background = Brushes.BurlyWood;
+                    
+	
+					
 					button.Click += new RoutedEventHandler(ButtonClick);
+					
 					_RecipesWrapPanel.Children.Add(button);
 					
                 }
-
+				
             }
         }
         private void BackClick(object sender, RoutedEventArgs e)

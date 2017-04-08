@@ -102,7 +102,7 @@ namespace Horizontal_Prototype_March_4
                         text.Width = button.Width - 10;
                         button.Content = sp;
                         button.Tag = text.Text;
-                        button.Background = Brushes.Beige;
+                        button.Background = Brushes.BurlyWood;
                         button.Click += new RoutedEventHandler(ButtonClick);
                         _GlutenWrapPanel.Children.Add(button);
                     }
@@ -125,7 +125,7 @@ namespace Horizontal_Prototype_March_4
                         text.Width = button.Width - 10;
                         button.Content = sp;
                         button.Tag = text.Text;
-                        button.Background = Brushes.Beige;
+                        button.Background = Brushes.BurlyWood;
                         button.Click += new RoutedEventHandler(ButtonClick);
                         _GlutenWrapPanel.Children.Add(button);
                     }
@@ -191,8 +191,8 @@ namespace Horizontal_Prototype_March_4
                     text.Width = button.Width - 10;
                     button.Content = sp;
                     button.Tag = text.Text;
-                    button.Background = Brushes.Beige;
-                    button.BorderBrush = Brushes.BurlyWood;
+                    button.Background = Brushes.BurlyWood;
+                    
                     button.Click += new RoutedEventHandler(ButtonClick);
                     _GlutenWrapPanel.Children.Add(button);
 
