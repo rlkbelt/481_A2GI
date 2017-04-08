@@ -396,15 +396,15 @@ namespace Horizontal_Prototype_March_4
                 _lemonIngr.lemonIngrCollapsed = true;
             }
             isExpanded = false;
-            _HomeDP.Width = 0;
-            _SeachDP.Width = 0;
-            _FavouritesDP.Width = 0;
-            _SettingsDP.Width = 0;
-            _Sidebar.Width = 24;
-            _BorderDP.Width = 30;
+         //   _HomeDP.Width = 0;
+          //  _SeachDP.Width = 0;
+           // _FavouritesDP.Width = 0;
+            //_SettingsDP.Width = 0;
+           // _Sidebar.Width = 24;
+           // _BorderDP.Width = 30;
             _pagestack.Width = 462;
             _pagestack.Margin = new Thickness(28, 0, 0, 0);
-            _ExpanderDP.Margin = new Thickness(0, -256, 0, 230);
+           // _ExpanderDP.Margin = new Thickness(0, -256, 0, 230);
 
             changeWidth();
 
