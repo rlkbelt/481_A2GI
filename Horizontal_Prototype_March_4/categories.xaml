@@ -21,7 +21,7 @@
 
             <WrapPanel x:Name="_CategoriesWrapPanel" HorizontalAlignment="Right" Width="330">
 
-                <Button x:Name="gluten_free"  Background="Transparent" BorderBrush="BurlyWood"  HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100">
+                <Button x:Name="gluten_free"  Background="Transparent" BorderBrush="BurlyWood"  HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="100" Click="GlutenClick">
                     
                     <StackPanel>
                        <!-- <Border x:Name ="TopAndLeft" BorderThickness="3,3,0,0" BorderBrush="{x:Static SystemColors.ControlDarkBrush}"/-->

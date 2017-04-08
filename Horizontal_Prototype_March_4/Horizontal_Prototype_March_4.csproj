@@ -61,6 +61,9 @@
     <Compile Include="Chopped_Definition.xaml.cs">
       <DependentUpon>Chopped_Definition.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GlutenFree.xaml.cs">
+      <DependentUpon>GlutenFree.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LemonChickenDesc.xaml.cs">
       <DependentUpon>LemonChickenDesc.xaml</DependentUpon>
     </Compile>
@@ -143,6 +146,10 @@
     <Page Include="favourites.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GlutenFree.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="HomePage.xaml">
       <Generator>MSBuild:Compile</Generator>

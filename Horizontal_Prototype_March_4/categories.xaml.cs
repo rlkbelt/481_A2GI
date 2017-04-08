@@ -47,5 +47,13 @@ namespace Horizontal_Prototype_March_4
             window.CurrentUserControl = window.backStack.Pop();
             window._Navigation.Navigate(window.CurrentUserControl);
         }
+
+        private void GlutenClick(object sender, RoutedEventArgs e)
+        {
+            window._glutenFree.initValues(window._recipesArray);
+            window._Navigation.Navigate(window._glutenFree);
+            window.CurrentUserControl = window._glutenFree;
+
+        }
     }
 }

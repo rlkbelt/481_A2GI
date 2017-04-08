@@ -23,6 +23,7 @@ namespace Horizontal_Prototype_March_4
         public Stack<object> backStack = new Stack<object>();
         public List<string> favouritesList = new List<string>();
 
+
         public object[,] _recipesArray = new object[,] {   { "Italian Delux Pizza", "peperoni ham hamburger flour salt", "images/food/delux_pizza.jpg", new LemonChickenDesc(false) },
                                                            { "Vegan Stirfry", "green pepper beef cabage yam brocolli soy sauce", "images/food/gluten_free_stirfry.jpeg", new LemonChickenDesc(false) },
                                                            {"Honeysmoked Ham", "ham honey brown sugar salt" , "images/food/honeysmoked_ham.jpeg", new LemonChickenDesc(false) },
@@ -34,7 +35,9 @@ namespace Horizontal_Prototype_March_4
                                                            {"Vegtable Salad", "Spinach italian dressing peppers raisons ", "images/food/veg_salad.jpg", new LemonChickenDesc(false) },
                                                            { "Lemon Chicken" ,"chicken lemon lime pepper salt", "images/food/chicken.jpeg", new LemonChickenDesc(false) },
                                                            {"Meatloaf", "Beef pepper curry salt chilli onion", "images/food/Meatloaf-121.jpg", new MeatDesc(false) },
-                                                           {"Strawberry Souffle", "icing sugar strawberry dessert", "images/food/straw_sou.jpg", new StrawberrySouffleDesc(falsecmd) } };
+                                                           {"Strawberry Souffle", "icing sugar strawberry dessert", "images/food/straw_sou.jpg", new StrawberrySouffleDesc(false) } };
+
+
         public favourites _favourites = new favourites();
         public Search _search = new Search();
 
@@ -67,8 +70,10 @@ namespace Horizontal_Prototype_March_4
 		public Meat_Complete _meatComp = new Meat_Complete();
 
 		public Chopped_Definition _choppedDefinition = new Chopped_Definition();
+
 		public bool isExpanded = true;
 
+        public GlutenFree _glutenFree = new GlutenFree();
 
 
         public object CurrentUserControl { get; set; }
@@ -861,8 +866,33 @@ namespace Horizontal_Prototype_March_4
 					//_lemonStep3.BackButton.Visibility = Visibility.Hidden;
 				}
 			}
+            else if (CurrentUserControl is GlutenFree)
+            {
+                if (!isExpanded)
+                {
+                    _glutenFree._glutenFree_Grid.Width = 470;
+                    _glutenFree._GlutenWrapPanel.Width = 430;
+                    foreach (Button child in _glutenFree._GlutenWrapPanel.Children)
+                        if (child.Width > 110)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            incButtonSize(_glutenFree._GlutenWrapPanel);
+                            break;
+                        }
 
-		}
+                }
+                else
+                {
+                    _glutenFree._glutenFree_Grid.Width = 372;
+                    _glutenFree._GlutenWrapPanel.Width = 332;
+                    decButtonSize(_glutenFree._GlutenWrapPanel);
+                }
+            }
+
+        }
 
 		public void decButtonSize(WrapPanel wp)
 		{
