@@ -104,7 +104,7 @@ namespace Horizontal_Prototype_March_4
 				}
 				else if (Recipe_Ratio.Value == 2 && (bool)window._settings.metricRadio.IsChecked)
 				{
-					meat_quan1.Text = "0.9 kg.";
+					meat_quan1.Text = "1.35 kg.";
 					meat_quan2.Text = "4";
 					meat_quan3.Text = "1 L.";
 					meat_quan4.Text = "500 mL.";
